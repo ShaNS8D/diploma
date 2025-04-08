@@ -24,5 +24,10 @@ django-admin startproject my_cloud
 ### Переход в папку проекта
 cd my_cloud
 
-### Создание приложения
+### Создание приложениий
 python manage.py startapp cloud_app
+python manage.py startapp users
+
+#### Создание БД в postgresql
+#### выполнение настроек в файле settings.py
+
