@@ -1,20 +1,13 @@
+import os
 
 from pathlib import Path
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+from config.general_config import DATABASES, SECRET_KEY, DEBUG, ALLOWED_HOSTS
+from config.my_cloud_config import BASE_DIR, MEDIA_URL, MEDIA_ROOT
+print(os.environ.get('DB_NAME'))  # Проверка, что переменная есть
 
 
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
-
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-=0bkvprto7h+$x%u*9bujce+1d4&(uri4ketdru^sjn@(g-3ie'
-
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = []
+AUTH_USER_MODEL = 'users.User'
 
 
 # Application definition
@@ -30,6 +23,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
     'corsheaders',
+    'mptt',
+
     'cloud_app.apps.CloudAppConfig',
     'users.apps.UsersConfig',
 ]
@@ -66,21 +61,6 @@ WSGI_APPLICATION = 'my_cloud.wsgi.application'
 
 CORS_ALLOW_CREDENTIALS = False
 CORS_ORIGIN_ALLOW_ALL = True
-
-
-# Database
-# https://docs.djangoproject.com/en/5.2/ref/settings/#databases
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'cloud_app',
-        'USER': 'postgres',
-        'PASSWORD': '12qwaszx',
-        'HOST': 'localhost',
-        'PORT': '5432',
-    }
-}
 
 
 # Password validation
