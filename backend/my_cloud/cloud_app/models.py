@@ -54,7 +54,6 @@ class Folder(MPTTModel):
     )
     
     def get_folder_path(self):
-        """Возвращает список имён папок от корня до текущей папки"""
         return [node.name for node in self.get_ancestors(include_self=True)]
     
     def __str__(self):
