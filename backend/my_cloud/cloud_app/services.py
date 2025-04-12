@@ -32,5 +32,5 @@ def create_file_record(user, uploaded_file, comment=""):
         comment=comment,
         storage_path=storage_path,
         download_link=uuid.uuid4(),
-        # user=user  # Если есть пользователи
+        user=user
     )

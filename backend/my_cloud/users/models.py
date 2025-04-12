@@ -1,59 +1,35 @@
 from django.db import models
-from django.contrib.auth.models import AbstractUser
+from django.contrib.auth.models import AbstractUser, UserManager
 from django.utils.translation import gettext_lazy as _
-from django.core.validators import RegexValidator, MinLengthValidator
+from django.contrib.auth.hashers import make_password
+
+class CustomUserManager(UserManager):
+    def _create_user(self, username, email, password, **extra_fields):
+        if not email:
+            raise ValueError('Email должен быть указан')
+        email = self.normalize_email(email)
+        user = self.model(username=username, email=email, **extra_fields)
+        user.set_password(password)
+        user.save(using=self._db)
+        return user
 
 class User(AbstractUser):
+    objects = CustomUserManager()
 
-    full_name = models.CharField(
-        _("Full Name"),
-        max_length=255,
-        blank=True,
-        null=True
-    )
-
-    email = models.EmailField(
-        _("Email Address"),
-        unique=True,
-        validators=[
-            RegexValidator(
-                regex=r'^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$',
-                message=_("Введите действительный адрес электронной почты")
-            )
-        ]
-    )
-
-    is_admin = models.BooleanField(
-        _("Admin Status"),
-        default=False,
-        help_text=_("Проверка прав пользователя")
-    )
-
-    storage_path = models.CharField(
-        _("Storage Path"),
-        max_length=255,
-        unique=True,
-        blank=True,
-        null=True,
-        help_text=_("Относительный путь к каталогу хранилища пользователя")
-    )
-
-    password = models.CharField(
-        _("Password"),
-        max_length=128,
-        validators=[
-            MinLengthValidator(6, message=_("Длина пароля должна составлять не менее 6 символов."))
-        ]
-    )
+    full_name = models.CharField(_('Full Name'), max_length=255, blank=True)
+    email = models.EmailField(_('Email Address'), unique=True)
+    is_admin = models.BooleanField(_('Admin Status'), default=False)
+    storage_path = models.CharField(_('Storage Path'), max_length=255, unique=True, blank=True)
 
     def save(self, *args, **kwargs):
         if not self.storage_path:
-            self.storage_path = f"user_{self.username}_{self.pk}"
+            self.storage_path = f"user_{self.username}"
+        
+        if self.password and not self.password.startswith(('pbkdf2_sha256$', 'bcrypt$', 'argon2$')):
+            self.set_password(self.password)
+            
         super().save(*args, **kwargs)
 
-    def __str__(self):
-        return self.username
-
     class Meta:
-        verbose_name = _("User")
-        verbose_name_plural = _("Users")
+        verbose_name = _('User')
+        verbose_name_plural = _('Users')
