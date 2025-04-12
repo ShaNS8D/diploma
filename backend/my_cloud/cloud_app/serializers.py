@@ -7,7 +7,7 @@ from rest_framework.exceptions import PermissionDenied
 from django.core.files.uploadedfile import InMemoryUploadedFile
 from django.utils import timezone
 import uuid
-from utils.file_validators import validate_file_extension
+from cloud_app.utils.file_validators import validate_file_extension
 
 class FileListSerializer(serializers.ModelSerializer):
     full_path = serializers.SerializerMethodField()

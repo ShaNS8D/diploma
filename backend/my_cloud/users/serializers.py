@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from .models import User
-from utils.validators import validate_username, validate_email, validate_password
+from users.utils.validators import validate_username, validate_email, validate_password
 
 class UserRegistrationSerializer(serializers.ModelSerializer):
     password = serializers.CharField(
