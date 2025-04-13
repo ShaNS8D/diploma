@@ -15,6 +15,7 @@ from django.shortcuts import get_object_or_404
 from django.http import FileResponse
 import os
 import logging
+from . import services
 
 
 logger = logging.getLogger(__name__)
@@ -74,6 +75,19 @@ class FileDeleteView(generics.DestroyAPIView):
         instance.file_path.delete()
         instance.delete()
 
+
+class FileDeleteView(generics.DestroyAPIView):
+    permission_classes = [IsAuthenticated]
+    queryset = File.objects.all()
+    
+    def perform_destroy(self, instance):
+        if instance.owner != self.request.user:
+            raise PermissionDenied("Нет прав на удаление файла")
+
+        file_path = os.path.join(settings.MEDIA_ROOT, instance.file_path.name)
+        services.delete_file_from_storage(file_path)
+        instance.delete()
+
 class FileRenameView(generics.UpdateAPIView):
     permission_classes = [IsAuthenticated]
     queryset = File.objects.all()
@@ -82,7 +96,7 @@ class FileRenameView(generics.UpdateAPIView):
     def get_object(self):
         obj = get_object_or_404(File, pk=self.kwargs['pk'])
         if obj.owner != self.request.user:
-            raise PermissionDenied("You don't have permission to rename this file")
+            raise PermissionDenied("У вас нет прав на переименование этого файла")
         return obj
 
 class FileUpdateCommentView(generics.UpdateAPIView):
@@ -93,7 +107,7 @@ class FileUpdateCommentView(generics.UpdateAPIView):
     def get_object(self):
         obj = get_object_or_404(File, pk=self.kwargs['pk'])
         if obj.owner != self.request.user:
-            raise PermissionDenied("You don't have permission to update this file's comment")
+            raise PermissionDenied("У вас нет прав на обновление комментария к этому файлу")
         return obj
 
 class FilePublicLinkView(generics.UpdateAPIView):
@@ -104,7 +118,7 @@ class FilePublicLinkView(generics.UpdateAPIView):
     def get_object(self):
         obj = get_object_or_404(File, pk=self.kwargs['pk'])
         if obj.owner != self.request.user:
-            raise PermissionDenied("You don't have permission to generate link for this file")
+            raise PermissionDenied("У вас нет прав на создание ссылки для этого файла")
         return obj
 
 class FileDownloadByLinkView(generics.RetrieveAPIView):

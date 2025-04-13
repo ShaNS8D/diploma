@@ -1,7 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser, UserManager
 from django.utils.translation import gettext_lazy as _
-from django.contrib.auth.hashers import make_password
+
 
 class CustomUserManager(UserManager):
     def _create_user(self, username, email, password, **extra_fields):
@@ -12,6 +12,7 @@ class CustomUserManager(UserManager):
         user.set_password(password)
         user.save(using=self._db)
         return user
+    
 
 class User(AbstractUser):
     objects = CustomUserManager()
@@ -24,7 +25,8 @@ class User(AbstractUser):
     def save(self, *args, **kwargs):
         if not self.storage_path:
             self.storage_path = f"user_{self.username}"
-        
+        if self.email:
+            self.email = self.email.lower()        
         if self.password and not self.password.startswith(('pbkdf2_sha256$', 'bcrypt$', 'argon2$')):
             self.set_password(self.password)
             

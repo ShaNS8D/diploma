@@ -8,6 +8,7 @@ from django.core.files.uploadedfile import InMemoryUploadedFile
 from django.utils import timezone
 import uuid
 from cloud_app.utils.file_validators import validate_file_extension
+from . import services
 
 class FileListSerializer(serializers.ModelSerializer):
     full_path = serializers.SerializerMethodField()
@@ -75,19 +76,17 @@ class FileUploadSerializer(serializers.ModelSerializer):
         return attrs
     
     def create(self, validated_data):
-        file = validated_data.pop('file')
         user = self.context['request'].user
+        uploaded_file = validated_data['file']
+        comment = validated_data.get('comment', '')
+        folder = validated_data.get('folder')
         
-        instance = File(
-            original_name=file.name,
-            file_path=file,
-            owner=user,
-            comment=validated_data.get('comment'),
-            folder=validated_data.get('folder')
+        return services.create_file_record(
+            user=user,
+            uploaded_file=uploaded_file,
+            comment=comment,
+            folder=folder
         )
-        
-        instance.save()
-        return instance
 
 class FileDeleteSerializer(serializers.Serializer):
     id = serializers.PrimaryKeyRelatedField(
@@ -100,7 +99,7 @@ class FileDeleteSerializer(serializers.Serializer):
         if value.owner != user:
             raise PermissionDenied(_("Вы не можете удалить этот файл"))
         return value
-
+    
 class FileRenameSerializer(serializers.ModelSerializer):
     new_name = serializers.CharField(
         max_length=255,

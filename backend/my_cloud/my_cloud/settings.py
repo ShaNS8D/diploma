@@ -113,6 +113,7 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.IsAuthenticated',
     ],
     'EXCEPTION_HANDLER': 'my_cloud.utils.custom_exception_handler',
+    'TEST_REQUEST_DEFAULT_FORMAT': 'json'
 }
 
 

@@ -147,10 +147,6 @@ class File(models.Model):
         self.save(update_fields=['last_download_date'])
     
     def get_full_path(self):
-        # if self.folder:
-        #     return f"{'/'.join(self.folder.get_folder_path())}/{self.original_name}"
-        # return self.original_name
-
         if not hasattr(self, '_cached_full_path'):
             if self.folder_id:
                 self._cached_full_path = f"{'/'.join(self.folder.get_folder_path())}/{self.original_name}"
