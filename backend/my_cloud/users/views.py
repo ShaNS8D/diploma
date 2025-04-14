@@ -59,10 +59,8 @@ class LoginView(APIView):
         )
         
         if user:
-            token, _ = Token.objects.get_or_create(user=user)
             logger.info(f"User {user.username} logged in successfully")
             return Response({
-                'token': token.key,
                 'user_id': user.pk,
                 'is_admin': user.is_admin
             })
@@ -77,7 +75,6 @@ class LogoutView(APIView):
 
     def post(self, request):
         try:
-            request.user.auth_token.delete()
             logout(request)
             logger.info(f"User {request.user.username} logged out")
             return Response(status=status.HTTP_200_OK)
