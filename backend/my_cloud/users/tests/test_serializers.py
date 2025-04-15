@@ -6,6 +6,16 @@ from .factories import UserFactory
 
 @pytest.mark.django_db
 class TestUserLoginSerializer:
+    def test_valid_credentials(self):
+        user = UserFactory.create(username='valid_user', password='correct_pass')
+        data = {
+            'username': 'valid_user',
+            'password': 'correct_pass'
+        }
+        serializer = UserLoginSerializer(data=data)
+        assert serializer.is_valid()
+        assert serializer.validated_data['user'] == user
+
     def test_invalid_credentials(self):
         UserFactory.create(username='valid_user', password='correct_pass')
         data = {
@@ -14,9 +24,8 @@ class TestUserLoginSerializer:
         }        
         serializer = UserLoginSerializer(data=data)
         assert not serializer.is_valid()
-
         with pytest.raises(ValidationError):
-            serializer.validate(data)  
+            serializer.validate(data)
 
     def test_password_input_type(self):
         serializer = UserLoginSerializer()
@@ -26,6 +35,20 @@ class TestUserLoginSerializer:
         serializer = UserLoginSerializer(data={'username': 'testuser'})
         assert not serializer.is_valid()
         assert 'password' in serializer.errors
+    
+    def test_inactive_user(self):
+        UserFactory.create(
+            username='inactive_user',
+            password='correct_pass',
+            is_active=False
+        )
+        data = {
+            'username': 'inactive_user',
+            'password': 'correct_pass'
+        }
+        serializer = UserLoginSerializer(data=data)
+        assert not serializer.is_valid()
+        assert 'non_field_errors' in serializer.errors
 
 
 @pytest.mark.django_db

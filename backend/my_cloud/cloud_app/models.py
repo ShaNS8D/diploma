@@ -9,14 +9,11 @@ from mptt.models import MPTTModel, TreeForeignKey
 
 
 def get_upload_path(instance, filename):
-    path_components = []
-    
+    path_components = []    
     if instance.folder:
-        path_components = instance.folder.get_folder_path()
-    
+        path_components = instance.folder.get_folder_path()    
     ext = os.path.splitext(filename)[1]
-    unique_filename = f"{uuid.uuid4()}{ext}"
-    
+    unique_filename = f"{uuid.uuid4()}{ext}"    
     return os.path.join(
         settings.FILE_STORAGE_BASE_DIR,
         str(instance.owner.id),
@@ -30,8 +27,7 @@ class Folder(MPTTModel):
         _("Название папки"),
         max_length=255,
         help_text=_("Имя папки")
-    )
-    
+    )    
     parent = TreeForeignKey(
         'self',
         on_delete=models.CASCADE,
@@ -39,20 +35,18 @@ class Folder(MPTTModel):
         blank=True,
         related_name='children',
         verbose_name=_("Родительская папка")
-    )
-    
+    )    
     owner = models.ForeignKey(
         "users.User",
         on_delete=models.CASCADE,
         related_name="folders",
         verbose_name=_("Владелец")
-    )
-    
+    )    
     created_at = models.DateTimeField(
         _("Дата создания"),
         auto_now_add=True
     )
-    
+        
     def get_folder_path(self):
         return [node.name for node in self.get_ancestors(include_self=True)]
     

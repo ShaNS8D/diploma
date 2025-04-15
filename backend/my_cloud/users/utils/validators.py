@@ -1,4 +1,5 @@
 import re
+from django.contrib.auth import authenticate
 from django.core.exceptions import ValidationError
 from django.contrib.auth import get_user_model
 from django.utils.translation import gettext_lazy as _
@@ -9,7 +10,8 @@ User = get_user_model()
 def validate_username(value):
     if not re.match(r'^[a-zA-Z][a-zA-Z0-9]{3,19}$', value):
         raise ValidationError(
-            _("Логин должен начинаться с буквы, содержать только латинские буквы и цифры, длина 4-20 символов")
+            _("Логин должен начинаться с буквы, содержать только латинские " \
+            "буквы и цифры, длина 4-20 символов")
         )
 
 def validate_email(value, instance=None):
@@ -26,8 +28,24 @@ def validate_password(value):
     if len(value) < 6:
         raise ValidationError(_("Пароль должен содержать минимум 6 символов"))
     if not any(c.isupper() for c in value):
-        raise ValidationError(_("Пароль должен содержать хотя бы одну заглавную букву"))
+        raise ValidationError(_("Пароль должен содержать хотя бы одну заглавную" \
+        " букву"))
     if not any(c.isdigit() for c in value):
         raise ValidationError(_("Пароль должен содержать хотя бы одну цифру"))
     if not any(not c.isalnum() for c in value):
-        raise ValidationError(_("Пароль должен содержать хотя бы один специальный символ"))
+        raise ValidationError(_("Пароль должен содержать хотя бы один специальный" \
+        " символ"))
+    
+# def validate_login_credentials(username, password, request=None):
+#     user = authenticate(request=request, username=username, password=password)
+#     if not user:
+#         raise ValidationError(
+#             _("Неверные имя пользователя или пароль"),
+#             code='authorization'
+#         )
+#     if not user.is_active:
+#         raise ValidationError(
+#             _("Аккаунт деактивирован"),
+#             code='inactive'
+#         )
+#     return user
