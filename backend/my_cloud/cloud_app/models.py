@@ -15,7 +15,7 @@ def get_upload_path(instance, filename):
     ext = os.path.splitext(filename)[1]
     unique_filename = f"{uuid.uuid4()}{ext}"    
     return os.path.join(
-        settings.FILE_STORAGE_BASE_DIR,
+        settings.MEDIA_ROOT,
         str(instance.owner.id),
         *path_components,
         unique_filename
