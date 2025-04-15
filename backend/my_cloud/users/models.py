@@ -6,12 +6,17 @@ from django.utils.translation import gettext_lazy as _
 class CustomUserManager(BaseUserManager):
     def create_user(self, username, email, password, **extra_fields):
         if not email:
-            raise ValueError(_('Email должен быть указан'))        
+            raise ValueError(_('Email должен быть указан'))
         email = self.normalize_email(email)
         user = self.model(username=username, email=email, **extra_fields)
         user.set_password(password)
-        user.save(using=self._db)        
+        user.save(using=self._db)
         return user
+    
+    def create_superuser(self, username, email, password, **extra_fields):
+        extra_fields.setdefault("is_admin", True)
+        return self.create_user(username, email, password, **extra_fields)
+
 
 class User(AbstractUser):
     objects = CustomUserManager()
@@ -27,7 +32,7 @@ class User(AbstractUser):
 
     def save(self, *args, **kwargs):
         if not self.storage_path:
-            self.storage_path = f'user_{self.username}'        
+            self.storage_path = f'user_{self.username}'
         self.email = self.email.lower()
         super().save(*args, **kwargs)
 

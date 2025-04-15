@@ -35,7 +35,7 @@ class UserSerializer(serializers.ModelSerializer):
         read_only_fields = ['id', 'is_admin', 'storage_path']
 
 class UserLoginSerializer(serializers.Serializer):
-    username = serializers.CharField(validators=[validate_username])
+    username = serializers.CharField()
     password = serializers.CharField(
         style={'input_type': 'password'},
         write_only=True
@@ -50,7 +50,7 @@ class UserLoginSerializer(serializers.Serializer):
             raise serializers.ValidationError(
                 _("Неверные имя пользователя или пароль"),
                 code='authorization'
-            )        
+            )
         if not user.is_active:
             raise serializers.ValidationError(
                 _("Аккаунт деактивирован"),

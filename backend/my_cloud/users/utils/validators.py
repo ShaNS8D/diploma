@@ -1,5 +1,4 @@
 import re
-from django.contrib.auth import authenticate
 from django.core.exceptions import ValidationError
 from django.contrib.auth import get_user_model
 from django.utils.translation import gettext_lazy as _
@@ -35,17 +34,3 @@ def validate_password(value):
     if not any(not c.isalnum() for c in value):
         raise ValidationError(_("Пароль должен содержать хотя бы один специальный" \
         " символ"))
-    
-# def validate_login_credentials(username, password, request=None):
-#     user = authenticate(request=request, username=username, password=password)
-#     if not user:
-#         raise ValidationError(
-#             _("Неверные имя пользователя или пароль"),
-#             code='authorization'
-#         )
-#     if not user.is_active:
-#         raise ValidationError(
-#             _("Аккаунт деактивирован"),
-#             code='inactive'
-#         )
-#     return user
