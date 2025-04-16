@@ -1,6 +1,6 @@
 import pytest
 from users.models import User, CustomUserManager
-from users.tests.factories import UserFactory
+from tests.factories import UserFactory
 
 
 @pytest.mark.django_db

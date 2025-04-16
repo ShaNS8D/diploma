@@ -5,7 +5,7 @@ from users.serializers import (
     UserSerializer, 
     UserLoginSerializer
 )
-from .factories import UserFactory
+from ..factories import UserFactory
 from django.utils.translation import gettext_lazy as _
 
 @pytest.mark.django_db

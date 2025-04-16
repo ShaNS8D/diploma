@@ -1,6 +1,6 @@
 import factory
 from users.models import User
-from cloud_app.models import Folder, File
+from cloud_app.models import File
 
 class UserFactory(factory.django.DjangoModelFactory):
     class Meta:
@@ -14,13 +14,7 @@ class UserFactory(factory.django.DjangoModelFactory):
     is_active = True
     storage_path = ""
 
-class FolderFactory(factory.django.DjangoModelFactory):
-    class Meta:
-        model = Folder
 
-    name = factory.Sequence(lambda n: f"Folder {n}")
-    owner = factory.SubFactory(UserFactory)
-    parent = None
 
 class FileFactory(factory.django.DjangoModelFactory):
     class Meta:

@@ -1,7 +1,8 @@
 import pytest
 from django.core.exceptions import ValidationError
 from django.contrib.auth import get_user_model
-from .factories import UserFactory
+from ..factories import UserFactory
+
 from users.utils.validators import (
     validate_username,
     validate_email,
