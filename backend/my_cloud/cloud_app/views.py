@@ -12,7 +12,7 @@ from .serializers import (
     FileShareSerializer,
     ShareLinkDownloadSerializer
 )
-from utils.file_validators import validate_file_extension
+from .utils.file_validators import validate_file_extension
 import logging
 import os
 

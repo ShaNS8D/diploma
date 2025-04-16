@@ -1,8 +1,6 @@
 import pytest
 from users.models import User, CustomUserManager
 from users.tests.factories import UserFactory
-from factory import Faker
-from factory.django import DjangoModelFactory
 
 
 @pytest.mark.django_db

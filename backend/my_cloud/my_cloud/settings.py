@@ -18,7 +18,6 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
     'corsheaders',
-    'mptt',
 
     'cloud_app.apps.CloudAppConfig',
     'users.apps.UsersConfig',
