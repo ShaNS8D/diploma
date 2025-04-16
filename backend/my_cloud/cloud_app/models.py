@@ -72,7 +72,7 @@ class File(models.Model):
     size = models.PositiveIntegerField(
         _("Размер"),
         validators=[MinValueValidator(1)],
-        help_text=_("Размер файла в байтах Бт")
+        help_text=_("Размер файла в байтах")
     )
 
     upload_date = models.DateTimeField(
