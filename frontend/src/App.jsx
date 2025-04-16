@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { RouterProvider, createBrowserRouter, Outlet } from 'react-router-dom';
 import { Provider, useDispatch } from 'react-redux';
-import { store } from './store';
+import { store } from './features/store';
 import ProtectedRoute from './hoc/ProtectedRoute';
 import ErrorHandler from './components/ErrorHandler';
 import HomePage from './pages/HomePage';
@@ -12,6 +12,7 @@ import AdminPage from './pages/AdminPage';
 import NotFoundPage from './pages/NotFoundPage';
 import Layout from './components/Layout';
 import { checkAuth } from './features/auth/authSlice';
+import './App.css';
 
 const AppWrapper = () => {
   return (
@@ -23,11 +24,9 @@ const AppWrapper = () => {
 
 const App = () => {
   const dispatch = useDispatch();
-
   useEffect(() => {
     dispatch(checkAuth());
   }, [dispatch]);
-
   const router = createBrowserRouter([
     {
       path: '/',

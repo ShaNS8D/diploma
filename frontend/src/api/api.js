@@ -34,7 +34,7 @@ export const authAPI = {
   logout: () => api.post('users/logout/'),
   getUsers: () => api.get('users/'),
   deleteUser: (id) => api.delete(`users/${id}/delete/`),
-  checkAuth: () => api.get('users/check-auth/'), // Новый endpoint для проверки сессии
+  checkAuth: () => api.get('users/check-auth/'),
 };
 
 // File related endpoints

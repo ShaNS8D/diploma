@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { folderAPI } from '../../api';
+import { folderAPI } from '../../api/api';
 import { handleAsyncError } from '../error/errorSlice';
 
 const initialState = {

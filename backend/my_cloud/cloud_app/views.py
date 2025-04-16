@@ -159,8 +159,7 @@ class ShareLinkDownloadView(generics.RetrieveAPIView):
     def retrieve(self, request, *args, **kwargs):
         try:
             instance = self.get_object()
-            instance.update_last_download()
-            
+            instance.update_last_download()            
             response = FileResponse(instance.file.open('rb'), as_attachment=True, filename=instance.original_name)
             response['Content-Length'] = instance.size
             return response
