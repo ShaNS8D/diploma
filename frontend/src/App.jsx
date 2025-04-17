@@ -3,14 +3,14 @@ import { RouterProvider, createBrowserRouter, Outlet } from 'react-router-dom';
 import { Provider, useDispatch } from 'react-redux';
 import { store } from './features/store';
 import ProtectedRoute from './hoc/ProtectedRoute';
-import ErrorHandler from './components/ErrorHandler';
+import ErrorHandler from './hoc/ErrorHandler';
 import HomePage from './pages/HomePage';
 import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
 import FileStoragePage from './pages/FileStoragePage';
 import AdminPage from './pages/AdminPage';
 import NotFoundPage from './pages/NotFoundPage';
-import Layout from './components/Layout';
+import Layout from './components/layout/Layout';
 import { checkAuth } from './features/auth/authSlice';
 import './App.css';
 

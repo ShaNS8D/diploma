@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
-import { logoutUser } from '../features/auth/authSlice';
+import { logoutUser } from '../../features/auth/authSlice';
 import { useDispatch } from 'react-redux';
 import './Layout.css';
 

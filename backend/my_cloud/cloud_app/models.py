@@ -46,3 +46,9 @@ class File(models.Model):
     def update_last_download(self):
         self.last_download = timezone.now()
         self.save(update_fields=['last_download'])
+    
+    def delete(self, *args, **kwargs):
+        if self.file:
+            if os.path.isfile(self.file.path):
+                os.remove(self.file.path) 
+        super().delete(*args, **kwargs)  
