@@ -23,7 +23,7 @@ class FileListSerializer(serializers.ModelSerializer):
 
     def get_download_url(self, obj):
         request = self.context.get('request')
-        return request.build_absolute_uri(f'/api/files/{obj.id}/download/') if request else None
+        return request.build_absolute_uri(f'/api/v1/cloud/{obj.id}/download/') if request else None
 
     def get_file_type(self, obj):
         return os.path.splitext(obj.original_name)[1][1:].lower() if obj.original_name else None
@@ -64,7 +64,7 @@ class FileShareSerializer(serializers.ModelSerializer):
 
     def get_share_url(self, obj):
         request = self.context.get('request')
-        return request.build_absolute_uri(f'/api/files/share/{obj.share_link}/') if request else None
+        return request.build_absolute_uri(f'/api/v1/cloud/share/{obj.share_link}/') if request else None
 
 
 class FileDownloadSerializer(serializers.ModelSerializer):

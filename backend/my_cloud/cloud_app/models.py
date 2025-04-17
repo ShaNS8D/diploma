@@ -10,10 +10,10 @@ class File(models.Model):
     size = models.PositiveIntegerField()
     upload_date = models.DateTimeField(auto_now_add=True)
     last_download = models.DateTimeField(null=True, blank=True)
-    comment = models.TextField(blank=True, null=True, max_length=500)
-    file = models.FileField(upload_to='user_files/%Y/%m/%d/')
+    comment = models.TextField(blank=True, null=True, max_length=500)    
     share_link = models.UUIDField(default=uuid.uuid4, unique=True)
     owner = models.ForeignKey('users.User', on_delete=models.CASCADE)
+    file = models.FileField(upload_to=f'user_owner/%Y/%m/%d/')
 
     class Meta:
         constraints = [

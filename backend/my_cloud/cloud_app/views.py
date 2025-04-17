@@ -1,7 +1,9 @@
 import logging
 from rest_framework import viewsets, permissions, status
+from django.http import FileResponse
 from rest_framework.decorators import action
 from rest_framework.response import Response
+
 from django.shortcuts import get_object_or_404
 from .models import File
 from .serializers import (
@@ -25,8 +27,8 @@ class FileViewSet(viewsets.ModelViewSet):
             return FileUploadSerializer
         elif self.action in ['update', 'partial_update']:
             return FileUpdateSerializer
-        elif self.action == 'download':
-            return FileDownloadSerializer
+        # elif self.action == 'download':
+        #     return FileDownloadSerializer
         elif self.action == 'share':
             return FileShareSerializer
         return FileListSerializer
@@ -62,11 +64,15 @@ class FileViewSet(viewsets.ModelViewSet):
         try:
             file_obj = self.get_object()
             file_obj.update_last_download()            
-            logger.info(f"File {file_obj.id} downloaded by user {request.user.id}")            
-            serializer = self.get_serializer(file_obj)
-            response = Response(serializer.data)
-            response['Content-Disposition'] = f'attachment; filename="{file_obj.original_name}"'
-            return response
+            logger.info(f"File {file_obj.id} downloaded by user {request.user.id}")
+            file_handle = file_obj.file.open('rb')            
+            response = FileResponse(
+                file_handle,
+                content_type='application/octet-stream',
+                as_attachment=True,
+                filename=file_obj.original_name
+            )
+            return response        
         except Exception as e:
             logger.error(f"File download failed: {str(e)}")
             return Response(
@@ -111,11 +117,15 @@ class FileShareDownloadViewSet(viewsets.ViewSet):
             file_obj.update_last_download()
             
             logger.info(f"File {file_obj.id} downloaded via share link")
+
+            file_handle = file_obj.file.open('rb')
+            return FileResponse(
+                file_handle,
+                as_attachment=True,
+                filename=file_obj.original_name,
+                content_type='application/octet-stream'
+            )
             
-            serializer = FileDownloadSerializer(file_obj)
-            response = Response(serializer.data)
-            response['Content-Disposition'] = f'attachment; filename="{file_obj.original_name}"'
-            return response
         except Exception as e:
             logger.error(f"Share link download failed: {str(e)}")
             return Response(
