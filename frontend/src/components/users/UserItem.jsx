@@ -9,7 +9,7 @@ const UserItem = ({ user }) => {
   };
 
   const handleDelete = () => {
-    if (window.confirm(`Are you sure you want to delete user ${user.login}?`)) {
+    if (window.confirm(`Вы уверены, что хотите удалить этого пользователя ${user.login}?`)) {
       dispatch(deleteUser(user.id));
     }
   };

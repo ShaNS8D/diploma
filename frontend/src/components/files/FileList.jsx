@@ -2,16 +2,16 @@ import FileItem from './FileItem';
 
 const FileList = ({ files }) => {
   if (files.length === 0) {
-    return <div className="no-files">No files uploaded yet</div>;
+    return <div className="no-files">Файлы еще не загружены</div>;
   }
 
   return (
     <div className="file-list">
       <div className="file-list-header">
-        <span>Name</span>
-        <span>Size</span>
-        <span>Uploaded</span>
-        <span>Actions</span>
+        <span>Имя</span>
+        <span>Размер</span>
+        <span>Загружено</span>
+        <span>Действия</span>
       </div>
       
       {files.map(file => (

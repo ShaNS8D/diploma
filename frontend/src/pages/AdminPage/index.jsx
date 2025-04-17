@@ -19,12 +19,12 @@ const AdminPage = () => {
   return (
     <div className="admin-page">
       <PageHeader 
-        title="Admin Dashboard" 
-        subtitle="Manage users and system settings" 
+        title="Панель администрирования" 
+        subtitle="Управление пользователями и системными настройками" 
       />
       
       <Card>
-        <h2>Users Management</h2>
+        <h2>Управление пользователями</h2>
         <UserList users={users} />
       </Card>
     </div>

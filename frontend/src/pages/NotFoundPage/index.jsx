@@ -5,12 +5,12 @@ import Card from '../../components/ui/Card';
 const NotFoundPage = () => {
   return (
     <div className="not-found-page">
-      <PageHeader title="404 - Page Not Found" />
+      <PageHeader title="404 - Страница не найдена!" />
       
       <Card>
-        <p>The page you are looking for does not exist.</p>
+        <p>Страница, которую вы ищете, не существует.</p>
         <Link to="/" className="btn primary">
-          Go to Home Page
+          Вернуться на домашнюю страницу
         </Link>
       </Card>
     </div>

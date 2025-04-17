@@ -31,3 +31,5 @@ python manage.py startapp users
 #### Создание БД в postgresql
 #### выполнение настроек в файле settings.py
 
+### Установка необходимых зависимостей при развертывании проекта
+pip install -r requirements.txt

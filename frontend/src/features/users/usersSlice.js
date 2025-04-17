@@ -63,7 +63,7 @@ export const deleteUser = (id) => async (dispatch) => {
 export const toggleAdminStatus = (id, isAdmin) => async (dispatch) => {
   try {
     dispatch(setLoading(true));
-    // Assuming we have an API endpoint for this
+
     // const response = await authAPI.updateUserAdminStatus(id, isAdmin);
     // dispatch(updateUser(response.data));
     // For now, just update locally

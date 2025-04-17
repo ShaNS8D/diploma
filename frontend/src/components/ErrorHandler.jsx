@@ -24,7 +24,7 @@ const ErrorHandler = () => {
 
   if (!error || !showError) return null;
 
-    const getErrorClass = () => {
+  const getErrorClass = () => {
     if (!error.status) return 'error';
     if (error.status >= 500) return 'error-server';
     if (error.status === 401) return 'error-unauthorized';

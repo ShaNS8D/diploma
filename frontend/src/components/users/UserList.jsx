@@ -5,10 +5,10 @@ const UserList = ({ users }) => {
     <div className="user-list">
       <div className="user-list-header">
         <span>Login</span>
-        <span>Full Name</span>
-        <span>Email</span>
-        <span>Admin</span>
-        <span>Actions</span>
+        <span>Полное имя</span>
+        <span>Почта</span>
+        <span>Админ</span>
+        <span>Дейтсвия</span>
       </div>
       
       {users.map(user => (

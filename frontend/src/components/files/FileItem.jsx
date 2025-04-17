@@ -9,7 +9,7 @@ const FileItem = ({ file }) => {
   };
 
   const handleDelete = () => {
-    if (window.confirm('Are you sure you want to delete this file?')) {
+    if (window.confirm('Вы уверены, что хотите удалить этот файл?')) {
       dispatch(deleteFile(file.id));
     }
   };

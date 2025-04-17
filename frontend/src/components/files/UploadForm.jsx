@@ -21,7 +21,7 @@ const UploadForm = ({ onUpload }) => {
   return (
     <form onSubmit={handleSubmit} className="upload-form">
       <div className="form-group">
-        <label>Select File</label>
+        <label>Выберите файл</label>
         <input 
           type="file" 
           onChange={handleFileChange} 
@@ -30,17 +30,17 @@ const UploadForm = ({ onUpload }) => {
       </div>
       
       <div className="form-group">
-        <label>Comment</label>
+        <label>Описание</label>
         <input
           type="text"
           value={comment}
           onChange={(e) => setComment(e.target.value)}
-          placeholder="Optional file description"
+          placeholder="Необязательное описание файла"
         />
       </div>
       
       <button type="submit" disabled={!file}>
-        Upload File
+        Загрузить файл
       </button>
     </form>
   );

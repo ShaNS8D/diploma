@@ -4,7 +4,6 @@ import { handleAsyncError } from '../error/errorSlice';
 
 const initialState = {
   files: [],
-  currentFolderFiles: [],
   loading: false,
   error: null,
   currentFile: null,
@@ -17,9 +16,6 @@ const filesSlice = createSlice({
   reducers: {
     setFiles: (state, action) => {
       state.files = action.payload;
-    },
-    setCurrentFolderFiles: (state, action) => {
-      state.currentFolderFiles = action.payload;
     },
     addFile: (state, action) => {
       state.files.push(action.payload);
@@ -71,26 +67,11 @@ export const fetchFiles = () => async (dispatch) => {
   }
 };
 
-export const fetchFilesInFolder = (folderId) => async (dispatch, getState) => {
-  try {
-    dispatch(setLoading(true));
-    const response = await fileAPI.getFiles({ folder: folderId });
-    dispatch(setCurrentFolderFiles(response.data));
-  } catch (error) {
-    dispatch(handleAsyncError(error));
-  } finally {
-    dispatch(setLoading(false));
-  }
-};
-
 export const uploadFile = (formData) => async (dispatch) => {
   try {
     dispatch(setLoading(true));
     const response = await fileAPI.uploadFile(formData);
     dispatch(addFile(response.data));
-    if (formData.get('folder')) {
-      dispatch(fetchFilesInFolder(formData.get('folder')));
-    }    
     return { success: true };
   } catch (error) {
     dispatch(handleAsyncError(error));
@@ -107,7 +88,7 @@ export const deleteFile = (id) => async (dispatch) => {
     dispatch(removeFile(id));
     return { success: true };
   } catch (error) {
-    dispatch(setError(error.response?.data || error.message));
+    dispatch(handleAsyncError(error.response?.data || error.message));
     return { success: false, error: error.response?.data };
   } finally {
     dispatch(setLoading(false));
@@ -121,7 +102,7 @@ export const renameFile = (id, newName) => async (dispatch) => {
     dispatch(updateFile(response.data));
     return { success: true };
   } catch (error) {
-    dispatch(setError(error.response?.data || error.message));
+    dispatch(handleAsyncError(error.response?.data || error.message));
     return { success: false, error: error.response?.data };
   } finally {
     dispatch(setLoading(false));
@@ -135,7 +116,7 @@ export const updateFileComment = (id, comment) => async (dispatch) => {
     dispatch(updateFile(response.data));
     return { success: true };
   } catch (error) {
-    dispatch(setError(error.response?.data || error.message));
+    dispatch(handleAsyncError(error.response?.data || error.message));
     return { success: false, error: error.response?.data };
   } finally {
     dispatch(setLoading(false));
@@ -149,7 +130,7 @@ export const generatePublicLink = (id) => async (dispatch) => {
     dispatch(setPublicLink({ id, link: response.data.public_link }));
     return { success: true, link: response.data.public_link };
   } catch (error) {
-    dispatch(setError(error.response?.data || error.message));
+    dispatch(handleAsyncError(error.response?.data || error.message));
     return { success: false, error: error.response?.data };
   } finally {
     dispatch(setLoading(false));

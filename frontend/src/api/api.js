@@ -34,32 +34,22 @@ export const authAPI = {
   logout: () => api.post('users/logout/'),
   getUsers: () => api.get('users/'),
   deleteUser: (id) => api.delete(`users/${id}/delete/`),
-  checkAuth: () => api.get('users/check-auth/'),
+  checkAuth: () => api.get('users/check-auth/'),// endpoint для проверки сессии
 };
 
-// File related endpoints
 export const fileAPI = {
-  uploadFile: (formData) => api.post('cloud/files/upload/', formData, {
+  uploadFile: (formData) => api.post('cloud/upload/', formData, {
     headers: {
       'Content-Type': 'multipart/form-data',
     },
   }),
-  getFiles: (params = {}) => api.get('cloud/files/', { params }),
-
-  downloadFile: (id) => api.get(`cloud/files/${id}/download/`, { responseType: 'blob' }),
-  deleteFile: (id) => api.delete(`cloud/files/${id}/delete/`),
-  renameFile: (id, newName) => api.patch(`cloud/files/${id}/rename/`, { new_name: newName }),
-  updateComment: (id, comment) => api.patch(`cloud/files/${id}/comment/`, { comment }),
-  getPublicLink: (id) => api.get(`cloud/files/${id}/public-link/`),
-  downloadByPublicLink: (link) => api.get(`cloud/public/files/${link}/download/`, { responseType: 'blob' }),
-};
-
-// Folder related endpoints
-export const folderAPI = {
-  getFolders: () => api.get('cloud/folders/'),
-  createFolder: (name) => api.post('cloud/folders/', { name }),
-  updateFolder: (id, data) => api.patch(`cloud/folders/${id}/`, data),
-  deleteFolder: (id) => api.delete(`cloud/folders/${id}/`),
+  getFiles: (params = {}) => api.get('cloud/', { params }),
+  downloadFile: (id) => api.get(`cloud/${id}/download/`, { responseType: 'blob' }),
+  deleteFile: (id) => api.delete(`cloud/${id}/delete/`),
+  renameFile: (id, newName) => api.patch(`cloud/${id}/rename/`, { new_name: newName }),
+  updateComment: (id, comment) => api.patch(`cloud/${id}/comment/`, { comment }),
+  getPublicLink: (id) => api.get(`cloud/${id}/public-link/`),
+  downloadByPublicLink: (link) => api.get(`cloud/public/${link}/download/`, { responseType: 'blob' }),
 };
 
 export default api;

@@ -58,7 +58,7 @@ export const registerUser = (userData) => async (dispatch) => {
     }));
     return { success: true };
   } catch (error) {
-    return { success: false, error: error.message || 'Registration failed' };
+    return { success: false, error: error.message || 'Регистрация не удалась' };
   } finally {
     dispatch(setLoading(false));
   }
@@ -74,7 +74,7 @@ export const loginUser = (credentials) => async (dispatch) => {
     }));
     return { success: true };
   } catch (error) {
-    return { success: false, error: error.message || 'Login failed' };
+    return { success: false, error: error.message || 'Вход в систему не удался' };
   } finally {
     dispatch(setLoading(false));
   }

@@ -27,45 +27,33 @@ const RegisterPage = () => {
 
   const validate = () => {
     const newErrors = {};
-    
-    // Login validation
     if (!/^[a-zA-Z][a-zA-Z0-9]{3,19}$/.test(userData.login)) {
-      newErrors.login = 'Login must start with a letter and be 4-20 characters long';
+      newErrors.login = 'Логин должен начинаться с буквы и состоять из 4-20 символов';
     }
-    
-    // Email validation
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(userData.email)) {
-      newErrors.email = 'Please enter a valid email address';
+      newErrors.email = 'Пожалуйста, введите действительный адрес электронной почты';
     }
-    
-    // Password validation
     if (userData.password.length < 6) {
-      newErrors.password = 'Password must be at least 6 characters';
+      newErrors.password = 'Пароль должен содержать не менее 6 символов';
     } else if (!/[A-Z]/.test(userData.password)) {
-      newErrors.password = 'Password must contain at least one uppercase letter';
+      newErrors.password = 'Пароль должен содержать хотя бы одну заглавную букву';
     } else if (!/[0-9]/.test(userData.password)) {
-      newErrors.password = 'Password must contain at least one number';
+      newErrors.password = 'Пароль должен содержать хотя бы одну цифру';
     } else if (!/[^A-Za-z0-9]/.test(userData.password)) {
-      newErrors.password = 'Password must contain at least one special character';
+      newErrors.password = 'Пароль должен содержать хотя бы один специальный символ';
     }
-    
-    // Confirm password
     if (userData.password !== userData.confirmPassword) {
-      newErrors.confirmPassword = 'Passwords do not match';
-    }
-    
+      newErrors.confirmPassword = 'Пароли не совпадают';
+    }    
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    
-    if (!validate()) return;
-    
+    e.preventDefault();    
+    if (!validate()) return;    
     const { confirmPassword, ...registrationData } = userData;
-    const result = await dispatch(registerUser(registrationData));
-    
+    const result = await dispatch(registerUser(registrationData));    
     if (result.error) {
       setErrors({ form: result.error.message });
     } else {
@@ -129,7 +117,7 @@ const RegisterPage = () => {
         </AuthButton>
         
         <div className="auth-footer">
-          Already have an account? <Link to="/login">Login</Link>
+        У вас уже есть учетная запись? <Link to="/login">Войти</Link>
         </div>
       </AuthForm>
     </div>

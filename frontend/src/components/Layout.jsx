@@ -1,9 +1,9 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
-import { AppBar, Toolbar, Button, Typography, Container } from '@mui/material';
 import { logoutUser } from '../features/auth/authSlice';
 import { useDispatch } from 'react-redux';
+import './Layout.css';
 
 const Layout = ({ children }) => {
   const { isAuthenticated, isAdmin } = useSelector((state) => state.auth);
@@ -16,42 +16,42 @@ const Layout = ({ children }) => {
   };
 
   return (
-    <>
-      <AppBar position="static">
-        <Toolbar>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            Cloud Storage
-          </Typography>
-          {isAuthenticated ? (
-            <>
-              <Button color="inherit" component={Link} to="/storage">
-                My Storage
-              </Button>
-              {isAdmin && (
-                <Button color="inherit" component={Link} to="/admin">
-                  Admin
-                </Button>
-              )}
-              <Button color="inherit" onClick={handleLogout}>
-                Logout
-              </Button>
-            </>
-          ) : (
-            <>
-              <Button color="inherit" component={Link} to="/login">
-                Login
-              </Button>
-              <Button color="inherit" component={Link} to="/register">
-                Register
-              </Button>
-            </>
-          )}
-        </Toolbar>
-      </AppBar>
-      <Container maxWidth="lg" sx={{ mt: 4 }}>
+    <div className="layout">
+      <header className="header">
+        <nav className="nav">
+          <h1 className="logo">Облачное хранилище</h1>
+          <div className="nav-links">
+            {isAuthenticated ? (
+              <>
+                <Link to="/storage" className="nav-link">
+                  Мое хранилище
+                </Link>
+                {isAdmin && (
+                  <Link to="/admin" className="nav-link">
+                    Админ
+                  </Link>
+                )}
+                <button onClick={handleLogout} className="nav-button">
+                  Выйти
+                </button>
+              </>
+            ) : (
+              <>
+                <Link to="/login" className="nav-link">
+                  Вход
+                </Link>
+                <Link to="/register" className="nav-link">
+                  Регистрация
+                </Link>
+              </>
+            )}
+          </div>
+        </nav>
+      </header>
+      <main className="main-content">
         {children}
-      </Container>
-    </>
+      </main>
+    </div>
   );
 };
 
