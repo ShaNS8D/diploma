@@ -1,7 +1,7 @@
 import os
 from pathlib import Path
 from config.general_config import DATABASES, SECRET_KEY, DEBUG, ALLOWED_HOSTS
-from config.my_cloud_config import BASE_DIR, MEDIA_URL, MEDIA_ROOT, MAX_FILE_SIZE
+from config.my_cloud_config import BASE_DIR, MEDIA_URL, MEDIA_ROOT, MAX_FILE_SIZE, ALLOWED_FILE_TYPES
 from config.logging_config import LOGGING
 
 
@@ -53,7 +53,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'my_cloud.wsgi.application'
 
-CORS_ALLOW_CREDENTIALS = False
+CORS_ALLOW_CREDENTIALS = True
 CORS_ORIGIN_ALLOW_ALL = True
 CORS_ALLOW_HEADERS = [
     'accept',

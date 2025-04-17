@@ -34,22 +34,20 @@ export const authAPI = {
   logout: () => api.post('users/logout/'),
   getUsers: () => api.get('users/'),
   deleteUser: (id) => api.delete(`users/${id}/delete/`),
-  checkAuth: () => api.get('users/check-auth/'),// endpoint для проверки сессии
+  checkAuth: () => api.get('users/session-check/'),
 };
 
 export const fileAPI = {
-  uploadFile: (formData) => api.post('cloud/upload/', formData, {
+  uploadFile: (formData) => api.post('cloud/files/', formData, {
     headers: {
       'Content-Type': 'multipart/form-data',
     },
   }),
-  getFiles: (params = {}) => api.get('cloud/', { params }),
-  downloadFile: (id) => api.get(`cloud/${id}/download/`, { responseType: 'blob' }),
-  deleteFile: (id) => api.delete(`cloud/${id}/delete/`),
-  renameFile: (id, newName) => api.patch(`cloud/${id}/rename/`, { new_name: newName }),
-  updateComment: (id, comment) => api.patch(`cloud/${id}/comment/`, { comment }),
-  getPublicLink: (id) => api.get(`cloud/${id}/public-link/`),
-  downloadByPublicLink: (link) => api.get(`cloud/public/${link}/download/`, { responseType: 'blob' }),
+  getFiles: (params = {}) => api.get('cloud/files/', { params }),
+  downloadFile: (id) => api.get(`cloud/files/${id}/download/`, { responseType: 'blob' }),
+  deleteFile: (id) => api.delete(`cloud/files/${id}/`),
+  updateFile: (id, data) => api.patch(`cloud/files/${id}/`, data),
+  getPublicLink: (id) => api.get(`cloud/files/${id}/share/`),
 };
 
 export default api;

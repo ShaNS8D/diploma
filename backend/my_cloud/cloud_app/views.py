@@ -1,176 +1,125 @@
-from rest_framework import generics, permissions, status
+import logging
+from rest_framework import viewsets, permissions, status
+from rest_framework.decorators import action
 from rest_framework.response import Response
-from rest_framework.parsers import MultiPartParser, FormParser
 from django.shortcuts import get_object_or_404
-from django.http import FileResponse, Http404
-from django.core.exceptions import ValidationError
 from .models import File
 from .serializers import (
-    FileSerializer,
+    FileListSerializer,
+    FileUploadSerializer,
     FileUpdateSerializer,
-    FileDownloadSerializer,
     FileShareSerializer,
-    ShareLinkDownloadSerializer
+    FileDownloadSerializer
 )
+from users.permissions import IsAdminOrOwner
 from .utils.file_validators import validate_file_extension
-import logging
-import os
 
 logger = logging.getLogger(__name__)
 
-class FileUploadView(generics.CreateAPIView):
+class FileViewSet(viewsets.ModelViewSet):
     queryset = File.objects.all()
-    serializer_class = FileSerializer
-    permission_classes = [permissions.IsAuthenticated]
-    parser_classes = [MultiPartParser, FormParser]
+    permission_classes = [permissions.IsAuthenticated, IsAdminOrOwner]
+
+    def get_serializer_class(self):
+        if self.action == 'create':
+            return FileUploadSerializer
+        elif self.action in ['update', 'partial_update']:
+            return FileUpdateSerializer
+        elif self.action == 'download':
+            return FileDownloadSerializer
+        elif self.action == 'share':
+            return FileShareSerializer
+        return FileListSerializer
+
+    def get_queryset(self):
+        try:
+            queryset = super().get_queryset()
+            if not self.request.user.is_staff:
+                queryset = queryset.filter(owner=self.request.user)
+            
+            user_id = self.request.query_params.get('user_id')
+            if user_id and self.request.user.is_staff:
+                queryset = queryset.filter(owner_id=user_id)
+            
+            logger.info(f"File list retrieved by user {self.request.user.id}")
+            return queryset
+        except Exception as e:
+            logger.error(f"Error getting files: {str(e)}")
+            raise
 
     def perform_create(self, serializer):
         file = serializer.validated_data.get('file')
         try:
             validate_file_extension(file)
             serializer.save(owner=self.request.user)
-        except ValidationError as e:
-            logger.warning(f"User {self.request.user} tried to upload invalid file type: {file.name}")
+            logger.info(f"File uploaded by user {self.request.user.id}")
+        except Exception as e:
+            logger.error(f"File upload failed by user {self.request.user.id}: {str(e)}")
+            raise
+
+    @action(detail=True, methods=['get'])
+    def download(self, request, pk=None):
+        try:
+            file_obj = self.get_object()
+            file_obj.update_last_download()            
+            logger.info(f"File {file_obj.id} downloaded by user {request.user.id}")            
+            serializer = self.get_serializer(file_obj)
+            response = Response(serializer.data)
+            response['Content-Disposition'] = f'attachment; filename="{file_obj.original_name}"'
+            return response
+        except Exception as e:
+            logger.error(f"File download failed: {str(e)}")
             return Response(
-                {'error': str(e)},
+                {"error": "File download failed", "details": str(e)},
+                status=status.HTTP_500_INTERNAL_SERVER_ERROR
+            )
+
+    @action(detail=True, methods=['get'])
+    def share(self, request, pk=None):
+        try:
+            file_obj = self.get_object()
+            serializer = self.get_serializer(file_obj)
+            logger.info(f"Share link accessed for file {file_obj.id} by user {request.user.id}")
+            return Response(serializer.data)
+        except Exception as e:
+            logger.error(f"Share link access failed: {str(e)}")
+            return Response(
+                {"error": "Failed to get share link", "details": str(e)},
                 status=status.HTTP_400_BAD_REQUEST
             )
 
-class FileListView(generics.ListAPIView):
-    serializer_class = FileSerializer
-    permission_classes = [permissions.IsAuthenticated]
-
-    def get_queryset(self):
-        return File.objects.filter(owner=self.request.user).order_by('-upload_date')
-
-class FileDetailView(generics.RetrieveUpdateDestroyAPIView):
-    permission_classes = [permissions.IsAuthenticated]
-
-    def get_queryset(self):
-        return File.objects.filter(owner=self.request.user)
-
-    def get_serializer_class(self):
-        if self.request.method in ['PUT', 'PATCH']:
-            return FileUpdateSerializer
-        return FileSerializer
-
-    def get_object(self):
-        queryset = self.get_queryset()
-        filter_kwargs = {self.lookup_field: self.kwargs[self.lookup_field]}
-        obj = get_object_or_404(queryset, **filter_kwargs)
-        return obj
-
     def destroy(self, request, *args, **kwargs):
         try:
-            instance = self.get_object()
-            self.perform_destroy(instance)
+            file_obj = self.get_object()
+            file_obj.delete()
+            logger.info(f"File {file_obj.id} deleted by user {request.user.id}")
             return Response(status=status.HTTP_204_NO_CONTENT)
-        except Http404:
+        except Exception as e:
+            logger.error(f"File deletion failed: {str(e)}")
             return Response(
-                {'error': 'File not found'},
-                status=status.HTTP_404_NOT_FOUND
+                {"error": "File deletion failed", "details": str(e)},
+                status=status.HTTP_500_INTERNAL_SERVER_ERROR
             )
 
-class FileDownloadView(generics.RetrieveAPIView):
-    serializer_class = FileDownloadSerializer
-    permission_classes = [permissions.IsAuthenticated]
 
-    def get_queryset(self):
-        return File.objects.filter(owner=self.request.user)
+class FileShareDownloadViewSet(viewsets.ViewSet):
+    permission_classes = [permissions.AllowAny]
 
-    def get_object(self):
-        queryset = self.get_queryset()
-        filter_kwargs = {self.lookup_field: self.kwargs[self.lookup_field]}
-        obj = get_object_or_404(queryset, **filter_kwargs)
-        return obj
-
-    def retrieve(self, request, *args, **kwargs):
+    def retrieve(self, request, share_link=None):
         try:
-            instance = self.get_object()
-            instance.update_last_download()
+            file_obj = get_object_or_404(File, share_link=share_link)
+            file_obj.update_last_download()
             
-            response = FileResponse(instance.file.open('rb'), as_attachment=True, filename=instance.original_name)
-            response['Content-Length'] = instance.size
+            logger.info(f"File {file_obj.id} downloaded via share link")
+            
+            serializer = FileDownloadSerializer(file_obj)
+            response = Response(serializer.data)
+            response['Content-Disposition'] = f'attachment; filename="{file_obj.original_name}"'
             return response
-        except Http404:
-            return Response(
-                {'error': 'File not found'},
-                status=status.HTTP_404_NOT_FOUND
-            )
         except Exception as e:
-            logger.error(f"Error downloading file: {str(e)}")
+            logger.error(f"Share link download failed: {str(e)}")
             return Response(
-                {'error': 'Internal server error'},
-                status=status.HTTP_500_INTERNAL_SERVER_ERROR
-            )
-
-class FileShareView(generics.RetrieveAPIView):
-    serializer_class = FileShareSerializer
-    permission_classes = [permissions.IsAuthenticated]
-
-    def get_queryset(self):
-        return File.objects.filter(owner=self.request.user)
-
-    def get_object(self):
-        queryset = self.get_queryset()
-        filter_kwargs = {self.lookup_field: self.kwargs[self.lookup_field]}
-        obj = get_object_or_404(queryset, **filter_kwargs)
-        return obj
-
-class ShareLinkAccessView(generics.RetrieveAPIView):
-    serializer_class = ShareLinkDownloadSerializer
-    lookup_field = 'share_link'
-    lookup_url_kwarg = 'share_link'
-
-    def get_queryset(self):
-        return File.objects.all()
-
-    def get_object(self):
-        queryset = self.get_queryset()
-        filter_kwargs = {self.lookup_field: self.kwargs[self.lookup_field]}
-        obj = get_object_or_404(queryset, **filter_kwargs)
-        return obj
-
-    def retrieve(self, request, *args, **kwargs):
-        try:
-            instance = self.get_object()
-            serializer = self.get_serializer(instance)
-            return Response(serializer.data, status=status.HTTP_200_OK)
-        except Http404:
-            return Response(
-                {'error': 'Shared file not found or link is invalid'},
-                status=status.HTTP_404_NOT_FOUND
-            )
-
-class ShareLinkDownloadView(generics.RetrieveAPIView):
-    serializer_class = ShareLinkDownloadSerializer
-    lookup_field = 'share_link'
-    lookup_url_kwarg = 'share_link'
-
-    def get_queryset(self):
-        return File.objects.all()
-
-    def get_object(self):
-        queryset = self.get_queryset()
-        filter_kwargs = {self.lookup_field: self.kwargs[self.lookup_field]}
-        obj = get_object_or_404(queryset, **filter_kwargs)
-        return obj
-
-    def retrieve(self, request, *args, **kwargs):
-        try:
-            instance = self.get_object()
-            instance.update_last_download()            
-            response = FileResponse(instance.file.open('rb'), as_attachment=True, filename=instance.original_name)
-            response['Content-Length'] = instance.size
-            return response
-        except Http404:
-            return Response(
-                {'error': 'Shared file not found or link is invalid'},
-                status=status.HTTP_404_NOT_FOUND
-            )
-        except Exception as e:
-            logger.error(f"Error downloading shared file: {str(e)}")
-            return Response(
-                {'error': 'Internal server error'},
-                status=status.HTTP_500_INTERNAL_SERVER_ERROR
+                {"error": "File not found or access denied", "details": str(e)},
+                status=status.HTTP_404_NOT_FOUND if isinstance(e, File.DoesNotExist) 
+                else status.HTTP_500_INTERNAL_SERVER_ERROR
             )

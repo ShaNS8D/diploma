@@ -1,22 +1,13 @@
-from django.urls import path
-from .views import (
-    FileUploadView,
-    FileListView,
-    FileDetailView,
-    FileDownloadView,
-    FileShareView,
-    ShareLinkAccessView,
-    ShareLinkDownloadView
-)
+from django.urls import path, include
+from rest_framework.routers import DefaultRouter
+from .views import FileViewSet, FileShareDownloadViewSet
 
-app_name = 'cloud'
+router = DefaultRouter()
+router.register(r'files', FileViewSet, basename='file')
 
 urlpatterns = [
-    path('upload/', FileUploadView.as_view(), name='file-upload'),
-    path('', FileListView.as_view(), name='file-list'),
-    path('<int:pk>/download/', FileDownloadView.as_view(), name='file-download'),
-    path('<int:pk>/', FileDetailView.as_view(), name='file-detail'),
-    path('<int:pk>/share/', FileShareView.as_view(), name='file-share'),
-    path('share/<uuid:share_link>/', ShareLinkAccessView.as_view(), name='share-link-access'),
-    path('share/<uuid:share_link>/download/', ShareLinkDownloadView.as_view(), name='share-link-download'),
+    path('', include(router.urls)),
+    path('files/share/<uuid:share_link>/', 
+         FileShareDownloadViewSet.as_view({'get': 'retrieve'}), 
+         name='file-share-download')
 ]
