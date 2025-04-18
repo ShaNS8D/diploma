@@ -378,3 +378,552 @@ WARNING 2025-04-17 22:03:50,913 log 10972 9864 Not Found: /favicon.ico
 INFO 2025-04-17 22:03:50,914 basehttp 10972 9864 - Broken pipe from ('127.0.0.1', 51126)
 INFO 2025-04-17 22:31:15,543 basehttp 10972 1636 "GET /api/v1/cloud/3/share/ HTTP/1.1" 200 6406
 INFO 2025-04-17 22:31:27,627 basehttp 10972 1636 "GET /api/v1/cloud/share/e03120cf-f3da-40df-910b-acf41678dc62/ HTTP/1.1" 200 47558
+INFO 2025-04-18 08:10:09,308 autoreload 7328 11080 Watching for file changes with StatReloader
+WARNING 2025-04-18 08:10:16,353 log 7328 7980 Not Found: /
+WARNING 2025-04-18 08:10:16,375 basehttp 7328 7980 "GET / HTTP/1.1" 404 2471
+WARNING 2025-04-18 08:10:16,474 log 7328 7980 Not Found: /favicon.ico
+INFO 2025-04-18 08:10:16,475 basehttp 7328 7980 - Broken pipe from ('127.0.0.1', 51348)
+INFO 2025-04-18 08:10:39,806 basehttp 7328 8032 "GET /api/v1/cloud/ HTTP/1.1" 200 9639
+INFO 2025-04-18 08:10:39,998 basehttp 7328 8032 - Broken pipe from ('127.0.0.1', 51354)
+INFO 2025-04-18 08:10:40,006 basehttp 7328 4012 - Broken pipe from ('127.0.0.1', 51356)
+INFO 2025-04-18 08:10:40,010 basehttp 7328 6412 - Broken pipe from ('127.0.0.1', 51357)
+INFO 2025-04-18 08:10:40,022 basehttp 7328 5248 - Broken pipe from ('127.0.0.1', 51358)
+INFO 2025-04-18 08:12:10,099 autoreload 3008 4512 Watching for file changes with StatReloader
+INFO 2025-04-18 08:12:19,650 basehttp 3008 10516 "GET /api/v1/cloud/ HTTP/1.1" 200 9639
+WARNING 2025-04-18 08:12:19,780 log 3008 10516 Not Found: /favicon.ico
+INFO 2025-04-18 08:12:19,781 basehttp 3008 10516 - Broken pipe from ('127.0.0.1', 51378)
+INFO 2025-04-18 08:12:33,910 basehttp 3008 10448 "POST /api/v1/cloud/ HTTP/1.1" 201 9085
+INFO 2025-04-18 08:12:40,781 basehttp 3008 10448 "GET /api/v1/cloud/ HTTP/1.1" 200 10606
+WARNING 2025-04-18 08:12:40,856 log 3008 10448 Not Found: /favicon.ico
+INFO 2025-04-18 08:12:40,857 basehttp 3008 10448 - Broken pipe from ('127.0.0.1', 51385)
+INFO 2025-04-18 08:12:49,873 basehttp 3008 10980 "GET /api/v1/cloud/4/download/ HTTP/1.1" 200 43411
+INFO 2025-04-18 08:18:19,485 basehttp 3008 9856 "OPTIONS /api/v1/cloud/ HTTP/1.1" 200 13884
+INFO 2025-04-18 08:18:53,382 basehttp 3008 9856 "GET /api/v1/cloud/5 HTTP/1.1" 301 0
+WARNING 2025-04-18 08:18:53,496 log 3008 10684 Not Found: /api/v1/cloud/5/
+WARNING 2025-04-18 08:18:53,497 basehttp 3008 10684 "GET /api/v1/cloud/5/ HTTP/1.1" 404 10752
+WARNING 2025-04-18 08:18:53,618 log 3008 10684 Not Found: /favicon.ico
+INFO 2025-04-18 08:18:53,619 basehttp 3008 10684 - Broken pipe from ('127.0.0.1', 51426)
+WARNING 2025-04-18 08:19:00,315 log 3008 2768 Not Found: /api/v1/cloud/5/
+WARNING 2025-04-18 08:19:00,316 basehttp 3008 2768 "GET /api/v1/cloud/5/ HTTP/1.1" 404 10752
+WARNING 2025-04-18 08:19:00,396 log 3008 2768 Not Found: /favicon.ico
+INFO 2025-04-18 08:19:00,397 basehttp 3008 2768 - Broken pipe from ('127.0.0.1', 51430)
+INFO 2025-04-18 08:19:08,001 basehttp 3008 9920 "GET /api/v1/cloud/4/ HTTP/1.1" 200 11644
+WARNING 2025-04-18 08:19:08,076 log 3008 9920 Not Found: /favicon.ico
+INFO 2025-04-18 08:19:08,077 basehttp 3008 9920 - Broken pipe from ('127.0.0.1', 51432)
+INFO 2025-04-18 08:19:19,088 basehttp 3008 9532 "DELETE /api/v1/cloud/4/ HTTP/1.1" 200 10683
+WARNING 2025-04-18 08:19:23,979 log 3008 9532 Not Found: /api/v1/cloud/4/
+WARNING 2025-04-18 08:19:23,980 basehttp 3008 9532 "GET /api/v1/cloud/4/ HTTP/1.1" 404 10752
+WARNING 2025-04-18 08:19:24,047 log 3008 9532 Not Found: /favicon.ico
+INFO 2025-04-18 08:19:24,048 basehttp 3008 9532 - Broken pipe from ('127.0.0.1', 51434)
+INFO 2025-04-18 08:20:11,297 autoreload 3008 4512 D:\diploma\backend\my_cloud\cloud_app\views.py changed, reloading.
+INFO 2025-04-18 08:20:11,862 autoreload 7948 9764 Watching for file changes with StatReloader
+INFO 2025-04-18 08:20:23,975 autoreload 7948 9764 D:\diploma\backend\my_cloud\cloud_app\views.py changed, reloading.
+INFO 2025-04-18 08:20:24,549 autoreload 10344 10160 Watching for file changes with StatReloader
+INFO 2025-04-18 08:20:37,722 autoreload 10344 10160 D:\diploma\backend\my_cloud\cloud_app\views.py changed, reloading.
+INFO 2025-04-18 08:20:38,279 autoreload 8912 9616 Watching for file changes with StatReloader
+INFO 2025-04-18 08:20:39,876 autoreload 8912 9616 D:\diploma\backend\my_cloud\cloud_app\views.py changed, reloading.
+INFO 2025-04-18 08:20:40,404 autoreload 10268 8288 Watching for file changes with StatReloader
+INFO 2025-04-18 08:20:46,204 autoreload 10268 8288 D:\diploma\backend\my_cloud\cloud_app\views.py changed, reloading.
+INFO 2025-04-18 08:20:46,772 autoreload 10012 10736 Watching for file changes with StatReloader
+INFO 2025-04-18 08:20:49,405 autoreload 10012 10736 D:\diploma\backend\my_cloud\cloud_app\views.py changed, reloading.
+INFO 2025-04-18 08:20:49,922 autoreload 10972 10992 Watching for file changes with StatReloader
+INFO 2025-04-18 08:21:07,179 basehttp 10972 10276 "GET /api/v1/cloud/ HTTP/1.1" 200 9639
+INFO 2025-04-18 08:21:24,351 basehttp 10972 10276 "POST /api/v1/cloud/ HTTP/1.1" 201 9163
+WARNING 2025-04-18 08:21:24,512 log 10972 10276 Not Found: /favicon.ico
+INFO 2025-04-18 08:21:24,513 basehttp 10972 10276 - Broken pipe from ('127.0.0.1', 51468)
+INFO 2025-04-18 08:21:42,313 basehttp 10972 11068 "GET /api/v1/cloud/5/ HTTP/1.1" 200 11639
+WARNING 2025-04-18 08:21:42,390 log 10972 11068 Not Found: /favicon.ico
+INFO 2025-04-18 08:21:42,391 basehttp 10972 11068 - Broken pipe from ('127.0.0.1', 51474)
+INFO 2025-04-18 08:22:13,083 basehttp 10972 9188 "DELETE /api/v1/cloud/5/ HTTP/1.1" 200 10683
+INFO 2025-04-18 08:22:29,670 autoreload 10972 10992 D:\diploma\backend\my_cloud\cloud_app\views.py changed, reloading.
+INFO 2025-04-18 08:22:30,263 autoreload 2696 10788 Watching for file changes with StatReloader
+INFO 2025-04-18 08:22:35,573 basehttp 2696 9824 "GET /api/v1/cloud/ HTTP/1.1" 200 9639
+WARNING 2025-04-18 08:22:35,653 log 2696 9824 Not Found: /favicon.ico
+INFO 2025-04-18 08:22:35,654 basehttp 2696 9824 - Broken pipe from ('127.0.0.1', 51484)
+INFO 2025-04-18 08:23:21,560 autoreload 2696 10788 D:\diploma\backend\my_cloud\cloud_app\views.py changed, reloading.
+INFO 2025-04-18 08:23:22,147 autoreload 11184 3120 Watching for file changes with StatReloader
+INFO 2025-04-18 08:23:23,735 autoreload 11184 3120 D:\diploma\backend\my_cloud\cloud_app\views.py changed, reloading.
+INFO 2025-04-18 08:23:24,257 autoreload 11132 10760 Watching for file changes with StatReloader
+INFO 2025-04-18 08:23:41,615 autoreload 11132 10760 D:\diploma\backend\my_cloud\cloud_app\views.py changed, reloading.
+INFO 2025-04-18 08:23:42,186 autoreload 9788 10596 Watching for file changes with StatReloader
+INFO 2025-04-18 08:23:53,244 autoreload 9788 10596 D:\diploma\backend\my_cloud\cloud_app\views.py changed, reloading.
+INFO 2025-04-18 08:23:53,819 autoreload 10692 11184 Watching for file changes with StatReloader
+INFO 2025-04-18 08:24:10,492 basehttp 10692 11056 "POST /api/v1/cloud/ HTTP/1.1" 201 8923
+WARNING 2025-04-18 08:24:10,641 log 10692 11056 Not Found: /favicon.ico
+INFO 2025-04-18 08:24:10,642 basehttp 10692 11056 - Broken pipe from ('127.0.0.1', 51509)
+INFO 2025-04-18 08:25:25,049 autoreload 10692 11184 D:\diploma\backend\my_cloud\cloud_app\views.py changed, reloading.
+INFO 2025-04-18 08:25:25,612 autoreload 10536 10824 Watching for file changes with StatReloader
+INFO 2025-04-18 08:25:31,407 autoreload 10536 10824 D:\diploma\backend\my_cloud\cloud_app\views.py changed, reloading.
+INFO 2025-04-18 08:25:31,973 autoreload 10916 8236 Watching for file changes with StatReloader
+INFO 2025-04-18 08:25:38,906 basehttp 10916 9428 "GET /api/v1/cloud/ HTTP/1.1" 200 10592
+INFO 2025-04-18 08:25:44,866 basehttp 10916 9428 "GET /api/v1/cloud/6 HTTP/1.1" 301 0
+INFO 2025-04-18 08:25:44,949 basehttp 10916 10676 "GET /api/v1/cloud/6/ HTTP/1.1" 200 11567
+WARNING 2025-04-18 08:25:45,030 log 10916 10676 Not Found: /favicon.ico
+INFO 2025-04-18 08:25:45,030 basehttp 10916 10676 - Broken pipe from ('127.0.0.1', 51536)
+INFO 2025-04-18 08:26:07,674 basehttp 10916 10472 "DELETE /api/v1/cloud/6/ HTTP/1.1" 200 10683
+INFO 2025-04-18 08:26:34,078 autoreload 10916 8236 D:\diploma\backend\my_cloud\cloud_app\views.py changed, reloading.
+INFO 2025-04-18 08:26:34,639 autoreload 10256 10480 Watching for file changes with StatReloader
+INFO 2025-04-18 08:26:42,518 autoreload 10256 10480 D:\diploma\backend\my_cloud\cloud_app\views.py changed, reloading.
+INFO 2025-04-18 08:26:43,089 autoreload 9428 10680 Watching for file changes with StatReloader
+INFO 2025-04-18 08:26:45,739 autoreload 9428 10680 D:\diploma\backend\my_cloud\cloud_app\views.py changed, reloading.
+INFO 2025-04-18 08:26:46,306 autoreload 7976 10752 Watching for file changes with StatReloader
+INFO 2025-04-18 08:26:52,082 autoreload 7976 10752 D:\diploma\backend\my_cloud\cloud_app\views.py changed, reloading.
+INFO 2025-04-18 08:26:52,655 autoreload 10504 9504 Watching for file changes with StatReloader
+INFO 2025-04-18 08:27:00,586 autoreload 10504 9504 D:\diploma\backend\my_cloud\cloud_app\views.py changed, reloading.
+INFO 2025-04-18 08:27:01,159 autoreload 10428 9928 Watching for file changes with StatReloader
+INFO 2025-04-18 08:27:11,220 basehttp 10428 10560 "GET /api/v1/cloud/ HTTP/1.1" 200 9639
+WARNING 2025-04-18 08:27:11,358 log 10428 10560 Not Found: /favicon.ico
+INFO 2025-04-18 08:27:11,359 basehttp 10428 10560 - Broken pipe from ('127.0.0.1', 51566)
+INFO 2025-04-18 08:27:26,788 basehttp 10428 7788 "POST /api/v1/cloud/ HTTP/1.1" 201 8980
+INFO 2025-04-18 08:27:33,105 basehttp 10428 7788 "GET /api/v1/cloud/7 HTTP/1.1" 301 0
+INFO 2025-04-18 08:27:33,188 basehttp 10428 6408 "GET /api/v1/cloud/7/ HTTP/1.1" 200 11576
+WARNING 2025-04-18 08:27:33,254 log 10428 6408 Not Found: /favicon.ico
+INFO 2025-04-18 08:27:33,255 basehttp 10428 6408 - Broken pipe from ('127.0.0.1', 51575)
+INFO 2025-04-18 08:27:39,285 basehttp 10428 10964 "DELETE /api/v1/cloud/7/ HTTP/1.1" 200 10683
+INFO 2025-04-18 08:28:11,456 basehttp 10428 10964 "GET /api/v1/cloud/ HTTP/1.1" 200 9639
+WARNING 2025-04-18 08:28:11,530 log 10428 10964 Not Found: /favicon.ico
+INFO 2025-04-18 08:28:11,531 basehttp 10428 10964 - Broken pipe from ('127.0.0.1', 51577)
+WARNING 2025-04-18 08:28:13,267 log 10428 6408 Bad Request: /api/v1/cloud/
+WARNING 2025-04-18 08:28:13,268 basehttp 10428 6408 "POST /api/v1/cloud/ HTTP/1.1" 400 8767
+INFO 2025-04-18 08:28:42,641 basehttp 10428 6408 "POST /api/v1/cloud/ HTTP/1.1" 201 8914
+INFO 2025-04-18 08:28:47,827 basehttp 10428 6408 "GET /api/v1/cloud/ HTTP/1.1" 200 10589
+WARNING 2025-04-18 08:28:47,895 log 10428 6408 Not Found: /favicon.ico
+INFO 2025-04-18 08:28:47,896 basehttp 10428 6408 - Broken pipe from ('127.0.0.1', 51584)
+INFO 2025-04-18 08:28:54,401 basehttp 10428 10044 "GET /api/v1/cloud/8 HTTP/1.1" 301 0
+INFO 2025-04-18 08:28:54,495 basehttp 10428 11052 "GET /api/v1/cloud/8/ HTTP/1.1" 200 11558
+WARNING 2025-04-18 08:28:54,561 log 10428 11052 Not Found: /favicon.ico
+INFO 2025-04-18 08:28:54,562 basehttp 10428 11052 - Broken pipe from ('127.0.0.1', 51590)
+INFO 2025-04-18 08:29:06,691 autoreload 10428 9928 D:\diploma\backend\my_cloud\cloud_app\views.py changed, reloading.
+INFO 2025-04-18 08:29:07,291 autoreload 9492 10132 Watching for file changes with StatReloader
+INFO 2025-04-18 08:29:14,264 basehttp 9492 10444 "DELETE /api/v1/cloud/8/ HTTP/1.1" 200 10683
+INFO 2025-04-18 08:29:48,050 autoreload 9492 10132 D:\diploma\backend\my_cloud\cloud_app\views.py changed, reloading.
+INFO 2025-04-18 08:29:48,665 autoreload 10844 6412 Watching for file changes with StatReloader
+INFO 2025-04-18 08:29:52,336 autoreload 10844 6412 D:\diploma\backend\my_cloud\cloud_app\views.py changed, reloading.
+INFO 2025-04-18 08:29:52,856 autoreload 10800 10652 Watching for file changes with StatReloader
+INFO 2025-04-18 08:30:09,158 autoreload 10800 10652 D:\diploma\backend\my_cloud\cloud_app\views.py changed, reloading.
+INFO 2025-04-18 08:30:09,715 autoreload 8808 9676 Watching for file changes with StatReloader
+INFO 2025-04-18 08:30:11,286 autoreload 8808 9676 D:\diploma\backend\my_cloud\cloud_app\views.py changed, reloading.
+INFO 2025-04-18 08:30:11,821 autoreload 11132 10820 Watching for file changes with StatReloader
+INFO 2025-04-18 08:30:16,558 autoreload 11132 10820 D:\diploma\backend\my_cloud\cloud_app\views.py changed, reloading.
+INFO 2025-04-18 08:30:17,119 autoreload 9856 11036 Watching for file changes with StatReloader
+INFO 2025-04-18 08:30:32,008 basehttp 9856 10764 "GET /api/v1/cloud/ HTTP/1.1" 200 9639
+WARNING 2025-04-18 08:30:32,135 log 9856 10764 Not Found: /favicon.ico
+INFO 2025-04-18 08:30:32,135 basehttp 9856 10764 - Broken pipe from ('127.0.0.1', 51618)
+INFO 2025-04-18 08:30:48,451 basehttp 9856 11228 "POST /api/v1/cloud/ HTTP/1.1" 201 8938
+INFO 2025-04-18 08:30:51,096 basehttp 9856 11228 "GET /api/v1/cloud/ HTTP/1.1" 200 10598
+WARNING 2025-04-18 08:30:51,165 log 9856 11228 Not Found: /favicon.ico
+INFO 2025-04-18 08:30:51,165 basehttp 9856 11228 - Broken pipe from ('127.0.0.1', 51623)
+INFO 2025-04-18 08:30:57,602 basehttp 9856 9404 "GET /api/v1/cloud/9 HTTP/1.1" 301 0
+INFO 2025-04-18 08:30:57,700 basehttp 9856 3120 "GET /api/v1/cloud/9/ HTTP/1.1" 200 11583
+INFO 2025-04-18 08:31:01,712 basehttp 9856 3120 "GET /api/v1/cloud/9/download/ HTTP/1.1" 200 132446
+INFO 2025-04-18 08:31:11,401 basehttp 9856 3120 "DELETE /api/v1/cloud/9/ HTTP/1.1" 200 10683
+INFO 2025-04-18 08:32:30,497 autoreload 9856 11036 D:\diploma\backend\my_cloud\cloud_app\views.py changed, reloading.
+INFO 2025-04-18 08:32:31,062 autoreload 9800 9364 Watching for file changes with StatReloader
+INFO 2025-04-18 08:32:33,734 autoreload 9800 9364 D:\diploma\backend\my_cloud\cloud_app\views.py changed, reloading.
+INFO 2025-04-18 08:32:34,259 autoreload 408 10652 Watching for file changes with StatReloader
+INFO 2025-04-18 08:32:35,831 autoreload 408 10652 D:\diploma\backend\my_cloud\cloud_app\views.py changed, reloading.
+INFO 2025-04-18 08:32:36,351 autoreload 10972 9228 Watching for file changes with StatReloader
+INFO 2025-04-18 08:32:47,389 autoreload 10972 9228 D:\diploma\backend\my_cloud\cloud_app\views.py changed, reloading.
+INFO 2025-04-18 08:32:47,968 autoreload 6576 10540 Watching for file changes with StatReloader
+INFO 2025-04-18 08:32:52,519 basehttp 6576 348 "GET /api/v1/cloud/ HTTP/1.1" 200 9639
+WARNING 2025-04-18 08:32:52,658 log 6576 348 Not Found: /favicon.ico
+INFO 2025-04-18 08:32:52,659 basehttp 6576 348 - Broken pipe from ('127.0.0.1', 51655)
+INFO 2025-04-18 08:33:10,872 basehttp 6576 9308 "POST /api/v1/cloud/ HTTP/1.1" 201 8962
+WARNING 2025-04-18 08:33:10,953 log 6576 9308 Not Found: /favicon.ico
+INFO 2025-04-18 08:33:10,954 basehttp 6576 9308 - Broken pipe from ('127.0.0.1', 51664)
+INFO 2025-04-18 08:33:13,475 basehttp 6576 10700 "GET /api/v1/cloud/ HTTP/1.1" 200 10610
+INFO 2025-04-18 08:33:23,506 basehttp 6576 10700 "GET /api/v1/cloud/10 HTTP/1.1" 301 0
+INFO 2025-04-18 08:33:23,600 basehttp 6576 10044 "GET /api/v1/cloud/10/ HTTP/1.1" 200 11622
+INFO 2025-04-18 08:33:29,655 basehttp 6576 10044 "DELETE /api/v1/cloud/10/ HTTP/1.1" 200 10694
+INFO 2025-04-18 08:36:17,172 autoreload 6576 10540 D:\diploma\backend\my_cloud\cloud_app\views.py changed, reloading.
+INFO 2025-04-18 08:36:17,725 autoreload 10012 10464 Watching for file changes with StatReloader
+INFO 2025-04-18 08:36:26,687 autoreload 10012 10464 D:\diploma\backend\my_cloud\cloud_app\views.py changed, reloading.
+INFO 2025-04-18 08:36:27,239 autoreload 7976 10668 Watching for file changes with StatReloader
+INFO 2025-04-18 08:36:29,912 autoreload 7976 10668 D:\diploma\backend\my_cloud\cloud_app\views.py changed, reloading.
+INFO 2025-04-18 08:36:30,435 autoreload 6404 7788 Watching for file changes with StatReloader
+INFO 2025-04-18 08:36:33,057 autoreload 6404 7788 D:\diploma\backend\my_cloud\cloud_app\views.py changed, reloading.
+INFO 2025-04-18 08:36:33,575 autoreload 11148 10764 Watching for file changes with StatReloader
+INFO 2025-04-18 08:36:40,400 autoreload 11148 10764 D:\diploma\backend\my_cloud\cloud_app\views.py changed, reloading.
+INFO 2025-04-18 08:36:40,940 autoreload 9228 10420 Watching for file changes with StatReloader
+INFO 2025-04-18 08:37:06,702 autoreload 9228 10420 D:\diploma\backend\my_cloud\cloud_app\views.py changed, reloading.
+INFO 2025-04-18 08:37:07,280 autoreload 10540 8924 Watching for file changes with StatReloader
+INFO 2025-04-18 08:37:09,706 autoreload 10540 8924 D:\diploma\backend\my_cloud\cloud_app\views.py changed, reloading.
+INFO 2025-04-18 08:37:10,234 autoreload 4476 6648 Watching for file changes with StatReloader
+INFO 2025-04-18 08:37:34,150 basehttp 4476 9496 "GET /api/v1/cloud/ HTTP/1.1" 200 9639
+INFO 2025-04-18 08:37:45,175 basehttp 4476 9496 "POST /api/v1/cloud/ HTTP/1.1" 201 8935
+WARNING 2025-04-18 08:37:45,247 log 4476 9496 Not Found: /favicon.ico
+INFO 2025-04-18 08:37:45,248 basehttp 4476 9496 - Broken pipe from ('127.0.0.1', 51714)
+INFO 2025-04-18 08:37:47,417 basehttp 4476 4028 "GET /api/v1/cloud/ HTTP/1.1" 200 10601
+INFO 2025-04-18 08:37:52,355 basehttp 4476 4028 "GET /api/v1/cloud/11 HTTP/1.1" 301 0
+INFO 2025-04-18 08:37:52,453 basehttp 4476 10716 "GET /api/v1/cloud/11/ HTTP/1.1" 200 11595
+INFO 2025-04-18 08:38:08,777 basehttp 4476 10716 "DELETE /api/v1/cloud/11/ HTTP/1.1" 200 10694
+INFO 2025-04-18 09:03:42,664 basehttp 4476 10268 "GET /api/v1/cloud/ HTTP/1.1" 200 9639
+INFO 2025-04-18 09:03:52,009 basehttp 4476 10268 "POST /api/v1/cloud/ HTTP/1.1" 201 8926
+WARNING 2025-04-18 09:03:52,077 log 4476 10268 Not Found: /favicon.ico
+INFO 2025-04-18 09:03:52,078 basehttp 4476 10268 - Broken pipe from ('127.0.0.1', 51894)
+ERROR 2025-04-18 09:04:00,326 log 4476 11180 Internal Server Error: /api/v1/cloud/
+ERROR 2025-04-18 09:04:00,326 basehttp 4476 11180 "POST /api/v1/cloud/ HTTP/1.1" 500 8752
+INFO 2025-04-18 09:04:16,632 basehttp 4476 11180 "POST /api/v1/cloud/ HTTP/1.1" 201 8995
+WARNING 2025-04-18 09:04:16,709 log 4476 11180 Not Found: /favicon.ico
+INFO 2025-04-18 09:04:16,710 basehttp 4476 11180 - Broken pipe from ('127.0.0.1', 51899)
+INFO 2025-04-18 09:04:22,178 basehttp 4476 10160 "GET /api/v1/cloud/ HTTP/1.1" 200 11552
+WARNING 2025-04-18 09:04:22,263 log 4476 10160 Not Found: /favicon.ico
+INFO 2025-04-18 09:04:22,264 basehttp 4476 10160 - Broken pipe from ('127.0.0.1', 51903)
+INFO 2025-04-18 09:04:33,869 autoreload 4476 6648 D:\diploma\backend\my_cloud\cloud_app\views.py changed, reloading.
+INFO 2025-04-18 09:04:34,437 autoreload 11084 9788 Watching for file changes with StatReloader
+INFO 2025-04-18 09:04:40,214 autoreload 11084 9788 D:\diploma\backend\my_cloud\cloud_app\views.py changed, reloading.
+INFO 2025-04-18 09:04:40,782 autoreload 10736 10312 Watching for file changes with StatReloader
+INFO 2025-04-18 09:04:42,337 autoreload 10736 10312 D:\diploma\backend\my_cloud\cloud_app\views.py changed, reloading.
+INFO 2025-04-18 09:04:42,876 autoreload 10488 9572 Watching for file changes with StatReloader
+INFO 2025-04-18 09:05:01,215 basehttp 10488 10588 "GET /api/v1/cloud/ HTTP/1.1" 200 11552
+INFO 2025-04-18 09:05:01,319 basehttp 10488 10588 - Broken pipe from ('127.0.0.1', 51917)
+INFO 2025-04-18 09:05:13,183 basehttp 10488 1984 "GET /api/v1/cloud/12 HTTP/1.1" 301 0
+INFO 2025-04-18 09:05:13,281 basehttp 10488 10684 "GET /api/v1/cloud/12/ HTTP/1.1" 200 11572
+INFO 2025-04-18 09:05:16,359 basehttp 10488 10684 "DELETE /api/v1/cloud/12/ HTTP/1.1" 200 10694
+INFO 2025-04-18 09:05:30,102 basehttp 10488 10684 "GET /api/v1/cloud/ HTTP/1.1" 200 10599
+WARNING 2025-04-18 09:05:30,170 log 10488 10684 Not Found: /favicon.ico
+INFO 2025-04-18 09:05:30,171 basehttp 10488 10684 - Broken pipe from ('127.0.0.1', 51921)
+INFO 2025-04-18 09:05:38,452 basehttp 10488 10336 "GET /api/v1/cloud/13 HTTP/1.1" 301 0
+INFO 2025-04-18 09:05:38,550 basehttp 10488 9552 "GET /api/v1/cloud/13/ HTTP/1.1" 200 11593
+WARNING 2025-04-18 09:05:38,621 log 10488 9552 Not Found: /favicon.ico
+INFO 2025-04-18 09:05:38,622 basehttp 10488 9552 - Broken pipe from ('127.0.0.1', 51927)
+INFO 2025-04-18 09:05:41,063 basehttp 10488 9880 "DELETE /api/v1/cloud/13/ HTTP/1.1" 200 10694
+INFO 2025-04-18 09:06:45,742 autoreload 10488 9572 D:\diploma\backend\my_cloud\cloud_app\views.py changed, reloading.
+INFO 2025-04-18 09:06:46,307 autoreload 9716 10840 Watching for file changes with StatReloader
+INFO 2025-04-18 09:07:00,533 autoreload 9716 10840 D:\diploma\backend\my_cloud\cloud_app\views.py changed, reloading.
+INFO 2025-04-18 09:07:01,086 autoreload 10736 10312 Watching for file changes with StatReloader
+INFO 2025-04-18 09:07:17,435 autoreload 10736 10312 D:\diploma\backend\my_cloud\cloud_app\views.py changed, reloading.
+INFO 2025-04-18 09:07:18,042 autoreload 10864 10668 Watching for file changes with StatReloader
+INFO 2025-04-18 09:07:32,255 autoreload 10864 10668 D:\diploma\backend\my_cloud\cloud_app\views.py changed, reloading.
+INFO 2025-04-18 09:07:32,814 autoreload 492 9232 Watching for file changes with StatReloader
+INFO 2025-04-18 09:07:43,855 autoreload 492 9232 D:\diploma\backend\my_cloud\cloud_app\views.py changed, reloading.
+INFO 2025-04-18 09:07:44,415 autoreload 824 10312 Watching for file changes with StatReloader
+INFO 2025-04-18 09:07:50,219 autoreload 824 10312 D:\diploma\backend\my_cloud\cloud_app\views.py changed, reloading.
+INFO 2025-04-18 09:07:50,775 autoreload 6188 9912 Watching for file changes with StatReloader
+INFO 2025-04-18 09:07:56,585 autoreload 6188 9912 D:\diploma\backend\my_cloud\cloud_app\views.py changed, reloading.
+INFO 2025-04-18 09:07:57,147 autoreload 11064 9576 Watching for file changes with StatReloader
+INFO 2025-04-18 09:08:22,911 autoreload 11064 9576 D:\diploma\backend\my_cloud\cloud_app\views.py changed, reloading.
+INFO 2025-04-18 09:08:23,463 autoreload 10736 10816 Watching for file changes with StatReloader
+INFO 2025-04-18 09:08:57,625 autoreload 10736 10816 D:\diploma\backend\my_cloud\cloud_app\views.py changed, reloading.
+INFO 2025-04-18 09:08:58,208 autoreload 9436 10740 Watching for file changes with StatReloader
+INFO 2025-04-18 09:09:02,973 autoreload 9436 10740 D:\diploma\backend\my_cloud\cloud_app\views.py changed, reloading.
+INFO 2025-04-18 09:09:03,549 autoreload 10572 8500 Watching for file changes with StatReloader
+INFO 2025-04-18 09:09:07,251 autoreload 10572 8500 D:\diploma\backend\my_cloud\cloud_app\views.py changed, reloading.
+INFO 2025-04-18 09:09:07,773 autoreload 11216 10936 Watching for file changes with StatReloader
+INFO 2025-04-18 09:09:10,395 autoreload 11216 10936 D:\diploma\backend\my_cloud\cloud_app\views.py changed, reloading.
+INFO 2025-04-18 09:09:10,931 autoreload 6648 11176 Watching for file changes with StatReloader
+INFO 2025-04-18 09:09:38,778 autoreload 6648 11176 D:\diploma\backend\my_cloud\cloud_app\views.py changed, reloading.
+INFO 2025-04-18 09:09:39,381 autoreload 9872 11224 Watching for file changes with StatReloader
+INFO 2025-04-18 09:09:52,539 autoreload 9872 11224 D:\diploma\backend\my_cloud\cloud_app\views.py changed, reloading.
+INFO 2025-04-18 09:09:53,091 autoreload 9212 10164 Watching for file changes with StatReloader
+INFO 2025-04-18 09:10:06,261 autoreload 9212 10164 D:\diploma\backend\my_cloud\cloud_app\views.py changed, reloading.
+INFO 2025-04-18 09:10:06,840 autoreload 6164 5200 Watching for file changes with StatReloader
+INFO 2025-04-18 09:10:08,430 autoreload 6164 5200 D:\diploma\backend\my_cloud\cloud_app\views.py changed, reloading.
+INFO 2025-04-18 09:10:08,965 autoreload 1836 10132 Watching for file changes with StatReloader
+INFO 2025-04-18 09:10:18,984 autoreload 1836 10132 D:\diploma\backend\my_cloud\cloud_app\views.py changed, reloading.
+INFO 2025-04-18 09:10:19,535 autoreload 9564 2816 Watching for file changes with StatReloader
+INFO 2025-04-18 09:10:36,912 autoreload 9564 2816 D:\diploma\backend\my_cloud\cloud_app\views.py changed, reloading.
+INFO 2025-04-18 09:10:37,462 autoreload 2304 10164 Watching for file changes with StatReloader
+INFO 2025-04-18 09:11:04,272 autoreload 2304 10164 D:\diploma\backend\my_cloud\cloud_app\views.py changed, reloading.
+INFO 2025-04-18 09:11:04,825 autoreload 9272 10440 Watching for file changes with StatReloader
+INFO 2025-04-18 09:11:18,035 autoreload 9272 10440 D:\diploma\backend\my_cloud\cloud_app\views.py changed, reloading.
+INFO 2025-04-18 09:11:18,580 autoreload 5200 10900 Watching for file changes with StatReloader
+INFO 2025-04-18 09:11:38,034 autoreload 5200 10900 D:\diploma\backend\my_cloud\cloud_app\views.py changed, reloading.
+INFO 2025-04-18 09:11:38,581 autoreload 9716 1984 Watching for file changes with StatReloader
+INFO 2025-04-18 09:11:57,020 autoreload 9716 1984 D:\diploma\backend\my_cloud\cloud_app\views.py changed, reloading.
+INFO 2025-04-18 09:11:57,582 autoreload 10576 10420 Watching for file changes with StatReloader
+INFO 2025-04-18 09:12:08,658 autoreload 10576 10420 D:\diploma\backend\my_cloud\cloud_app\views.py changed, reloading.
+INFO 2025-04-18 09:12:09,207 autoreload 10664 10840 Watching for file changes with StatReloader
+INFO 2025-04-18 09:14:00,109 autoreload 10664 10840 D:\diploma\backend\my_cloud\users\views.py changed, reloading.
+INFO 2025-04-18 09:14:00,673 autoreload 1236 9128 Watching for file changes with StatReloader
+INFO 2025-04-18 09:14:49,115 autoreload 1236 9128 D:\diploma\backend\my_cloud\users\views.py changed, reloading.
+INFO 2025-04-18 09:14:49,656 autoreload 8460 492 Watching for file changes with StatReloader
+INFO 2025-04-18 09:15:17,170 autoreload 8460 492 D:\diploma\backend\my_cloud\users\views.py changed, reloading.
+INFO 2025-04-18 09:15:17,735 autoreload 10988 9824 Watching for file changes with StatReloader
+INFO 2025-04-18 09:15:54,688 autoreload 10988 9824 D:\diploma\backend\my_cloud\users\views.py changed, reloading.
+INFO 2025-04-18 09:15:55,219 autoreload 10560 10292 Watching for file changes with StatReloader
+INFO 2025-04-18 09:15:56,574 autoreload 10560 10292 D:\diploma\backend\my_cloud\users\views.py changed, reloading.
+INFO 2025-04-18 09:15:57,098 autoreload 6188 9620 Watching for file changes with StatReloader
+INFO 2025-04-18 09:16:32,350 autoreload 6188 9620 D:\diploma\backend\my_cloud\users\views.py changed, reloading.
+INFO 2025-04-18 09:16:32,905 autoreload 10872 9516 Watching for file changes with StatReloader
+INFO 2025-04-18 09:16:48,166 autoreload 10872 9516 D:\diploma\backend\my_cloud\users\views.py changed, reloading.
+INFO 2025-04-18 09:16:48,732 autoreload 10960 2428 Watching for file changes with StatReloader
+INFO 2025-04-18 09:17:04,028 autoreload 10960 2428 D:\diploma\backend\my_cloud\users\views.py changed, reloading.
+INFO 2025-04-18 09:17:04,922 autoreload 9468 8288 Watching for file changes with StatReloader
+INFO 2025-04-18 09:17:29,655 autoreload 9468 8288 D:\diploma\backend\my_cloud\users\views.py changed, reloading.
+INFO 2025-04-18 09:17:30,208 autoreload 8856 9816 Watching for file changes with StatReloader
+INFO 2025-04-18 09:17:46,528 autoreload 8856 9816 D:\diploma\backend\my_cloud\users\views.py changed, reloading.
+INFO 2025-04-18 09:17:47,077 autoreload 10960 9856 Watching for file changes with StatReloader
+INFO 2025-04-18 09:18:02,351 autoreload 10960 9856 D:\diploma\backend\my_cloud\users\views.py changed, reloading.
+INFO 2025-04-18 09:18:02,902 autoreload 10824 11248 Watching for file changes with StatReloader
+INFO 2025-04-18 09:18:16,072 autoreload 10824 11248 D:\diploma\backend\my_cloud\users\views.py changed, reloading.
+INFO 2025-04-18 09:18:16,626 autoreload 10984 9444 Watching for file changes with StatReloader
+INFO 2025-04-18 09:18:19,271 autoreload 10984 9444 D:\diploma\backend\my_cloud\users\views.py changed, reloading.
+INFO 2025-04-18 09:18:19,778 autoreload 8408 9064 Watching for file changes with StatReloader
+INFO 2025-04-18 09:18:22,376 autoreload 8408 9064 D:\diploma\backend\my_cloud\users\views.py changed, reloading.
+INFO 2025-04-18 09:18:22,927 autoreload 10496 6576 Watching for file changes with StatReloader
+INFO 2025-04-18 09:18:57,083 autoreload 10496 6576 D:\diploma\backend\my_cloud\users\views.py changed, reloading.
+INFO 2025-04-18 09:18:57,669 autoreload 7764 8292 Watching for file changes with StatReloader
+INFO 2025-04-18 09:19:44,458 autoreload 7764 8292 D:\diploma\backend\my_cloud\users\views.py changed, reloading.
+INFO 2025-04-18 09:19:45,020 autoreload 11228 276 Watching for file changes with StatReloader
+INFO 2025-04-18 09:20:09,746 autoreload 11228 276 D:\diploma\backend\my_cloud\users\views.py changed, reloading.
+INFO 2025-04-18 09:20:10,322 autoreload 3208 9796 Watching for file changes with StatReloader
+INFO 2025-04-18 09:20:29,793 autoreload 3208 9796 D:\diploma\backend\my_cloud\users\views.py changed, reloading.
+INFO 2025-04-18 09:20:30,354 autoreload 8412 9212 Watching for file changes with StatReloader
+INFO 2025-04-18 09:20:41,412 autoreload 8412 9212 D:\diploma\backend\my_cloud\users\views.py changed, reloading.
+INFO 2025-04-18 09:20:41,966 autoreload 10312 6412 Watching for file changes with StatReloader
+INFO 2025-04-18 09:21:14,054 autoreload 10312 6412 D:\diploma\backend\my_cloud\users\views.py changed, reloading.
+INFO 2025-04-18 09:21:14,633 autoreload 10340 8696 Watching for file changes with StatReloader
+INFO 2025-04-18 09:21:27,797 autoreload 10340 8696 D:\diploma\backend\my_cloud\users\views.py changed, reloading.
+INFO 2025-04-18 09:21:28,363 autoreload 10548 10604 Watching for file changes with StatReloader
+INFO 2025-04-18 09:21:52,049 autoreload 10548 10604 D:\diploma\backend\my_cloud\cloud_app\models.py changed, reloading.
+INFO 2025-04-18 09:21:52,604 autoreload 492 9840 Watching for file changes with StatReloader
+INFO 2025-04-18 09:35:03,609 autoreload 492 9840 D:\diploma\backend\my_cloud\config\logging_config.py changed, reloading.
+INFO 2025-04-18 09:35:04,186 autoreload 10252 2492 Watching for file changes with StatReloader
+INFO 2025-04-18 09:35:08,922 autoreload 10252 2492 D:\diploma\backend\my_cloud\config\logging_config.py changed, reloading.
+INFO 2025-04-18 09:35:09,471 autoreload 9212 9856 Watching for file changes with StatReloader
+INFO 2025-04-18 09:35:12,101 autoreload 9212 9856 D:\diploma\backend\my_cloud\config\logging_config.py changed, reloading.
+INFO 2025-04-18 09:35:12,619 autoreload 6188 3552 Watching for file changes with StatReloader
+INFO 2025-04-18 09:35:15,231 autoreload 6188 3552 D:\diploma\backend\my_cloud\config\logging_config.py changed, reloading.
+INFO 2025-04-18 09:35:15,748 autoreload 10756 9428 Watching for file changes with StatReloader
+INFO 2025-04-18 09:35:19,427 autoreload 10756 9428 D:\diploma\backend\my_cloud\config\logging_config.py changed, reloading.
+INFO 2025-04-18 09:35:19,953 autoreload 10528 9412 Watching for file changes with StatReloader
+INFO 2025-04-18 09:35:25,736 autoreload 10528 9412 D:\diploma\backend\my_cloud\config\logging_config.py changed, reloading.
+INFO 2025-04-18 09:35:26,287 autoreload 11192 10916 Watching for file changes with StatReloader
+INFO 2025-04-18 09:35:41,569 autoreload 11192 10916 D:\diploma\backend\my_cloud\config\logging_config.py changed, reloading.
+INFO 2025-04-18 09:36:21,936 autoreload 10880 1984 Watching for file changes with StatReloader
+INFO 2025-04-18 09:36:41,622 views 10880 11152 ������ ������, ����������� ������������� 3
+INFO 2025-04-18 09:36:41,643 views 10880 11152 ������ ������, ����������� ������������� 3
+INFO 2025-04-18 09:36:41,710 basehttp 10880 11152 "GET /api/v1/cloud/ HTTP/1.1" 200 9639
+ERROR 2025-04-18 09:36:54,610 views 10880 11152 ������ �������� ����� ������������� 3: ������:  ������������� �������� ����� �������� ����������� ������������ "unique_owner_filename"
+DETAIL:  ���� "(owner_id, original_name)=(3, �����.jpg)" ��� ����������.
+
+ERROR 2025-04-18 09:36:54,615 log 10880 11152 Internal Server Error: /api/v1/cloud/
+ERROR 2025-04-18 09:36:54,616 basehttp 10880 11152 "POST /api/v1/cloud/ HTTP/1.1" 500 8752
+INFO 2025-04-18 09:36:56,252 views 10880 11152 ������ ������, ����������� ������������� 3
+INFO 2025-04-18 09:36:56,259 views 10880 11152 ������ ������, ����������� ������������� 3
+INFO 2025-04-18 09:36:56,262 basehttp 10880 11152 "GET /api/v1/cloud/ HTTP/1.1" 200 9639
+WARNING 2025-04-18 09:36:56,324 log 10880 11152 Not Found: /favicon.ico
+INFO 2025-04-18 09:36:56,325 basehttp 10880 11152 - Broken pipe from ('127.0.0.1', 52295)
+INFO 2025-04-18 09:37:04,961 views 10880 8468 ������ ������, ����������� ������������� 3
+INFO 2025-04-18 09:37:04,967 views 10880 8468 ������ ������, ����������� ������������� 3
+INFO 2025-04-18 09:37:04,971 basehttp 10880 8468 "GET /api/v1/cloud/ HTTP/1.1" 200 9639
+INFO 2025-04-18 09:39:48,199 views 10880 10336 ������ ������, ����������� ������������� 3
+INFO 2025-04-18 09:39:48,203 views 10880 10336 ������ ������, ����������� ������������� 3
+INFO 2025-04-18 09:39:48,206 basehttp 10880 10336 "GET /api/v1/cloud/ HTTP/1.1" 200 8647
+INFO 2025-04-18 09:39:53,663 views 10880 10336 ������ ������, ����������� ������������� 3
+INFO 2025-04-18 09:39:53,667 views 10880 10336 ������ ������, ����������� ������������� 3
+INFO 2025-04-18 09:39:53,670 basehttp 10880 10336 "GET /api/v1/cloud/ HTTP/1.1" 200 8647
+INFO 2025-04-18 09:39:54,478 views 10880 10336 ������ ������, ����������� ������������� 3
+INFO 2025-04-18 09:39:54,482 views 10880 10336 ������ ������, ����������� ������������� 3
+INFO 2025-04-18 09:39:54,486 basehttp 10880 10336 "GET /api/v1/cloud/ HTTP/1.1" 200 8647
+INFO 2025-04-18 09:39:55,012 views 10880 10336 ������ ������, ����������� ������������� 3
+INFO 2025-04-18 09:39:55,016 views 10880 10336 ������ ������, ����������� ������������� 3
+INFO 2025-04-18 09:39:55,019 basehttp 10880 10336 "GET /api/v1/cloud/ HTTP/1.1" 200 8647
+WARNING 2025-04-18 09:39:55,080 log 10880 10336 Not Found: /favicon.ico
+INFO 2025-04-18 09:39:55,080 basehttp 10880 10336 - Broken pipe from ('127.0.0.1', 52320)
+INFO 2025-04-18 09:40:03,801 views 10880 2832 ����, ����������� ������������� 3
+INFO 2025-04-18 09:40:03,806 basehttp 10880 2832 "POST /api/v1/cloud/ HTTP/1.1" 201 8995
+INFO 2025-04-18 09:40:07,696 views 10880 2832 ������ ������, ����������� ������������� 3
+INFO 2025-04-18 09:40:07,702 views 10880 2832 ������ ������, ����������� ������������� 3
+INFO 2025-04-18 09:40:07,705 basehttp 10880 2832 "GET /api/v1/cloud/ HTTP/1.1" 200 9607
+INFO 2025-04-18 09:40:41,843 views 10880 2832 ������ ������, ����������� ������������� 3
+INFO 2025-04-18 09:40:41,849 views 10880 2832 ������ ������, ����������� ������������� 3
+INFO 2025-04-18 09:40:41,853 basehttp 10880 2832 "GET /api/v1/cloud/ HTTP/1.1" 200 9607
+WARNING 2025-04-18 09:40:41,924 log 10880 2832 Not Found: /favicon.ico
+INFO 2025-04-18 09:40:41,925 basehttp 10880 2832 - Broken pipe from ('127.0.0.1', 52327)
+INFO 2025-04-18 09:40:54,963 views 10880 6648 ����, ����������� ������������� 3
+INFO 2025-04-18 09:40:54,969 basehttp 10880 6648 "POST /api/v1/cloud/ HTTP/1.1" 201 9163
+INFO 2025-04-18 09:42:57,657 autoreload 10880 1984 D:\diploma\backend\my_cloud\config\logging_config.py changed, reloading.
+INFO 2025-04-18 09:42:58,217 autoreload 10668 32 Watching for file changes with StatReloader
+INFO 2025-04-18 09:43:01,896 autoreload 10668 32 D:\diploma\backend\my_cloud\config\logging_config.py changed, reloading.
+INFO 2025-04-18 09:43:02,412 autoreload 3796 10816 Watching for file changes with StatReloader
+INFO 2025-04-18 09:43:38,115 views 3796 10996 Файл, загруженный пользователем 3
+INFO 2025-04-18 09:43:38,145 basehttp 3796 10996 "POST /api/v1/cloud/ HTTP/1.1" 201 9085
+INFO 2025-04-18 09:43:55,748 views 3796 10996 Список файлов, извлеченных пользователем 3
+INFO 2025-04-18 09:43:55,766 views 3796 10996 Список файлов, извлеченных пользователем 3
+INFO 2025-04-18 09:43:55,815 basehttp 3796 10996 "GET /api/v1/cloud/ HTTP/1.1" 200 11568
+WARNING 2025-04-18 09:43:55,890 log 3796 10996 Not Found: /favicon.ico
+INFO 2025-04-18 09:43:55,891 basehttp 3796 10996 - Broken pipe from ('127.0.0.1', 52367)
+INFO 2025-04-18 09:44:04,934 basehttp 3796 9540 "GET /api/v1/cloud/16 HTTP/1.1" 301 0
+INFO 2025-04-18 09:44:05,016 views 3796 10132 Список файлов, извлеченных пользователем 3
+INFO 2025-04-18 09:44:05,028 basehttp 3796 10132 "GET /api/v1/cloud/16/ HTTP/1.1" 200 11653
+WARNING 2025-04-18 09:44:05,113 log 3796 10132 Not Found: /favicon.ico
+INFO 2025-04-18 09:44:05,115 basehttp 3796 10132 - Broken pipe from ('127.0.0.1', 52373)
+INFO 2025-04-18 09:44:08,129 views 3796 10684 Список файлов, извлеченных пользователем 3
+INFO 2025-04-18 09:44:08,145 views 3796 10684 Файл None удален пользователем 3
+INFO 2025-04-18 09:44:08,152 basehttp 3796 10684 "DELETE /api/v1/cloud/16/ HTTP/1.1" 200 10694
+INFO 2025-04-18 09:44:10,391 views 3796 10684 Список файлов, извлеченных пользователем 3
+INFO 2025-04-18 09:44:10,398 views 3796 10684 Список файлов, извлеченных пользователем 3
+INFO 2025-04-18 09:44:10,402 basehttp 3796 10684 "GET /api/v1/cloud/ HTTP/1.1" 200 10588
+WARNING 2025-04-18 09:44:10,477 log 3796 10684 Not Found: /favicon.ico
+INFO 2025-04-18 09:44:10,478 basehttp 3796 10684 - Broken pipe from ('127.0.0.1', 52375)
+INFO 2025-04-18 09:44:36,073 basehttp 3796 10872 "GET /api/v1/cloud/15 HTTP/1.1" 301 0
+INFO 2025-04-18 09:44:36,142 views 3796 11036 Список файлов, извлеченных пользователем 3
+INFO 2025-04-18 09:44:36,153 basehttp 3796 11036 "GET /api/v1/cloud/15/ HTTP/1.1" 200 11593
+INFO 2025-04-18 09:44:38,952 views 3796 11036 Список файлов, извлеченных пользователем 3
+INFO 2025-04-18 09:44:38,964 views 3796 11036 Файл None удален пользователем 3
+INFO 2025-04-18 09:44:38,970 basehttp 3796 11036 "DELETE /api/v1/cloud/15/ HTTP/1.1" 200 10694
+INFO 2025-04-18 09:44:46,523 views 3796 11036 Список файлов, извлеченных пользователем 3
+INFO 2025-04-18 09:44:46,529 views 3796 11036 Список файлов, извлеченных пользователем 3
+INFO 2025-04-18 09:44:46,532 basehttp 3796 11036 "GET /api/v1/cloud/ HTTP/1.1" 200 9628
+WARNING 2025-04-18 09:44:46,630 log 3796 11036 Not Found: /favicon.ico
+INFO 2025-04-18 09:44:46,630 basehttp 3796 11036 - Broken pipe from ('127.0.0.1', 52379)
+INFO 2025-04-18 09:44:52,409 basehttp 3796 1104 "GET /api/v1/cloud/17 HTTP/1.1" 301 0
+INFO 2025-04-18 09:44:52,475 views 3796 7764 Список файлов, извлеченных пользователем 3
+INFO 2025-04-18 09:44:52,485 basehttp 3796 7764 "GET /api/v1/cloud/17/ HTTP/1.1" 200 11654
+WARNING 2025-04-18 09:44:52,561 log 3796 7764 Not Found: /favicon.ico
+INFO 2025-04-18 09:44:52,561 basehttp 3796 7764 - Broken pipe from ('127.0.0.1', 52384)
+INFO 2025-04-18 09:44:55,049 views 3796 11104 Список файлов, извлеченных пользователем 3
+INFO 2025-04-18 09:44:55,063 views 3796 11104 Файл None удален пользователем 3
+INFO 2025-04-18 09:44:55,064 views 3796 11104 Удален пустой каталог: D:\diploma\backend\my_cloud\media\user_3\2025\4\18
+INFO 2025-04-18 09:44:55,070 basehttp 3796 11104 "DELETE /api/v1/cloud/17/ HTTP/1.1" 200 10694
+INFO 2025-04-18 09:45:40,787 views 3796 11104 Список файлов, извлеченных пользователем 3
+INFO 2025-04-18 09:45:40,791 views 3796 11104 Список файлов, извлеченных пользователем 3
+INFO 2025-04-18 09:45:40,795 basehttp 3796 11104 "GET /api/v1/cloud/ HTTP/1.1" 200 8647
+WARNING 2025-04-18 09:45:53,860 log 3796 11104 Forbidden: /api/v1/users/
+WARNING 2025-04-18 09:45:53,861 basehttp 3796 11104 "GET /api/v1/users/ HTTP/1.1" 403 4985
+WARNING 2025-04-18 09:45:53,933 log 3796 11104 Not Found: /favicon.ico
+INFO 2025-04-18 09:45:53,934 basehttp 3796 11104 - Broken pipe from ('127.0.0.1', 52386)
+WARNING 2025-04-18 09:45:57,392 log 3796 504 Forbidden: /api/v1/users/
+WARNING 2025-04-18 09:45:57,393 basehttp 3796 504 "GET /api/v1/users/ HTTP/1.1" 403 4985
+WARNING 2025-04-18 09:45:57,461 log 3796 504 Not Found: /favicon.ico
+INFO 2025-04-18 09:45:57,462 basehttp 3796 504 - Broken pipe from ('127.0.0.1', 52407)
+INFO 2025-04-18 09:46:07,444 basehttp 3796 32 "GET /api/v1/users/logout HTTP/1.1" 301 0
+WARNING 2025-04-18 09:46:07,513 log 3796 2304 Method Not Allowed: /api/v1/users/logout/
+WARNING 2025-04-18 09:46:07,514 basehttp 3796 2304 "GET /api/v1/users/logout/ HTTP/1.1" 405 5738
+WARNING 2025-04-18 09:46:13,526 log 3796 2304 Method Not Allowed: /api/v1/users/logout/
+WARNING 2025-04-18 09:46:13,527 basehttp 3796 2304 "GET /api/v1/users/logout/ HTTP/1.1" 405 5738
+WARNING 2025-04-18 09:46:13,603 log 3796 2304 Not Found: /favicon.ico
+INFO 2025-04-18 09:46:13,604 basehttp 3796 2304 - Broken pipe from ('127.0.0.1', 52410)
+WARNING 2025-04-18 09:46:14,332 log 3796 9220 Forbidden: /api/v1/users/
+WARNING 2025-04-18 09:46:14,333 basehttp 3796 9220 "GET /api/v1/users/ HTTP/1.1" 403 4985
+WARNING 2025-04-18 09:47:14,380 log 3796 9220 Forbidden: /api/v1/users/
+WARNING 2025-04-18 09:47:14,381 basehttp 3796 9220 "GET /api/v1/users/ HTTP/1.1" 403 4985
+WARNING 2025-04-18 09:47:14,456 log 3796 9220 Not Found: /favicon.ico
+INFO 2025-04-18 09:47:14,457 basehttp 3796 9220 - Broken pipe from ('127.0.0.1', 52413)
+WARNING 2025-04-18 09:47:21,553 log 3796 5284 Method Not Allowed: /api/v1/users/logout/
+WARNING 2025-04-18 09:47:21,554 basehttp 3796 5284 "GET /api/v1/users/logout/ HTTP/1.1" 405 5738
+WARNING 2025-04-18 09:47:21,623 log 3796 5284 Not Found: /favicon.ico
+INFO 2025-04-18 09:47:21,623 basehttp 3796 5284 - Broken pipe from ('127.0.0.1', 52420)
+INFO 2025-04-18 09:47:33,395 signals 3796 10224 Сессия завершена: livpiip1tniszqgn1bkv2daa8p3tm5m1, Пользователь: 3
+INFO 2025-04-18 09:47:33,396 views 3796 10224 Пользователь mia1 успешно вышел из системы
+INFO 2025-04-18 09:47:33,398 basehttp 3796 10224 "POST /api/v1/users/logout/ HTTP/1.1" 200 3788
+INFO 2025-04-18 09:48:45,168 basehttp 3796 10224 "GET /api/v1/users/login HTTP/1.1" 301 0
+WARNING 2025-04-18 09:48:45,180 log 3796 11032 Method Not Allowed: /api/v1/users/login/
+WARNING 2025-04-18 09:48:45,181 basehttp 3796 11032 "GET /api/v1/users/login/ HTTP/1.1" 405 5684
+INFO 2025-04-18 09:49:23,998 signals 3796 11032 Сессия начата: d7534t5wmf4d6wt1z1mdofh1gn31xx4b, Пользователь: не аутентифицирован
+INFO 2025-04-18 09:49:24,000 views 3796 11032 Пользователь leva вошел в систему. Сеанс: d7534t5wmf4d6wt1z1mdofh1gn31xx4b
+INFO 2025-04-18 09:49:24,006 basehttp 3796 11032 "POST /api/v1/users/login/ HTTP/1.1" 200 6130
+INFO 2025-04-18 09:49:26,986 views 3796 11032 Пользователь Admin leva получил доступ к списку пользователей
+INFO 2025-04-18 09:49:26,989 basehttp 3796 11032 "GET /api/v1/users/ HTTP/1.1" 200 6126
+WARNING 2025-04-18 09:49:27,063 log 3796 11032 Not Found: /favicon.ico
+INFO 2025-04-18 09:49:27,064 basehttp 3796 11032 - Broken pipe from ('127.0.0.1', 52431)
+INFO 2025-04-18 09:49:49,557 views 3796 10392 Пользователь Admin leva получил доступ к списку пользователей
+INFO 2025-04-18 09:49:49,559 basehttp 3796 10392 "GET /api/v1/users/ HTTP/1.1" 200 6126
+WARNING 2025-04-18 09:49:58,397 log 3796 10392 Not Found: /api/v1/users/4
+WARNING 2025-04-18 09:49:58,398 basehttp 3796 10392 "GET /api/v1/users/4 HTTP/1.1" 404 4008
+INFO 2025-04-18 09:50:16,250 views 3796 10392 Пользователь Admin leva получил доступ к списку пользователей
+INFO 2025-04-18 09:50:16,253 basehttp 3796 10392 "GET /api/v1/users/ HTTP/1.1" 200 6126
+INFO 2025-04-18 09:50:16,344 basehttp 3796 10392 - Broken pipe from ('127.0.0.1', 52438)
+WARNING 2025-04-18 09:54:17,128 log 3796 10636 Not Found: /api/v1/users/4/
+WARNING 2025-04-18 09:54:17,128 basehttp 3796 10636 "GET /api/v1/users/4/ HTTP/1.1" 404 4011
+WARNING 2025-04-18 09:54:17,247 log 3796 10636 Not Found: /favicon.ico
+INFO 2025-04-18 09:54:17,248 basehttp 3796 10636 - Broken pipe from ('127.0.0.1', 52462)
+WARNING 2025-04-18 09:54:26,923 log 3796 10636 Method Not Allowed: /api/v1/users/4/delete/
+WARNING 2025-04-18 09:54:26,924 basehttp 3796 10636 "GET /api/v1/users/4/delete/ HTTP/1.1" 405 5171
+INFO 2025-04-18 09:54:40,200 views 3796 10636 Пользователь tona удален администратором leva
+INFO 2025-04-18 09:54:40,202 basehttp 3796 10636 "DELETE /api/v1/users/4/delete/ HTTP/1.1" 200 5172
+INFO 2025-04-18 09:54:44,505 views 3796 10636 Пользователь Admin leva получил доступ к списку пользователей
+INFO 2025-04-18 09:54:44,508 basehttp 3796 10636 "GET /api/v1/users/ HTTP/1.1" 200 5810
+WARNING 2025-04-18 09:54:44,582 log 3796 10636 Not Found: /favicon.ico
+INFO 2025-04-18 09:54:44,583 basehttp 3796 10636 - Broken pipe from ('127.0.0.1', 52464)
+INFO 2025-04-18 09:57:46,957 views 3796 276 Список файлов, извлеченных пользователем 1
+INFO 2025-04-18 09:57:46,961 views 3796 276 Список файлов, извлеченных пользователем 1
+INFO 2025-04-18 09:57:46,965 basehttp 3796 276 "GET /api/v1/cloud/ HTTP/1.1" 200 8648
+WARNING 2025-04-18 09:57:47,098 log 3796 276 Not Found: /favicon.ico
+INFO 2025-04-18 09:57:47,099 basehttp 3796 276 - Broken pipe from ('127.0.0.1', 52521)
+INFO 2025-04-18 09:57:57,062 views 3796 11784 Файл, загруженный пользователем 1
+INFO 2025-04-18 09:57:57,067 basehttp 3796 11784 "POST /api/v1/cloud/ HTTP/1.1" 201 8927
+INFO 2025-04-18 09:58:05,979 views 3796 11784 Файл, загруженный пользователем 1
+INFO 2025-04-18 09:58:05,985 basehttp 3796 11784 "POST /api/v1/cloud/ HTTP/1.1" 201 9017
+WARNING 2025-04-18 09:58:06,055 log 3796 11784 Not Found: /favicon.ico
+INFO 2025-04-18 09:58:06,056 basehttp 3796 11784 - Broken pipe from ('127.0.0.1', 52526)
+INFO 2025-04-18 09:58:08,043 views 3796 11968 Список файлов, извлеченных пользователем 1
+INFO 2025-04-18 09:58:08,050 views 3796 11968 Список файлов, извлеченных пользователем 1
+INFO 2025-04-18 09:58:08,054 basehttp 3796 11968 "GET /api/v1/cloud/ HTTP/1.1" 200 10555
+WARNING 2025-04-18 09:59:17,524 log 3796 11968 Not Found: /api/v1/users/logotu
+WARNING 2025-04-18 09:59:17,525 basehttp 3796 11968 "GET /api/v1/users/logotu HTTP/1.1" 404 4023
+WARNING 2025-04-18 09:59:17,621 log 3796 11968 Not Found: /favicon.ico
+INFO 2025-04-18 09:59:17,622 basehttp 3796 11968 - Broken pipe from ('127.0.0.1', 52529)
+WARNING 2025-04-18 09:59:29,347 log 3796 12156 Method Not Allowed: /api/v1/users/logout/
+WARNING 2025-04-18 09:59:29,348 basehttp 3796 12156 "GET /api/v1/users/logout/ HTTP/1.1" 405 5739
+INFO 2025-04-18 09:59:34,600 signals 3796 12156 Сессия завершена: d7534t5wmf4d6wt1z1mdofh1gn31xx4b, Пользователь: 1
+INFO 2025-04-18 09:59:34,601 views 3796 12156 Пользователь leva успешно вышел из системы
+INFO 2025-04-18 09:59:34,603 basehttp 3796 12156 "POST /api/v1/users/logout/ HTTP/1.1" 200 3788
+WARNING 2025-04-18 09:59:40,954 log 3796 12156 Method Not Allowed: /api/v1/users/login/
+WARNING 2025-04-18 09:59:40,955 basehttp 3796 12156 "GET /api/v1/users/login/ HTTP/1.1" 405 5684
+INFO 2025-04-18 10:00:24,099 signals 3796 12156 Сессия начата: ekup7q32ubnn7qk6jps4x2dixsu6msbd, Пользователь: не аутентифицирован
+INFO 2025-04-18 10:00:24,101 views 3796 12156 Пользователь mia1 вошел в систему. Сеанс: ekup7q32ubnn7qk6jps4x2dixsu6msbd
+INFO 2025-04-18 10:00:24,107 basehttp 3796 12156 "POST /api/v1/users/login/ HTTP/1.1" 200 6134
+INFO 2025-04-18 10:00:38,321 views 3796 12156 Список файлов, извлеченных пользователем 3
+INFO 2025-04-18 10:00:38,325 views 3796 12156 Список файлов, извлеченных пользователем 3
+INFO 2025-04-18 10:00:38,328 basehttp 3796 12156 "GET /api/v1/cloud/ HTTP/1.1" 200 8647
+WARNING 2025-04-18 10:00:38,448 log 3796 12156 Not Found: /favicon.ico
+INFO 2025-04-18 10:00:38,449 basehttp 3796 12156 - Broken pipe from ('127.0.0.1', 52533)
+INFO 2025-04-18 10:00:48,798 views 3796 10312 Файл, загруженный пользователем 3
+INFO 2025-04-18 10:00:48,803 basehttp 3796 10312 "POST /api/v1/cloud/ HTTP/1.1" 201 9163
+WARNING 2025-04-18 10:00:48,875 log 3796 10312 Not Found: /favicon.ico
+INFO 2025-04-18 10:00:48,875 basehttp 3796 10312 - Broken pipe from ('127.0.0.1', 52549)
+INFO 2025-04-18 10:01:00,532 views 3796 4376 Файл, загруженный пользователем 3
+INFO 2025-04-18 10:01:00,537 basehttp 3796 4376 "POST /api/v1/cloud/ HTTP/1.1" 201 8938
+INFO 2025-04-18 10:01:02,569 views 3796 4376 Список файлов, извлеченных пользователем 3
+INFO 2025-04-18 10:01:02,576 views 3796 4376 Список файлов, извлеченных пользователем 3
+INFO 2025-04-18 10:01:02,580 basehttp 3796 4376 "GET /api/v1/cloud/ HTTP/1.1" 200 10589
+WARNING 2025-04-18 10:01:02,668 log 3796 4376 Not Found: /favicon.ico
+INFO 2025-04-18 10:01:02,669 basehttp 3796 4376 - Broken pipe from ('127.0.0.1', 52552)
+INFO 2025-04-18 10:03:27,225 autoreload 3796 10816 D:\diploma\backend\my_cloud\cloud_app\views.py changed, reloading.
+INFO 2025-04-18 10:03:27,799 autoreload 12072 7324 Watching for file changes with StatReloader
+INFO 2025-04-18 10:03:32,843 views 12072 11408 Список файлов, извлеченных пользователем 3
+INFO 2025-04-18 10:03:32,864 views 12072 11408 Список файлов, извлеченных пользователем 3
+INFO 2025-04-18 10:03:32,930 basehttp 12072 11408 "GET /api/v1/cloud/ HTTP/1.1" 200 10589
+WARNING 2025-04-18 10:03:33,058 log 12072 11408 Not Found: /favicon.ico
+INFO 2025-04-18 10:03:33,059 basehttp 12072 11408 - Broken pipe from ('127.0.0.1', 52595)
+WARNING 2025-04-18 10:03:43,965 log 12072 9584 Forbidden: /api/v1/users/
+WARNING 2025-04-18 10:03:43,966 basehttp 12072 9584 "GET /api/v1/users/ HTTP/1.1" 403 4985
+WARNING 2025-04-18 10:03:44,042 log 12072 9584 Not Found: /favicon.ico
+INFO 2025-04-18 10:03:44,043 basehttp 12072 9584 - Broken pipe from ('127.0.0.1', 52601)
+WARNING 2025-04-18 10:03:50,954 log 12072 11400 Method Not Allowed: /api/v1/users/logout/
+WARNING 2025-04-18 10:03:50,955 basehttp 12072 11400 "GET /api/v1/users/logout/ HTTP/1.1" 405 5738
+WARNING 2025-04-18 10:03:51,033 log 12072 11400 Not Found: /favicon.ico
+INFO 2025-04-18 10:03:51,034 basehttp 12072 11400 - Broken pipe from ('127.0.0.1', 52603)
+INFO 2025-04-18 10:03:57,430 signals 12072 11844 Сессия завершена: ekup7q32ubnn7qk6jps4x2dixsu6msbd, Пользователь: 3
+INFO 2025-04-18 10:03:57,431 views 12072 11844 Пользователь mia1 успешно вышел из системы
+INFO 2025-04-18 10:03:57,433 basehttp 12072 11844 "POST /api/v1/users/logout/ HTTP/1.1" 200 3788
+WARNING 2025-04-18 10:04:05,969 log 12072 11844 Method Not Allowed: /api/v1/users/login/
+WARNING 2025-04-18 10:04:05,970 basehttp 12072 11844 "GET /api/v1/users/login/ HTTP/1.1" 405 5684
+WARNING 2025-04-18 10:04:42,676 views 12072 11844 Ошибка проверки логина: {'username': [ErrorDetail(string='This field is required.', code='required')]}
+WARNING 2025-04-18 10:04:42,680 log 12072 11844 Bad Request: /api/v1/users/login/
+WARNING 2025-04-18 10:04:42,681 basehttp 12072 11844 "POST /api/v1/users/login/ HTTP/1.1" 400 5818
+INFO 2025-04-18 10:06:06,834 signals 12072 11844 Сессия начата: coj1iyz6zy2w4io2j9vaark5kg2f3xy5, Пользователь: не аутентифицирован
+INFO 2025-04-18 10:06:06,836 views 12072 11844 Пользователь leva вошел в систему. Сеанс: coj1iyz6zy2w4io2j9vaark5kg2f3xy5
+INFO 2025-04-18 10:06:06,841 basehttp 12072 11844 "POST /api/v1/users/login/ HTTP/1.1" 200 6130
+INFO 2025-04-18 10:06:06,921 basehttp 12072 11844 - Broken pipe from ('127.0.0.1', 52605)
+INFO 2025-04-18 10:06:17,325 views 12072 12180 Список файлов, извлеченных пользователем 1
+INFO 2025-04-18 10:06:17,334 views 12072 12180 Список файлов, извлеченных пользователем 1
+INFO 2025-04-18 10:06:17,338 basehttp 12072 12180 "GET /api/v1/cloud/ HTTP/1.1" 200 12497
+WARNING 2025-04-18 10:06:17,461 log 12072 12180 Not Found: /favicon.ico
+INFO 2025-04-18 10:06:17,462 basehttp 12072 12180 - Broken pipe from ('127.0.0.1', 52621)
+INFO 2025-04-18 10:18:51,285 autoreload 12072 7324 D:\diploma\backend\my_cloud\cloud_app\views.py changed, reloading.
+INFO 2025-04-18 10:18:51,914 autoreload 6156 11144 Watching for file changes with StatReloader
+INFO 2025-04-18 10:18:56,380 autoreload 6156 11144 D:\diploma\backend\my_cloud\cloud_app\views.py changed, reloading.
+INFO 2025-04-18 10:18:56,917 autoreload 6648 11324 Watching for file changes with StatReloader
+INFO 2025-04-18 10:19:03,752 autoreload 6648 11324 D:\diploma\backend\my_cloud\cloud_app\views.py changed, reloading.
+INFO 2025-04-18 10:19:04,315 autoreload 8064 11932 Watching for file changes with StatReloader
+INFO 2025-04-18 10:20:12,193 autoreload 8064 11932 D:\diploma\backend\my_cloud\cloud_app\views.py changed, reloading.
+INFO 2025-04-18 10:20:12,766 autoreload 9576 4476 Watching for file changes with StatReloader
+INFO 2025-04-18 10:20:36,052 views 9576 11216 Список файлов, извлеченных пользователем 1
+INFO 2025-04-18 10:20:36,072 views 9576 11216 Список файлов, извлеченных пользователем 1
+INFO 2025-04-18 10:20:36,139 basehttp 9576 11216 "GET /api/v1/cloud/?user_id=3 HTTP/1.1" 200 10668
+INFO 2025-04-18 10:20:55,651 autoreload 9576 4476 D:\diploma\backend\my_cloud\cloud_app\views.py changed, reloading.
+INFO 2025-04-18 10:20:56,221 autoreload 12248 276 Watching for file changes with StatReloader

@@ -65,10 +65,3 @@ class FileShareSerializer(serializers.ModelSerializer):
     def get_share_url(self, obj):
         request = self.context.get('request')
         return request.build_absolute_uri(f'/api/v1/cloud/share/{obj.share_link}/') if request else None
-
-
-class FileDownloadSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = File
-        fields = ['id', 'original_name', 'file']
-        read_only_fields = ['id', 'original_name', 'file']

@@ -30,6 +30,7 @@ LOGGING = {
             'maxBytes': 1024*1024*5,  # 5 MB
             'backupCount': 5,
             'formatter': 'verbose',
+            'encoding': 'utf-8',
         },
         'error_file': {
             'level': 'WARNING',
@@ -38,6 +39,7 @@ LOGGING = {
             'maxBytes': 1024*1024*5,
             'backupCount': 5,
             'formatter': 'verbose',
+            'encoding': 'utf-8',
         },
     },
     'loggers': {
@@ -49,7 +51,11 @@ LOGGING = {
         'my_cloud': {
             'handlers': ['console', 'file', 'error_file'],
             'level': 'DEBUG',
-            'propagate': False,
+            'propagate': True,
+        },
+        'root': {  
+            'handlers': ['file'],
+            'level': 'INFO',
         },
     },
 }

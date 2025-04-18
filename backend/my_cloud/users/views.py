@@ -14,27 +14,27 @@ class UserRegistrationView(generics.CreateAPIView):
     permission_classes = [permissions.AllowAny]
 
     def create(self, request, *args, **kwargs):
-        logger.debug(f"Registration attempt with data: {request.data}")
+        logger.debug(f"Попытка регистрации с использованием данных: {request.data}")
         serializer = self.get_serializer(data=request.data)
         if not serializer.is_valid():
-            logger.warning(f"Registration validation failed: {serializer.errors}")
+            logger.warning(f"Ошибка проверки регистрации: {serializer.errors}")
             return Response(
-                {"detail": "Validation failed", "errors": serializer.errors},
+                {"detail": "Не удалось выполнить проверку", "errors": serializer.errors},
                 status=status.HTTP_400_BAD_REQUEST
             )
         
         try:
             self.perform_create(serializer)
             user = serializer.instance
-            logger.info(f"User {user.username} registered successfully")
+            logger.info(f"Пользователь {user.username} успешно зарегистрирован")
             return Response(
-                {"detail": "User registered successfully"},
+                {"detail": "Пользователь успешно зарегистрировался"},
                 status=status.HTTP_201_CREATED
             )
         except Exception as e:
-            logger.error(f"Registration error: {str(e)}")
+            logger.error(f"Ошибка регистрации: {str(e)}")
             return Response(
-                {"detail": "Registration failed"},
+                {"detail": "Не удалось выполнить регистрацию"},
                 status=status.HTTP_500_INTERNAL_SERVER_ERROR
             )
 
@@ -44,15 +44,15 @@ class UserListView(generics.ListAPIView):
     permission_classes = [permissions.IsAuthenticated, permissions.IsAdminUser]
 
     def list(self, request, *args, **kwargs):
-        logger.debug(f"User list requested by {request.user.username}")
+        logger.debug(f"Список пользователей, запрошенный {request.user.username}")
         try:
             response = super().list(request, *args, **kwargs)
-            logger.info(f"Admin user {request.user.username} accessed user list")
+            logger.info(f"Пользователь Admin {request.user.username} получил доступ к списку пользователей")
             return response
         except Exception as e:
-            logger.error(f"Error getting user list: {str(e)}")
+            logger.error(f"Ошибка при получении списка пользователей: {str(e)}")
             return Response(
-                {"detail": "Error retrieving user list"},
+                {"detail": "Ошибка при получении списка пользователей"},
                 status=status.HTTP_500_INTERNAL_SERVER_ERROR
             )
 
@@ -65,22 +65,22 @@ class UserDeleteView(generics.DestroyAPIView):
         try:
             instance = self.get_object()
             if instance == request.user:
-                logger.warning(f"Admin {request.user.username} attempted to delete themselves")
+                logger.warning(f"Администратор {request.user.username} попытался удалить себя сам")
                 return Response(
-                    {"detail": "Cannot delete yourself"},
+                    {"detail": "Не удается удалить себя"},
                     status=status.HTTP_403_FORBIDDEN
                 )
                 
             self.perform_destroy(instance)
-            logger.info(f"User {instance.username} deleted by admin {request.user.username}")
+            logger.info(f"Пользователь {instance.username} удален администратором {request.user.username}")
             return Response(
-                {"detail": "User deleted successfully"},
+                {"detail": "Пользователь успешно удален"},
                 status=status.HTTP_200_OK
             )
         except Exception as e:
-            logger.error(f"Error deleting user: {str(e)}")
+            logger.error(f"Ошибка при удалении пользователя: {str(e)}")
             return Response(
-                {"detail": "Error deleting user"},
+                {"detail": "Ошибка удалении пользователя"},
                 status=status.HTTP_500_INTERNAL_SERVER_ERROR
             )
 
@@ -88,12 +88,12 @@ class LoginView(APIView):
     permission_classes = [permissions.AllowAny]
 
     def post(self, request):
-        logger.debug(f"Login attempt with data: {request.data}")
+        logger.debug(f"Попытка входа в систему с использованием данных: {request.data}")
         serializer = UserLoginSerializer(data=request.data)
         if not serializer.is_valid():
-            logger.warning(f"Login validation failed: {serializer.errors}")
+            logger.warning(f"Ошибка проверки логина: {serializer.errors}")
             return Response(
-                {"detail": "Validation failed", "errors": serializer.errors},
+                {"detail": "Не удалось выполнить проверку", "errors": serializer.errors},
                 status=status.HTTP_400_BAD_REQUEST
             )
         
@@ -103,16 +103,16 @@ class LoginView(APIView):
         user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
-            logger.info(f"User {username} logged in. Session: {request.session.session_key}")
+            logger.info(f"Пользователь {username} вошел в систему. Сеанс: {request.session.session_key}")
             return Response({
-                'detail': 'Login successful',
+                'detail': 'Вход в систему прошел успешно',
                 'user': UserSerializer(user).data,
                 'sessionid': request.session.session_key
             })
         
-        logger.warning(f"Failed login attempt for username: {username}")
+        logger.warning(f"Неудачная попытка входа для имени пользователя: {username}")
         return Response(
-            {'detail': 'Invalid credentials'},
+            {'detail': 'Неверные учетные данные'},
             status=status.HTTP_401_UNAUTHORIZED
         )
 
@@ -121,23 +121,23 @@ class LogoutView(APIView):
 
     def post(self, request):
         if not request.user.is_authenticated:
-            logger.warning("Logout attempt by unauthenticated user")
+            logger.warning("Попытка выхода из системы пользователя, не прошедшего проверку подлинности")
             return Response(
-                {"detail": "Not authenticated"},
+                {"detail": "Не прошел проверку подлинности"},
                 status=status.HTTP_401_UNAUTHORIZED
             )
             
         username = request.user.username
         try:
             logout(request)
-            logger.info(f"User {username} logged out successfully")
+            logger.info(f"Пользователь {username} успешно вышел из системы")
             return Response(
-                {"detail": "Logout successful"},
+                {"detail": "Успешный выход из системы"},
                 status=status.HTTP_200_OK
             )
         except Exception as e:
-            logger.error(f"Error during logout for user {username}: {str(e)}")
+            logger.error(f"Ошибка при выходе пользователя {username}: {str(e)}")
             return Response(
-                {"detail": "Error during logout"},
+                {"detail": "Ошибка при выходе из системы"},
                 status=status.HTTP_500_INTERNAL_SERVER_ERROR
             )

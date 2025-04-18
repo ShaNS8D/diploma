@@ -5,6 +5,17 @@ from django.core.exceptions import ValidationError
 from django.utils import timezone
 from django.conf import settings
 
+
+def user_directory_path(instance, filename):
+    return 'user_{0}/{1}/{2}/{3}/{4}'.format(
+        instance.owner.id, 
+        timezone.now().year,
+        timezone.now().month,
+        timezone.now().day,
+        filename
+    )
+
+
 class File(models.Model):
     original_name = models.CharField(max_length=255)
     size = models.PositiveIntegerField()
@@ -13,7 +24,7 @@ class File(models.Model):
     comment = models.TextField(blank=True, null=True, max_length=500)    
     share_link = models.UUIDField(default=uuid.uuid4, unique=True)
     owner = models.ForeignKey('users.User', on_delete=models.CASCADE)
-    file = models.FileField(upload_to=f'user_owner/%Y/%m/%d/')
+    file = models.FileField(upload_to=user_directory_path)
 
     class Meta:
         constraints = [

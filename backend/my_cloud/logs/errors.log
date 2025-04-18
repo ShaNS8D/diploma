@@ -139,3 +139,106 @@ WARNING 2025-04-17 21:53:26,433 basehttp 10972 11020 "GET /api/v1/cloud/share/ H
 ERROR 2025-04-17 21:53:58,954 log 10972 11020 Internal Server Error: /api/v1/cloud/share/
 ERROR 2025-04-17 21:53:58,955 basehttp 10972 11020 "DELETE /api/v1/cloud/share/ HTTP/1.1" 500 10836
 WARNING 2025-04-17 22:03:50,913 log 10972 9864 Not Found: /favicon.ico
+WARNING 2025-04-18 08:10:16,353 log 7328 7980 Not Found: /
+WARNING 2025-04-18 08:10:16,375 basehttp 7328 7980 "GET / HTTP/1.1" 404 2471
+WARNING 2025-04-18 08:10:16,474 log 7328 7980 Not Found: /favicon.ico
+WARNING 2025-04-18 08:12:19,780 log 3008 10516 Not Found: /favicon.ico
+WARNING 2025-04-18 08:12:40,856 log 3008 10448 Not Found: /favicon.ico
+WARNING 2025-04-18 08:18:53,496 log 3008 10684 Not Found: /api/v1/cloud/5/
+WARNING 2025-04-18 08:18:53,497 basehttp 3008 10684 "GET /api/v1/cloud/5/ HTTP/1.1" 404 10752
+WARNING 2025-04-18 08:18:53,618 log 3008 10684 Not Found: /favicon.ico
+WARNING 2025-04-18 08:19:00,315 log 3008 2768 Not Found: /api/v1/cloud/5/
+WARNING 2025-04-18 08:19:00,316 basehttp 3008 2768 "GET /api/v1/cloud/5/ HTTP/1.1" 404 10752
+WARNING 2025-04-18 08:19:00,396 log 3008 2768 Not Found: /favicon.ico
+WARNING 2025-04-18 08:19:08,076 log 3008 9920 Not Found: /favicon.ico
+WARNING 2025-04-18 08:19:23,979 log 3008 9532 Not Found: /api/v1/cloud/4/
+WARNING 2025-04-18 08:19:23,980 basehttp 3008 9532 "GET /api/v1/cloud/4/ HTTP/1.1" 404 10752
+WARNING 2025-04-18 08:19:24,047 log 3008 9532 Not Found: /favicon.ico
+WARNING 2025-04-18 08:21:24,512 log 10972 10276 Not Found: /favicon.ico
+WARNING 2025-04-18 08:21:42,390 log 10972 11068 Not Found: /favicon.ico
+WARNING 2025-04-18 08:22:35,653 log 2696 9824 Not Found: /favicon.ico
+WARNING 2025-04-18 08:24:10,641 log 10692 11056 Not Found: /favicon.ico
+WARNING 2025-04-18 08:25:45,030 log 10916 10676 Not Found: /favicon.ico
+WARNING 2025-04-18 08:27:11,358 log 10428 10560 Not Found: /favicon.ico
+WARNING 2025-04-18 08:27:33,254 log 10428 6408 Not Found: /favicon.ico
+WARNING 2025-04-18 08:28:11,530 log 10428 10964 Not Found: /favicon.ico
+WARNING 2025-04-18 08:28:13,267 log 10428 6408 Bad Request: /api/v1/cloud/
+WARNING 2025-04-18 08:28:13,268 basehttp 10428 6408 "POST /api/v1/cloud/ HTTP/1.1" 400 8767
+WARNING 2025-04-18 08:28:47,895 log 10428 6408 Not Found: /favicon.ico
+WARNING 2025-04-18 08:28:54,561 log 10428 11052 Not Found: /favicon.ico
+WARNING 2025-04-18 08:30:32,135 log 9856 10764 Not Found: /favicon.ico
+WARNING 2025-04-18 08:30:51,165 log 9856 11228 Not Found: /favicon.ico
+WARNING 2025-04-18 08:32:52,658 log 6576 348 Not Found: /favicon.ico
+WARNING 2025-04-18 08:33:10,953 log 6576 9308 Not Found: /favicon.ico
+WARNING 2025-04-18 08:37:45,247 log 4476 9496 Not Found: /favicon.ico
+WARNING 2025-04-18 09:03:52,077 log 4476 10268 Not Found: /favicon.ico
+ERROR 2025-04-18 09:04:00,326 log 4476 11180 Internal Server Error: /api/v1/cloud/
+ERROR 2025-04-18 09:04:00,326 basehttp 4476 11180 "POST /api/v1/cloud/ HTTP/1.1" 500 8752
+WARNING 2025-04-18 09:04:16,709 log 4476 11180 Not Found: /favicon.ico
+WARNING 2025-04-18 09:04:22,263 log 4476 10160 Not Found: /favicon.ico
+WARNING 2025-04-18 09:05:30,170 log 10488 10684 Not Found: /favicon.ico
+WARNING 2025-04-18 09:05:38,621 log 10488 9552 Not Found: /favicon.ico
+ERROR 2025-04-18 09:36:54,615 log 10880 11152 Internal Server Error: /api/v1/cloud/
+ERROR 2025-04-18 09:36:54,616 basehttp 10880 11152 "POST /api/v1/cloud/ HTTP/1.1" 500 8752
+WARNING 2025-04-18 09:36:56,324 log 10880 11152 Not Found: /favicon.ico
+WARNING 2025-04-18 09:39:55,080 log 10880 10336 Not Found: /favicon.ico
+WARNING 2025-04-18 09:40:41,924 log 10880 2832 Not Found: /favicon.ico
+WARNING 2025-04-18 09:43:55,890 log 3796 10996 Not Found: /favicon.ico
+WARNING 2025-04-18 09:44:05,113 log 3796 10132 Not Found: /favicon.ico
+WARNING 2025-04-18 09:44:10,477 log 3796 10684 Not Found: /favicon.ico
+WARNING 2025-04-18 09:44:46,630 log 3796 11036 Not Found: /favicon.ico
+WARNING 2025-04-18 09:44:52,561 log 3796 7764 Not Found: /favicon.ico
+WARNING 2025-04-18 09:45:53,860 log 3796 11104 Forbidden: /api/v1/users/
+WARNING 2025-04-18 09:45:53,861 basehttp 3796 11104 "GET /api/v1/users/ HTTP/1.1" 403 4985
+WARNING 2025-04-18 09:45:53,933 log 3796 11104 Not Found: /favicon.ico
+WARNING 2025-04-18 09:45:57,392 log 3796 504 Forbidden: /api/v1/users/
+WARNING 2025-04-18 09:45:57,393 basehttp 3796 504 "GET /api/v1/users/ HTTP/1.1" 403 4985
+WARNING 2025-04-18 09:45:57,461 log 3796 504 Not Found: /favicon.ico
+WARNING 2025-04-18 09:46:07,513 log 3796 2304 Method Not Allowed: /api/v1/users/logout/
+WARNING 2025-04-18 09:46:07,514 basehttp 3796 2304 "GET /api/v1/users/logout/ HTTP/1.1" 405 5738
+WARNING 2025-04-18 09:46:13,526 log 3796 2304 Method Not Allowed: /api/v1/users/logout/
+WARNING 2025-04-18 09:46:13,527 basehttp 3796 2304 "GET /api/v1/users/logout/ HTTP/1.1" 405 5738
+WARNING 2025-04-18 09:46:13,603 log 3796 2304 Not Found: /favicon.ico
+WARNING 2025-04-18 09:46:14,332 log 3796 9220 Forbidden: /api/v1/users/
+WARNING 2025-04-18 09:46:14,333 basehttp 3796 9220 "GET /api/v1/users/ HTTP/1.1" 403 4985
+WARNING 2025-04-18 09:47:14,380 log 3796 9220 Forbidden: /api/v1/users/
+WARNING 2025-04-18 09:47:14,381 basehttp 3796 9220 "GET /api/v1/users/ HTTP/1.1" 403 4985
+WARNING 2025-04-18 09:47:14,456 log 3796 9220 Not Found: /favicon.ico
+WARNING 2025-04-18 09:47:21,553 log 3796 5284 Method Not Allowed: /api/v1/users/logout/
+WARNING 2025-04-18 09:47:21,554 basehttp 3796 5284 "GET /api/v1/users/logout/ HTTP/1.1" 405 5738
+WARNING 2025-04-18 09:47:21,623 log 3796 5284 Not Found: /favicon.ico
+WARNING 2025-04-18 09:48:45,180 log 3796 11032 Method Not Allowed: /api/v1/users/login/
+WARNING 2025-04-18 09:48:45,181 basehttp 3796 11032 "GET /api/v1/users/login/ HTTP/1.1" 405 5684
+WARNING 2025-04-18 09:49:27,063 log 3796 11032 Not Found: /favicon.ico
+WARNING 2025-04-18 09:49:58,397 log 3796 10392 Not Found: /api/v1/users/4
+WARNING 2025-04-18 09:49:58,398 basehttp 3796 10392 "GET /api/v1/users/4 HTTP/1.1" 404 4008
+WARNING 2025-04-18 09:54:17,128 log 3796 10636 Not Found: /api/v1/users/4/
+WARNING 2025-04-18 09:54:17,128 basehttp 3796 10636 "GET /api/v1/users/4/ HTTP/1.1" 404 4011
+WARNING 2025-04-18 09:54:17,247 log 3796 10636 Not Found: /favicon.ico
+WARNING 2025-04-18 09:54:26,923 log 3796 10636 Method Not Allowed: /api/v1/users/4/delete/
+WARNING 2025-04-18 09:54:26,924 basehttp 3796 10636 "GET /api/v1/users/4/delete/ HTTP/1.1" 405 5171
+WARNING 2025-04-18 09:54:44,582 log 3796 10636 Not Found: /favicon.ico
+WARNING 2025-04-18 09:57:47,098 log 3796 276 Not Found: /favicon.ico
+WARNING 2025-04-18 09:58:06,055 log 3796 11784 Not Found: /favicon.ico
+WARNING 2025-04-18 09:59:17,524 log 3796 11968 Not Found: /api/v1/users/logotu
+WARNING 2025-04-18 09:59:17,525 basehttp 3796 11968 "GET /api/v1/users/logotu HTTP/1.1" 404 4023
+WARNING 2025-04-18 09:59:17,621 log 3796 11968 Not Found: /favicon.ico
+WARNING 2025-04-18 09:59:29,347 log 3796 12156 Method Not Allowed: /api/v1/users/logout/
+WARNING 2025-04-18 09:59:29,348 basehttp 3796 12156 "GET /api/v1/users/logout/ HTTP/1.1" 405 5739
+WARNING 2025-04-18 09:59:40,954 log 3796 12156 Method Not Allowed: /api/v1/users/login/
+WARNING 2025-04-18 09:59:40,955 basehttp 3796 12156 "GET /api/v1/users/login/ HTTP/1.1" 405 5684
+WARNING 2025-04-18 10:00:38,448 log 3796 12156 Not Found: /favicon.ico
+WARNING 2025-04-18 10:00:48,875 log 3796 10312 Not Found: /favicon.ico
+WARNING 2025-04-18 10:01:02,668 log 3796 4376 Not Found: /favicon.ico
+WARNING 2025-04-18 10:03:33,058 log 12072 11408 Not Found: /favicon.ico
+WARNING 2025-04-18 10:03:43,965 log 12072 9584 Forbidden: /api/v1/users/
+WARNING 2025-04-18 10:03:43,966 basehttp 12072 9584 "GET /api/v1/users/ HTTP/1.1" 403 4985
+WARNING 2025-04-18 10:03:44,042 log 12072 9584 Not Found: /favicon.ico
+WARNING 2025-04-18 10:03:50,954 log 12072 11400 Method Not Allowed: /api/v1/users/logout/
+WARNING 2025-04-18 10:03:50,955 basehttp 12072 11400 "GET /api/v1/users/logout/ HTTP/1.1" 405 5738
+WARNING 2025-04-18 10:03:51,033 log 12072 11400 Not Found: /favicon.ico
+WARNING 2025-04-18 10:04:05,969 log 12072 11844 Method Not Allowed: /api/v1/users/login/
+WARNING 2025-04-18 10:04:05,970 basehttp 12072 11844 "GET /api/v1/users/login/ HTTP/1.1" 405 5684
+WARNING 2025-04-18 10:04:42,680 log 12072 11844 Bad Request: /api/v1/users/login/
+WARNING 2025-04-18 10:04:42,681 basehttp 12072 11844 "POST /api/v1/users/login/ HTTP/1.1" 400 5818
+WARNING 2025-04-18 10:06:17,461 log 12072 12180 Not Found: /favicon.ico
