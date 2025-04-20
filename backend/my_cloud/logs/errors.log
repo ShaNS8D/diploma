@@ -459,3 +459,55 @@ WARNING 2025-04-20 11:10:27,061 log 9232 3284 Not Found: /api/v1/cloud/files/
 WARNING 2025-04-20 11:10:27,062 log 9232 7492 Not Found: /api/v1/cloud/files/
 WARNING 2025-04-20 11:10:27,062 basehttp 9232 3284 "GET /api/v1/cloud/files/ HTTP/1.1" 404 24
 WARNING 2025-04-20 11:10:27,063 basehttp 9232 7492 "GET /api/v1/cloud/files/ HTTP/1.1" 404 24
+WARNING 2025-04-20 16:16:50,093 log 5520 7404 Bad Request: /api/v1/users/login/
+WARNING 2025-04-20 16:16:50,094 basehttp 5520 7404 "POST /api/v1/users/login/ HTTP/1.1" 400 171
+WARNING 2025-04-20 16:17:20,369 log 5520 7404 Bad Request: /api/v1/users/login/
+WARNING 2025-04-20 16:17:20,370 basehttp 5520 7404 "POST /api/v1/users/login/ HTTP/1.1" 400 171
+WARNING 2025-04-20 16:38:02,075 log 5520 596 Bad Request: /api/v1/users/login/
+WARNING 2025-04-20 16:38:02,076 basehttp 5520 596 "POST /api/v1/users/login/ HTTP/1.1" 400 171
+WARNING 2025-04-20 16:42:46,908 log 5520 10080 Bad Request: /api/v1/users/login/
+WARNING 2025-04-20 16:42:46,908 basehttp 5520 10080 "POST /api/v1/users/login/ HTTP/1.1" 400 171
+WARNING 2025-04-20 16:44:50,977 log 5520 7776 Bad Request: /api/v1/users/login/
+WARNING 2025-04-20 16:44:50,978 basehttp 5520 7776 "POST /api/v1/users/login/ HTTP/1.1" 400 171
+WARNING 2025-04-20 16:52:10,139 log 5520 10116 Bad Request: /api/v1/users/login/
+WARNING 2025-04-20 16:52:10,139 basehttp 5520 10116 "POST /api/v1/users/login/ HTTP/1.1" 400 171
+WARNING 2025-04-20 17:02:27,074 log 5520 9392 Bad Request: /api/v1/users/login/
+WARNING 2025-04-20 17:02:27,074 basehttp 5520 9392 "POST /api/v1/users/login/ HTTP/1.1" 400 171
+WARNING 2025-04-20 17:11:35,078 log 5520 9296 Bad Request: /api/v1/users/login/
+WARNING 2025-04-20 17:11:35,079 basehttp 5520 9296 "POST /api/v1/users/login/ HTTP/1.1" 400 171
+WARNING 2025-04-20 17:26:59,209 log 5520 9624 Bad Request: /api/v1/users/login/
+WARNING 2025-04-20 17:26:59,210 basehttp 5520 9624 "POST /api/v1/users/login/ HTTP/1.1" 400 171
+WARNING 2025-04-20 17:28:53,222 log 5520 9624 Bad Request: /api/v1/users/login/
+WARNING 2025-04-20 17:28:53,223 basehttp 5520 9624 "POST /api/v1/users/login/ HTTP/1.1" 400 171
+WARNING 2025-04-20 17:29:30,978 log 5520 9624 Bad Request: /api/v1/users/login/
+WARNING 2025-04-20 17:29:30,978 basehttp 5520 9624 "POST /api/v1/users/login/ HTTP/1.1" 400 171
+WARNING 2025-04-20 17:31:15,611 log 5520 9624 Bad Request: /api/v1/users/login/
+WARNING 2025-04-20 17:31:15,612 basehttp 5520 9624 "POST /api/v1/users/login/ HTTP/1.1" 400 171
+WARNING 2025-04-20 17:33:01,499 log 5520 9624 Bad Request: /api/v1/users/login/
+WARNING 2025-04-20 17:33:01,500 basehttp 5520 9624 "POST /api/v1/users/login/ HTTP/1.1" 400 171
+WARNING 2025-04-20 17:33:30,182 log 5520 9624 Bad Request: /api/v1/users/login/
+WARNING 2025-04-20 17:33:30,183 basehttp 5520 9624 "POST /api/v1/users/login/ HTTP/1.1" 400 171
+WARNING 2025-04-20 17:34:24,491 log 5520 9624 Bad Request: /api/v1/users/login/
+WARNING 2025-04-20 17:34:24,491 basehttp 5520 9624 "POST /api/v1/users/login/ HTTP/1.1" 400 171
+WARNING 2025-04-20 19:20:18,365 log 5520 5064 Forbidden: /api/v1/users/
+WARNING 2025-04-20 19:20:18,366 basehttp 5520 5064 "GET /api/v1/users/ HTTP/1.1" 403 59
+WARNING 2025-04-20 19:20:20,319 log 5520 5064 Forbidden: /api/v1/users/
+WARNING 2025-04-20 19:20:20,320 basehttp 5520 5064 "GET /api/v1/users/ HTTP/1.1" 403 59
+WARNING 2025-04-20 19:20:53,803 log 5520 5064 Forbidden: /api/v1/users/
+WARNING 2025-04-20 19:20:53,804 basehttp 5520 5064 "GET /api/v1/users/ HTTP/1.1" 403 59
+WARNING 2025-04-20 19:20:58,784 log 5520 5064 Forbidden: /api/v1/users/
+WARNING 2025-04-20 19:20:58,784 basehttp 5520 5064 "GET /api/v1/users/ HTTP/1.1" 403 59
+WARNING 2025-04-20 19:21:18,742 log 5520 5064 Bad Request: /api/v1/users/login/
+WARNING 2025-04-20 19:21:18,742 basehttp 5520 5064 "POST /api/v1/users/login/ HTTP/1.1" 400 171
+WARNING 2025-04-20 19:24:31,412 log 5520 10620 Forbidden: /api/v1/users/
+WARNING 2025-04-20 19:24:31,412 basehttp 5520 10620 "GET /api/v1/users/ HTTP/1.1" 403 64
+WARNING 2025-04-20 19:24:31,509 log 5520 5064 Forbidden: /api/v1/users/
+WARNING 2025-04-20 19:24:31,509 basehttp 5520 5064 "GET /api/v1/users/ HTTP/1.1" 403 64
+WARNING 2025-04-20 19:25:11,975 log 5520 5064 Forbidden: /api/v1/users/
+WARNING 2025-04-20 19:25:11,976 basehttp 5520 5064 "GET /api/v1/users/ HTTP/1.1" 403 64
+WARNING 2025-04-20 19:25:11,979 log 5520 10620 Forbidden: /api/v1/users/
+WARNING 2025-04-20 19:25:11,980 basehttp 5520 10620 "GET /api/v1/users/ HTTP/1.1" 403 64
+WARNING 2025-04-20 19:34:57,270 log 5520 10360 Forbidden: /api/v1/users/
+WARNING 2025-04-20 19:34:57,271 basehttp 5520 10360 "GET /api/v1/users/ HTTP/1.1" 403 64
+WARNING 2025-04-20 19:34:57,285 log 5520 11016 Forbidden: /api/v1/users/
+WARNING 2025-04-20 19:34:57,286 basehttp 5520 11016 "GET /api/v1/users/ HTTP/1.1" 403 64

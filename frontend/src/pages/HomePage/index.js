@@ -9,8 +9,8 @@ const HomePage = () => {
   return (
     <div className="home-page">
       <PageHeader 
-        title="Cloud Storage" 
-        subtitle="Secure and reliable file storage solution" 
+        title="Сервис облачного хранилища" 
+        subtitle="Безопасное и надежное решение для хранения файлов" 
       />
       
       <Card>

@@ -35,16 +35,23 @@ const authSlice = createSlice({
 });
 
 export const { setAuth, clearAuth, setLoading, setAuthChecked } = authSlice.actions;
-
 export const checkAuth = () => async (dispatch) => {
   try {
-    const response = await authAPI.sessionCheckAuth();
+    const response = await authAPI.getFiles();
     dispatch(setAuth({
       user: response.data.user,
       isAdmin: response.data.user.is_admin,
     }));
   } catch (error) {
+    console.log('[checkAuth] Error:', error);
+    if (error.response?.status === 401) {
+      console.log('[checkAuth] User is not authenticated');
+    } else {
+      console.error('[checkAuth] Unexpected error:', error.message || 'Ошибка проверки аутентификации');
+    }
     dispatch(clearAuth());
+  } finally {
+    dispatch(setAuthChecked());
   }
 };
 
@@ -74,6 +81,7 @@ export const loginUser = (credentials) => async (dispatch) => {
     }));
     return { success: true };
   } catch (error) {
+    // console.log('[loginUser] Error:', error);
     return { success: false, error: error.message || 'Вход в систему не удался' };
   } finally {
     dispatch(setLoading(false));

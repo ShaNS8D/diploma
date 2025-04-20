@@ -23,10 +23,18 @@ export const { setError, clearError } = errorSlice.actions;
 
 
 export const handleAsyncError = (error) => (dispatch) => {
+  console.log('[handleAsyncError] Received error:', error);
   const normalizedError = typeof error === 'string' 
   ? { message: error } 
   : error;
-
+  // let finalMessage = normalizedError.message;
+  // if (normalizedError.data) {
+  //   if (normalizedError.data.detail) {
+  //     finalMessage = normalizedError.data.detail;
+  //   } else if (normalizedError.data.non_field_errors) {
+  //     finalMessage = normalizedError.data.non_field_errors.join(', ');
+  //   }
+  // }
   const errorData = {
     status: normalizedError.status || 500,
     message: normalizedError.message || 'Server error',

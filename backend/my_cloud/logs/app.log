@@ -1315,3 +1315,132 @@ INFO 2025-04-20 15:44:18,010 autoreload 4048 1540 D:\diploma\backend\my_cloud\us
 INFO 2025-04-20 15:44:18,560 autoreload 6416 6000 Watching for file changes with StatReloader
 INFO 2025-04-20 15:44:43,230 autoreload 6416 6000 D:\diploma\backend\my_cloud\users\models.py changed, reloading.
 INFO 2025-04-20 15:44:43,782 autoreload 5520 5072 Watching for file changes with StatReloader
+INFO 2025-04-20 16:16:49,186 basehttp 5520 2496 "OPTIONS /api/v1/users/login/ HTTP/1.1" 200 0
+WARNING 2025-04-20 16:16:50,092 views 5520 7404 Ошибка проверки логина: {'non_field_errors': [ErrorDetail(string='Неверные имя пользователя или пароль', code='authorization')]}
+WARNING 2025-04-20 16:16:50,093 log 5520 7404 Bad Request: /api/v1/users/login/
+WARNING 2025-04-20 16:16:50,094 basehttp 5520 7404 "POST /api/v1/users/login/ HTTP/1.1" 400 171
+WARNING 2025-04-20 16:17:20,369 views 5520 7404 Ошибка проверки логина: {'non_field_errors': [ErrorDetail(string='Неверные имя пользователя или пароль', code='authorization')]}
+WARNING 2025-04-20 16:17:20,369 log 5520 7404 Bad Request: /api/v1/users/login/
+WARNING 2025-04-20 16:17:20,370 basehttp 5520 7404 "POST /api/v1/users/login/ HTTP/1.1" 400 171
+WARNING 2025-04-20 16:38:02,074 views 5520 596 Ошибка проверки логина: {'non_field_errors': [ErrorDetail(string='Неверные имя пользователя или пароль', code='authorization')]}
+WARNING 2025-04-20 16:38:02,075 log 5520 596 Bad Request: /api/v1/users/login/
+WARNING 2025-04-20 16:38:02,076 basehttp 5520 596 "POST /api/v1/users/login/ HTTP/1.1" 400 171
+WARNING 2025-04-20 16:42:46,907 views 5520 10080 Ошибка проверки логина: {'non_field_errors': [ErrorDetail(string='Неверные имя пользователя или пароль', code='authorization')]}
+WARNING 2025-04-20 16:42:46,908 log 5520 10080 Bad Request: /api/v1/users/login/
+WARNING 2025-04-20 16:42:46,908 basehttp 5520 10080 "POST /api/v1/users/login/ HTTP/1.1" 400 171
+WARNING 2025-04-20 16:44:50,976 views 5520 7776 Ошибка проверки логина: {'non_field_errors': [ErrorDetail(string='Неверные имя пользователя или пароль', code='authorization')]}
+WARNING 2025-04-20 16:44:50,977 log 5520 7776 Bad Request: /api/v1/users/login/
+WARNING 2025-04-20 16:44:50,978 basehttp 5520 7776 "POST /api/v1/users/login/ HTTP/1.1" 400 171
+WARNING 2025-04-20 16:52:10,138 views 5520 10116 Ошибка проверки логина: {'non_field_errors': [ErrorDetail(string='Неверные имя пользователя или пароль', code='authorization')]}
+WARNING 2025-04-20 16:52:10,139 log 5520 10116 Bad Request: /api/v1/users/login/
+WARNING 2025-04-20 16:52:10,139 basehttp 5520 10116 "POST /api/v1/users/login/ HTTP/1.1" 400 171
+WARNING 2025-04-20 17:02:27,073 views 5520 9392 Ошибка проверки логина: {'non_field_errors': [ErrorDetail(string='Неверные имя пользователя или пароль', code='authorization')]}
+WARNING 2025-04-20 17:02:27,074 log 5520 9392 Bad Request: /api/v1/users/login/
+WARNING 2025-04-20 17:02:27,074 basehttp 5520 9392 "POST /api/v1/users/login/ HTTP/1.1" 400 171
+WARNING 2025-04-20 17:11:35,078 views 5520 9296 Ошибка проверки логина: {'non_field_errors': [ErrorDetail(string='Неверные имя пользователя или пароль', code='authorization')]}
+WARNING 2025-04-20 17:11:35,078 log 5520 9296 Bad Request: /api/v1/users/login/
+WARNING 2025-04-20 17:11:35,079 basehttp 5520 9296 "POST /api/v1/users/login/ HTTP/1.1" 400 171
+WARNING 2025-04-20 17:26:59,209 views 5520 9624 Ошибка проверки логина: {'non_field_errors': [ErrorDetail(string='Неверные имя пользователя или пароль', code='authorization')]}
+WARNING 2025-04-20 17:26:59,209 log 5520 9624 Bad Request: /api/v1/users/login/
+WARNING 2025-04-20 17:26:59,210 basehttp 5520 9624 "POST /api/v1/users/login/ HTTP/1.1" 400 171
+WARNING 2025-04-20 17:28:53,222 views 5520 9624 Ошибка проверки логина: {'non_field_errors': [ErrorDetail(string='Неверные имя пользователя или пароль', code='authorization')]}
+WARNING 2025-04-20 17:28:53,222 log 5520 9624 Bad Request: /api/v1/users/login/
+WARNING 2025-04-20 17:28:53,223 basehttp 5520 9624 "POST /api/v1/users/login/ HTTP/1.1" 400 171
+WARNING 2025-04-20 17:29:30,977 views 5520 9624 Ошибка проверки логина: {'non_field_errors': [ErrorDetail(string='Неверные имя пользователя или пароль', code='authorization')]}
+WARNING 2025-04-20 17:29:30,978 log 5520 9624 Bad Request: /api/v1/users/login/
+WARNING 2025-04-20 17:29:30,978 basehttp 5520 9624 "POST /api/v1/users/login/ HTTP/1.1" 400 171
+WARNING 2025-04-20 17:31:15,611 views 5520 9624 Ошибка проверки логина: {'non_field_errors': [ErrorDetail(string='Неверные имя пользователя или пароль', code='authorization')]}
+WARNING 2025-04-20 17:31:15,611 log 5520 9624 Bad Request: /api/v1/users/login/
+WARNING 2025-04-20 17:31:15,612 basehttp 5520 9624 "POST /api/v1/users/login/ HTTP/1.1" 400 171
+WARNING 2025-04-20 17:33:01,499 views 5520 9624 Ошибка проверки логина: {'non_field_errors': [ErrorDetail(string='Неверные имя пользователя или пароль', code='authorization')]}
+WARNING 2025-04-20 17:33:01,499 log 5520 9624 Bad Request: /api/v1/users/login/
+WARNING 2025-04-20 17:33:01,500 basehttp 5520 9624 "POST /api/v1/users/login/ HTTP/1.1" 400 171
+WARNING 2025-04-20 17:33:30,182 views 5520 9624 Ошибка проверки логина: {'non_field_errors': [ErrorDetail(string='Неверные имя пользователя или пароль', code='authorization')]}
+WARNING 2025-04-20 17:33:30,182 log 5520 9624 Bad Request: /api/v1/users/login/
+WARNING 2025-04-20 17:33:30,183 basehttp 5520 9624 "POST /api/v1/users/login/ HTTP/1.1" 400 171
+WARNING 2025-04-20 17:34:24,491 views 5520 9624 Ошибка проверки логина: {'non_field_errors': [ErrorDetail(string='Неверные имя пользователя или пароль', code='authorization')]}
+WARNING 2025-04-20 17:34:24,491 log 5520 9624 Bad Request: /api/v1/users/login/
+WARNING 2025-04-20 17:34:24,491 basehttp 5520 9624 "POST /api/v1/users/login/ HTTP/1.1" 400 171
+WARNING 2025-04-20 19:20:18,365 log 5520 5064 Forbidden: /api/v1/users/
+WARNING 2025-04-20 19:20:18,366 basehttp 5520 5064 "GET /api/v1/users/ HTTP/1.1" 403 59
+WARNING 2025-04-20 19:20:20,319 log 5520 5064 Forbidden: /api/v1/users/
+WARNING 2025-04-20 19:20:20,320 basehttp 5520 5064 "GET /api/v1/users/ HTTP/1.1" 403 59
+WARNING 2025-04-20 19:20:53,803 log 5520 5064 Forbidden: /api/v1/users/
+WARNING 2025-04-20 19:20:53,804 basehttp 5520 5064 "GET /api/v1/users/ HTTP/1.1" 403 59
+WARNING 2025-04-20 19:20:58,784 log 5520 5064 Forbidden: /api/v1/users/
+WARNING 2025-04-20 19:20:58,784 basehttp 5520 5064 "GET /api/v1/users/ HTTP/1.1" 403 59
+WARNING 2025-04-20 19:21:18,741 views 5520 5064 Ошибка проверки логина: {'non_field_errors': [ErrorDetail(string='Неверные имя пользователя или пароль', code='authorization')]}
+WARNING 2025-04-20 19:21:18,742 log 5520 5064 Bad Request: /api/v1/users/login/
+WARNING 2025-04-20 19:21:18,742 basehttp 5520 5064 "POST /api/v1/users/login/ HTTP/1.1" 400 171
+INFO 2025-04-20 19:21:39,233 signals 5520 5064 Сессия начата: k2rb7jt1oe25it51i7r0xwfxh8t6klx2, Пользователь: не аутентифицирован
+INFO 2025-04-20 19:21:39,237 views 5520 5064 Пользователь leva вошел в систему. Сеанс: k2rb7jt1oe25it51i7r0xwfxh8t6klx2
+INFO 2025-04-20 19:21:39,240 basehttp 5520 5064 "POST /api/v1/users/login/ HTTP/1.1" 200 227
+INFO 2025-04-20 19:21:39,333 views 5520 5064 Список файлов, извлеченных пользователем 1
+INFO 2025-04-20 19:21:39,337 basehttp 5520 5064 "GET /api/v1/cloud/ HTTP/1.1" 200 2
+INFO 2025-04-20 19:21:39,358 views 5520 11240 Список файлов, извлеченных пользователем 1
+INFO 2025-04-20 19:21:39,362 basehttp 5520 11240 "GET /api/v1/cloud/ HTTP/1.1" 200 2
+INFO 2025-04-20 19:22:15,222 basehttp 5520 11028 "OPTIONS /api/v1/cloud/ HTTP/1.1" 200 0
+INFO 2025-04-20 19:22:15,308 views 5520 5064 Файл, загруженный пользователем 1
+INFO 2025-04-20 19:22:15,310 basehttp 5520 5064 "POST /api/v1/cloud/ HTTP/1.1" 201 113
+INFO 2025-04-20 19:22:15,392 views 5520 5064 Список файлов, извлеченных пользователем 1
+INFO 2025-04-20 19:22:15,420 basehttp 5520 5064 "GET /api/v1/cloud/ HTTP/1.1" 200 386
+INFO 2025-04-20 19:22:36,301 views 5520 5064 Файл, загруженный пользователем 1
+INFO 2025-04-20 19:22:36,303 basehttp 5520 5064 "POST /api/v1/cloud/ HTTP/1.1" 201 106
+INFO 2025-04-20 19:22:36,374 views 5520 5064 Список файлов, извлеченных пользователем 1
+INFO 2025-04-20 19:22:36,382 basehttp 5520 5064 "GET /api/v1/cloud/ HTTP/1.1" 200 767
+INFO 2025-04-20 19:23:49,847 basehttp 5520 11028 "OPTIONS /api/v1/cloud/1/ HTTP/1.1" 200 0
+INFO 2025-04-20 19:23:49,923 views 5520 5064 Список файлов, извлеченных пользователем 1
+INFO 2025-04-20 19:23:49,941 views 5520 5064 Файл None удален пользователем 1
+INFO 2025-04-20 19:23:49,943 basehttp 5520 5064 "DELETE /api/v1/cloud/1/ HTTP/1.1" 204 0
+WARNING 2025-04-20 19:24:31,412 log 5520 10620 Forbidden: /api/v1/users/
+WARNING 2025-04-20 19:24:31,412 basehttp 5520 10620 "GET /api/v1/users/ HTTP/1.1" 403 64
+WARNING 2025-04-20 19:24:31,509 log 5520 5064 Forbidden: /api/v1/users/
+WARNING 2025-04-20 19:24:31,509 basehttp 5520 5064 "GET /api/v1/users/ HTTP/1.1" 403 64
+INFO 2025-04-20 19:25:10,425 views 5520 5064 Список файлов, извлеченных пользователем 1
+INFO 2025-04-20 19:25:10,431 views 5520 10620 Список файлов, извлеченных пользователем 1
+INFO 2025-04-20 19:25:10,432 basehttp 5520 5064 "GET /api/v1/cloud/ HTTP/1.1" 200 382
+INFO 2025-04-20 19:25:10,438 basehttp 5520 10620 "GET /api/v1/cloud/ HTTP/1.1" 200 382
+WARNING 2025-04-20 19:25:11,975 log 5520 5064 Forbidden: /api/v1/users/
+WARNING 2025-04-20 19:25:11,976 basehttp 5520 5064 "GET /api/v1/users/ HTTP/1.1" 403 64
+WARNING 2025-04-20 19:25:11,979 log 5520 10620 Forbidden: /api/v1/users/
+WARNING 2025-04-20 19:25:11,980 basehttp 5520 10620 "GET /api/v1/users/ HTTP/1.1" 403 64
+INFO 2025-04-20 19:30:01,954 basehttp 5520 10676 "OPTIONS /api/v1/users/logout/ HTTP/1.1" 200 0
+INFO 2025-04-20 19:30:02,050 signals 5520 10360 Сессия завершена: k2rb7jt1oe25it51i7r0xwfxh8t6klx2, Пользователь: 1
+INFO 2025-04-20 19:30:02,052 views 5520 10360 Пользователь leva успешно вышел из системы
+INFO 2025-04-20 19:30:02,052 basehttp 5520 10360 "POST /api/v1/users/logout/ HTTP/1.1" 200 60
+INFO 2025-04-20 19:31:10,414 basehttp 5520 10676 "OPTIONS /api/v1/users/register/ HTTP/1.1" 200 0
+INFO 2025-04-20 19:31:11,314 views 5520 10360 Пользователь nika успешно зарегистрирован
+INFO 2025-04-20 19:31:11,315 basehttp 5520 10360 "POST /api/v1/users/register/ HTTP/1.1" 201 87
+INFO 2025-04-20 19:31:48,324 signals 5520 10360 Сессия начата: ev15xa68alb78ghpne7q0lz2ol3z1gdq, Пользователь: не аутентифицирован
+INFO 2025-04-20 19:31:48,326 views 5520 10360 Пользователь nika вошел в систему. Сеанс: ev15xa68alb78ghpne7q0lz2ol3z1gdq
+INFO 2025-04-20 19:31:48,328 basehttp 5520 10360 "POST /api/v1/users/login/ HTTP/1.1" 200 236
+INFO 2025-04-20 19:31:48,428 views 5520 10360 Список файлов, извлеченных пользователем 2
+INFO 2025-04-20 19:31:48,432 basehttp 5520 10360 "GET /api/v1/cloud/ HTTP/1.1" 200 2
+INFO 2025-04-20 19:31:48,455 views 5520 5776 Список файлов, извлеченных пользователем 2
+INFO 2025-04-20 19:31:48,459 basehttp 5520 5776 "GET /api/v1/cloud/ HTTP/1.1" 200 2
+INFO 2025-04-20 19:32:00,813 views 5520 10360 Файл, загруженный пользователем 2
+INFO 2025-04-20 19:32:00,815 basehttp 5520 10360 "POST /api/v1/cloud/ HTTP/1.1" 201 87
+INFO 2025-04-20 19:32:00,886 views 5520 10360 Список файлов, извлеченных пользователем 2
+INFO 2025-04-20 19:32:00,892 basehttp 5520 10360 "GET /api/v1/cloud/ HTTP/1.1" 200 393
+INFO 2025-04-20 19:32:10,084 views 5520 10360 Файл, загруженный пользователем 2
+INFO 2025-04-20 19:32:10,086 basehttp 5520 10360 "POST /api/v1/cloud/ HTTP/1.1" 201 87
+INFO 2025-04-20 19:32:10,156 views 5520 10360 Список файлов, извлеченных пользователем 2
+INFO 2025-04-20 19:32:10,164 basehttp 5520 10360 "GET /api/v1/cloud/ HTTP/1.1" 200 784
+INFO 2025-04-20 19:32:45,888 basehttp 5520 10676 "OPTIONS /api/v1/cloud/3/ HTTP/1.1" 200 0
+INFO 2025-04-20 19:32:45,967 views 5520 10360 Список файлов, извлеченных пользователем 2
+INFO 2025-04-20 19:32:45,981 views 5520 10360 Файл None удален пользователем 2
+INFO 2025-04-20 19:32:45,983 basehttp 5520 10360 "DELETE /api/v1/cloud/3/ HTTP/1.1" 204 0
+INFO 2025-04-20 19:32:57,831 signals 5520 10360 Сессия завершена: ev15xa68alb78ghpne7q0lz2ol3z1gdq, Пользователь: 2
+INFO 2025-04-20 19:32:57,831 views 5520 10360 Пользователь nika успешно вышел из системы
+INFO 2025-04-20 19:32:57,832 basehttp 5520 10360 "POST /api/v1/users/logout/ HTTP/1.1" 200 60
+INFO 2025-04-20 19:34:10,350 signals 5520 10360 Сессия начата: ivjv9ralhv9d93jk1n0ui8lwd98tuuo9, Пользователь: не аутентифицирован
+INFO 2025-04-20 19:34:10,352 views 5520 10360 Пользователь leva вошел в систему. Сеанс: ivjv9ralhv9d93jk1n0ui8lwd98tuuo9
+INFO 2025-04-20 19:34:10,354 basehttp 5520 10360 "POST /api/v1/users/login/ HTTP/1.1" 200 227
+INFO 2025-04-20 19:34:10,471 views 5520 10360 Список файлов, извлеченных пользователем 1
+INFO 2025-04-20 19:34:10,473 views 5520 11016 Список файлов, извлеченных пользователем 1
+INFO 2025-04-20 19:34:10,480 basehttp 5520 10360 "GET /api/v1/cloud/ HTTP/1.1" 200 773
+INFO 2025-04-20 19:34:10,481 basehttp 5520 11016 "GET /api/v1/cloud/ HTTP/1.1" 200 773
+WARNING 2025-04-20 19:34:57,270 log 5520 10360 Forbidden: /api/v1/users/
+WARNING 2025-04-20 19:34:57,271 basehttp 5520 10360 "GET /api/v1/users/ HTTP/1.1" 403 64
+WARNING 2025-04-20 19:34:57,285 log 5520 11016 Forbidden: /api/v1/users/
+WARNING 2025-04-20 19:34:57,286 basehttp 5520 11016 "GET /api/v1/users/ HTTP/1.1" 403 64

@@ -27,14 +27,51 @@ function getCookie(name) {
 
 
 const handleError = (error) => {
+  // console.log('[handleError] Processing error:', error);
   if (error.response) {
     const { status, data } = error.response;
-    const errorMessage = data.message || `Запрос не выполнен с кодом состояния ${status}`;
-    return Promise.reject({ status, message: errorMessage, data });
+    let userFriendlyMessage = 'Произошла ошибка';
+    if (data.detail) {
+      userFriendlyMessage = data.detail;
+    } 
+    else if (data.errors?.non_field_errors) {
+      userFriendlyMessage = data.errors.non_field_errors.join(', ');
+    }
+    else if (data.non_field_errors) {
+      userFriendlyMessage = Array.isArray(data.non_field_errors) 
+        ? data.non_field_errors.join(', ') 
+        : data.non_field_errors;
+    }
+    else if (typeof data === 'object') {
+      const fieldErrors = Object.entries(data)
+        .filter(([key]) => key !== 'status' && key !== 'detail')
+        .map(([key, value]) => {
+          const errorText = Array.isArray(value) ? value.join(', ') : value;
+          return `${key}: ${errorText}`;
+        });
+      
+      if (fieldErrors.length > 0) {
+        userFriendlyMessage = fieldErrors.join('; ');
+      }
+    }
+    
+    return Promise.reject({
+      status,
+      message: userFriendlyMessage,
+      originalMessage: error.message,
+      data,
+      isServerError: true
+    });
   } else if (error.request) {
-    return Promise.reject({ status: 0, message: 'Нет ответа от сервера' });
+    return Promise.reject({ 
+      status: 0, 
+      message: 'Сервер не отвечает. Пожалуйста, проверьте подключение к интернету' 
+    });
   } else {
-    return Promise.reject({ status: -1, message: error.message });
+    return Promise.reject({ 
+      status: -1, 
+      message: error.message || 'Произошла неизвестная ошибка' 
+    });
   }
 };
 
@@ -72,8 +109,7 @@ export const authAPI = {
   login: (data) => api.post('users/login/', data),
   logout: () => api.post('users/logout/'),
   getUsers: () => api.get('users/'),
-  deleteUser: (id) => api.delete(`users/${id}/delete/`),
-  // getCSRFToken: () => api.get('users/get-csrf-token/')
+  deleteUser: (id) => api.delete(`users/${id}/delete/`)
 };
 
 export const fileAPI = {

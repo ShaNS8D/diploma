@@ -37,13 +37,13 @@ const LoginPage = () => {
 
   return (
     <div className="login-page">
-      <AuthForm title="Login" onSubmit={handleSubmit}>
+      <AuthForm title="Вход" onSubmit={handleSubmit}>
         <AuthInput
           name="username"
-          value={credentials.login}
+          value={credentials.username}
           onChange={handleChange}
           placeholder="Введите логин"
-          error={errors.login}
+          error={errors.username}
           label="Логин"
         />
         <AuthInput
