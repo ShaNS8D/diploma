@@ -1,12 +1,8 @@
 import { useDispatch } from 'react-redux';
-import { deleteFile, downloadFile } from '../../features/files/filesSlice';
+import { deleteFile } from '../../features/files/filesSlice';
 
 const FileItem = ({ file }) => {
   const dispatch = useDispatch();
-
-  const handleDownload = () => {
-    dispatch(downloadFile(file.id));
-  };
 
   const handleDelete = () => {
     if (window.confirm('Вы уверены, что хотите удалить этот файл?')) {
@@ -20,7 +16,7 @@ const FileItem = ({ file }) => {
       <span>{formatFileSize(file.size)}</span>
       <span>{new Date(file.upload_date).toLocaleDateString()}</span>
       <div className="file-actions">
-        <button onClick={handleDownload}>Download</button>
+        {/* <button onClick={handleDownload}>Download</button> */}
         <button onClick={handleDelete}>Delete</button>
       </div>
     </div>

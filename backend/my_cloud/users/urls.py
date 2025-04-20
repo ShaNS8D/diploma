@@ -1,11 +1,11 @@
 from django.urls import path
-from django.http import HttpResponse
 from .views import (
     UserRegistrationView,
     UserListView,
     UserDeleteView,
     LoginView,
     LogoutView,
+    GetCSRFToken
 )
 
 app_name = 'users'
@@ -17,7 +17,5 @@ urlpatterns = [
     
     path('', UserListView.as_view(), name='user-list'),
     path('<int:pk>/delete/', UserDeleteView.as_view(), name='user-delete'),
-    path('session-check/', lambda request: HttpResponse(status=200) 
-         if request.user.is_authenticated 
-         else HttpResponse(status=401))
+    # path('get-csrf-token/', GetCSRFToken.as_view(), name='get-csrf-token'),
 ]

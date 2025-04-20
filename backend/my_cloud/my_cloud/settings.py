@@ -54,7 +54,13 @@ TEMPLATES = [
 WSGI_APPLICATION = 'my_cloud.wsgi.application'
 
 CORS_ALLOW_CREDENTIALS = True
+#убрать в продакшен
 CORS_ORIGIN_ALLOW_ALL = True
+#включить в продакшен и указать правильный домен
+# CORS_ALLOWED_ORIGINS = [
+#     "http://localhost:3000",  
+#     "https://yourdomain.com",
+# ]
 CORS_ALLOW_HEADERS = [
     'accept',
     'accept-encoding',
@@ -120,9 +126,10 @@ SESSION_ENGINE = 'django.contrib.sessions.backends.db'  # Хранение се�
 SESSION_COOKIE_HTTPONLY = True  # Защита от XSS (JavaScript не может прочитать куки)
 SESSION_COOKIE_SECURE = False  # Только HTTPS (включить в production!)
 SESSION_COOKIE_SAMESITE = 'Lax'  # Защита от CSRF (можно 'Strict' для большей безопасности)
-SESSION_COOKIE_NAME = 'fs_sessionid'  # Уникальное имя куки
+SESSION_COOKIE_NAME = 'sessionid'  # Уникальное имя куки
 SESSION_EXPIRE_AT_BROWSER_CLOSE = False  # Сессия сохраняется после закрытия браузера
 SESSION_COOKIE_AGE = 1209600  # Время жизни сессии (2 недели, в секундах)
+SESSION_SAVE_EVERY_REQUEST = True # Сохранять сессию при каждом запросе
 
 CSRF_USE_SESSIONS = False  # Хранить CSRF-токен в cookie (лучше для React)
 CSRF_COOKIE_HTTPONLY = False  # React должен читать CSRF-токен

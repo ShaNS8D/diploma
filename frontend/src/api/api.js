@@ -1,19 +1,19 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'http://localhost:8000/api/';
+const API_BASE_URL = 'http://localhost:8000/api/v1/';
 
 const api = axios.create({
   baseURL: API_BASE_URL,
   withCredentials: true,
   headers: {
-    'Content-Type': 'application/json',
-  },
+    'Content-Type': 'application/json'
+  }
 });
 
 const handleError = (error) => {
   if (error.response) {
     const { status, data } = error.response;
-    const errorMessage = data.message || `Request failed with status code ${status}`;
+    const errorMessage = data.message || `Запрос не выполнен с кодом состояния ${status}`;
     return Promise.reject({ status, message: errorMessage, data });
   } else if (error.request) {
     return Promise.reject({ status: 0, message: 'Нет ответа от сервера' });
@@ -21,6 +21,15 @@ const handleError = (error) => {
     return Promise.reject({ status: -1, message: error.message });
   }
 };
+
+api.interceptors.request.use(async (config) => {
+  if (['post', 'put', 'patch', 'delete'].includes(config.method.toLowerCase())) {
+    const { data: { csrfToken } } = await authAPI.getCSRFToken();
+    config.headers['X-CSRFToken'] = csrfToken;
+    console.log('api.interceptors',csrfToken)
+  }
+  return config;
+});
 
 api.interceptors.response.use(
   response => response,
@@ -34,7 +43,7 @@ export const authAPI = {
   logout: () => api.post('users/logout/'),
   getUsers: () => api.get('users/'),
   deleteUser: (id) => api.delete(`users/${id}/delete/`),
-  checkAuth: () => api.get('users/session-check/'),
+  // getCSRFToken: () => api.get('users/get-csrf-token/')
 };
 
 export const fileAPI = {
@@ -46,7 +55,7 @@ export const fileAPI = {
   getFiles: (params = {}) => api.get('cloud/files/', { params }),
   downloadFile: (id) => api.get(`cloud/files/${id}/download/`, { responseType: 'blob' }),
   deleteFile: (id) => api.delete(`cloud/files/${id}/`),
-  updateFile: (id, data) => api.patch(`cloud/files/${id}/`, data),
+  updateDataFile: (id, data) => api.patch(`cloud/files/${id}/`, data),
   getPublicLink: (id) => api.get(`cloud/files/${id}/share/`),
 };
 

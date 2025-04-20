@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { RouterProvider, createBrowserRouter, Outlet } from 'react-router-dom';
 import { Provider, useDispatch } from 'react-redux';
 import { store } from './features/store';
+import { authAPI } from './api/api';
 import ProtectedRoute from './hoc/ProtectedRoute';
 import ErrorHandler from './hoc/ErrorHandler';
 import HomePage from './pages/HomePage';
@@ -15,6 +16,9 @@ import { checkAuth } from './features/auth/authSlice';
 import './App.css';
 
 const AppWrapper = () => {
+  useEffect(() => {
+    authAPI.getCSRFToken();
+  }, []);
   return (
     <Provider store={store}>
       <App />

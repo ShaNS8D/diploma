@@ -927,3 +927,337 @@ INFO 2025-04-18 10:20:36,072 views 9576 11216 Список файлов, изв�
 INFO 2025-04-18 10:20:36,139 basehttp 9576 11216 "GET /api/v1/cloud/?user_id=3 HTTP/1.1" 200 10668
 INFO 2025-04-18 10:20:55,651 autoreload 9576 4476 D:\diploma\backend\my_cloud\cloud_app\views.py changed, reloading.
 INFO 2025-04-18 10:20:56,221 autoreload 12248 276 Watching for file changes with StatReloader
+INFO 2025-04-18 10:44:42,309 autoreload 11684 7972 Watching for file changes with StatReloader
+WARNING 2025-04-18 10:46:36,345 log 11684 9720 Not Found: /api/users/session-check/
+WARNING 2025-04-18 10:46:36,349 log 11684 12084 Not Found: /api/users/session-check/
+WARNING 2025-04-18 10:46:36,350 basehttp 11684 9720 "GET /api/users/session-check/ HTTP/1.1" 404 2561
+WARNING 2025-04-18 10:46:36,350 basehttp 11684 12084 "GET /api/users/session-check/ HTTP/1.1" 404 2561
+INFO 2025-04-18 11:52:45,607 autoreload 9180 9984 Watching for file changes with StatReloader
+WARNING 2025-04-18 11:53:53,811 log 9180 9272 Not Found: /api/users/session-check/
+WARNING 2025-04-18 11:53:53,814 log 9180 9332 Not Found: /api/users/session-check/
+WARNING 2025-04-18 11:53:53,815 basehttp 9180 9272 "GET /api/users/session-check/ HTTP/1.1" 404 2561
+WARNING 2025-04-18 11:53:53,815 basehttp 9180 9332 "GET /api/users/session-check/ HTTP/1.1" 404 2561
+WARNING 2025-04-18 11:56:57,306 log 9180 9544 Not Found: /api/users/session-check/
+WARNING 2025-04-18 11:56:57,310 log 9180 9248 Not Found: /api/users/session-check/
+WARNING 2025-04-18 11:56:57,310 basehttp 9180 9544 "GET /api/users/session-check/ HTTP/1.1" 404 2561
+WARNING 2025-04-18 11:56:57,310 basehttp 9180 9248 "GET /api/users/session-check/ HTTP/1.1" 404 2561
+INFO 2025-04-18 11:57:27,667 basehttp 9180 9836 "OPTIONS /api/users/login/ HTTP/1.1" 200 0
+WARNING 2025-04-18 11:57:27,675 log 9180 9544 Not Found: /api/users/login/
+WARNING 2025-04-18 11:57:27,675 basehttp 9180 9544 "POST /api/users/login/ HTTP/1.1" 404 2538
+WARNING 2025-04-18 12:04:30,204 log 9180 9224 Not Found: /api/м1/users/session-check/
+WARNING 2025-04-18 12:04:30,207 basehttp 9180 9224 "GET /api/%D0%BC1/users/session-check/ HTTP/1.1" 404 2577
+WARNING 2025-04-18 12:04:34,200 log 9180 9224 Unauthorized: /api/v1/users/session-check/
+WARNING 2025-04-18 12:04:34,201 basehttp 9180 9224 "GET /api/v1/users/session-check/ HTTP/1.1" 401 0
+INFO 2025-04-18 12:05:12,636 basehttp 9180 2808 "OPTIONS /api/v1/users/login/ HTTP/1.1" 200 0
+WARNING 2025-04-18 12:05:12,639 views 9180 9224 Ошибка проверки логина: {'username': [ErrorDetail(string='This field is required.', code='required')]}
+WARNING 2025-04-18 12:05:12,640 log 9180 9224 Bad Request: /api/v1/users/login/
+WARNING 2025-04-18 12:05:12,640 basehttp 9180 9224 "POST /api/v1/users/login/ HTTP/1.1" 400 118
+WARNING 2025-04-18 12:05:45,274 log 9180 9264 Unauthorized: /api/v1/users/session-check/
+WARNING 2025-04-18 12:05:45,275 basehttp 9180 9264 "GET /api/v1/users/session-check/ HTTP/1.1" 401 0
+WARNING 2025-04-18 12:05:45,276 log 9180 6444 Unauthorized: /api/v1/users/session-check/
+WARNING 2025-04-18 12:05:45,277 basehttp 9180 6444 "GET /api/v1/users/session-check/ HTTP/1.1" 401 0
+WARNING 2025-04-18 12:05:51,756 views 9180 9264 Ошибка проверки логина: {'username': [ErrorDetail(string='This field is required.', code='required')]}
+WARNING 2025-04-18 12:05:51,756 log 9180 9264 Bad Request: /api/v1/users/login/
+WARNING 2025-04-18 12:05:51,757 basehttp 9180 9264 "POST /api/v1/users/login/ HTTP/1.1" 400 118
+WARNING 2025-04-18 12:06:38,051 views 9180 9264 Ошибка проверки логина: {'username': [ErrorDetail(string='This field is required.', code='required')]}
+WARNING 2025-04-18 12:06:38,052 log 9180 9264 Bad Request: /api/v1/users/login/
+WARNING 2025-04-18 12:06:38,052 basehttp 9180 9264 "POST /api/v1/users/login/ HTTP/1.1" 400 118
+WARNING 2025-04-18 12:06:43,058 log 9180 9804 Unauthorized: /api/v1/users/session-check/
+WARNING 2025-04-18 12:06:43,059 log 9180 9844 Unauthorized: /api/v1/users/session-check/
+WARNING 2025-04-18 12:06:43,060 basehttp 9180 9804 "GET /api/v1/users/session-check/ HTTP/1.1" 401 0
+WARNING 2025-04-18 12:06:43,060 basehttp 9180 9844 "GET /api/v1/users/session-check/ HTTP/1.1" 401 0
+INFO 2025-04-18 12:09:11,417 signals 9180 10032 Сессия начата: qjqcxkgtid01iq1xepjogp1mfxrcv80l, Пользователь: не аутентифицирован
+INFO 2025-04-18 12:09:11,442 views 9180 10032 Пользователь leva вошел в систему. Сеанс: qjqcxkgtid01iq1xepjogp1mfxrcv80l
+INFO 2025-04-18 12:09:11,445 basehttp 9180 10032 "POST /api/v1/users/login/ HTTP/1.1" 200 227
+INFO 2025-04-18 12:09:11,549 views 9180 10032 Список файлов, извлеченных пользователем 1
+INFO 2025-04-18 12:09:11,550 views 9180 6672 Список файлов, извлеченных пользователем 1
+WARNING 2025-04-18 12:09:11,567 log 9180 10032 Not Found: /api/v1/cloud/files/
+WARNING 2025-04-18 12:09:11,567 log 9180 6672 Not Found: /api/v1/cloud/files/
+WARNING 2025-04-18 12:09:11,568 basehttp 9180 10032 "GET /api/v1/cloud/files/ HTTP/1.1" 404 24
+WARNING 2025-04-18 12:09:11,568 basehttp 9180 6672 "GET /api/v1/cloud/files/ HTTP/1.1" 404 24
+INFO 2025-04-18 12:16:15,981 basehttp 9180 9536 "GET /api/v1/users/session-check/ HTTP/1.1" 200 0
+INFO 2025-04-18 12:16:42,814 basehttp 9180 9536 "GET /api/v1/users/session-check/ HTTP/1.1" 200 0
+INFO 2025-04-18 12:17:55,834 basehttp 9180 9536 "GET /api/v1/users/session-check/ HTTP/1.1" 200 0
+WARNING 2025-04-18 12:18:16,503 log 9180 9536 Forbidden: /api/v1/users/login/
+WARNING 2025-04-18 12:18:16,504 basehttp 9180 9536 "POST /api/v1/users/login/ HTTP/1.1" 403 109
+INFO 2025-04-18 12:20:21,670 basehttp 9180 1824 "GET /api/v1/users/session-check/ HTTP/1.1" 200 0
+ERROR 2025-04-18 12:28:54,806 log 9180 6292 Internal Server Error: /api/v1/users
+Traceback (most recent call last):
+  File "D:\diploma\backend\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\diploma\backend\venv\Lib\site-packages\django\utils\deprecation.py", line 122, in __call__
+    response = self.process_response(request, response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\diploma\backend\venv\Lib\site-packages\django\middleware\common.py", line 108, in process_response
+    return self.response_redirect_class(self.get_full_path_with_slash(request))
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\diploma\backend\venv\Lib\site-packages\django\middleware\common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 127.0.0.1:8000/api/v1/users/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+ERROR 2025-04-18 12:28:54,808 basehttp 9180 6292 "POST /api/v1/users HTTP/1.1" 500 72886
+INFO 2025-04-18 18:08:33,894 autoreload 10232 10060 Watching for file changes with StatReloader
+ERROR 2025-04-18 18:12:39,431 log 10232 10712 Internal Server Error: /api/v1/users
+Traceback (most recent call last):
+  File "D:\diploma\backend\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\diploma\backend\venv\Lib\site-packages\django\utils\deprecation.py", line 122, in __call__
+    response = self.process_response(request, response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\diploma\backend\venv\Lib\site-packages\django\middleware\common.py", line 108, in process_response
+    return self.response_redirect_class(self.get_full_path_with_slash(request))
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\diploma\backend\venv\Lib\site-packages\django\middleware\common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 127.0.0.1:8000/api/v1/users/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+ERROR 2025-04-18 18:12:39,433 basehttp 10232 10712 "POST /api/v1/users HTTP/1.1" 500 72886
+ERROR 2025-04-18 18:16:27,479 log 10232 1500 Internal Server Error: /api/v1/users
+Traceback (most recent call last):
+  File "D:\diploma\backend\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\diploma\backend\venv\Lib\site-packages\django\utils\deprecation.py", line 122, in __call__
+    response = self.process_response(request, response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\diploma\backend\venv\Lib\site-packages\django\middleware\common.py", line 108, in process_response
+    return self.response_redirect_class(self.get_full_path_with_slash(request))
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\diploma\backend\venv\Lib\site-packages\django\middleware\common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 127.0.0.1:8000/api/v1/users/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+ERROR 2025-04-18 18:16:27,481 basehttp 10232 1500 "POST /api/v1/users HTTP/1.1" 500 72745
+ERROR 2025-04-18 18:17:12,357 log 10232 11044 Internal Server Error: /api/v1/users
+Traceback (most recent call last):
+  File "D:\diploma\backend\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\diploma\backend\venv\Lib\site-packages\django\utils\deprecation.py", line 122, in __call__
+    response = self.process_response(request, response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\diploma\backend\venv\Lib\site-packages\django\middleware\common.py", line 108, in process_response
+    return self.response_redirect_class(self.get_full_path_with_slash(request))
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\diploma\backend\venv\Lib\site-packages\django\middleware\common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 127.0.0.1:8000/api/v1/users/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+ERROR 2025-04-18 18:17:12,358 basehttp 10232 11044 "POST /api/v1/users HTTP/1.1" 500 72892
+ERROR 2025-04-18 18:25:02,986 log 10232 10432 Internal Server Error: /api/v1/users
+Traceback (most recent call last):
+  File "D:\diploma\backend\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\diploma\backend\venv\Lib\site-packages\django\utils\deprecation.py", line 122, in __call__
+    response = self.process_response(request, response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\diploma\backend\venv\Lib\site-packages\django\middleware\common.py", line 108, in process_response
+    return self.response_redirect_class(self.get_full_path_with_slash(request))
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\diploma\backend\venv\Lib\site-packages\django\middleware\common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 127.0.0.1:8000/api/v1/users/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+ERROR 2025-04-18 18:25:02,988 basehttp 10232 10432 "POST /api/v1/users HTTP/1.1" 500 72289
+WARNING 2025-04-18 18:25:29,899 log 10232 10484 Forbidden: /api/v1/users/
+WARNING 2025-04-18 18:25:29,900 basehttp 10232 10484 "POST /api/v1/users/ HTTP/1.1" 403 59
+WARNING 2025-04-18 18:26:44,696 log 10232 116 Forbidden: /api/v1/users/
+WARNING 2025-04-18 18:26:44,696 basehttp 10232 116 "POST /api/v1/users/ HTTP/1.1" 403 59
+WARNING 2025-04-18 18:29:56,102 log 10232 5100 Not Found: /api/csrf/
+WARNING 2025-04-18 18:29:56,103 basehttp 10232 5100 "GET /api/csrf/ HTTP/1.1" 404 2516
+WARNING 2025-04-18 18:32:11,537 log 10232 10016 Forbidden: /api/v1/users/
+WARNING 2025-04-18 18:32:11,538 basehttp 10232 10016 "POST /api/v1/users/ HTTP/1.1" 403 59
+INFO 2025-04-19 10:48:16,987 autoreload 252 8492 Watching for file changes with StatReloader
+WARNING 2025-04-19 10:48:29,649 views 252 11212 Ошибка проверки логина: {'username': [ErrorDetail(string='This field is required.', code='required')], 'password': [ErrorDetail(string='This field is required.', code='required')]}
+WARNING 2025-04-19 10:48:29,650 log 252 11212 Bad Request: /api/v1/users/login/
+WARNING 2025-04-19 10:48:29,651 basehttp 252 11212 "POST /api/v1/users/login/ HTTP/1.1" 400 157
+INFO 2025-04-19 10:49:35,465 signals 252 10216 Сессия начата: htn41e45363e0fcsfe1wk3dd5tn5beks, Пользователь: не аутентифицирован
+INFO 2025-04-19 10:49:35,475 views 252 10216 Пользователь leva вошел в систему. Сеанс: htn41e45363e0fcsfe1wk3dd5tn5beks
+INFO 2025-04-19 10:49:35,478 basehttp 252 10216 "POST /api/v1/users/login/ HTTP/1.1" 200 227
+WARNING 2025-04-19 10:52:59,017 log 252 952 Forbidden: /api/v1/users/register/
+WARNING 2025-04-19 10:52:59,017 basehttp 252 952 "POST /api/v1/users/register/ HTTP/1.1" 403 46
+WARNING 2025-04-19 10:53:24,218 log 252 952 Method Not Allowed: /api/v1/users/register/
+WARNING 2025-04-19 10:53:24,219 basehttp 252 952 "GET /api/v1/users/register/ HTTP/1.1" 405 41
+WARNING 2025-04-19 10:54:04,074 log 252 952 Forbidden: /api/v1/users/register/
+WARNING 2025-04-19 10:54:04,074 basehttp 252 952 "POST /api/v1/users/register/ HTTP/1.1" 403 46
+WARNING 2025-04-19 10:55:03,477 log 252 2480 Not Found: /
+WARNING 2025-04-19 10:55:03,478 basehttp 252 2480 "GET / HTTP/1.1" 404 2471
+WARNING 2025-04-19 10:55:03,602 log 252 2480 Not Found: /favicon.ico
+WARNING 2025-04-19 10:55:03,603 basehttp 252 2480 "GET /favicon.ico HTTP/1.1" 404 2522
+WARNING 2025-04-19 10:55:22,599 log 252 2480 Forbidden: /api/v1/users/
+WARNING 2025-04-19 10:55:22,599 basehttp 252 2480 "GET /api/v1/users/ HTTP/1.1" 403 4935
+INFO 2025-04-19 10:55:22,815 basehttp 252 10024 "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1152
+INFO 2025-04-19 10:55:22,818 basehttp 252 11216 "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+INFO 2025-04-19 10:55:22,828 basehttp 252 10024 "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1793
+INFO 2025-04-19 10:55:22,839 basehttp 252 11216 "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 39680
+INFO 2025-04-19 10:55:22,839 basehttp 252 2480 "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121457
+INFO 2025-04-19 10:55:22,842 basehttp 252 2480 "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 200 59
+INFO 2025-04-19 10:55:22,842 basehttp 252 11216 "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1268
+INFO 2025-04-19 10:55:22,843 basehttp 252 276 "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3426
+INFO 2025-04-19 10:55:22,846 basehttp 252 4188 "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3796
+INFO 2025-04-19 10:55:22,856 basehttp 252 3268 "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 200 87533
+INFO 2025-04-19 10:55:22,865 basehttp 252 10024 "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+INFO 2025-04-19 10:55:22,876 basehttp 252 2480 "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+WARNING 2025-04-19 10:55:35,812 log 252 2480 Method Not Allowed: /api/v1/users/register/
+WARNING 2025-04-19 10:55:35,813 basehttp 252 2480 "GET /api/v1/users/register/ HTTP/1.1" 405 8322
+WARNING 2025-04-19 11:00:11,007 log 252 9908 Forbidden: /api/v1/users/register/
+WARNING 2025-04-19 11:00:11,007 basehttp 252 9908 "POST /api/v1/users/register/ HTTP/1.1" 403 46
+WARNING 2025-04-19 11:00:51,941 log 252 9908 Forbidden: /api/v1/users/register/
+WARNING 2025-04-19 11:00:51,941 basehttp 252 9908 "POST /api/v1/users/register/ HTTP/1.1" 403 46
+WARNING 2025-04-19 11:01:19,267 log 252 9908 Forbidden: /api/v1/users/logout/
+WARNING 2025-04-19 11:01:19,267 basehttp 252 9908 "POST /api/v1/users/logout/ HTTP/1.1" 403 46
+WARNING 2025-04-19 11:01:29,042 log 252 9908 Forbidden: /api/v1/users/logout/
+WARNING 2025-04-19 11:01:29,043 basehttp 252 9908 "POST /api/v1/users/logout/ HTTP/1.1" 403 46
+WARNING 2025-04-19 11:01:53,204 log 252 9908 Forbidden: /api/v1/users/
+WARNING 2025-04-19 11:01:53,205 basehttp 252 9908 "POST /api/v1/users/ HTTP/1.1" 403 46
+INFO 2025-04-19 11:02:12,796 views 252 9908 Пользователь Admin leva получил доступ к списку пользователей
+INFO 2025-04-19 11:02:12,798 basehttp 252 9908 "GET /api/v1/users/ HTTP/1.1" 200 219
+WARNING 2025-04-19 11:04:03,878 log 252 8204 Forbidden: /api/v1/users/logout/
+WARNING 2025-04-19 11:04:03,878 basehttp 252 8204 "POST /api/v1/users/logout/ HTTP/1.1" 403 46
+WARNING 2025-04-19 11:05:15,583 log 252 8716 Forbidden: /api/v1/users/
+WARNING 2025-04-19 11:05:15,584 basehttp 252 8716 "GET /api/v1/users/ HTTP/1.1" 403 4935
+INFO 2025-04-19 11:06:52,445 signals 252 8772 Сессия завершена: htn41e45363e0fcsfe1wk3dd5tn5beks, Пользователь: 1
+INFO 2025-04-19 11:06:52,446 views 252 8772 Пользователь leva успешно вышел из системы
+INFO 2025-04-19 11:06:52,446 basehttp 252 8772 "POST /api/v1/users/logout/ HTTP/1.1" 200 60
+WARNING 2025-04-19 11:09:12,516 log 252 2680 Method Not Allowed: /api/v1/users/register/
+WARNING 2025-04-19 11:09:12,517 basehttp 252 2680 "GET /api/v1/users/register/ HTTP/1.1" 405 41
+WARNING 2025-04-19 11:09:38,451 views 252 2680 Ошибка проверки регистрации: {'username': [ErrorDetail(string='This field is required.', code='required')], 'email': [ErrorDetail(string='This field is required.', code='required')], 'password': [ErrorDetail(string='This field is required.', code='required')]}
+WARNING 2025-04-19 11:09:38,451 log 252 2680 Bad Request: /api/v1/users/register/
+WARNING 2025-04-19 11:09:38,452 basehttp 252 2680 "POST /api/v1/users/register/ HTTP/1.1" 400 193
+WARNING 2025-04-19 11:09:58,317 views 252 2680 Ошибка проверки регистрации: {'username': [ErrorDetail(string='This field is required.', code='required')], 'email': [ErrorDetail(string='This field is required.', code='required')], 'password': [ErrorDetail(string='This field is required.', code='required')]}
+WARNING 2025-04-19 11:09:58,317 log 252 2680 Bad Request: /api/v1/users/register/
+WARNING 2025-04-19 11:09:58,318 basehttp 252 2680 "POST /api/v1/users/register/ HTTP/1.1" 400 193
+WARNING 2025-04-19 11:10:04,775 log 252 2680 Method Not Allowed: /api/v1/users/register/
+WARNING 2025-04-19 11:10:04,776 basehttp 252 2680 "GET /api/v1/users/register/ HTTP/1.1" 405 41
+WARNING 2025-04-19 11:10:16,339 log 252 2680 Method Not Allowed: /api/v1/users/register/
+WARNING 2025-04-19 11:10:16,340 basehttp 252 2680 "GET /api/v1/users/register/ HTTP/1.1" 405 41
+WARNING 2025-04-19 11:10:32,442 log 252 2680 Method Not Allowed: /api/v1/users/register/
+WARNING 2025-04-19 11:10:32,443 basehttp 252 2680 "GET /api/v1/users/register/ HTTP/1.1" 405 41
+WARNING 2025-04-19 11:10:39,763 views 252 2680 Ошибка проверки регистрации: {'username': [ErrorDetail(string='This field is required.', code='required')], 'email': [ErrorDetail(string='This field is required.', code='required')], 'password': [ErrorDetail(string='This field is required.', code='required')]}
+WARNING 2025-04-19 11:10:39,763 log 252 2680 Bad Request: /api/v1/users/register/
+WARNING 2025-04-19 11:10:39,764 basehttp 252 2680 "POST /api/v1/users/register/ HTTP/1.1" 400 193
+WARNING 2025-04-19 11:11:02,155 views 252 2680 Ошибка проверки регистрации: {'password': [ErrorDetail(string='Пароль должен содержать хотя бы одну заглавную букву', code='invalid')]}
+WARNING 2025-04-19 11:11:02,156 log 252 2680 Bad Request: /api/v1/users/register/
+WARNING 2025-04-19 11:11:02,156 basehttp 252 2680 "POST /api/v1/users/register/ HTTP/1.1" 400 192
+INFO 2025-04-19 11:11:17,451 views 252 2680 Пользователь mika успешно зарегистрирован
+INFO 2025-04-19 11:11:17,452 basehttp 252 2680 "POST /api/v1/users/register/ HTTP/1.1" 201 87
+WARNING 2025-04-19 11:14:38,853 log 252 4944 Forbidden: /api/v1/users/
+WARNING 2025-04-19 11:14:38,853 basehttp 252 4944 "POST /api/v1/users/ HTTP/1.1" 403 59
+WARNING 2025-04-19 11:15:10,684 log 252 4944 Forbidden: /api/v1/users/
+WARNING 2025-04-19 11:15:10,685 basehttp 252 4944 "POST /api/v1/users/ HTTP/1.1" 403 59
+INFO 2025-04-19 11:15:39,708 signals 252 4944 Сессия начата: s6ddi8nrwkcm2uc4rq5yq0wyhmz9rkus, Пользователь: не аутентифицирован
+INFO 2025-04-19 11:15:39,711 views 252 4944 Пользователь leva вошел в систему. Сеанс: s6ddi8nrwkcm2uc4rq5yq0wyhmz9rkus
+INFO 2025-04-19 11:15:39,714 basehttp 252 4944 "POST /api/v1/users/login/ HTTP/1.1" 200 227
+INFO 2025-04-19 11:16:23,535 views 252 4944 Пользователь Admin leva получил доступ к списку пользователей
+INFO 2025-04-19 11:16:23,537 basehttp 252 4944 "GET /api/v1/users/ HTTP/1.1" 200 334
+WARNING 2025-04-19 11:17:07,688 log 252 4944 Forbidden: /api/v1/users/5/delete/
+WARNING 2025-04-19 11:17:07,689 basehttp 252 4944 "DELETE /api/v1/users/5/delete/ HTTP/1.1" 403 83
+INFO 2025-04-19 11:17:34,995 views 252 4944 Пользователь Admin leva получил доступ к списку пользователей
+INFO 2025-04-19 11:17:34,997 basehttp 252 4944 "GET /api/v1/users/ HTTP/1.1" 200 334
+WARNING 2025-04-19 11:17:57,423 log 252 4944 Not Found: /api/v1/users/5/
+WARNING 2025-04-19 11:17:57,424 basehttp 252 4944 "GET /api/v1/users/5/ HTTP/1.1" 404 4011
+WARNING 2025-04-19 11:18:29,995 log 252 4944 Method Not Allowed: /api/v1/users/5/delete/
+WARNING 2025-04-19 11:18:29,996 basehttp 252 4944 "GET /api/v1/users/5/delete/ HTTP/1.1" 405 41
+WARNING 2025-04-19 11:18:39,172 log 252 4944 Forbidden: /api/v1/users/5/delete/
+WARNING 2025-04-19 11:18:39,173 basehttp 252 4944 "DELETE /api/v1/users/5/delete/ HTTP/1.1" 403 83
+WARNING 2025-04-19 11:18:43,288 log 252 4944 Forbidden: /api/v1/users/5/delete/
+WARNING 2025-04-19 11:18:43,288 basehttp 252 4944 "POST /api/v1/users/5/delete/ HTTP/1.1" 403 83
+INFO 2025-04-19 11:19:43,241 views 252 4944 Пользователь mika удален администратором leva
+INFO 2025-04-19 11:19:43,243 basehttp 252 4944 "DELETE /api/v1/users/5/delete/ HTTP/1.1" 200 65
+INFO 2025-04-19 11:20:00,894 views 252 4944 Пользователь Admin leva получил доступ к списку пользователей
+INFO 2025-04-19 11:20:00,896 basehttp 252 4944 "GET /api/v1/users/ HTTP/1.1" 200 219
+INFO 2025-04-19 12:19:15,064 autoreload 252 8492 D:\diploma\backend\my_cloud\users\views.py changed, reloading.
+INFO 2025-04-19 12:19:15,666 autoreload 3948 8028 Watching for file changes with StatReloader
+INFO 2025-04-19 12:19:26,697 autoreload 3948 8028 D:\diploma\backend\my_cloud\users\views.py changed, reloading.
+INFO 2025-04-19 12:19:27,274 autoreload 3188 11788 Watching for file changes with StatReloader
+INFO 2025-04-19 12:19:29,932 autoreload 3188 11788 D:\diploma\backend\my_cloud\users\views.py changed, reloading.
+INFO 2025-04-19 12:19:30,456 autoreload 9268 7212 Watching for file changes with StatReloader
+INFO 2025-04-19 12:19:32,035 autoreload 9268 7212 D:\diploma\backend\my_cloud\users\views.py changed, reloading.
+INFO 2025-04-19 12:19:32,567 autoreload 12204 11440 Watching for file changes with StatReloader
+INFO 2025-04-19 12:19:36,274 autoreload 12204 11440 D:\diploma\backend\my_cloud\users\views.py changed, reloading.
+INFO 2025-04-19 12:19:36,788 autoreload 10404 7744 Watching for file changes with StatReloader
+INFO 2025-04-19 12:19:52,019 autoreload 10404 7744 D:\diploma\backend\my_cloud\users\views.py changed, reloading.
+INFO 2025-04-19 12:19:52,584 autoreload 8056 276 Watching for file changes with StatReloader
+INFO 2025-04-19 12:19:56,290 autoreload 8056 276 D:\diploma\backend\my_cloud\users\views.py changed, reloading.
+INFO 2025-04-19 12:19:56,812 autoreload 11912 9516 Watching for file changes with StatReloader
+INFO 2025-04-19 12:21:46,575 autoreload 11912 9516 D:\diploma\backend\my_cloud\users\urls.py changed, reloading.
+INFO 2025-04-19 12:21:47,124 autoreload 1552 12108 Watching for file changes with StatReloader
+INFO 2025-04-19 12:21:53,900 autoreload 1552 12108 D:\diploma\backend\my_cloud\users\urls.py changed, reloading.
+INFO 2025-04-19 12:21:54,441 autoreload 3704 11424 Watching for file changes with StatReloader
+INFO 2025-04-19 12:22:01,290 autoreload 3704 11424 D:\diploma\backend\my_cloud\users\urls.py changed, reloading.
+INFO 2025-04-19 12:22:01,852 autoreload 2516 3036 Watching for file changes with StatReloader
+INFO 2025-04-19 12:22:16,060 autoreload 2516 3036 D:\diploma\backend\my_cloud\users\urls.py changed, reloading.
+INFO 2025-04-19 12:22:16,623 autoreload 10196 9068 Watching for file changes with StatReloader
+INFO 2025-04-19 12:22:19,259 autoreload 10196 9068 D:\diploma\backend\my_cloud\users\urls.py changed, reloading.
+INFO 2025-04-19 12:22:19,782 autoreload 3868 8748 Watching for file changes with StatReloader
+INFO 2025-04-19 12:22:37,094 autoreload 3868 8748 D:\diploma\backend\my_cloud\users\urls.py changed, reloading.
+INFO 2025-04-19 12:22:37,658 autoreload 10552 7888 Watching for file changes with StatReloader
+INFO 2025-04-19 12:22:53,933 autoreload 10552 7888 D:\diploma\backend\my_cloud\users\urls.py changed, reloading.
+INFO 2025-04-19 12:22:54,487 autoreload 12112 4944 Watching for file changes with StatReloader
+INFO 2025-04-19 12:34:25,472 basehttp 12112 1792 "GET /api/v1/users/get-csrf-token/ HTTP/1.1" 200 80
+INFO 2025-04-19 12:34:25,472 basehttp 12112 7156 "GET /api/v1/users/get-csrf-token/ HTTP/1.1" 200 80
+INFO 2025-04-19 12:35:20,946 basehttp 12112 1792 "GET /api/v1/users/get-csrf-token/ HTTP/1.1" 200 80
+INFO 2025-04-19 12:35:20,946 basehttp 12112 6076 "OPTIONS /api/v1/users/login/ HTTP/1.1" 200 0
+INFO 2025-04-19 12:35:22,501 signals 12112 7156 Сессия начата: 8gs9skvp0nebm1ugszpp3cgygilte4jt, Пользователь: не аутентифицирован
+INFO 2025-04-19 12:35:22,540 views 12112 7156 Пользователь leva вошел в систему. Сеанс: 8gs9skvp0nebm1ugszpp3cgygilte4jt
+INFO 2025-04-19 12:35:22,541 basehttp 12112 7156 "POST /api/v1/users/login/ HTTP/1.1" 200 227
+INFO 2025-04-19 12:35:22,630 views 12112 7156 Список файлов, извлеченных пользователем 1
+INFO 2025-04-19 12:35:22,630 views 12112 1792 Список файлов, извлеченных пользователем 1
+WARNING 2025-04-19 12:35:22,630 log 12112 7156 Not Found: /api/v1/cloud/files/
+WARNING 2025-04-19 12:35:22,630 basehttp 12112 7156 "GET /api/v1/cloud/files/ HTTP/1.1" 404 24
+WARNING 2025-04-19 12:35:22,630 log 12112 1792 Not Found: /api/v1/cloud/files/
+WARNING 2025-04-19 12:35:22,630 basehttp 12112 1792 "GET /api/v1/cloud/files/ HTTP/1.1" 404 24
+INFO 2025-04-19 12:36:00,077 basehttp 12112 7156 "GET /api/v1/users/get-csrf-token/ HTTP/1.1" 200 80
+INFO 2025-04-19 12:36:00,092 basehttp 12112 6076 "OPTIONS /api/v1/users/logout/ HTTP/1.1" 200 0
+WARNING 2025-04-19 12:36:00,148 log 12112 7156 Forbidden: /api/v1/users/logout/
+WARNING 2025-04-19 12:36:00,148 basehttp 12112 7156 "POST /api/v1/users/logout/ HTTP/1.1" 403 109
+INFO 2025-04-19 12:36:21,616 views 12112 7156 Список файлов, извлеченных пользователем 1
+WARNING 2025-04-19 12:36:21,616 log 12112 7156 Not Found: /api/v1/cloud/files/
+WARNING 2025-04-19 12:36:21,616 basehttp 12112 7156 "GET /api/v1/cloud/files/ HTTP/1.1" 404 24
+INFO 2025-04-19 12:36:21,616 views 12112 1792 Список файлов, извлеченных пользователем 1
+WARNING 2025-04-19 12:36:21,632 log 12112 1792 Not Found: /api/v1/cloud/files/
+WARNING 2025-04-19 12:36:21,632 basehttp 12112 1792 "GET /api/v1/cloud/files/ HTTP/1.1" 404 24
+INFO 2025-04-19 12:36:24,500 views 12112 7156 Пользователь Admin leva получил доступ к списку пользователей
+INFO 2025-04-19 12:36:24,500 views 12112 1792 Пользователь Admin leva получил доступ к списку пользователей
+INFO 2025-04-19 12:36:24,500 basehttp 12112 7156 "GET /api/v1/users/ HTTP/1.1" 200 219
+INFO 2025-04-19 12:36:24,500 basehttp 12112 1792 "GET /api/v1/users/ HTTP/1.1" 200 219
+INFO 2025-04-19 12:45:18,896 basehttp 12112 11632 "GET /api/v1/users/get-csrf-token/ HTTP/1.1" 200 80
+INFO 2025-04-19 12:45:18,896 basehttp 12112 5064 "GET /api/v1/users/get-csrf-token/ HTTP/1.1" 200 80
+INFO 2025-04-19 12:45:39,633 basehttp 12112 11632 "GET /api/v1/users/get-csrf-token/ HTTP/1.1" 200 80
+WARNING 2025-04-19 12:45:39,693 log 12112 5064 Forbidden: /api/v1/users/login/
+WARNING 2025-04-19 12:45:39,693 basehttp 12112 5064 "POST /api/v1/users/login/ HTTP/1.1" 403 109
+INFO 2025-04-19 12:46:12,167 basehttp 12112 9896 "GET /api/v1/users/get-csrf-token/ HTTP/1.1" 200 80
+INFO 2025-04-19 12:46:12,182 basehttp 12112 7724 "GET /api/v1/users/get-csrf-token/ HTTP/1.1" 200 80
+INFO 2025-04-19 12:47:04,067 basehttp 12112 9896 "GET /api/v1/users/get-csrf-token/ HTTP/1.1" 200 80
+INFO 2025-04-19 12:47:04,067 basehttp 12112 7516 "OPTIONS /api/v1/users/register/ HTTP/1.1" 200 0
+WARNING 2025-04-19 12:47:04,131 log 12112 7724 Forbidden: /api/v1/users/register/
+WARNING 2025-04-19 12:47:04,131 basehttp 12112 7724 "POST /api/v1/users/register/ HTTP/1.1" 403 109
+INFO 2025-04-19 12:59:38,925 basehttp 12112 9472 "GET /api/v1/users/get-csrf-token/ HTTP/1.1" 200 80
+WARNING 2025-04-19 12:59:39,001 log 12112 9472 Forbidden: /api/v1/users/register/
+WARNING 2025-04-19 12:59:39,001 basehttp 12112 9472 "POST /api/v1/users/register/ HTTP/1.1" 403 109
+INFO 2025-04-19 13:00:12,768 basehttp 12112 9472 "GET /api/v1/users/get-csrf-token/ HTTP/1.1" 200 80
+WARNING 2025-04-19 13:00:12,836 log 12112 9472 Forbidden: /api/v1/users/register/
+WARNING 2025-04-19 13:00:12,836 basehttp 12112 9472 "POST /api/v1/users/register/ HTTP/1.1" 403 109
+INFO 2025-04-19 13:00:22,578 autoreload 11872 7976 Watching for file changes with StatReloader
+INFO 2025-04-19 13:00:32,765 basehttp 11872 12120 "GET /api/v1/users/get-csrf-token/ HTTP/1.1" 200 80
+INFO 2025-04-19 13:00:32,781 basehttp 11872 9308 "GET /api/v1/users/get-csrf-token/ HTTP/1.1" 200 80
+INFO 2025-04-19 13:00:42,705 basehttp 11872 12120 "GET /api/v1/users/get-csrf-token/ HTTP/1.1" 200 80
+WARNING 2025-04-19 13:00:42,771 log 11872 9308 Forbidden: /api/v1/users/login/
+WARNING 2025-04-19 13:00:42,771 basehttp 11872 9308 "POST /api/v1/users/login/ HTTP/1.1" 403 109
+INFO 2025-04-19 13:01:55,954 autoreload 11872 7976 D:\diploma\backend\my_cloud\users\views.py changed, reloading.
+INFO 2025-04-19 13:01:56,562 autoreload 4564 2300 Watching for file changes with StatReloader
+INFO 2025-04-19 13:03:43,361 basehttp 4564 10828 "GET /api/v1/users/get-csrf-token/ HTTP/1.1" 200 80
+INFO 2025-04-19 13:03:43,464 basehttp 4564 8832 "GET /api/v1/users/get-csrf-token/ HTTP/1.1" 200 80
+INFO 2025-04-19 13:03:46,044 basehttp 4564 10828 "GET /api/v1/users/get-csrf-token/ HTTP/1.1" 200 80
+WARNING 2025-04-19 13:03:46,113 log 4564 8832 Forbidden: /api/v1/users/login/
+WARNING 2025-04-19 13:03:46,113 basehttp 4564 8832 "POST /api/v1/users/login/ HTTP/1.1" 403 109
+INFO 2025-04-19 19:13:39,804 autoreload 8680 2184 Watching for file changes with StatReloader
+INFO 2025-04-19 19:16:50,458 views 8680 7420 Пользователь leva вошел в систему. Сеанс: s6ddi8nrwkcm2uc4rq5yq0wyhmz9rkus
+INFO 2025-04-19 19:16:50,461 basehttp 8680 7420 "POST /api/v1/users/login/ HTTP/1.1" 200 227
+INFO 2025-04-19 19:18:21,149 basehttp 8680 10012 "GET /api/v1/users/get-csrf-token/ HTTP/1.1" 200 80
+INFO 2025-04-19 19:18:21,182 basehttp 8680 10044 "GET /api/v1/users/get-csrf-token/ HTTP/1.1" 200 80
+INFO 2025-04-19 19:19:11,234 basehttp 8680 10012 "GET /api/v1/users/get-csrf-token/ HTTP/1.1" 200 80
+INFO 2025-04-19 19:19:11,246 basehttp 8680 4976 "OPTIONS /api/v1/users/login/ HTTP/1.1" 200 0
+WARNING 2025-04-19 19:19:11,324 log 8680 10044 Forbidden: /api/v1/users/login/
+WARNING 2025-04-19 19:19:11,324 basehttp 8680 10044 "POST /api/v1/users/login/ HTTP/1.1" 403 109
+INFO 2025-04-19 19:21:02,030 basehttp 8680 10044 "GET /api/v1/users/get-csrf-token/ HTTP/1.1" 200 80
+WARNING 2025-04-19 19:21:02,096 log 8680 10044 Forbidden: /api/v1/users/login/
+WARNING 2025-04-19 19:21:02,097 basehttp 8680 10044 "POST /api/v1/users/login/ HTTP/1.1" 403 109

@@ -242,3 +242,210 @@ WARNING 2025-04-18 10:04:05,970 basehttp 12072 11844 "GET /api/v1/users/login/ H
 WARNING 2025-04-18 10:04:42,680 log 12072 11844 Bad Request: /api/v1/users/login/
 WARNING 2025-04-18 10:04:42,681 basehttp 12072 11844 "POST /api/v1/users/login/ HTTP/1.1" 400 5818
 WARNING 2025-04-18 10:06:17,461 log 12072 12180 Not Found: /favicon.ico
+WARNING 2025-04-18 10:46:36,345 log 11684 9720 Not Found: /api/users/session-check/
+WARNING 2025-04-18 10:46:36,349 log 11684 12084 Not Found: /api/users/session-check/
+WARNING 2025-04-18 10:46:36,350 basehttp 11684 9720 "GET /api/users/session-check/ HTTP/1.1" 404 2561
+WARNING 2025-04-18 10:46:36,350 basehttp 11684 12084 "GET /api/users/session-check/ HTTP/1.1" 404 2561
+WARNING 2025-04-18 11:53:53,811 log 9180 9272 Not Found: /api/users/session-check/
+WARNING 2025-04-18 11:53:53,814 log 9180 9332 Not Found: /api/users/session-check/
+WARNING 2025-04-18 11:53:53,815 basehttp 9180 9272 "GET /api/users/session-check/ HTTP/1.1" 404 2561
+WARNING 2025-04-18 11:53:53,815 basehttp 9180 9332 "GET /api/users/session-check/ HTTP/1.1" 404 2561
+WARNING 2025-04-18 11:56:57,306 log 9180 9544 Not Found: /api/users/session-check/
+WARNING 2025-04-18 11:56:57,310 log 9180 9248 Not Found: /api/users/session-check/
+WARNING 2025-04-18 11:56:57,310 basehttp 9180 9544 "GET /api/users/session-check/ HTTP/1.1" 404 2561
+WARNING 2025-04-18 11:56:57,310 basehttp 9180 9248 "GET /api/users/session-check/ HTTP/1.1" 404 2561
+WARNING 2025-04-18 11:57:27,675 log 9180 9544 Not Found: /api/users/login/
+WARNING 2025-04-18 11:57:27,675 basehttp 9180 9544 "POST /api/users/login/ HTTP/1.1" 404 2538
+WARNING 2025-04-18 12:04:30,204 log 9180 9224 Not Found: /api/м1/users/session-check/
+WARNING 2025-04-18 12:04:30,207 basehttp 9180 9224 "GET /api/%D0%BC1/users/session-check/ HTTP/1.1" 404 2577
+WARNING 2025-04-18 12:04:34,200 log 9180 9224 Unauthorized: /api/v1/users/session-check/
+WARNING 2025-04-18 12:04:34,201 basehttp 9180 9224 "GET /api/v1/users/session-check/ HTTP/1.1" 401 0
+WARNING 2025-04-18 12:05:12,640 log 9180 9224 Bad Request: /api/v1/users/login/
+WARNING 2025-04-18 12:05:12,640 basehttp 9180 9224 "POST /api/v1/users/login/ HTTP/1.1" 400 118
+WARNING 2025-04-18 12:05:45,274 log 9180 9264 Unauthorized: /api/v1/users/session-check/
+WARNING 2025-04-18 12:05:45,275 basehttp 9180 9264 "GET /api/v1/users/session-check/ HTTP/1.1" 401 0
+WARNING 2025-04-18 12:05:45,276 log 9180 6444 Unauthorized: /api/v1/users/session-check/
+WARNING 2025-04-18 12:05:45,277 basehttp 9180 6444 "GET /api/v1/users/session-check/ HTTP/1.1" 401 0
+WARNING 2025-04-18 12:05:51,756 log 9180 9264 Bad Request: /api/v1/users/login/
+WARNING 2025-04-18 12:05:51,757 basehttp 9180 9264 "POST /api/v1/users/login/ HTTP/1.1" 400 118
+WARNING 2025-04-18 12:06:38,052 log 9180 9264 Bad Request: /api/v1/users/login/
+WARNING 2025-04-18 12:06:38,052 basehttp 9180 9264 "POST /api/v1/users/login/ HTTP/1.1" 400 118
+WARNING 2025-04-18 12:06:43,058 log 9180 9804 Unauthorized: /api/v1/users/session-check/
+WARNING 2025-04-18 12:06:43,059 log 9180 9844 Unauthorized: /api/v1/users/session-check/
+WARNING 2025-04-18 12:06:43,060 basehttp 9180 9804 "GET /api/v1/users/session-check/ HTTP/1.1" 401 0
+WARNING 2025-04-18 12:06:43,060 basehttp 9180 9844 "GET /api/v1/users/session-check/ HTTP/1.1" 401 0
+WARNING 2025-04-18 12:09:11,567 log 9180 10032 Not Found: /api/v1/cloud/files/
+WARNING 2025-04-18 12:09:11,567 log 9180 6672 Not Found: /api/v1/cloud/files/
+WARNING 2025-04-18 12:09:11,568 basehttp 9180 10032 "GET /api/v1/cloud/files/ HTTP/1.1" 404 24
+WARNING 2025-04-18 12:09:11,568 basehttp 9180 6672 "GET /api/v1/cloud/files/ HTTP/1.1" 404 24
+WARNING 2025-04-18 12:18:16,503 log 9180 9536 Forbidden: /api/v1/users/login/
+WARNING 2025-04-18 12:18:16,504 basehttp 9180 9536 "POST /api/v1/users/login/ HTTP/1.1" 403 109
+ERROR 2025-04-18 12:28:54,806 log 9180 6292 Internal Server Error: /api/v1/users
+Traceback (most recent call last):
+  File "D:\diploma\backend\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\diploma\backend\venv\Lib\site-packages\django\utils\deprecation.py", line 122, in __call__
+    response = self.process_response(request, response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\diploma\backend\venv\Lib\site-packages\django\middleware\common.py", line 108, in process_response
+    return self.response_redirect_class(self.get_full_path_with_slash(request))
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\diploma\backend\venv\Lib\site-packages\django\middleware\common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 127.0.0.1:8000/api/v1/users/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+ERROR 2025-04-18 12:28:54,808 basehttp 9180 6292 "POST /api/v1/users HTTP/1.1" 500 72886
+ERROR 2025-04-18 18:12:39,431 log 10232 10712 Internal Server Error: /api/v1/users
+Traceback (most recent call last):
+  File "D:\diploma\backend\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\diploma\backend\venv\Lib\site-packages\django\utils\deprecation.py", line 122, in __call__
+    response = self.process_response(request, response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\diploma\backend\venv\Lib\site-packages\django\middleware\common.py", line 108, in process_response
+    return self.response_redirect_class(self.get_full_path_with_slash(request))
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\diploma\backend\venv\Lib\site-packages\django\middleware\common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 127.0.0.1:8000/api/v1/users/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+ERROR 2025-04-18 18:12:39,433 basehttp 10232 10712 "POST /api/v1/users HTTP/1.1" 500 72886
+ERROR 2025-04-18 18:16:27,479 log 10232 1500 Internal Server Error: /api/v1/users
+Traceback (most recent call last):
+  File "D:\diploma\backend\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\diploma\backend\venv\Lib\site-packages\django\utils\deprecation.py", line 122, in __call__
+    response = self.process_response(request, response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\diploma\backend\venv\Lib\site-packages\django\middleware\common.py", line 108, in process_response
+    return self.response_redirect_class(self.get_full_path_with_slash(request))
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\diploma\backend\venv\Lib\site-packages\django\middleware\common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 127.0.0.1:8000/api/v1/users/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+ERROR 2025-04-18 18:16:27,481 basehttp 10232 1500 "POST /api/v1/users HTTP/1.1" 500 72745
+ERROR 2025-04-18 18:17:12,357 log 10232 11044 Internal Server Error: /api/v1/users
+Traceback (most recent call last):
+  File "D:\diploma\backend\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\diploma\backend\venv\Lib\site-packages\django\utils\deprecation.py", line 122, in __call__
+    response = self.process_response(request, response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\diploma\backend\venv\Lib\site-packages\django\middleware\common.py", line 108, in process_response
+    return self.response_redirect_class(self.get_full_path_with_slash(request))
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\diploma\backend\venv\Lib\site-packages\django\middleware\common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 127.0.0.1:8000/api/v1/users/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+ERROR 2025-04-18 18:17:12,358 basehttp 10232 11044 "POST /api/v1/users HTTP/1.1" 500 72892
+ERROR 2025-04-18 18:25:02,986 log 10232 10432 Internal Server Error: /api/v1/users
+Traceback (most recent call last):
+  File "D:\diploma\backend\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\diploma\backend\venv\Lib\site-packages\django\utils\deprecation.py", line 122, in __call__
+    response = self.process_response(request, response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\diploma\backend\venv\Lib\site-packages\django\middleware\common.py", line 108, in process_response
+    return self.response_redirect_class(self.get_full_path_with_slash(request))
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\diploma\backend\venv\Lib\site-packages\django\middleware\common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 127.0.0.1:8000/api/v1/users/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+ERROR 2025-04-18 18:25:02,988 basehttp 10232 10432 "POST /api/v1/users HTTP/1.1" 500 72289
+WARNING 2025-04-18 18:25:29,899 log 10232 10484 Forbidden: /api/v1/users/
+WARNING 2025-04-18 18:25:29,900 basehttp 10232 10484 "POST /api/v1/users/ HTTP/1.1" 403 59
+WARNING 2025-04-18 18:26:44,696 log 10232 116 Forbidden: /api/v1/users/
+WARNING 2025-04-18 18:26:44,696 basehttp 10232 116 "POST /api/v1/users/ HTTP/1.1" 403 59
+WARNING 2025-04-18 18:29:56,102 log 10232 5100 Not Found: /api/csrf/
+WARNING 2025-04-18 18:29:56,103 basehttp 10232 5100 "GET /api/csrf/ HTTP/1.1" 404 2516
+WARNING 2025-04-18 18:32:11,537 log 10232 10016 Forbidden: /api/v1/users/
+WARNING 2025-04-18 18:32:11,538 basehttp 10232 10016 "POST /api/v1/users/ HTTP/1.1" 403 59
+WARNING 2025-04-19 10:48:29,650 log 252 11212 Bad Request: /api/v1/users/login/
+WARNING 2025-04-19 10:48:29,651 basehttp 252 11212 "POST /api/v1/users/login/ HTTP/1.1" 400 157
+WARNING 2025-04-19 10:52:59,017 log 252 952 Forbidden: /api/v1/users/register/
+WARNING 2025-04-19 10:52:59,017 basehttp 252 952 "POST /api/v1/users/register/ HTTP/1.1" 403 46
+WARNING 2025-04-19 10:53:24,218 log 252 952 Method Not Allowed: /api/v1/users/register/
+WARNING 2025-04-19 10:53:24,219 basehttp 252 952 "GET /api/v1/users/register/ HTTP/1.1" 405 41
+WARNING 2025-04-19 10:54:04,074 log 252 952 Forbidden: /api/v1/users/register/
+WARNING 2025-04-19 10:54:04,074 basehttp 252 952 "POST /api/v1/users/register/ HTTP/1.1" 403 46
+WARNING 2025-04-19 10:55:03,477 log 252 2480 Not Found: /
+WARNING 2025-04-19 10:55:03,478 basehttp 252 2480 "GET / HTTP/1.1" 404 2471
+WARNING 2025-04-19 10:55:03,602 log 252 2480 Not Found: /favicon.ico
+WARNING 2025-04-19 10:55:03,603 basehttp 252 2480 "GET /favicon.ico HTTP/1.1" 404 2522
+WARNING 2025-04-19 10:55:22,599 log 252 2480 Forbidden: /api/v1/users/
+WARNING 2025-04-19 10:55:22,599 basehttp 252 2480 "GET /api/v1/users/ HTTP/1.1" 403 4935
+WARNING 2025-04-19 10:55:35,812 log 252 2480 Method Not Allowed: /api/v1/users/register/
+WARNING 2025-04-19 10:55:35,813 basehttp 252 2480 "GET /api/v1/users/register/ HTTP/1.1" 405 8322
+WARNING 2025-04-19 11:00:11,007 log 252 9908 Forbidden: /api/v1/users/register/
+WARNING 2025-04-19 11:00:11,007 basehttp 252 9908 "POST /api/v1/users/register/ HTTP/1.1" 403 46
+WARNING 2025-04-19 11:00:51,941 log 252 9908 Forbidden: /api/v1/users/register/
+WARNING 2025-04-19 11:00:51,941 basehttp 252 9908 "POST /api/v1/users/register/ HTTP/1.1" 403 46
+WARNING 2025-04-19 11:01:19,267 log 252 9908 Forbidden: /api/v1/users/logout/
+WARNING 2025-04-19 11:01:19,267 basehttp 252 9908 "POST /api/v1/users/logout/ HTTP/1.1" 403 46
+WARNING 2025-04-19 11:01:29,042 log 252 9908 Forbidden: /api/v1/users/logout/
+WARNING 2025-04-19 11:01:29,043 basehttp 252 9908 "POST /api/v1/users/logout/ HTTP/1.1" 403 46
+WARNING 2025-04-19 11:01:53,204 log 252 9908 Forbidden: /api/v1/users/
+WARNING 2025-04-19 11:01:53,205 basehttp 252 9908 "POST /api/v1/users/ HTTP/1.1" 403 46
+WARNING 2025-04-19 11:04:03,878 log 252 8204 Forbidden: /api/v1/users/logout/
+WARNING 2025-04-19 11:04:03,878 basehttp 252 8204 "POST /api/v1/users/logout/ HTTP/1.1" 403 46
+WARNING 2025-04-19 11:05:15,583 log 252 8716 Forbidden: /api/v1/users/
+WARNING 2025-04-19 11:05:15,584 basehttp 252 8716 "GET /api/v1/users/ HTTP/1.1" 403 4935
+WARNING 2025-04-19 11:09:12,516 log 252 2680 Method Not Allowed: /api/v1/users/register/
+WARNING 2025-04-19 11:09:12,517 basehttp 252 2680 "GET /api/v1/users/register/ HTTP/1.1" 405 41
+WARNING 2025-04-19 11:09:38,451 log 252 2680 Bad Request: /api/v1/users/register/
+WARNING 2025-04-19 11:09:38,452 basehttp 252 2680 "POST /api/v1/users/register/ HTTP/1.1" 400 193
+WARNING 2025-04-19 11:09:58,317 log 252 2680 Bad Request: /api/v1/users/register/
+WARNING 2025-04-19 11:09:58,318 basehttp 252 2680 "POST /api/v1/users/register/ HTTP/1.1" 400 193
+WARNING 2025-04-19 11:10:04,775 log 252 2680 Method Not Allowed: /api/v1/users/register/
+WARNING 2025-04-19 11:10:04,776 basehttp 252 2680 "GET /api/v1/users/register/ HTTP/1.1" 405 41
+WARNING 2025-04-19 11:10:16,339 log 252 2680 Method Not Allowed: /api/v1/users/register/
+WARNING 2025-04-19 11:10:16,340 basehttp 252 2680 "GET /api/v1/users/register/ HTTP/1.1" 405 41
+WARNING 2025-04-19 11:10:32,442 log 252 2680 Method Not Allowed: /api/v1/users/register/
+WARNING 2025-04-19 11:10:32,443 basehttp 252 2680 "GET /api/v1/users/register/ HTTP/1.1" 405 41
+WARNING 2025-04-19 11:10:39,763 log 252 2680 Bad Request: /api/v1/users/register/
+WARNING 2025-04-19 11:10:39,764 basehttp 252 2680 "POST /api/v1/users/register/ HTTP/1.1" 400 193
+WARNING 2025-04-19 11:11:02,156 log 252 2680 Bad Request: /api/v1/users/register/
+WARNING 2025-04-19 11:11:02,156 basehttp 252 2680 "POST /api/v1/users/register/ HTTP/1.1" 400 192
+WARNING 2025-04-19 11:14:38,853 log 252 4944 Forbidden: /api/v1/users/
+WARNING 2025-04-19 11:14:38,853 basehttp 252 4944 "POST /api/v1/users/ HTTP/1.1" 403 59
+WARNING 2025-04-19 11:15:10,684 log 252 4944 Forbidden: /api/v1/users/
+WARNING 2025-04-19 11:15:10,685 basehttp 252 4944 "POST /api/v1/users/ HTTP/1.1" 403 59
+WARNING 2025-04-19 11:17:07,688 log 252 4944 Forbidden: /api/v1/users/5/delete/
+WARNING 2025-04-19 11:17:07,689 basehttp 252 4944 "DELETE /api/v1/users/5/delete/ HTTP/1.1" 403 83
+WARNING 2025-04-19 11:17:57,423 log 252 4944 Not Found: /api/v1/users/5/
+WARNING 2025-04-19 11:17:57,424 basehttp 252 4944 "GET /api/v1/users/5/ HTTP/1.1" 404 4011
+WARNING 2025-04-19 11:18:29,995 log 252 4944 Method Not Allowed: /api/v1/users/5/delete/
+WARNING 2025-04-19 11:18:29,996 basehttp 252 4944 "GET /api/v1/users/5/delete/ HTTP/1.1" 405 41
+WARNING 2025-04-19 11:18:39,172 log 252 4944 Forbidden: /api/v1/users/5/delete/
+WARNING 2025-04-19 11:18:39,173 basehttp 252 4944 "DELETE /api/v1/users/5/delete/ HTTP/1.1" 403 83
+WARNING 2025-04-19 11:18:43,288 log 252 4944 Forbidden: /api/v1/users/5/delete/
+WARNING 2025-04-19 11:18:43,288 basehttp 252 4944 "POST /api/v1/users/5/delete/ HTTP/1.1" 403 83
+WARNING 2025-04-19 12:35:22,630 log 12112 7156 Not Found: /api/v1/cloud/files/
+WARNING 2025-04-19 12:35:22,630 basehttp 12112 7156 "GET /api/v1/cloud/files/ HTTP/1.1" 404 24
+WARNING 2025-04-19 12:35:22,630 log 12112 1792 Not Found: /api/v1/cloud/files/
+WARNING 2025-04-19 12:35:22,630 basehttp 12112 1792 "GET /api/v1/cloud/files/ HTTP/1.1" 404 24
+WARNING 2025-04-19 12:36:00,148 log 12112 7156 Forbidden: /api/v1/users/logout/
+WARNING 2025-04-19 12:36:00,148 basehttp 12112 7156 "POST /api/v1/users/logout/ HTTP/1.1" 403 109
+WARNING 2025-04-19 12:36:21,616 log 12112 7156 Not Found: /api/v1/cloud/files/
+WARNING 2025-04-19 12:36:21,616 basehttp 12112 7156 "GET /api/v1/cloud/files/ HTTP/1.1" 404 24
+WARNING 2025-04-19 12:36:21,632 log 12112 1792 Not Found: /api/v1/cloud/files/
+WARNING 2025-04-19 12:36:21,632 basehttp 12112 1792 "GET /api/v1/cloud/files/ HTTP/1.1" 404 24
+WARNING 2025-04-19 12:45:39,693 log 12112 5064 Forbidden: /api/v1/users/login/
+WARNING 2025-04-19 12:45:39,693 basehttp 12112 5064 "POST /api/v1/users/login/ HTTP/1.1" 403 109
+WARNING 2025-04-19 12:47:04,131 log 12112 7724 Forbidden: /api/v1/users/register/
+WARNING 2025-04-19 12:47:04,131 basehttp 12112 7724 "POST /api/v1/users/register/ HTTP/1.1" 403 109
+WARNING 2025-04-19 12:59:39,001 log 12112 9472 Forbidden: /api/v1/users/register/
+WARNING 2025-04-19 12:59:39,001 basehttp 12112 9472 "POST /api/v1/users/register/ HTTP/1.1" 403 109
+WARNING 2025-04-19 13:00:12,836 log 12112 9472 Forbidden: /api/v1/users/register/
+WARNING 2025-04-19 13:00:12,836 basehttp 12112 9472 "POST /api/v1/users/register/ HTTP/1.1" 403 109
+WARNING 2025-04-19 13:00:42,771 log 11872 9308 Forbidden: /api/v1/users/login/
+WARNING 2025-04-19 13:00:42,771 basehttp 11872 9308 "POST /api/v1/users/login/ HTTP/1.1" 403 109
+WARNING 2025-04-19 13:03:46,113 log 4564 8832 Forbidden: /api/v1/users/login/
+WARNING 2025-04-19 13:03:46,113 basehttp 4564 8832 "POST /api/v1/users/login/ HTTP/1.1" 403 109
+WARNING 2025-04-19 19:19:11,324 log 8680 10044 Forbidden: /api/v1/users/login/
+WARNING 2025-04-19 19:19:11,324 basehttp 8680 10044 "POST /api/v1/users/login/ HTTP/1.1" 403 109
+WARNING 2025-04-19 19:21:02,096 log 8680 10044 Forbidden: /api/v1/users/login/
+WARNING 2025-04-19 19:21:02,097 basehttp 8680 10044 "POST /api/v1/users/login/ HTTP/1.1" 403 109

@@ -2,11 +2,21 @@ from rest_framework import generics, permissions, status
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from django.contrib.auth import authenticate, logout, login
+# from django.middleware.csrf import get_token
 from .models import User
 from .serializers import UserRegistrationSerializer, UserSerializer, UserLoginSerializer
 import logging
 
+
 logger = logging.getLogger(__name__)
+
+
+# class GetCSRFToken(APIView):
+#     permission_classes = [permissions.AllowAny]
+
+#     def get(self, request):
+#         token = get_token(request)
+#         return Response({'csrfToken': token})
 
 class UserRegistrationView(generics.CreateAPIView):
     queryset = User.objects.all()

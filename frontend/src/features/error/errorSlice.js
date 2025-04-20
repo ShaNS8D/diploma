@@ -23,10 +23,14 @@ export const { setError, clearError } = errorSlice.actions;
 
 
 export const handleAsyncError = (error) => (dispatch) => {
+  const normalizedError = typeof error === 'string' 
+  ? { message: error } 
+  : error;
+
   const errorData = {
-    status: error.status || 500,
-    message: error.message || 'Server error',
-    ...error,
+    status: normalizedError.status || 500,
+    message: normalizedError.message || 'Server error',
+    ...normalizedError,  
   };
   dispatch(setError(errorData));
   return Promise.reject(errorData);

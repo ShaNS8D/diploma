@@ -9,7 +9,7 @@ import LoadingSpinner from '../../components/ui/LoadingSpinner';
 
 const LoginPage = () => {
   const [credentials, setCredentials] = useState({
-    login: '',
+    username: '',
     password: '',
   });
   const [errors, setErrors] = useState({});
@@ -39,21 +39,21 @@ const LoginPage = () => {
     <div className="login-page">
       <AuthForm title="Login" onSubmit={handleSubmit}>
         <AuthInput
-          name="login"
+          name="username"
           value={credentials.login}
           onChange={handleChange}
-          placeholder="Enter your login"
+          placeholder="Введите логин"
           error={errors.login}
-          label="Login"
+          label="Логин"
         />
         <AuthInput
           type="password"
           name="password"
           value={credentials.password}
           onChange={handleChange}
-          placeholder="Enter your password"
+          placeholder="Введите пароль"
           error={errors.password}
-          label="Password"
+          label="Пароль"
         />
         
         {errors.form && <div className="form-error">{errors.form}</div>}
@@ -63,7 +63,7 @@ const LoginPage = () => {
         </AuthButton>
         
         <div className="auth-footer">
-          Don't have an account? <Link to="/register">Register</Link>
+        У вас нет учетной записи? <Link to="/register">Зарегистрируйся</Link>
         </div>
       </AuthForm>
     </div>

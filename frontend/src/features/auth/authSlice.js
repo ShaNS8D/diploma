@@ -23,7 +23,7 @@ const authSlice = createSlice({
       state.user = null;
       state.isAuthenticated = false;
       state.isAdmin = false;
-      state.authChecked = true;
+      state.authChecked = false;
     },
     setLoading: (state, action) => {
       state.loading = action.payload;
@@ -38,7 +38,7 @@ export const { setAuth, clearAuth, setLoading, setAuthChecked } = authSlice.acti
 
 export const checkAuth = () => async (dispatch) => {
   try {
-    const response = await authAPI.checkAuth();
+    const response = await authAPI.sessionCheckAuth();
     dispatch(setAuth({
       user: response.data.user,
       isAdmin: response.data.user.is_admin,

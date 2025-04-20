@@ -26,7 +26,7 @@ const filesSlice = createSlice({
     updateFile: (state, action) => {
       const index = state.files.findIndex(file => file.id === action.payload.id);
       if (index !== -1) {
-        state.files[index] = { ...state.files[index], ...action.payload };
+        state.files[index] = action.payload;
       }
     },
     setLoading: (state, action) => {
@@ -55,13 +55,14 @@ export const {
   setPublicLink,
 } = filesSlice.actions;
 
-export const fetchFiles = () => async (dispatch) => {
+export const fetchFiles = (params = {}) => async (dispatch) => {
   try {
+    dispatch(setError(null));
     dispatch(setLoading(true));
-    const response = await fileAPI.getFiles();
+    const response = await fileAPI.getFiles(params);
     dispatch(setFiles(response.data));
   } catch (error) {
-    dispatch(handleAsyncError(error));
+    dispatch(handleAsyncError(error.response?.data || error.message));
   } finally {
     dispatch(setLoading(false));
   }
@@ -74,7 +75,7 @@ export const uploadFile = (formData) => async (dispatch) => {
     dispatch(addFile(response.data));
     return { success: true };
   } catch (error) {
-    dispatch(handleAsyncError(error));
+    dispatch(handleAsyncError(error.response?.data || error.message));
     return { success: false, error: error.response?.data };
   } finally {
     dispatch(setLoading(false));
@@ -95,24 +96,10 @@ export const deleteFile = (id) => async (dispatch) => {
   }
 };
 
-export const renameFile = (id, newName) => async (dispatch) => {
+export const updateDataFile = (id, newName) => async (dispatch) => {
   try {
     dispatch(setLoading(true));
-    const response = await fileAPI.renameFile(id, newName);
-    dispatch(updateFile(response.data));
-    return { success: true };
-  } catch (error) {
-    dispatch(handleAsyncError(error.response?.data || error.message));
-    return { success: false, error: error.response?.data };
-  } finally {
-    dispatch(setLoading(false));
-  }
-};
-
-export const updateFileComment = (id, comment) => async (dispatch) => {
-  try {
-    dispatch(setLoading(true));
-    const response = await fileAPI.updateComment(id, comment);
+    const response = await fileAPI.updateDataFile(id, newName);
     dispatch(updateFile(response.data));
     return { success: true };
   } catch (error) {
