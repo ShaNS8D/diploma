@@ -2,6 +2,7 @@ from rest_framework import generics, permissions, status
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from django.contrib.auth import authenticate, logout, login
+from users.permissions import IsAdmin
 # from django.middleware.csrf import get_token
 from .models import User
 from .serializers import UserRegistrationSerializer, UserSerializer, UserLoginSerializer
@@ -37,8 +38,12 @@ class UserRegistrationView(generics.CreateAPIView):
             self.perform_create(serializer)
             user = serializer.instance
             logger.info(f"Пользователь {user.username} успешно зарегистрирован")
+            user_serializer = UserSerializer(user)
             return Response(
-                {"detail": "Пользователь успешно зарегистрировался"},
+                {
+                    "detail": "Пользователь успешно зарегистрировался",
+                    "user": user_serializer.data
+                },
                 status=status.HTTP_201_CREATED
             )
         except Exception as e:
@@ -51,7 +56,7 @@ class UserRegistrationView(generics.CreateAPIView):
 class UserListView(generics.ListAPIView):
     queryset = User.objects.all()
     serializer_class = UserSerializer
-    permission_classes = [permissions.IsAuthenticated, permissions.IsAdminUser]
+    permission_classes = [permissions.IsAuthenticated, IsAdmin]
 
     def list(self, request, *args, **kwargs):
         logger.debug(f"Список пользователей, запрошенный {request.user.username}")
@@ -66,10 +71,55 @@ class UserListView(generics.ListAPIView):
                 status=status.HTTP_500_INTERNAL_SERVER_ERROR
             )
 
+class UserUpdateView(generics.UpdateAPIView):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
+    permission_classes = [permissions.IsAuthenticated, IsAdmin]
+
+    def update(self, request, *args, **kwargs):
+        
+        user_id = kwargs.get('pk')
+        logger.debug(f"Админ {request.user.username} пытается обновить пользователя {user_id} с данными: {request.data}")
+
+        try:
+            user = User.objects.get(pk=user_id)
+        except User.DoesNotExist:
+            logger.warning(f"Пользователь с id={user_id} не найден")
+            return Response(
+                {"detail": "Пользователь не найден"},
+                status=status.HTTP_404_NOT_FOUND
+            )
+
+        serializer = self.get_serializer(user, data=request.data, partial=True)
+        
+        if not serializer.is_valid():
+            logger.warning(f"Ошибка валидации: {serializer.errors}")
+            return Response(
+                {"detail": "Неверные данные", "errors": serializer.errors},
+                status=status.HTTP_400_BAD_REQUEST
+            )
+
+        try:
+            self.perform_update(serializer)
+            logger.info(f"Админ {request.user.username} успешно обновил пользователя {user.username} (id={user_id})")
+            return Response(
+                {
+                    "detail": "Данные пользователя обновлены",
+                    "user": serializer.data
+                },
+                status=status.HTTP_200_OK
+            )
+        except Exception as e:
+            logger.error(f"Ошибка обновления: {str(e)}")
+            return Response(
+                {"detail": "Ошибка сервера при обновлении"},
+                status=status.HTTP_500_INTERNAL_SERVER_ERROR
+            )
+
 class UserDeleteView(generics.DestroyAPIView):
     queryset = User.objects.all()
     serializer_class = UserSerializer
-    permission_classes = [permissions.IsAuthenticated, permissions.IsAdminUser]
+    permission_classes = [permissions.IsAuthenticated, IsAdmin]
 
     def destroy(self, request, *args, **kwargs):
         try:

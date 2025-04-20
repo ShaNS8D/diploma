@@ -20,7 +20,7 @@ const usersSlice = createSlice({
     updateUser: (state, action) => {
       const index = state.users.findIndex(user => user.id === action.payload.id);
       if (index !== -1) {
-        state.users[index] = { ...state.users[index], ...action.payload };
+        state.users[index] = action.payload;
       }
     },
     setLoading: (state, action) => {
@@ -63,11 +63,9 @@ export const deleteUser = (id) => async (dispatch) => {
 export const toggleAdminStatus = (id, isAdmin) => async (dispatch) => {
   try {
     dispatch(setLoading(true));
-
-    // const response = await authAPI.updateUserAdminStatus(id, isAdmin);
-    // dispatch(updateUser(response.data));
-    // For now, just update locally
-    dispatch(updateUser({ id, is_admin: isAdmin }));
+    const response = await authAPI.updateDataUser(id, {is_admin: isAdmin });
+    // console.log(response.data);
+    dispatch(updateUser(response.data.user));
     return { success: true };
   } catch (error) {
     dispatch(setError(error.response?.data || error.message));

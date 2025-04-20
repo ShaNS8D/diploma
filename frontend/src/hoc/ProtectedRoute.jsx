@@ -5,6 +5,9 @@ import { checkAuth } from '../features/auth/authSlice';
 
 const ProtectedRoute = ({ children, adminOnly = false }) => {
   const { isAuthenticated, isAdmin, authChecked } = useSelector((state) => state.auth);
+  // console.log('isAuthenticated', isAuthenticated)
+  // console.log('print', isAdmin)
+  // console.log('authChecked', authChecked)
   const dispatch = useDispatch();
   const location = useLocation();
 
@@ -15,7 +18,7 @@ const ProtectedRoute = ({ children, adminOnly = false }) => {
   }, [dispatch, authChecked]);
 
   if (!authChecked) {
-    return <div>Checking authentication...</div>;
+    return <div>Проверка подлинности...</div>;
   }
 
   if (!isAuthenticated) {

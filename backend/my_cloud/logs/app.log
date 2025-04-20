@@ -1444,3 +1444,470 @@ WARNING 2025-04-20 19:34:57,270 log 5520 10360 Forbidden: /api/v1/users/
 WARNING 2025-04-20 19:34:57,271 basehttp 5520 10360 "GET /api/v1/users/ HTTP/1.1" 403 64
 WARNING 2025-04-20 19:34:57,285 log 5520 11016 Forbidden: /api/v1/users/
 WARNING 2025-04-20 19:34:57,286 basehttp 5520 11016 "GET /api/v1/users/ HTTP/1.1" 403 64
+WARNING 2025-04-20 19:48:31,473 log 5520 10120 Forbidden: /api/v1/users/
+WARNING 2025-04-20 19:48:31,474 basehttp 5520 10120 "GET /api/v1/users/ HTTP/1.1" 403 64
+WARNING 2025-04-20 19:48:31,477 log 5520 9388 Forbidden: /api/v1/users/
+WARNING 2025-04-20 19:48:31,478 basehttp 5520 9388 "GET /api/v1/users/ HTTP/1.1" 403 64
+INFO 2025-04-20 19:48:47,933 views 5520 10120 Список файлов, извлеченных пользователем 1
+INFO 2025-04-20 19:48:47,942 views 5520 9388 Список файлов, извлеченных пользователем 1
+INFO 2025-04-20 19:48:47,944 basehttp 5520 10120 "GET /api/v1/cloud/ HTTP/1.1" 200 773
+INFO 2025-04-20 19:48:47,953 basehttp 5520 9388 "GET /api/v1/cloud/ HTTP/1.1" 200 773
+WARNING 2025-04-20 19:48:52,174 log 5520 10120 Forbidden: /api/v1/users/
+WARNING 2025-04-20 19:48:52,175 basehttp 5520 10120 "GET /api/v1/users/ HTTP/1.1" 403 64
+WARNING 2025-04-20 19:48:52,178 log 5520 9388 Forbidden: /api/v1/users/
+WARNING 2025-04-20 19:48:52,179 basehttp 5520 9388 "GET /api/v1/users/ HTTP/1.1" 403 64
+INFO 2025-04-20 19:54:28,983 views 5520 10360 Пользователь leva вошел в систему. Сеанс: ivjv9ralhv9d93jk1n0ui8lwd98tuuo9
+INFO 2025-04-20 19:54:28,986 basehttp 5520 10360 "POST /api/v1/users/login/ HTTP/1.1" 200 227
+INFO 2025-04-20 19:54:29,095 views 5520 10360 Список файлов, извлеченных пользователем 1
+INFO 2025-04-20 19:54:29,097 views 5520 10656 Список файлов, извлеченных пользователем 1
+INFO 2025-04-20 19:54:29,104 basehttp 5520 10360 "GET /api/v1/cloud/ HTTP/1.1" 200 773
+INFO 2025-04-20 19:54:29,105 basehttp 5520 10656 "GET /api/v1/cloud/ HTTP/1.1" 200 773
+WARNING 2025-04-20 19:54:58,534 log 5520 10360 Forbidden: /api/v1/users/
+WARNING 2025-04-20 19:54:58,535 log 5520 10656 Forbidden: /api/v1/users/
+WARNING 2025-04-20 19:54:58,535 basehttp 5520 10360 "GET /api/v1/users/ HTTP/1.1" 403 64
+WARNING 2025-04-20 19:54:58,536 basehttp 5520 10656 "GET /api/v1/users/ HTTP/1.1" 403 64
+INFO 2025-04-20 19:57:00,730 views 5520 10436 Пользователь leva вошел в систему. Сеанс: ivjv9ralhv9d93jk1n0ui8lwd98tuuo9
+INFO 2025-04-20 19:57:00,733 basehttp 5520 10436 "POST /api/v1/users/login/ HTTP/1.1" 200 227
+INFO 2025-04-20 19:57:00,826 views 5520 10436 Список файлов, извлеченных пользователем 1
+INFO 2025-04-20 19:57:00,833 basehttp 5520 10436 "GET /api/v1/cloud/ HTTP/1.1" 200 773
+INFO 2025-04-20 19:57:00,892 views 5520 10436 Список файлов, извлеченных пользователем 1
+INFO 2025-04-20 19:57:00,899 basehttp 5520 10436 "GET /api/v1/cloud/ HTTP/1.1" 200 773
+INFO 2025-04-20 19:57:03,404 basehttp 5520 9340 "OPTIONS /api/v1/users/ HTTP/1.1" 200 0
+INFO 2025-04-20 19:57:03,404 basehttp 5520 10856 "OPTIONS /api/v1/users/ HTTP/1.1" 200 0
+WARNING 2025-04-20 19:57:03,485 log 5520 10436 Forbidden: /api/v1/users/
+WARNING 2025-04-20 19:57:03,486 basehttp 5520 10436 "GET /api/v1/users/ HTTP/1.1" 403 64
+WARNING 2025-04-20 19:57:03,489 log 5520 8552 Forbidden: /api/v1/users/
+WARNING 2025-04-20 19:57:03,490 basehttp 5520 8552 "GET /api/v1/users/ HTTP/1.1" 403 64
+INFO 2025-04-20 20:07:23,589 autoreload 5520 5072 D:\diploma\backend\my_cloud\users\permissions.py changed, reloading.
+INFO 2025-04-20 20:07:24,157 autoreload 708 9828 Watching for file changes with StatReloader
+INFO 2025-04-20 20:10:20,311 autoreload 708 9828 D:\diploma\backend\my_cloud\users\views.py changed, reloading.
+INFO 2025-04-20 20:10:20,893 autoreload 2384 4296 Watching for file changes with StatReloader
+INFO 2025-04-20 20:10:42,380 autoreload 2384 4296 D:\diploma\backend\my_cloud\users\views.py changed, reloading.
+INFO 2025-04-20 20:10:42,933 autoreload 9928 9100 Watching for file changes with StatReloader
+INFO 2025-04-20 20:12:19,074 autoreload 11236 9752 Watching for file changes with StatReloader
+INFO 2025-04-20 20:14:01,295 views 11236 980 Пользователь leva вошел в систему. Сеанс: ivjv9ralhv9d93jk1n0ui8lwd98tuuo9
+INFO 2025-04-20 20:14:01,298 basehttp 11236 980 "POST /api/v1/users/login/ HTTP/1.1" 200 227
+INFO 2025-04-20 20:14:01,422 views 11236 980 Список файлов, извлеченных пользователем 1
+INFO 2025-04-20 20:14:01,426 views 11236 10764 Список файлов, извлеченных пользователем 1
+INFO 2025-04-20 20:14:01,444 basehttp 11236 980 "GET /api/v1/cloud/ HTTP/1.1" 200 773
+INFO 2025-04-20 20:14:01,444 basehttp 11236 10764 "GET /api/v1/cloud/ HTTP/1.1" 200 773
+INFO 2025-04-20 20:14:05,111 views 11236 980 Пользователь Admin leva получил доступ к списку пользователей
+INFO 2025-04-20 20:14:05,113 views 11236 10764 Пользователь Admin leva получил доступ к списку пользователей
+INFO 2025-04-20 20:14:05,114 basehttp 11236 980 "GET /api/v1/users/ HTTP/1.1" 200 222
+INFO 2025-04-20 20:14:05,116 basehttp 11236 10764 "GET /api/v1/users/ HTTP/1.1" 200 222
+INFO 2025-04-20 20:14:50,876 basehttp 11236 9552 "OPTIONS /api/v1/users/2/delete/ HTTP/1.1" 200 0
+WARNING 2025-04-20 20:14:50,954 log 11236 980 Forbidden: /api/v1/users/2/delete/
+WARNING 2025-04-20 20:14:50,955 basehttp 11236 980 "DELETE /api/v1/users/2/delete/ HTTP/1.1" 403 64
+INFO 2025-04-20 20:15:29,687 autoreload 11236 9752 D:\diploma\backend\my_cloud\users\views.py changed, reloading.
+INFO 2025-04-20 20:15:30,238 autoreload 9916 8744 Watching for file changes with StatReloader
+INFO 2025-04-20 20:15:38,499 views 9916 9436 Пользователь nika удален администратором leva
+INFO 2025-04-20 20:15:38,502 basehttp 9916 9436 "DELETE /api/v1/users/2/delete/ HTTP/1.1" 200 65
+INFO 2025-04-20 20:15:44,234 views 9916 9436 Список файлов, извлеченных пользователем 1
+INFO 2025-04-20 20:15:44,237 views 9916 10388 Список файлов, извлеченных пользователем 1
+INFO 2025-04-20 20:15:44,253 basehttp 9916 9436 "GET /api/v1/cloud/ HTTP/1.1" 200 382
+INFO 2025-04-20 20:15:44,253 basehttp 9916 10388 "GET /api/v1/cloud/ HTTP/1.1" 200 382
+INFO 2025-04-20 20:15:46,519 views 9916 9436 Пользователь Admin leva получил доступ к списку пользователей
+INFO 2025-04-20 20:15:46,521 views 9916 10388 Пользователь Admin leva получил доступ к списку пользователей
+INFO 2025-04-20 20:15:46,523 basehttp 9916 9436 "GET /api/v1/users/ HTTP/1.1" 200 107
+INFO 2025-04-20 20:15:46,524 basehttp 9916 10388 "GET /api/v1/users/ HTTP/1.1" 200 107
+INFO 2025-04-20 20:19:23,760 views 9916 7352 Пользователь miko успешно зарегистрирован
+INFO 2025-04-20 20:19:23,763 basehttp 9916 7352 "POST /api/v1/users/register/ HTTP/1.1" 201 87
+INFO 2025-04-20 20:19:38,473 signals 9916 7352 Сессия завершена: ivjv9ralhv9d93jk1n0ui8lwd98tuuo9, Пользователь: 1
+INFO 2025-04-20 20:19:38,475 views 9916 7352 Пользователь miko вошел в систему. Сеанс: None
+INFO 2025-04-20 20:19:38,477 signals 9916 7352 Сессия начата: 670p28z7oui83ljcko5hhdno0stkf4gx, Пользователь: 3
+INFO 2025-04-20 20:19:38,478 basehttp 9916 7352 "POST /api/v1/users/login/ HTTP/1.1" 200 205
+INFO 2025-04-20 20:19:38,577 views 9916 7352 Список файлов, извлеченных пользователем 3
+INFO 2025-04-20 20:19:38,581 basehttp 9916 7352 "GET /api/v1/cloud/ HTTP/1.1" 200 2
+INFO 2025-04-20 20:19:38,602 views 9916 9388 Список файлов, извлеченных пользователем 3
+INFO 2025-04-20 20:19:38,606 basehttp 9916 9388 "GET /api/v1/cloud/ HTTP/1.1" 200 2
+INFO 2025-04-20 20:20:03,584 views 9916 7352 Файл, загруженный пользователем 3
+INFO 2025-04-20 20:20:03,586 basehttp 9916 7352 "POST /api/v1/cloud/ HTTP/1.1" 201 84
+INFO 2025-04-20 20:20:03,687 views 9916 7352 Список файлов, извлеченных пользователем 3
+INFO 2025-04-20 20:20:03,693 basehttp 9916 7352 "GET /api/v1/cloud/ HTTP/1.1" 200 388
+INFO 2025-04-20 20:25:46,251 views 9916 11252 Пользователь mona успешно зарегистрирован
+INFO 2025-04-20 20:25:46,253 basehttp 9916 11252 "POST /api/v1/users/register/ HTTP/1.1" 201 87
+INFO 2025-04-20 20:54:00,514 autoreload 9916 8744 D:\diploma\backend\my_cloud\users\views.py changed, reloading.
+INFO 2025-04-20 20:54:01,093 autoreload 1040 1616 Watching for file changes with StatReloader
+INFO 2025-04-20 20:54:33,165 autoreload 1040 1616 D:\diploma\backend\my_cloud\users\views.py changed, reloading.
+INFO 2025-04-20 20:54:33,713 autoreload 9848 9868 Watching for file changes with StatReloader
+WARNING 2025-04-20 20:55:42,731 views 9848 8576 Ошибка проверки регистрации: {'email': [ErrorDetail(string='Пользователь с таким email уже существует', code='invalid')]}
+WARNING 2025-04-20 20:55:42,734 log 9848 8576 Bad Request: /api/v1/users/register/
+WARNING 2025-04-20 20:55:42,735 basehttp 9848 8576 "POST /api/v1/users/register/ HTTP/1.1" 400 164
+INFO 2025-04-20 20:57:00,958 views 9848 8576 Пользователь frafra успешно зарегистрирован
+INFO 2025-04-20 20:57:00,961 basehttp 9848 8576 "POST /api/v1/users/register/ HTTP/1.1" 201 214
+INFO 2025-04-20 20:57:01,083 views 9848 8576 Список файлов, извлеченных пользователем 3
+INFO 2025-04-20 20:57:01,087 views 9848 9796 Список файлов, извлеченных пользователем 3
+INFO 2025-04-20 20:57:01,103 basehttp 9848 8576 "GET /api/v1/cloud/ HTTP/1.1" 200 388
+INFO 2025-04-20 20:57:01,103 basehttp 9848 9796 "GET /api/v1/cloud/ HTTP/1.1" 200 388
+INFO 2025-04-20 20:59:03,713 signals 9848 3460 Сессия завершена: 670p28z7oui83ljcko5hhdno0stkf4gx, Пользователь: 3
+INFO 2025-04-20 20:59:03,715 views 9848 3460 Пользователь frafra вошел в систему. Сеанс: None
+INFO 2025-04-20 20:59:03,718 signals 9848 3460 Сессия начата: njyuakpiihk6gqcufy06icvcosnbbzwz, Пользователь: 5
+INFO 2025-04-20 20:59:03,718 basehttp 9848 3460 "POST /api/v1/users/login/ HTTP/1.1" 200 211
+INFO 2025-04-20 20:59:03,821 views 9848 3460 Список файлов, извлеченных пользователем 5
+INFO 2025-04-20 20:59:03,825 basehttp 9848 3460 "GET /api/v1/cloud/ HTTP/1.1" 200 2
+INFO 2025-04-20 20:59:03,843 views 9848 10600 Список файлов, извлеченных пользователем 5
+INFO 2025-04-20 20:59:03,847 basehttp 9848 10600 "GET /api/v1/cloud/ HTTP/1.1" 200 2
+INFO 2025-04-20 20:59:26,510 signals 9848 3460 Сессия завершена: njyuakpiihk6gqcufy06icvcosnbbzwz, Пользователь: 5
+INFO 2025-04-20 20:59:26,512 views 9848 3460 Пользователь frafra успешно вышел из системы
+INFO 2025-04-20 20:59:26,512 basehttp 9848 3460 "POST /api/v1/users/logout/ HTTP/1.1" 200 60
+INFO 2025-04-20 21:00:05,576 views 9848 3460 Пользователь risa успешно зарегистрирован
+INFO 2025-04-20 21:00:05,578 basehttp 9848 3460 "POST /api/v1/users/register/ HTTP/1.1" 201 208
+WARNING 2025-04-20 21:00:05,623 log 9848 3460 Forbidden: /api/v1/cloud/
+WARNING 2025-04-20 21:00:05,624 log 9848 10600 Forbidden: /api/v1/cloud/
+WARNING 2025-04-20 21:00:05,624 basehttp 9848 3460 "GET /api/v1/cloud/ HTTP/1.1" 403 59
+WARNING 2025-04-20 21:00:05,625 basehttp 9848 10600 "GET /api/v1/cloud/ HTTP/1.1" 403 59
+INFO 2025-04-20 21:01:38,961 signals 9848 3460 Сессия начата: 9kcdx6tdjq7gfb6imskp065lk7fz4yzr, Пользователь: не аутентифицирован
+INFO 2025-04-20 21:01:38,963 views 9848 3460 Пользователь risa вошел в систему. Сеанс: 9kcdx6tdjq7gfb6imskp065lk7fz4yzr
+INFO 2025-04-20 21:01:38,965 basehttp 9848 3460 "POST /api/v1/users/login/ HTTP/1.1" 200 235
+INFO 2025-04-20 21:01:39,065 views 9848 3460 Список файлов, извлеченных пользователем 6
+INFO 2025-04-20 21:01:39,069 basehttp 9848 3460 "GET /api/v1/cloud/ HTTP/1.1" 200 2
+INFO 2025-04-20 21:01:39,166 views 9848 10600 Список файлов, извлеченных пользователем 6
+INFO 2025-04-20 21:01:39,170 basehttp 9848 10600 "GET /api/v1/cloud/ HTTP/1.1" 200 2
+INFO 2025-04-20 21:02:10,516 signals 9848 3460 Сессия завершена: 9kcdx6tdjq7gfb6imskp065lk7fz4yzr, Пользователь: 6
+INFO 2025-04-20 21:02:10,518 views 9848 3460 Пользователь risa успешно вышел из системы
+INFO 2025-04-20 21:02:10,518 basehttp 9848 3460 "POST /api/v1/users/logout/ HTTP/1.1" 200 60
+INFO 2025-04-20 21:02:28,237 signals 9848 3460 Сессия начата: nfraiso4axnaljpnd3vzsa4dgpah1b5h, Пользователь: не аутентифицирован
+INFO 2025-04-20 21:02:28,239 views 9848 3460 Пользователь leva вошел в систему. Сеанс: nfraiso4axnaljpnd3vzsa4dgpah1b5h
+INFO 2025-04-20 21:02:28,242 basehttp 9848 3460 "POST /api/v1/users/login/ HTTP/1.1" 200 227
+INFO 2025-04-20 21:02:28,353 views 9848 3460 Список файлов, извлеченных пользователем 1
+INFO 2025-04-20 21:02:28,355 views 9848 10600 Список файлов, извлеченных пользователем 1
+INFO 2025-04-20 21:02:28,363 basehttp 9848 3460 "GET /api/v1/cloud/ HTTP/1.1" 200 769
+INFO 2025-04-20 21:02:28,364 basehttp 9848 10600 "GET /api/v1/cloud/ HTTP/1.1" 200 769
+INFO 2025-04-20 21:03:30,055 views 9848 3460 Пользователь Admin leva получил доступ к списку пользователей
+INFO 2025-04-20 21:03:30,058 basehttp 9848 3460 "GET /api/v1/users/ HTTP/1.1" 200 571
+INFO 2025-04-20 21:03:30,068 views 9848 10600 Пользователь Admin leva получил доступ к списку пользователей
+INFO 2025-04-20 21:03:30,070 basehttp 9848 10600 "GET /api/v1/users/ HTTP/1.1" 200 571
+INFO 2025-04-20 21:03:37,603 basehttp 9848 9344 "OPTIONS /api/v1/users/5/delete/ HTTP/1.1" 200 0
+INFO 2025-04-20 21:03:37,689 views 9848 3460 Пользователь frafra удален администратором leva
+INFO 2025-04-20 21:03:37,690 basehttp 9848 3460 "DELETE /api/v1/users/5/delete/ HTTP/1.1" 200 65
+INFO 2025-04-20 21:03:41,852 basehttp 9848 9344 "OPTIONS /api/v1/users/3/delete/ HTTP/1.1" 200 0
+INFO 2025-04-20 21:03:41,937 views 9848 10600 Пользователь miko удален администратором leva
+INFO 2025-04-20 21:03:41,938 basehttp 9848 10600 "DELETE /api/v1/users/3/delete/ HTTP/1.1" 200 65
+INFO 2025-04-20 21:04:48,109 views 9848 3460 Список файлов, извлеченных пользователем 1
+INFO 2025-04-20 21:04:48,112 views 9848 10600 Список файлов, извлеченных пользователем 1
+INFO 2025-04-20 21:04:48,115 basehttp 9848 3460 "GET /api/v1/cloud/ HTTP/1.1" 200 382
+INFO 2025-04-20 21:04:48,122 basehttp 9848 10600 "GET /api/v1/cloud/ HTTP/1.1" 200 382
+INFO 2025-04-20 21:16:36,381 signals 9848 9576 Сессия завершена: nfraiso4axnaljpnd3vzsa4dgpah1b5h, Пользователь: 1
+INFO 2025-04-20 21:16:36,383 views 9848 9576 Пользователь mona вошел в систему. Сеанс: None
+INFO 2025-04-20 21:16:36,385 signals 9848 9576 Сессия начата: ownw1eu3fw7gd9mu1eugcvfy6wt4rulj, Пользователь: 4
+INFO 2025-04-20 21:16:36,386 basehttp 9848 9576 "POST /api/v1/users/login/ HTTP/1.1" 200 207
+INFO 2025-04-20 21:16:36,501 views 9848 9576 Список файлов, извлеченных пользователем 4
+INFO 2025-04-20 21:16:36,505 basehttp 9848 9576 "GET /api/v1/cloud/ HTTP/1.1" 200 2
+INFO 2025-04-20 21:16:36,507 views 9848 3176 Список файлов, извлеченных пользователем 4
+INFO 2025-04-20 21:16:36,512 basehttp 9848 3176 "GET /api/v1/cloud/ HTTP/1.1" 200 2
+INFO 2025-04-20 21:16:54,916 views 9848 9576 Файл, загруженный пользователем 4
+INFO 2025-04-20 21:16:54,919 basehttp 9848 9576 "POST /api/v1/cloud/ HTTP/1.1" 201 100
+INFO 2025-04-20 21:16:55,023 views 9848 9576 Список файлов, извлеченных пользователем 4
+INFO 2025-04-20 21:16:55,030 basehttp 9848 9576 "GET /api/v1/cloud/ HTTP/1.1" 200 390
+INFO 2025-04-20 21:35:44,758 views 9848 9768 Список файлов, извлеченных пользователем 4
+INFO 2025-04-20 21:35:44,762 views 9848 9768 Файл 6 скачан пользователем 4
+INFO 2025-04-20 21:35:44,765 basehttp 9848 9768 "GET /api/v1/cloud/6/download/ HTTP/1.1" 200 57822
+INFO 2025-04-20 21:37:10,829 signals 9848 10764 Сессия завершена: ownw1eu3fw7gd9mu1eugcvfy6wt4rulj, Пользователь: 4
+INFO 2025-04-20 21:37:10,829 views 9848 10764 Пользователь mona успешно вышел из системы
+INFO 2025-04-20 21:37:10,830 basehttp 9848 10764 "POST /api/v1/users/logout/ HTTP/1.1" 200 60
+INFO 2025-04-20 21:37:33,338 signals 9848 10764 Сессия начата: fibqfcnf4p3fuc39fee72u5vgclqob12, Пользователь: не аутентифицирован
+INFO 2025-04-20 21:37:33,340 views 9848 10764 Пользователь leva вошел в систему. Сеанс: fibqfcnf4p3fuc39fee72u5vgclqob12
+INFO 2025-04-20 21:37:33,343 basehttp 9848 10764 "POST /api/v1/users/login/ HTTP/1.1" 200 227
+INFO 2025-04-20 21:37:33,444 views 9848 10764 Список файлов, извлеченных пользователем 1
+INFO 2025-04-20 21:37:33,448 views 9848 10936 Список файлов, извлеченных пользователем 1
+INFO 2025-04-20 21:37:33,454 basehttp 9848 10764 "GET /api/v1/cloud/ HTTP/1.1" 200 796
+INFO 2025-04-20 21:37:33,458 basehttp 9848 10936 "GET /api/v1/cloud/ HTTP/1.1" 200 796
+INFO 2025-04-20 21:38:01,873 views 9848 10764 Пользователь Admin leva получил доступ к списку пользователей
+INFO 2025-04-20 21:38:01,876 basehttp 9848 10764 "GET /api/v1/users/ HTTP/1.1" 200 337
+INFO 2025-04-20 21:38:01,878 views 9848 10936 Пользователь Admin leva получил доступ к списку пользователей
+INFO 2025-04-20 21:38:01,881 basehttp 9848 10936 "GET /api/v1/users/ HTTP/1.1" 200 337
+INFO 2025-04-20 21:40:06,819 views 9848 9428 Пользователь leva вошел в систему. Сеанс: fibqfcnf4p3fuc39fee72u5vgclqob12
+INFO 2025-04-20 21:40:06,822 basehttp 9848 9428 "POST /api/v1/users/login/ HTTP/1.1" 200 227
+INFO 2025-04-20 21:40:06,940 views 9848 9428 Список файлов, извлеченных пользователем 1
+INFO 2025-04-20 21:40:06,944 views 9848 3508 Список файлов, извлеченных пользователем 1
+INFO 2025-04-20 21:40:06,950 basehttp 9848 9428 "GET /api/v1/cloud/ HTTP/1.1" 200 796
+INFO 2025-04-20 21:40:06,953 basehttp 9848 3508 "GET /api/v1/cloud/ HTTP/1.1" 200 796
+INFO 2025-04-20 21:40:09,211 views 9848 9428 Пользователь Admin leva получил доступ к списку пользователей
+INFO 2025-04-20 21:40:09,213 basehttp 9848 9428 "GET /api/v1/users/ HTTP/1.1" 200 337
+INFO 2025-04-20 21:40:09,219 views 9848 3508 Пользователь Admin leva получил доступ к списку пользователей
+INFO 2025-04-20 21:40:09,222 basehttp 9848 3508 "GET /api/v1/users/ HTTP/1.1" 200 337
+INFO 2025-04-20 21:43:00,308 signals 9848 10864 Сессия завершена: fibqfcnf4p3fuc39fee72u5vgclqob12, Пользователь: 1
+INFO 2025-04-20 21:43:00,309 views 9848 10864 Пользователь risa вошел в систему. Сеанс: None
+INFO 2025-04-20 21:43:00,312 signals 9848 10864 Сессия начата: bpgqmfl9sr0p7rfb5kbitfd110ql2jtq, Пользователь: 6
+INFO 2025-04-20 21:43:00,312 basehttp 9848 10864 "POST /api/v1/users/login/ HTTP/1.1" 200 205
+INFO 2025-04-20 21:43:00,422 views 9848 10864 Список файлов, извлеченных пользователем 6
+INFO 2025-04-20 21:43:00,426 views 9848 9604 Список файлов, извлеченных пользователем 6
+INFO 2025-04-20 21:43:00,427 basehttp 9848 10864 "GET /api/v1/cloud/ HTTP/1.1" 200 2
+INFO 2025-04-20 21:43:00,431 basehttp 9848 9604 "GET /api/v1/cloud/ HTTP/1.1" 200 2
+INFO 2025-04-20 21:43:04,649 signals 9848 10864 Сессия завершена: bpgqmfl9sr0p7rfb5kbitfd110ql2jtq, Пользователь: 6
+INFO 2025-04-20 21:43:04,649 views 9848 10864 Пользователь risa успешно вышел из системы
+INFO 2025-04-20 21:43:04,650 basehttp 9848 10864 "POST /api/v1/users/logout/ HTTP/1.1" 200 60
+INFO 2025-04-20 21:43:34,785 signals 9848 10864 Сессия начата: lcwdw9svr9wq6yxrgq85p2x0q2oooxup, Пользователь: не аутентифицирован
+INFO 2025-04-20 21:43:34,786 views 9848 10864 Пользователь leva вошел в систему. Сеанс: lcwdw9svr9wq6yxrgq85p2x0q2oooxup
+INFO 2025-04-20 21:43:34,788 basehttp 9848 10864 "POST /api/v1/users/login/ HTTP/1.1" 200 227
+INFO 2025-04-20 21:43:34,925 views 9848 10864 Список файлов, извлеченных пользователем 1
+INFO 2025-04-20 21:43:34,929 views 9848 9604 Список файлов, извлеченных пользователем 1
+INFO 2025-04-20 21:43:34,934 basehttp 9848 10864 "GET /api/v1/cloud/ HTTP/1.1" 200 796
+INFO 2025-04-20 21:43:34,939 basehttp 9848 9604 "GET /api/v1/cloud/ HTTP/1.1" 200 796
+INFO 2025-04-20 21:43:35,865 views 9848 10864 Пользователь Admin leva получил доступ к списку пользователей
+INFO 2025-04-20 21:43:35,868 basehttp 9848 10864 "GET /api/v1/users/ HTTP/1.1" 200 337
+INFO 2025-04-20 21:43:35,869 views 9848 9604 Пользователь Admin leva получил доступ к списку пользователей
+INFO 2025-04-20 21:43:35,873 basehttp 9848 9604 "GET /api/v1/users/ HTTP/1.1" 200 337
+INFO 2025-04-20 21:44:19,874 views 9848 10864 Список файлов, извлеченных пользователем 1
+INFO 2025-04-20 21:44:19,879 views 9848 9604 Список файлов, извлеченных пользователем 1
+INFO 2025-04-20 21:44:19,883 basehttp 9848 10864 "GET /api/v1/cloud/ HTTP/1.1" 200 796
+INFO 2025-04-20 21:44:19,889 basehttp 9848 9604 "GET /api/v1/cloud/ HTTP/1.1" 200 796
+INFO 2025-04-20 21:52:23,661 views 9848 12028 Пользователь leva вошел в систему. Сеанс: lcwdw9svr9wq6yxrgq85p2x0q2oooxup
+INFO 2025-04-20 21:52:23,663 basehttp 9848 12028 "POST /api/v1/users/login/ HTTP/1.1" 200 227
+INFO 2025-04-20 21:52:23,793 views 9848 12028 Список файлов, извлеченных пользователем 1
+INFO 2025-04-20 21:52:23,797 views 9848 1360 Список файлов, извлеченных пользователем 1
+INFO 2025-04-20 21:52:23,802 basehttp 9848 12028 "GET /api/v1/cloud/ HTTP/1.1" 200 796
+INFO 2025-04-20 21:52:23,808 basehttp 9848 1360 "GET /api/v1/cloud/ HTTP/1.1" 200 796
+INFO 2025-04-20 21:52:25,233 views 9848 12028 Пользователь Admin leva получил доступ к списку пользователей
+INFO 2025-04-20 21:52:25,235 views 9848 1360 Пользователь Admin leva получил доступ к списку пользователей
+INFO 2025-04-20 21:52:25,236 basehttp 9848 12028 "GET /api/v1/users/ HTTP/1.1" 200 337
+INFO 2025-04-20 21:52:25,238 basehttp 9848 1360 "GET /api/v1/users/ HTTP/1.1" 200 337
+WARNING 2025-04-20 21:53:36,077 views 9848 12028 Ошибка проверки логина: {'non_field_errors': [ErrorDetail(string='Неверные имя пользователя или пароль', code='authorization')]}
+WARNING 2025-04-20 21:53:36,080 log 9848 12028 Bad Request: /api/v1/users/login/
+WARNING 2025-04-20 21:53:36,081 basehttp 9848 12028 "POST /api/v1/users/login/ HTTP/1.1" 400 171
+INFO 2025-04-20 21:53:44,241 views 9848 1360 Пользователь leva вошел в систему. Сеанс: lcwdw9svr9wq6yxrgq85p2x0q2oooxup
+INFO 2025-04-20 21:53:44,243 basehttp 9848 1360 "POST /api/v1/users/login/ HTTP/1.1" 200 227
+INFO 2025-04-20 21:53:44,362 views 9848 12028 Список файлов, извлеченных пользователем 1
+INFO 2025-04-20 21:53:44,370 basehttp 9848 12028 "GET /api/v1/cloud/ HTTP/1.1" 200 796
+INFO 2025-04-20 21:53:44,380 views 9848 1360 Список файлов, извлеченных пользователем 1
+INFO 2025-04-20 21:53:44,388 basehttp 9848 1360 "GET /api/v1/cloud/ HTTP/1.1" 200 796
+INFO 2025-04-20 21:54:40,124 views 9848 12028 Пользователь leva вошел в систему. Сеанс: lcwdw9svr9wq6yxrgq85p2x0q2oooxup
+INFO 2025-04-20 21:54:40,127 basehttp 9848 12028 "POST /api/v1/users/login/ HTTP/1.1" 200 227
+INFO 2025-04-20 21:54:40,241 views 9848 1360 Список файлов, извлеченных пользователем 1
+INFO 2025-04-20 21:54:40,249 basehttp 9848 1360 "GET /api/v1/cloud/ HTTP/1.1" 200 796
+INFO 2025-04-20 21:54:40,257 views 9848 12028 Список файлов, извлеченных пользователем 1
+INFO 2025-04-20 21:54:40,264 basehttp 9848 12028 "GET /api/v1/cloud/ HTTP/1.1" 200 796
+INFO 2025-04-20 21:54:44,056 views 9848 1360 Пользователь Admin leva получил доступ к списку пользователей
+INFO 2025-04-20 21:54:44,058 views 9848 12028 Пользователь Admin leva получил доступ к списку пользователей
+INFO 2025-04-20 21:54:44,060 basehttp 9848 1360 "GET /api/v1/users/ HTTP/1.1" 200 337
+INFO 2025-04-20 21:54:44,061 basehttp 9848 12028 "GET /api/v1/users/ HTTP/1.1" 200 337
+INFO 2025-04-20 21:56:28,569 views 9848 1360 Пользователь leva вошел в систему. Сеанс: lcwdw9svr9wq6yxrgq85p2x0q2oooxup
+INFO 2025-04-20 21:56:28,572 basehttp 9848 1360 "POST /api/v1/users/login/ HTTP/1.1" 200 227
+INFO 2025-04-20 21:56:28,692 views 9848 12028 Список файлов, извлеченных пользователем 1
+INFO 2025-04-20 21:56:28,696 views 9848 1360 Список файлов, извлеченных пользователем 1
+INFO 2025-04-20 21:56:28,701 basehttp 9848 12028 "GET /api/v1/cloud/ HTTP/1.1" 200 796
+INFO 2025-04-20 21:56:28,706 basehttp 9848 1360 "GET /api/v1/cloud/ HTTP/1.1" 200 796
+INFO 2025-04-20 21:56:29,645 views 9848 12028 Пользователь Admin leva получил доступ к списку пользователей
+INFO 2025-04-20 21:56:29,648 views 9848 1360 Пользователь Admin leva получил доступ к списку пользователей
+INFO 2025-04-20 21:56:29,649 basehttp 9848 12028 "GET /api/v1/users/ HTTP/1.1" 200 337
+INFO 2025-04-20 21:56:29,651 basehttp 9848 1360 "GET /api/v1/users/ HTTP/1.1" 200 337
+INFO 2025-04-20 21:57:15,376 views 9848 9704 Пользователь leva вошел в систему. Сеанс: lcwdw9svr9wq6yxrgq85p2x0q2oooxup
+INFO 2025-04-20 21:57:15,379 basehttp 9848 9704 "POST /api/v1/users/login/ HTTP/1.1" 200 227
+INFO 2025-04-20 21:57:15,486 views 9848 9704 Список файлов, извлеченных пользователем 1
+INFO 2025-04-20 21:57:15,493 basehttp 9848 9704 "GET /api/v1/cloud/ HTTP/1.1" 200 796
+INFO 2025-04-20 21:57:15,590 views 9848 11128 Список файлов, извлеченных пользователем 1
+INFO 2025-04-20 21:57:15,597 basehttp 9848 11128 "GET /api/v1/cloud/ HTTP/1.1" 200 796
+INFO 2025-04-20 21:57:16,962 views 9848 11128 Пользователь Admin leva получил доступ к списку пользователей
+INFO 2025-04-20 21:57:16,964 basehttp 9848 11128 "GET /api/v1/users/ HTTP/1.1" 200 337
+INFO 2025-04-20 21:57:17,056 views 9848 9704 Пользователь Admin leva получил доступ к списку пользователей
+INFO 2025-04-20 21:57:17,058 basehttp 9848 9704 "GET /api/v1/users/ HTTP/1.1" 200 337
+INFO 2025-04-20 21:58:29,074 views 9848 11128 Пользователь leva вошел в систему. Сеанс: lcwdw9svr9wq6yxrgq85p2x0q2oooxup
+INFO 2025-04-20 21:58:29,077 basehttp 9848 11128 "POST /api/v1/users/login/ HTTP/1.1" 200 227
+INFO 2025-04-20 21:58:29,215 views 9848 9704 Список файлов, извлеченных пользователем 1
+INFO 2025-04-20 21:58:29,222 basehttp 9848 9704 "GET /api/v1/cloud/ HTTP/1.1" 200 796
+INFO 2025-04-20 21:58:29,229 views 9848 11128 Список файлов, извлеченных пользователем 1
+INFO 2025-04-20 21:58:29,237 basehttp 9848 11128 "GET /api/v1/cloud/ HTTP/1.1" 200 796
+INFO 2025-04-20 21:58:29,986 views 9848 9704 Пользователь Admin leva получил доступ к списку пользователей
+INFO 2025-04-20 21:58:29,988 basehttp 9848 9704 "GET /api/v1/users/ HTTP/1.1" 200 337
+INFO 2025-04-20 21:58:29,991 views 9848 11128 Пользователь Admin leva получил доступ к списку пользователей
+INFO 2025-04-20 21:58:29,994 basehttp 9848 11128 "GET /api/v1/users/ HTTP/1.1" 200 337
+INFO 2025-04-20 22:01:34,689 views 9848 11824 Пользователь leva вошел в систему. Сеанс: lcwdw9svr9wq6yxrgq85p2x0q2oooxup
+INFO 2025-04-20 22:01:34,692 basehttp 9848 11824 "POST /api/v1/users/login/ HTTP/1.1" 200 227
+INFO 2025-04-20 22:01:34,808 views 9848 11824 Список файлов, извлеченных пользователем 1
+INFO 2025-04-20 22:01:34,812 views 9848 12192 Список файлов, извлеченных пользователем 1
+INFO 2025-04-20 22:01:34,818 basehttp 9848 11824 "GET /api/v1/cloud/ HTTP/1.1" 200 796
+INFO 2025-04-20 22:01:34,821 basehttp 9848 12192 "GET /api/v1/cloud/ HTTP/1.1" 200 796
+INFO 2025-04-20 22:02:58,675 views 9848 11824 Пользователь Admin leva получил доступ к списку пользователей
+INFO 2025-04-20 22:02:58,678 views 9848 12192 Пользователь Admin leva получил доступ к списку пользователей
+INFO 2025-04-20 22:02:58,679 basehttp 9848 11824 "GET /api/v1/users/ HTTP/1.1" 200 337
+INFO 2025-04-20 22:02:58,681 basehttp 9848 12192 "GET /api/v1/users/ HTTP/1.1" 200 337
+INFO 2025-04-20 22:06:56,487 views 9848 9312 Пользователь leva вошел в систему. Сеанс: lcwdw9svr9wq6yxrgq85p2x0q2oooxup
+INFO 2025-04-20 22:06:56,490 basehttp 9848 9312 "POST /api/v1/users/login/ HTTP/1.1" 200 227
+INFO 2025-04-20 22:06:56,617 views 9848 9312 Список файлов, извлеченных пользователем 1
+INFO 2025-04-20 22:06:56,621 views 9848 8936 Список файлов, извлеченных пользователем 1
+INFO 2025-04-20 22:06:56,626 basehttp 9848 9312 "GET /api/v1/cloud/ HTTP/1.1" 200 796
+INFO 2025-04-20 22:06:56,631 basehttp 9848 8936 "GET /api/v1/cloud/ HTTP/1.1" 200 796
+INFO 2025-04-20 22:06:57,211 views 9848 9312 Пользователь Admin leva получил доступ к списку пользователей
+INFO 2025-04-20 22:06:57,213 views 9848 8936 Пользователь Admin leva получил доступ к списку пользователей
+INFO 2025-04-20 22:06:57,214 basehttp 9848 9312 "GET /api/v1/users/ HTTP/1.1" 200 337
+INFO 2025-04-20 22:06:57,215 basehttp 9848 8936 "GET /api/v1/users/ HTTP/1.1" 200 337
+INFO 2025-04-20 22:07:10,602 views 9848 9312 Список файлов, извлеченных пользователем 1
+INFO 2025-04-20 22:07:10,605 views 9848 8936 Список файлов, извлеченных пользователем 1
+INFO 2025-04-20 22:07:10,610 basehttp 9848 9312 "GET /api/v1/cloud/ HTTP/1.1" 200 796
+INFO 2025-04-20 22:07:10,615 basehttp 9848 8936 "GET /api/v1/cloud/ HTTP/1.1" 200 796
+INFO 2025-04-20 22:07:11,463 views 9848 9312 Пользователь Admin leva получил доступ к списку пользователей
+INFO 2025-04-20 22:07:11,465 basehttp 9848 9312 "GET /api/v1/users/ HTTP/1.1" 200 337
+INFO 2025-04-20 22:07:11,467 views 9848 8936 Пользователь Admin leva получил доступ к списку пользователей
+INFO 2025-04-20 22:07:11,471 basehttp 9848 8936 "GET /api/v1/users/ HTTP/1.1" 200 337
+INFO 2025-04-20 22:12:40,523 views 9848 12132 Пользователь leva вошел в систему. Сеанс: lcwdw9svr9wq6yxrgq85p2x0q2oooxup
+INFO 2025-04-20 22:12:40,526 basehttp 9848 12132 "POST /api/v1/users/login/ HTTP/1.1" 200 227
+INFO 2025-04-20 22:12:40,652 views 9848 12120 Список файлов, извлеченных пользователем 1
+INFO 2025-04-20 22:12:40,660 basehttp 9848 12120 "GET /api/v1/cloud/ HTTP/1.1" 200 796
+INFO 2025-04-20 22:12:40,747 views 9848 12132 Список файлов, извлеченных пользователем 1
+INFO 2025-04-20 22:12:40,755 basehttp 9848 12132 "GET /api/v1/cloud/ HTTP/1.1" 200 796
+INFO 2025-04-20 22:12:41,649 views 9848 12120 Пользователь Admin leva получил доступ к списку пользователей
+INFO 2025-04-20 22:12:41,651 basehttp 9848 12120 "GET /api/v1/users/ HTTP/1.1" 200 337
+INFO 2025-04-20 22:12:41,653 views 9848 12132 Пользователь Admin leva получил доступ к списку пользователей
+INFO 2025-04-20 22:12:41,657 basehttp 9848 12132 "GET /api/v1/users/ HTTP/1.1" 200 337
+INFO 2025-04-20 22:14:37,067 views 9848 12120 Пользователь leva вошел в систему. Сеанс: lcwdw9svr9wq6yxrgq85p2x0q2oooxup
+INFO 2025-04-20 22:14:37,070 basehttp 9848 12120 "POST /api/v1/users/login/ HTTP/1.1" 200 227
+INFO 2025-04-20 22:14:37,187 views 9848 12120 Список файлов, извлеченных пользователем 1
+INFO 2025-04-20 22:14:37,191 views 9848 10876 Список файлов, извлеченных пользователем 1
+INFO 2025-04-20 22:14:37,197 basehttp 9848 12120 "GET /api/v1/cloud/ HTTP/1.1" 200 796
+INFO 2025-04-20 22:14:37,199 basehttp 9848 10876 "GET /api/v1/cloud/ HTTP/1.1" 200 796
+INFO 2025-04-20 22:14:39,892 views 9848 12120 Пользователь Admin leva получил доступ к списку пользователей
+INFO 2025-04-20 22:14:39,894 views 9848 10876 Пользователь Admin leva получил доступ к списку пользователей
+INFO 2025-04-20 22:14:39,896 basehttp 9848 12120 "GET /api/v1/users/ HTTP/1.1" 200 337
+INFO 2025-04-20 22:14:39,897 basehttp 9848 10876 "GET /api/v1/users/ HTTP/1.1" 200 337
+INFO 2025-04-20 22:15:44,111 views 9848 12120 Пользователь leva вошел в систему. Сеанс: lcwdw9svr9wq6yxrgq85p2x0q2oooxup
+INFO 2025-04-20 22:15:44,114 basehttp 9848 12120 "POST /api/v1/users/login/ HTTP/1.1" 200 227
+INFO 2025-04-20 22:15:44,240 views 9848 10876 Список файлов, извлеченных пользователем 1
+INFO 2025-04-20 22:15:44,249 basehttp 9848 10876 "GET /api/v1/cloud/ HTTP/1.1" 200 796
+INFO 2025-04-20 22:15:44,260 views 9848 12120 Список файлов, извлеченных пользователем 1
+INFO 2025-04-20 22:15:44,269 basehttp 9848 12120 "GET /api/v1/cloud/ HTTP/1.1" 200 796
+INFO 2025-04-20 22:15:44,687 views 9848 10876 Пользователь Admin leva получил доступ к списку пользователей
+INFO 2025-04-20 22:15:44,690 views 9848 12120 Пользователь Admin leva получил доступ к списку пользователей
+INFO 2025-04-20 22:15:44,691 basehttp 9848 10876 "GET /api/v1/users/ HTTP/1.1" 200 337
+INFO 2025-04-20 22:15:44,693 basehttp 9848 12120 "GET /api/v1/users/ HTTP/1.1" 200 337
+INFO 2025-04-20 22:25:05,268 autoreload 9848 9868 D:\diploma\backend\my_cloud\users\views.py changed, reloading.
+INFO 2025-04-20 22:25:05,875 autoreload 11288 5956 Watching for file changes with StatReloader
+INFO 2025-04-20 22:25:25,358 autoreload 11288 5956 D:\diploma\backend\my_cloud\users\urls.py changed, reloading.
+INFO 2025-04-20 22:25:25,908 autoreload 9732 9916 Watching for file changes with StatReloader
+INFO 2025-04-20 22:25:49,587 autoreload 9732 9916 D:\diploma\backend\my_cloud\users\urls.py changed, reloading.
+INFO 2025-04-20 22:25:50,150 autoreload 10972 8516 Watching for file changes with StatReloader
+INFO 2025-04-20 22:31:33,612 autoreload 10972 8516 D:\diploma\backend\my_cloud\users\urls.py changed, reloading.
+INFO 2025-04-20 22:31:34,208 autoreload 12000 10864 Watching for file changes with StatReloader
+INFO 2025-04-20 22:32:49,396 autoreload 12000 10864 D:\diploma\backend\my_cloud\users\serializers.py changed, reloading.
+INFO 2025-04-20 22:32:49,950 autoreload 12224 12168 Watching for file changes with StatReloader
+INFO 2025-04-20 22:34:19,827 autoreload 12224 12168 D:\diploma\backend\my_cloud\users\views.py changed, reloading.
+INFO 2025-04-20 22:34:20,382 autoreload 11488 9140 Watching for file changes with StatReloader
+INFO 2025-04-20 22:35:15,593 autoreload 11488 9140 D:\diploma\backend\my_cloud\users\views.py changed, reloading.
+INFO 2025-04-20 22:35:16,141 autoreload 12128 11580 Watching for file changes with StatReloader
+INFO 2025-04-20 22:42:07,051 views 12128 11864 Пользователь leva вошел в систему. Сеанс: lcwdw9svr9wq6yxrgq85p2x0q2oooxup
+INFO 2025-04-20 22:42:07,055 basehttp 12128 11864 "POST /api/v1/users/login/ HTTP/1.1" 200 227
+INFO 2025-04-20 22:42:07,216 views 12128 11864 Список файлов, извлеченных пользователем 1
+INFO 2025-04-20 22:42:07,220 views 12128 11976 Список файлов, извлеченных пользователем 1
+INFO 2025-04-20 22:42:07,236 basehttp 12128 11864 "GET /api/v1/cloud/ HTTP/1.1" 200 796
+INFO 2025-04-20 22:42:07,237 basehttp 12128 11976 "GET /api/v1/cloud/ HTTP/1.1" 200 796
+INFO 2025-04-20 22:42:08,605 views 12128 11864 Пользователь Admin leva получил доступ к списку пользователей
+INFO 2025-04-20 22:42:08,608 basehttp 12128 11864 "GET /api/v1/users/ HTTP/1.1" 200 337
+INFO 2025-04-20 22:42:08,610 views 12128 11976 Пользователь Admin leva получил доступ к списку пользователей
+INFO 2025-04-20 22:42:08,613 basehttp 12128 11976 "GET /api/v1/users/ HTTP/1.1" 200 337
+INFO 2025-04-20 22:42:09,844 basehttp 12128 8772 "OPTIONS /api/v1/users/4/update HTTP/1.1" 200 0
+ERROR 2025-04-20 22:42:09,964 log 12128 11864 Internal Server Error: /api/v1/users/4/update
+Traceback (most recent call last):
+  File "D:\diploma\backend\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\diploma\backend\venv\Lib\site-packages\django\utils\deprecation.py", line 122, in __call__
+    response = self.process_response(request, response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\diploma\backend\venv\Lib\site-packages\django\middleware\common.py", line 108, in process_response
+    return self.response_redirect_class(self.get_full_path_with_slash(request))
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\diploma\backend\venv\Lib\site-packages\django\middleware\common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via PATCH, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining PATCH data. Change your form to point to localhost:8000/api/v1/users/4/update/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+ERROR 2025-04-20 22:42:09,966 basehttp 12128 11864 "PATCH /api/v1/users/4/update HTTP/1.1" 500 74381
+INFO 2025-04-20 22:48:48,297 autoreload 10596 9832 Watching for file changes with StatReloader
+INFO 2025-04-20 22:49:00,494 views 10596 7540 Пользователь leva вошел в систему. Сеанс: lcwdw9svr9wq6yxrgq85p2x0q2oooxup
+INFO 2025-04-20 22:49:00,497 basehttp 10596 7540 "POST /api/v1/users/login/ HTTP/1.1" 200 227
+INFO 2025-04-20 22:49:00,640 views 10596 7540 Список файлов, извлеченных пользователем 1
+INFO 2025-04-20 22:49:00,644 views 10596 12140 Список файлов, извлеченных пользователем 1
+INFO 2025-04-20 22:49:00,662 basehttp 10596 7540 "GET /api/v1/cloud/ HTTP/1.1" 200 796
+INFO 2025-04-20 22:49:00,663 basehttp 10596 12140 "GET /api/v1/cloud/ HTTP/1.1" 200 796
+INFO 2025-04-20 22:49:01,787 views 10596 7540 Пользователь Admin leva получил доступ к списку пользователей
+INFO 2025-04-20 22:49:01,790 views 10596 12140 Пользователь Admin leva получил доступ к списку пользователей
+INFO 2025-04-20 22:49:01,791 basehttp 10596 7540 "GET /api/v1/users/ HTTP/1.1" 200 337
+INFO 2025-04-20 22:49:01,793 basehttp 10596 12140 "GET /api/v1/users/ HTTP/1.1" 200 337
+ERROR 2025-04-20 22:49:03,419 log 10596 7540 Internal Server Error: /api/v1/users/4/update
+Traceback (most recent call last):
+  File "D:\diploma\backend\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\diploma\backend\venv\Lib\site-packages\django\utils\deprecation.py", line 122, in __call__
+    response = self.process_response(request, response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\diploma\backend\venv\Lib\site-packages\django\middleware\common.py", line 108, in process_response
+    return self.response_redirect_class(self.get_full_path_with_slash(request))
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\diploma\backend\venv\Lib\site-packages\django\middleware\common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via PATCH, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining PATCH data. Change your form to point to localhost:8000/api/v1/users/4/update/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+ERROR 2025-04-20 22:49:03,421 basehttp 10596 7540 "PATCH /api/v1/users/4/update HTTP/1.1" 500 74388
+INFO 2025-04-20 22:53:19,430 views 10596 9676 Пользователь leva вошел в систему. Сеанс: lcwdw9svr9wq6yxrgq85p2x0q2oooxup
+INFO 2025-04-20 22:53:19,433 basehttp 10596 9676 "POST /api/v1/users/login/ HTTP/1.1" 200 227
+INFO 2025-04-20 22:53:19,551 views 10596 9676 Список файлов, извлеченных пользователем 1
+INFO 2025-04-20 22:53:19,556 views 10596 9964 Список файлов, извлеченных пользователем 1
+INFO 2025-04-20 22:53:19,559 basehttp 10596 9676 "GET /api/v1/cloud/ HTTP/1.1" 200 796
+INFO 2025-04-20 22:53:19,566 basehttp 10596 9964 "GET /api/v1/cloud/ HTTP/1.1" 200 796
+INFO 2025-04-20 22:53:21,982 views 10596 9676 Пользователь Admin leva получил доступ к списку пользователей
+INFO 2025-04-20 22:53:21,985 basehttp 10596 9676 "GET /api/v1/users/ HTTP/1.1" 200 337
+INFO 2025-04-20 22:53:21,988 views 10596 9964 Пользователь Admin leva получил доступ к списку пользователей
+INFO 2025-04-20 22:53:21,992 basehttp 10596 9964 "GET /api/v1/users/ HTTP/1.1" 200 337
+ERROR 2025-04-20 22:53:23,671 log 10596 9676 Internal Server Error: /api/v1/users/4/update
+Traceback (most recent call last):
+  File "D:\diploma\backend\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\diploma\backend\venv\Lib\site-packages\django\utils\deprecation.py", line 122, in __call__
+    response = self.process_response(request, response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\diploma\backend\venv\Lib\site-packages\django\middleware\common.py", line 108, in process_response
+    return self.response_redirect_class(self.get_full_path_with_slash(request))
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\diploma\backend\venv\Lib\site-packages\django\middleware\common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via PATCH, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining PATCH data. Change your form to point to localhost:8000/api/v1/users/4/update/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+ERROR 2025-04-20 22:53:23,673 basehttp 10596 9676 "PATCH /api/v1/users/4/update HTTP/1.1" 500 74389
+INFO 2025-04-20 22:55:22,978 views 10596 11432 Пользователь leva вошел в систему. Сеанс: lcwdw9svr9wq6yxrgq85p2x0q2oooxup
+INFO 2025-04-20 22:55:22,982 basehttp 10596 11432 "POST /api/v1/users/login/ HTTP/1.1" 200 227
+INFO 2025-04-20 22:55:23,098 views 10596 11432 Список файлов, извлеченных пользователем 1
+INFO 2025-04-20 22:55:23,106 basehttp 10596 11432 "GET /api/v1/cloud/ HTTP/1.1" 200 796
+INFO 2025-04-20 22:55:23,111 views 10596 6256 Список файлов, извлеченных пользователем 1
+INFO 2025-04-20 22:55:23,120 basehttp 10596 6256 "GET /api/v1/cloud/ HTTP/1.1" 200 796
+INFO 2025-04-20 22:55:23,664 views 10596 11432 Пользователь Admin leva получил доступ к списку пользователей
+INFO 2025-04-20 22:55:23,668 basehttp 10596 11432 "GET /api/v1/users/ HTTP/1.1" 200 337
+INFO 2025-04-20 22:55:23,670 views 10596 6256 Пользователь Admin leva получил доступ к списку пользователей
+INFO 2025-04-20 22:55:23,673 basehttp 10596 6256 "GET /api/v1/users/ HTTP/1.1" 200 337
+INFO 2025-04-20 22:55:24,854 basehttp 10596 2412 "OPTIONS /api/v1/users/4/update/ HTTP/1.1" 200 0
+INFO 2025-04-20 22:55:24,919 views 10596 11432 Админ leva успешно обновил пользователя mona (id=4)
+INFO 2025-04-20 22:55:24,921 basehttp 10596 11432 "PATCH /api/v1/users/4/update/ HTTP/1.1" 200 191
+INFO 2025-04-20 22:55:26,122 views 10596 6256 Админ leva успешно обновил пользователя mona (id=4)
+INFO 2025-04-20 22:55:26,124 basehttp 10596 6256 "PATCH /api/v1/users/4/update/ HTTP/1.1" 200 191
+INFO 2025-04-20 22:55:26,765 views 10596 11432 Админ leva успешно обновил пользователя mona (id=4)
+INFO 2025-04-20 22:55:26,769 basehttp 10596 11432 "PATCH /api/v1/users/4/update/ HTTP/1.1" 200 191
+INFO 2025-04-20 22:55:27,410 views 10596 6256 Админ leva успешно обновил пользователя mona (id=4)
+INFO 2025-04-20 22:55:27,412 basehttp 10596 6256 "PATCH /api/v1/users/4/update/ HTTP/1.1" 200 191
+INFO 2025-04-20 22:55:57,022 autoreload 10596 9832 D:\diploma\backend\my_cloud\users\views.py changed, reloading.
+INFO 2025-04-20 22:55:57,583 autoreload 9584 12016 Watching for file changes with StatReloader
+INFO 2025-04-20 22:57:26,679 views 9584 10492 Пользователь leva вошел в систему. Сеанс: lcwdw9svr9wq6yxrgq85p2x0q2oooxup
+INFO 2025-04-20 22:57:26,683 basehttp 9584 10492 "POST /api/v1/users/login/ HTTP/1.1" 200 227
+INFO 2025-04-20 22:57:26,807 views 9584 10492 Список файлов, извлеченных пользователем 1
+INFO 2025-04-20 22:57:26,818 views 9584 12028 Список файлов, извлеченных пользователем 1
+INFO 2025-04-20 22:57:26,828 basehttp 9584 10492 "GET /api/v1/cloud/ HTTP/1.1" 200 795
+INFO 2025-04-20 22:57:26,829 basehttp 9584 12028 "GET /api/v1/cloud/ HTTP/1.1" 200 795
+INFO 2025-04-20 22:57:28,668 views 9584 10492 Пользователь Admin leva получил доступ к списку пользователей
+INFO 2025-04-20 22:57:28,673 views 9584 12028 Пользователь Admin leva получил доступ к списку пользователей
+INFO 2025-04-20 22:57:28,672 basehttp 9584 10492 "GET /api/v1/users/ HTTP/1.1" 200 336
+INFO 2025-04-20 22:57:28,676 basehttp 9584 12028 "GET /api/v1/users/ HTTP/1.1" 200 336
+INFO 2025-04-20 22:57:32,162 views 9584 10492 Админ leva успешно обновил пользователя mona (id=4)
+INFO 2025-04-20 22:57:32,164 basehttp 9584 10492 "PATCH /api/v1/users/4/update/ HTTP/1.1" 200 192
+INFO 2025-04-20 23:04:42,536 views 9584 11984 Пользователь leva вошел в систему. Сеанс: lcwdw9svr9wq6yxrgq85p2x0q2oooxup
+INFO 2025-04-20 23:04:42,539 basehttp 9584 11984 "POST /api/v1/users/login/ HTTP/1.1" 200 227
+INFO 2025-04-20 23:04:42,669 views 9584 11984 Список файлов, извлеченных пользователем 1
+INFO 2025-04-20 23:04:42,677 views 9584 7792 Список файлов, извлеченных пользователем 1
+INFO 2025-04-20 23:04:42,677 basehttp 9584 11984 "GET /api/v1/cloud/ HTTP/1.1" 200 796
+INFO 2025-04-20 23:04:42,686 basehttp 9584 7792 "GET /api/v1/cloud/ HTTP/1.1" 200 796
+INFO 2025-04-20 23:04:43,674 views 9584 11984 Пользователь Admin leva получил доступ к списку пользователей
+INFO 2025-04-20 23:04:43,677 basehttp 9584 11984 "GET /api/v1/users/ HTTP/1.1" 200 337
+INFO 2025-04-20 23:04:43,679 views 9584 7792 Пользователь Admin leva получил доступ к списку пользователей
+INFO 2025-04-20 23:04:43,682 basehttp 9584 7792 "GET /api/v1/users/ HTTP/1.1" 200 337
+INFO 2025-04-20 23:04:45,510 views 9584 11984 Админ leva успешно обновил пользователя mona (id=4)
+INFO 2025-04-20 23:04:45,512 basehttp 9584 11984 "PATCH /api/v1/users/4/update/ HTTP/1.1" 200 191
+INFO 2025-04-20 23:04:55,810 views 9584 7792 Админ leva успешно обновил пользователя mona (id=4)
+INFO 2025-04-20 23:04:55,812 basehttp 9584 7792 "PATCH /api/v1/users/4/update/ HTTP/1.1" 200 192
+INFO 2025-04-20 23:05:22,758 views 9584 11984 Список файлов, извлеченных пользователем 1
+INFO 2025-04-20 23:05:22,762 views 9584 7792 Список файлов, извлеченных пользователем 1
+INFO 2025-04-20 23:05:22,770 basehttp 9584 11984 "GET /api/v1/cloud/ HTTP/1.1" 200 796
+INFO 2025-04-20 23:05:22,773 basehttp 9584 7792 "GET /api/v1/cloud/ HTTP/1.1" 200 796

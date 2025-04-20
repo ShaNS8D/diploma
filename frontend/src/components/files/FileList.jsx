@@ -5,6 +5,7 @@ const FileList = ({ files }) => {
     return <div className="no-files">Файлы еще не загружены</div>;
   }
 
+
   return (
     <div className="file-list">
       <div className="file-list-header">

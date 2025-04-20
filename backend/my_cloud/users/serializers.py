@@ -32,7 +32,7 @@ class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = ['id', 'username', 'email', 'full_name', 'is_admin', 'storage_path']
-        read_only_fields = ['id', 'is_admin', 'storage_path']
+        read_only_fields = ['id', 'storage_path']
 
 class UserLoginSerializer(serializers.Serializer):
     username = serializers.CharField()

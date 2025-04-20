@@ -511,3 +511,74 @@ WARNING 2025-04-20 19:34:57,270 log 5520 10360 Forbidden: /api/v1/users/
 WARNING 2025-04-20 19:34:57,271 basehttp 5520 10360 "GET /api/v1/users/ HTTP/1.1" 403 64
 WARNING 2025-04-20 19:34:57,285 log 5520 11016 Forbidden: /api/v1/users/
 WARNING 2025-04-20 19:34:57,286 basehttp 5520 11016 "GET /api/v1/users/ HTTP/1.1" 403 64
+WARNING 2025-04-20 19:48:31,473 log 5520 10120 Forbidden: /api/v1/users/
+WARNING 2025-04-20 19:48:31,474 basehttp 5520 10120 "GET /api/v1/users/ HTTP/1.1" 403 64
+WARNING 2025-04-20 19:48:31,477 log 5520 9388 Forbidden: /api/v1/users/
+WARNING 2025-04-20 19:48:31,478 basehttp 5520 9388 "GET /api/v1/users/ HTTP/1.1" 403 64
+WARNING 2025-04-20 19:48:52,174 log 5520 10120 Forbidden: /api/v1/users/
+WARNING 2025-04-20 19:48:52,175 basehttp 5520 10120 "GET /api/v1/users/ HTTP/1.1" 403 64
+WARNING 2025-04-20 19:48:52,178 log 5520 9388 Forbidden: /api/v1/users/
+WARNING 2025-04-20 19:48:52,179 basehttp 5520 9388 "GET /api/v1/users/ HTTP/1.1" 403 64
+WARNING 2025-04-20 19:54:58,534 log 5520 10360 Forbidden: /api/v1/users/
+WARNING 2025-04-20 19:54:58,535 log 5520 10656 Forbidden: /api/v1/users/
+WARNING 2025-04-20 19:54:58,535 basehttp 5520 10360 "GET /api/v1/users/ HTTP/1.1" 403 64
+WARNING 2025-04-20 19:54:58,536 basehttp 5520 10656 "GET /api/v1/users/ HTTP/1.1" 403 64
+WARNING 2025-04-20 19:57:03,485 log 5520 10436 Forbidden: /api/v1/users/
+WARNING 2025-04-20 19:57:03,486 basehttp 5520 10436 "GET /api/v1/users/ HTTP/1.1" 403 64
+WARNING 2025-04-20 19:57:03,489 log 5520 8552 Forbidden: /api/v1/users/
+WARNING 2025-04-20 19:57:03,490 basehttp 5520 8552 "GET /api/v1/users/ HTTP/1.1" 403 64
+WARNING 2025-04-20 20:14:50,954 log 11236 980 Forbidden: /api/v1/users/2/delete/
+WARNING 2025-04-20 20:14:50,955 basehttp 11236 980 "DELETE /api/v1/users/2/delete/ HTTP/1.1" 403 64
+WARNING 2025-04-20 20:55:42,734 log 9848 8576 Bad Request: /api/v1/users/register/
+WARNING 2025-04-20 20:55:42,735 basehttp 9848 8576 "POST /api/v1/users/register/ HTTP/1.1" 400 164
+WARNING 2025-04-20 21:00:05,623 log 9848 3460 Forbidden: /api/v1/cloud/
+WARNING 2025-04-20 21:00:05,624 log 9848 10600 Forbidden: /api/v1/cloud/
+WARNING 2025-04-20 21:00:05,624 basehttp 9848 3460 "GET /api/v1/cloud/ HTTP/1.1" 403 59
+WARNING 2025-04-20 21:00:05,625 basehttp 9848 10600 "GET /api/v1/cloud/ HTTP/1.1" 403 59
+WARNING 2025-04-20 21:53:36,080 log 9848 12028 Bad Request: /api/v1/users/login/
+WARNING 2025-04-20 21:53:36,081 basehttp 9848 12028 "POST /api/v1/users/login/ HTTP/1.1" 400 171
+ERROR 2025-04-20 22:42:09,964 log 12128 11864 Internal Server Error: /api/v1/users/4/update
+Traceback (most recent call last):
+  File "D:\diploma\backend\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\diploma\backend\venv\Lib\site-packages\django\utils\deprecation.py", line 122, in __call__
+    response = self.process_response(request, response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\diploma\backend\venv\Lib\site-packages\django\middleware\common.py", line 108, in process_response
+    return self.response_redirect_class(self.get_full_path_with_slash(request))
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\diploma\backend\venv\Lib\site-packages\django\middleware\common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via PATCH, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining PATCH data. Change your form to point to localhost:8000/api/v1/users/4/update/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+ERROR 2025-04-20 22:42:09,966 basehttp 12128 11864 "PATCH /api/v1/users/4/update HTTP/1.1" 500 74381
+ERROR 2025-04-20 22:49:03,419 log 10596 7540 Internal Server Error: /api/v1/users/4/update
+Traceback (most recent call last):
+  File "D:\diploma\backend\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\diploma\backend\venv\Lib\site-packages\django\utils\deprecation.py", line 122, in __call__
+    response = self.process_response(request, response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\diploma\backend\venv\Lib\site-packages\django\middleware\common.py", line 108, in process_response
+    return self.response_redirect_class(self.get_full_path_with_slash(request))
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\diploma\backend\venv\Lib\site-packages\django\middleware\common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via PATCH, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining PATCH data. Change your form to point to localhost:8000/api/v1/users/4/update/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+ERROR 2025-04-20 22:49:03,421 basehttp 10596 7540 "PATCH /api/v1/users/4/update HTTP/1.1" 500 74388
+ERROR 2025-04-20 22:53:23,671 log 10596 9676 Internal Server Error: /api/v1/users/4/update
+Traceback (most recent call last):
+  File "D:\diploma\backend\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\diploma\backend\venv\Lib\site-packages\django\utils\deprecation.py", line 122, in __call__
+    response = self.process_response(request, response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\diploma\backend\venv\Lib\site-packages\django\middleware\common.py", line 108, in process_response
+    return self.response_redirect_class(self.get_full_path_with_slash(request))
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\diploma\backend\venv\Lib\site-packages\django\middleware\common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via PATCH, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining PATCH data. Change your form to point to localhost:8000/api/v1/users/4/update/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+ERROR 2025-04-20 22:53:23,673 basehttp 10596 9676 "PATCH /api/v1/users/4/update HTTP/1.1" 500 74389

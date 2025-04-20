@@ -43,12 +43,12 @@ export const checkAuth = () => async (dispatch) => {
       isAdmin: response.data.user.is_admin,
     }));
   } catch (error) {
-    console.log('[checkAuth] Error:', error);
-    if (error.response?.status === 401) {
-      console.log('[checkAuth] User is not authenticated');
-    } else {
-      console.error('[checkAuth] Unexpected error:', error.message || 'Ошибка проверки аутентификации');
-    }
+    // console.log('[checkAuth] Error:', error);
+    // if (error.response?.status === 401) {
+    //   console.log('[checkAuth] User is not authenticated');
+    // } else {
+    //   console.error('[checkAuth] Unexpected error:', error.message || 'Ошибка проверки аутентификации');
+    // }
     dispatch(clearAuth());
   } finally {
     dispatch(setAuthChecked());

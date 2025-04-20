@@ -6,7 +6,7 @@ const ErrorHandler = () => {
   const error = useSelector((state) => state.error);
   const dispatch = useDispatch();
   const [showError, setShowError] = useState(false);
-  console.log('Current error in ErrorHandler:', error);
+  // console.log('Current error in ErrorHandler:', error);
 
   useEffect(() => {
     if (error) {

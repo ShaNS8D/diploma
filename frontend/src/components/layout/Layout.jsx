@@ -2,6 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 import { logoutUser } from '../../features/auth/authSlice';
+import ErrorHandler from '../../hoc/ErrorHandler';
 import { useDispatch } from 'react-redux';
 import './Layout.css';
 
@@ -48,6 +49,7 @@ const Layout = ({ children }) => {
           </div>
         </nav>
       </header>
+      <ErrorHandler />
       <main className="main-content">
         {children}
       </main>

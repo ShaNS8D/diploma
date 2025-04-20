@@ -16,7 +16,7 @@ const UserItem = ({ user }) => {
 
   return (
     <div className="user-item">
-      <span>{user.login}</span>
+      <span>{user.username}</span>
       <span>{user.full_name}</span>
       <span>{user.email}</span>
       <span>
@@ -27,7 +27,7 @@ const UserItem = ({ user }) => {
         />
       </span>
       <div className="user-actions">
-        <button onClick={handleDelete}>Delete</button>
+        <button onClick={handleDelete}>Удалить</button>
       </div>
     </div>
   );

@@ -1,23 +1,26 @@
 import { useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom'
 import { deleteFile } from '../../features/files/filesSlice';
 
 const FileItem = ({ file }) => {
   const dispatch = useDispatch();
-
+  // console.log(file)
   const handleDelete = () => {
     if (window.confirm('Вы уверены, что хотите удалить этот файл?')) {
       dispatch(deleteFile(file.id));
     }
   };
 
+
   return (
     <div className="file-item">
-      <span>{file.name}</span>
+      <span>{file.original_name}</span>
       <span>{formatFileSize(file.size)}</span>
       <span>{new Date(file.upload_date).toLocaleDateString()}</span>
       <div className="file-actions">
-        {/* <button onClick={handleDownload}>Download</button> */}
-        <button onClick={handleDelete}>Delete</button>
+        <Link to={`/storage/edit/${file.id}`}>Редактировать</Link>
+        <Link to={file.download_url}>Сачать</Link>
+        <button name='delete' onClick={handleDelete}>Удалить</button>
       </div>
     </div>
   );

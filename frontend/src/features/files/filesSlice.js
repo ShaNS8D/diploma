@@ -99,7 +99,7 @@ export const deleteFile = (id) => async (dispatch) => {
 export const updateDataFile = (id, newName) => async (dispatch) => {
   try {
     dispatch(setLoading(true));
-    const response = await fileAPI.updateDataFile(id, newName);
+    const response = await fileAPI.updateFile(id, newName);
     dispatch(updateFile(response.data));
     return { success: true };
   } catch (error) {

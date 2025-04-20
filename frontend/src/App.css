@@ -34,3 +34,22 @@
 .error-details strong {
   font-weight: 600;
 }
+
+.user-list-header {
+  display: flex;
+  justify-content: space-between;
+}
+.user-item{
+  display: flex;
+  justify-content: space-between;
+}
+
+.file-list-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.file-item {
+  display: flex;
+  justify-content: space-between;
+}

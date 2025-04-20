@@ -13,7 +13,6 @@ const FileStoragePage = () => {
     files, loading 
   } = useSelector((state) => state.files);
  
-
   useEffect(() => {
     dispatch(fetchFiles());
   }, [dispatch]);
@@ -34,15 +33,11 @@ const FileStoragePage = () => {
         title="Моё хранилище"
         subtitle="Управление файлами" 
       />
-      
       <div className="storage-layout">
-       
-        
         <main className="content">
           <Card>
             <UploadForm onUpload={handleUpload} />
           </Card>
-          
           <Card>
             <FileList files={files} />
           </Card>

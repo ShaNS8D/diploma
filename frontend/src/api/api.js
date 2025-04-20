@@ -109,6 +109,7 @@ export const authAPI = {
   login: (data) => api.post('users/login/', data),
   logout: () => api.post('users/logout/'),
   getUsers: () => api.get('users/'),
+  updateDataUser: (id, data) => api.patch(`users/${id}/update/`, data),
   deleteUser: (id) => api.delete(`users/${id}/delete/`)
 };
 
@@ -121,7 +122,7 @@ export const fileAPI = {
   getFiles: (params = {}) => api.get('cloud/', { params }),
   downloadFile: (id) => api.get(`cloud/${id}/download/`, { responseType: 'blob' }),
   deleteFile: (id) => api.delete(`cloud/${id}/`),
-  updateDataFile: (id, data) => api.patch(`cloud/${id}/`, data),
+  updateFile: (id, data) => api.patch(`cloud/${id}/`, data),
   getPublicLink: (id) => api.get(`cloud/${id}/share/`),
 };
 
