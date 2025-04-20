@@ -1261,3 +1261,57 @@ WARNING 2025-04-19 19:19:11,324 basehttp 8680 10044 "POST /api/v1/users/login/ H
 INFO 2025-04-19 19:21:02,030 basehttp 8680 10044 "GET /api/v1/users/get-csrf-token/ HTTP/1.1" 200 80
 WARNING 2025-04-19 19:21:02,096 log 8680 10044 Forbidden: /api/v1/users/login/
 WARNING 2025-04-19 19:21:02,097 basehttp 8680 10044 "POST /api/v1/users/login/ HTTP/1.1" 403 109
+INFO 2025-04-20 10:40:27,873 autoreload 5084 1808 Watching for file changes with StatReloader
+INFO 2025-04-20 10:41:26,666 autoreload 5084 1808 D:\diploma\backend\my_cloud\users\urls.py changed, reloading.
+INFO 2025-04-20 10:41:27,186 autoreload 6780 2748 Watching for file changes with StatReloader
+INFO 2025-04-20 10:41:40,608 autoreload 9352 7404 Watching for file changes with StatReloader
+INFO 2025-04-20 10:53:58,697 basehttp 9352 9600 "OPTIONS /api/v1/users/register/ HTTP/1.1" 200 0
+WARNING 2025-04-20 10:53:58,877 log 9352 10068 Forbidden: /api/v1/users/register/
+WARNING 2025-04-20 10:53:58,877 basehttp 9352 10068 "POST /api/v1/users/register/ HTTP/1.1" 403 109
+WARNING 2025-04-20 10:55:37,987 log 9352 10068 Forbidden: /api/v1/users/register/
+WARNING 2025-04-20 10:55:37,987 basehttp 9352 10068 "POST /api/v1/users/register/ HTTP/1.1" 403 109
+INFO 2025-04-20 11:03:09,037 autoreload 9352 7404 D:\diploma\backend\my_cloud\my_cloud\settings.py changed, reloading.
+INFO 2025-04-20 11:03:09,577 autoreload 9232 9824 Watching for file changes with StatReloader
+WARNING 2025-04-20 11:03:47,387 views 9232 9384 Ошибка проверки регистрации: {'username': [ErrorDetail(string='This field is required.', code='required')]}
+WARNING 2025-04-20 11:03:47,387 log 9232 9384 Bad Request: /api/v1/users/register/
+WARNING 2025-04-20 11:03:47,387 basehttp 9232 9384 "POST /api/v1/users/register/ HTTP/1.1" 400 118
+INFO 2025-04-20 11:08:53,448 views 9232 3284 Пользователь nika успешно зарегистрирован
+INFO 2025-04-20 11:08:53,448 basehttp 9232 3284 "POST /api/v1/users/register/ HTTP/1.1" 201 87
+INFO 2025-04-20 11:10:25,379 basehttp 9232 9728 "OPTIONS /api/v1/users/login/ HTTP/1.1" 200 0
+INFO 2025-04-20 11:10:26,943 signals 9232 3284 Сессия завершена: 8gs9skvp0nebm1ugszpp3cgygilte4jt, Пользователь: 1
+INFO 2025-04-20 11:10:26,946 views 9232 3284 Пользователь nika вошел в систему. Сеанс: None
+INFO 2025-04-20 11:10:26,950 signals 9232 3284 Сессия начата: bgpj2okq9n9w4tcshebn8lsydcs5102h, Пользователь: 6
+INFO 2025-04-20 11:10:26,951 basehttp 9232 3284 "POST /api/v1/users/login/ HTTP/1.1" 200 205
+INFO 2025-04-20 11:10:27,057 views 9232 3284 Список файлов, извлеченных пользователем 6
+INFO 2025-04-20 11:10:27,058 views 9232 7492 Список файлов, извлеченных пользователем 6
+WARNING 2025-04-20 11:10:27,061 log 9232 3284 Not Found: /api/v1/cloud/files/
+WARNING 2025-04-20 11:10:27,062 log 9232 7492 Not Found: /api/v1/cloud/files/
+WARNING 2025-04-20 11:10:27,062 basehttp 9232 3284 "GET /api/v1/cloud/files/ HTTP/1.1" 404 24
+WARNING 2025-04-20 11:10:27,063 basehttp 9232 7492 "GET /api/v1/cloud/files/ HTTP/1.1" 404 24
+INFO 2025-04-20 11:17:30,980 views 9232 8100 Пользователь luna успешно зарегистрирован
+INFO 2025-04-20 11:17:30,982 basehttp 9232 8100 "POST /api/v1/users/register/ HTTP/1.1" 201 87
+INFO 2025-04-20 12:07:52,900 signals 9232 9480 Сессия завершена: bgpj2okq9n9w4tcshebn8lsydcs5102h, Пользователь: 6
+INFO 2025-04-20 12:07:52,900 views 9232 9480 Пользователь leva вошел в систему. Сеанс: None
+INFO 2025-04-20 12:07:52,900 signals 9232 9480 Сессия начата: yxkyys5km3wj4y4whcc4sdoaxr48vuiy, Пользователь: 1
+INFO 2025-04-20 12:07:52,900 basehttp 9232 9480 "POST /api/v1/users/login/ HTTP/1.1" 200 197
+INFO 2025-04-20 12:07:53,000 views 9232 9480 Список файлов, извлеченных пользователем 1
+INFO 2025-04-20 12:07:53,010 views 9232 7344 Список файлов, извлеченных пользователем 1
+INFO 2025-04-20 12:07:53,041 basehttp 9232 7344 "GET /api/v1/cloud/ HTTP/1.1" 200 1564
+INFO 2025-04-20 12:07:53,042 basehttp 9232 9480 "GET /api/v1/cloud/ HTTP/1.1" 200 1564
+INFO 2025-04-20 12:08:44,320 basehttp 9232 10912 "OPTIONS /api/v1/cloud/ HTTP/1.1" 200 0
+INFO 2025-04-20 12:08:44,401 views 9232 7344 Файл, загруженный пользователем 1
+INFO 2025-04-20 12:08:44,401 basehttp 9232 7344 "POST /api/v1/cloud/ HTTP/1.1" 201 108
+INFO 2025-04-20 12:08:44,481 views 9232 9480 Список файлов, извлеченных пользователем 1
+INFO 2025-04-20 12:08:44,490 basehttp 9232 9480 "GET /api/v1/cloud/ HTTP/1.1" 200 1952
+INFO 2025-04-20 12:09:54,510 views 9232 9480 Пользователь Admin leva получил доступ к списку пользователей
+INFO 2025-04-20 12:09:54,510 basehttp 9232 9480 "GET /api/v1/users/ HTTP/1.1" 200 448
+INFO 2025-04-20 12:09:54,580 views 9232 9480 Пользователь Admin leva получил доступ к списку пользователей
+INFO 2025-04-20 12:09:54,580 basehttp 9232 9480 "GET /api/v1/users/ HTTP/1.1" 200 448
+INFO 2025-04-20 12:31:12,091 autoreload 9232 9824 D:\diploma\backend\my_cloud\cloud_app\models.py changed, reloading.
+INFO 2025-04-20 12:31:12,673 autoreload 6640 5656 Watching for file changes with StatReloader
+INFO 2025-04-20 12:32:17,231 autoreload 9512 2056 Watching for file changes with StatReloader
+INFO 2025-04-20 15:42:35,455 autoreload 4048 1540 Watching for file changes with StatReloader
+INFO 2025-04-20 15:44:18,010 autoreload 4048 1540 D:\diploma\backend\my_cloud\users\models.py changed, reloading.
+INFO 2025-04-20 15:44:18,560 autoreload 6416 6000 Watching for file changes with StatReloader
+INFO 2025-04-20 15:44:43,230 autoreload 6416 6000 D:\diploma\backend\my_cloud\users\models.py changed, reloading.
+INFO 2025-04-20 15:44:43,782 autoreload 5520 5072 Watching for file changes with StatReloader

@@ -9,7 +9,7 @@ import LoadingSpinner from '../../components/ui/LoadingSpinner';
 
 const RegisterPage = () => {
   const [userData, setUserData] = useState({
-    login: '',
+    username: '',
     full_name: '',
     email: '',
     password: '',
@@ -27,8 +27,8 @@ const RegisterPage = () => {
 
   const validate = () => {
     const newErrors = {};
-    if (!/^[a-zA-Z][a-zA-Z0-9]{3,19}$/.test(userData.login)) {
-      newErrors.login = 'Логин должен начинаться с буквы и состоять из 4-20 символов';
+    if (!/^[a-zA-Z][a-zA-Z0-9]{3,19}$/.test(userData.username)) {
+      newErrors.username = 'Логин должен начинаться с буквы и состоять из 4-20 символов';
     }
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(userData.email)) {
       newErrors.email = 'Пожалуйста, введите действительный адрес электронной почты';
@@ -67,8 +67,8 @@ const RegisterPage = () => {
     <div className="register-page">
       <AuthForm title="Register" onSubmit={handleSubmit}>
         <AuthInput
-          name="login"
-          value={userData.login}
+          name="username"
+          value={userData.username}
           onChange={handleChange}
           placeholder="Enter your login"
           error={errors.login}

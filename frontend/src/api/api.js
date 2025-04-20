@@ -10,6 +10,22 @@ const api = axios.create({
   }
 });
 
+function getCookie(name) {
+  let cookieValue = null;
+  if (document.cookie && document.cookie !== '') {
+    const cookies = document.cookie.split(';');
+    for (let i = 0; i < cookies.length; i++) {
+      const cookie = cookies[i].trim();
+      if (cookie.substring(0, name.length + 1) === `${name}=`) {
+        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+        break;
+      }
+    }
+  }
+  return cookieValue;
+}
+
+
 const handleError = (error) => {
   if (error.response) {
     const { status, data } = error.response;
@@ -22,14 +38,28 @@ const handleError = (error) => {
   }
 };
 
-api.interceptors.request.use(async (config) => {
-  if (['post', 'put', 'patch', 'delete'].includes(config.method.toLowerCase())) {
-    const { data: { csrfToken } } = await authAPI.getCSRFToken();
-    config.headers['X-CSRFToken'] = csrfToken;
-    console.log('api.interceptors',csrfToken)
+
+api.interceptors.request.use((config) => {
+  if (['post', 'put', 'patch', 'delete'].includes(config.method?.toLowerCase())) {
+    const csrfToken = getCookie('csrftoken');
+    if (csrfToken) {
+      config.headers['X-CSRFToken'] = csrfToken;
+      // console.log('CSRF Token added:', csrfToken);
+    } else {
+      console.warn('CSRF Token not found in cookies');
+    }
   }
   return config;
 });
+
+// api.interceptors.request.use(async (config) => {
+//   if (['post', 'put', 'patch', 'delete'].includes(config.method.toLowerCase())) {
+//     const { data: { csrfToken } } = await authAPI.getCSRFToken();
+//     config.headers['X-CSRFToken'] = csrfToken;
+//     console.log('api.interceptors',csrfToken)
+//   }
+//   return config;
+// });
 
 api.interceptors.response.use(
   response => response,
@@ -47,16 +77,16 @@ export const authAPI = {
 };
 
 export const fileAPI = {
-  uploadFile: (formData) => api.post('cloud/files/', formData, {
+  uploadFile: (formData) => api.post('cloud/', formData, {
     headers: {
       'Content-Type': 'multipart/form-data',
     },
   }),
-  getFiles: (params = {}) => api.get('cloud/files/', { params }),
-  downloadFile: (id) => api.get(`cloud/files/${id}/download/`, { responseType: 'blob' }),
-  deleteFile: (id) => api.delete(`cloud/files/${id}/`),
-  updateDataFile: (id, data) => api.patch(`cloud/files/${id}/`, data),
-  getPublicLink: (id) => api.get(`cloud/files/${id}/share/`),
+  getFiles: (params = {}) => api.get('cloud/', { params }),
+  downloadFile: (id) => api.get(`cloud/${id}/download/`, { responseType: 'blob' }),
+  deleteFile: (id) => api.delete(`cloud/${id}/`),
+  updateDataFile: (id, data) => api.patch(`cloud/${id}/`, data),
+  getPublicLink: (id) => api.get(`cloud/${id}/share/`),
 };
 
 export default api;

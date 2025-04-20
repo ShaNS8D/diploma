@@ -136,3 +136,6 @@ CSRF_COOKIE_HTTPONLY = False  # React должен читать CSRF-токен
 CSRF_COOKIE_SECURE = False  # Только HTTPS (в production)
 CSRF_COOKIE_SAMESITE = 'Lax'  # Защита от CSRF
 CSRF_HEADER_NAME = 'HTTP_X_CSRFTOKEN'  # React будет отправлять токен в заголовке
+CSRF_TRUSTED_ORIGINS = [
+    'http://localhost:3000'
+]

@@ -16,9 +16,7 @@ import { checkAuth } from './features/auth/authSlice';
 import './App.css';
 
 const AppWrapper = () => {
-  useEffect(() => {
-    authAPI.getCSRFToken();
-  }, []);
+
   return (
     <Provider store={store}>
       <App />

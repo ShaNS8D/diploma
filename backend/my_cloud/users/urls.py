@@ -5,7 +5,7 @@ from .views import (
     UserDeleteView,
     LoginView,
     LogoutView,
-    GetCSRFToken
+    # GetCSRFToken
 )
 
 app_name = 'users'
