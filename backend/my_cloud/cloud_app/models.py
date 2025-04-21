@@ -23,7 +23,7 @@ class File(models.Model):
     last_download = models.DateTimeField(null=True, blank=True)
     comment = models.TextField(blank=True, null=True, max_length=500)    
     share_link = models.UUIDField(default=uuid.uuid4, unique=True)
-    owner = models.ForeignKey('users.User', on_delete=models.CASCADE)
+    owner = models.ForeignKey('users.User', on_delete=models.CASCADE, related_name='files')
     file = models.FileField(upload_to=user_directory_path)
 
     class Meta:

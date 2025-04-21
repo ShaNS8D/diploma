@@ -1,9 +1,10 @@
 import { useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { deleteUser, toggleAdminStatus } from '../../features/users/usersSlice';
+
 
 const UserItem = ({ user }) => {
   const dispatch = useDispatch();
-
   const handleToggleAdmin = () => {
     dispatch(toggleAdminStatus(user.id, !user.is_admin));
   };
@@ -26,7 +27,10 @@ const UserItem = ({ user }) => {
           onChange={handleToggleAdmin}
         />
       </span>
+      {/* <span>{user.files_count}</span> */}
+      {/* <span>{user.formatted_size}</span> */}
       <div className="user-actions">
+        <Link to={`/storage/?user_id=${user.id}`}>Посмотреть</Link>
         <button onClick={handleDelete}>Удалить</button>
       </div>
     </div>

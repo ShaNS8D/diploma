@@ -10,9 +10,11 @@ const FileList = ({ files }) => {
     <div className="file-list">
       <div className="file-list-header">
         <span>Имя</span>
+        <span>Комментарий</span>
         <span>Размер</span>
         <span>Загружено</span>
-        <span>Действия</span>
+        <span>Скачивали</span>        
+        <span className='file-list-header-span'>Действия</span>
       </div>
       
       {files.map(file => (

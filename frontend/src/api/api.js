@@ -123,7 +123,7 @@ export const fileAPI = {
   downloadFile: (id) => api.get(`cloud/${id}/download/`, { responseType: 'blob' }),
   deleteFile: (id) => api.delete(`cloud/${id}/`),
   updateFile: (id, data) => api.patch(`cloud/${id}/`, data),
-  getPublicLink: (id) => api.get(`cloud/${id}/share/`),
+  getPublicLink: (id) => api.get(`cloud/share/${id}/?info=true`),
 };
 
 export default api;

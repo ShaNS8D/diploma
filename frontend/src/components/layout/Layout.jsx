@@ -20,7 +20,10 @@ const Layout = ({ children }) => {
     <div className="layout">
       <header className="header">
         <nav className="nav">
-          <h1 className="logo">Облачное хранилище</h1>
+        
+          <h1 className="logo">
+            <Link to="/" className='nav-link'>Облачное хранилище</Link>
+          </h1>
           <div className="nav-links">
             {isAuthenticated ? (
               <>

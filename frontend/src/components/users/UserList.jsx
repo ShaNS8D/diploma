@@ -4,10 +4,12 @@ const UserList = ({ users }) => {
   return (
     <div className="user-list">
       <div className="user-list-header">
-        <span>Login</span>
+        <span>Логин</span>
         <span>Полное имя</span>
         <span>Почта</span>
         <span>Админ</span>
+        <span>Количество</span>
+        <span>Размер</span>
         <span>Дейтсвия</span>
       </div>
       

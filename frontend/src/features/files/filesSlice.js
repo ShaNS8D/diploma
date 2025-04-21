@@ -7,7 +7,6 @@ const initialState = {
   loading: false,
   error: null,
   currentFile: null,
-  publicLinks: {},
 };
 
 const filesSlice = createSlice({
@@ -38,9 +37,6 @@ const filesSlice = createSlice({
     setCurrentFile: (state, action) => {
       state.currentFile = action.payload;
     },
-    setPublicLink: (state, action) => {
-      state.publicLinks[action.payload.id] = action.payload.link;
-    },
   },
 });
 
@@ -51,8 +47,7 @@ export const {
   updateFile,
   setLoading,
   setError,
-  setCurrentFile,
-  setPublicLink,
+  setCurrentFile
 } = filesSlice.actions;
 
 export const fetchFiles = (params = {}) => async (dispatch) => {
@@ -96,10 +91,10 @@ export const deleteFile = (id) => async (dispatch) => {
   }
 };
 
-export const updateDataFile = (id, newName) => async (dispatch) => {
+export const updateDataFile = (id, newData) => async (dispatch) => {
   try {
     dispatch(setLoading(true));
-    const response = await fileAPI.updateFile(id, newName);
+    const response = await fileAPI.updateFile(id, newData);
     dispatch(updateFile(response.data));
     return { success: true };
   } catch (error) {
@@ -114,10 +109,10 @@ export const generatePublicLink = (id) => async (dispatch) => {
   try {
     dispatch(setLoading(true));
     const response = await fileAPI.getPublicLink(id);
-    dispatch(setPublicLink({ id, link: response.data.public_link }));
-    return { success: true, link: response.data.public_link };
+    const { share_url } = response.data;
+    return { success: true, link: share_url };
   } catch (error) {
-    dispatch(handleAsyncError(error.response?.data || error.message));
+    dispatch(setError(error.response?.data || error.message));
     return { success: false, error: error.response?.data };
   } finally {
     dispatch(setLoading(false));

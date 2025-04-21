@@ -53,3 +53,15 @@
   display: flex;
   justify-content: space-between;
 }
+
+.file-actions {
+  display: flex;
+  justify-content: space-between;
+  width: 30%;
+}
+
+.file-list-header-span {
+  display: flex;
+  justify-content: center;
+  width: 30%;
+}

@@ -12,10 +12,12 @@ const FileStoragePage = () => {
   const { 
     files, loading 
   } = useSelector((state) => state.files);
+  // console.log('FileStoragePage',files);
  
   useEffect(() => {
     dispatch(fetchFiles());
   }, [dispatch]);
+  
 
   const handleUpload = async (file, comment) => {
     const formData = new FormData();

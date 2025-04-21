@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { clearError, setError } from '../features/error/errorSlice';
+import { clearError } from '../features/error/errorSlice';
 
 const ErrorHandler = () => {
   const error = useSelector((state) => state.error);
@@ -17,13 +17,6 @@ const ErrorHandler = () => {
       // return () => clearTimeout(timer);
     }
   }, [error]);
-  const triggerTestError = () => {
-    dispatch(setError({
-      status: 400,
-      message: "Тестовая ошибка",
-      data: { detail: "Тестовое сообщение об ошибке" }
-    }));
-  };
 
   const handleClose = () => {
     setShowError(false);
@@ -41,13 +34,6 @@ const ErrorHandler = () => {
   };
 
   return (
-    <>    
-    <button 
-        onClick={triggerTestError}
-        style={{ position: 'fixed', bottom: 20, right: 20, zIndex: 1000 }}
-      >
-        Тест ошибки
-      </button>
     <div className={`error-container ${getErrorClass()}`}>
       <div className="error-content">
         <h3>Error {error.status || 'Unknown'}</h3>
@@ -66,7 +52,6 @@ const ErrorHandler = () => {
         </button>
       </div>
     </div>
-    </>
   );
 };
 

@@ -1,4 +1,5 @@
 import os
+import mimetypes
 import logging
 from rest_framework import viewsets, permissions, status
 from django.http import FileResponse
@@ -32,7 +33,9 @@ class FileViewSet(viewsets.ModelViewSet):
         return FileListSerializer
 
     def get_queryset(self):
+        logger.info(f"User files relation: {dir(self.request.user)}")
         try:
+            # print(dir(self.request))
             queryset = super().get_queryset()
             if not self.request.user.is_admin:
                 queryset = queryset.filter(owner=self.request.user)
@@ -75,6 +78,27 @@ class FileViewSet(viewsets.ModelViewSet):
             logger.error(f"Не удалось загрузить файл: {str(e)}")
             return Response(
                 {"error": "Не удалось загрузить файл", "details": str(e)},
+                status=status.HTTP_500_INTERNAL_SERVER_ERROR
+            )
+
+    @action(detail=True, methods=['get'])
+    def view(self, request, pk=None):
+        try:
+            file_obj = self.get_object()
+            file_handle = file_obj.file.open('rb')
+            content_type, _ = mimetypes.guess_type(file_obj.file.name)
+            if not content_type:
+               content_type = 'application/octet-stream' 
+            response = FileResponse(
+               file_handle,
+               content_type=content_type
+            )
+            response['Content-Disposition'] = f'inline; filename="{file_obj.original_name}"'
+            return response
+        except Exception as e:
+            logger.error(f"Не удалось просмотреть файл: {str(e)}")
+            return Response(
+                {"error": "Не удалось просмотреть файл", "details": str(e)},
                 status=status.HTTP_500_INTERNAL_SERVER_ERROR
             )
 
@@ -132,24 +156,17 @@ class FileShareDownloadViewSet(viewsets.ViewSet):
     permission_classes = [permissions.AllowAny]
 
     def retrieve(self, request, share_link=None):
-        try:
-            file_obj = get_object_or_404(File, share_link=share_link)
-            file_obj.update_last_download()
-            
-            logger.info(f"Файл {file_obj.id} загружен по общей ссылке")
+        file_obj = get_object_or_404(File, share_link=share_link)
+        
+        if request.query_params.get('info') == 'true':
+            serializer = FileShareSerializer(file_obj, context={'request': request})
+            return Response(serializer.data)
 
-            file_handle = file_obj.file.open('rb')
-            return FileResponse(
-                file_handle,
-                as_attachment=True,
-                filename=file_obj.original_name,
-                content_type='application/octet-stream'
-            )
-            
-        except Exception as e:
-            logger.error(f"Не удалось загрузить ссылку для общего доступа: {str(e)}")
-            return Response(
-                {"error": "Файл не найден или доступ к нему запрещен", "details": str(e)},
-                status=status.HTTP_404_NOT_FOUND if isinstance(e, File.DoesNotExist) 
-                else status.HTTP_500_INTERNAL_SERVER_ERROR
-            )
+        file_obj.update_last_download()
+        file_handle = file_obj.file.open('rb')
+        return FileResponse(
+            file_handle,
+            as_attachment=True,
+            filename=file_obj.original_name,
+            content_type='application/octet-stream'
+        )

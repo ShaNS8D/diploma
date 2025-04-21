@@ -582,3 +582,97 @@ Traceback (most recent call last):
     raise RuntimeError(
 RuntimeError: You called this URL via PATCH, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining PATCH data. Change your form to point to localhost:8000/api/v1/users/4/update/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
 ERROR 2025-04-20 22:53:23,673 basehttp 10596 9676 "PATCH /api/v1/users/4/update HTTP/1.1" 500 74389
+WARNING 2025-04-21 08:58:10,192 log 7100 7656 Bad Request: /api/v1/users/login/
+WARNING 2025-04-21 08:58:10,192 basehttp 7100 7656 "POST /api/v1/users/login/ HTTP/1.1" 400 171
+WARNING 2025-04-21 10:08:51,914 log 7100 14164 Not Found: /api/v1/cloud/[object Object]/
+WARNING 2025-04-21 10:08:51,915 basehttp 7100 14164 "PATCH /api/v1/cloud/[object%20Object]/ HTTP/1.1" 404 24
+WARNING 2025-04-21 10:13:55,732 log 7100 10960 Not Found: /api/v1/cloud/{"id":"3","original_name":"photo_2024-09-13_17-55-01.jpg","comment":"prada"}/
+WARNING 2025-04-21 10:13:55,733 basehttp 7100 10960 "PATCH /api/v1/cloud/%7B%22id%22:%223%22,%22original_name%22:%22photo_2024-09-13_17-55-01.jpg%22,%22comment%22:%22prada%22%7D/ HTTP/1.1" 404 6934
+WARNING 2025-04-21 11:37:27,482 log 7100 4280 Forbidden: /api/v1/cloud/
+WARNING 2025-04-21 11:37:27,484 basehttp 7100 4280 "GET /api/v1/cloud/ HTTP/1.1" 403 59
+WARNING 2025-04-21 11:37:27,485 log 7100 3048 Forbidden: /api/v1/cloud/
+WARNING 2025-04-21 11:37:27,487 basehttp 7100 3048 "GET /api/v1/cloud/ HTTP/1.1" 403 59
+ERROR 2025-04-21 12:05:08,179 log 7572 3460 Internal Server Error: /api/v1/users/login/
+ERROR 2025-04-21 12:05:08,181 basehttp 7572 3460 "POST /api/v1/users/login/ HTTP/1.1" 500 60
+ERROR 2025-04-21 12:05:33,278 log 7572 3460 Internal Server Error: /api/v1/users/login/
+ERROR 2025-04-21 12:05:33,280 basehttp 7572 3460 "POST /api/v1/users/login/ HTTP/1.1" 500 60
+ERROR 2025-04-21 12:06:28,918 log 7572 3460 Internal Server Error: /api/v1/users/login/
+ERROR 2025-04-21 12:06:28,920 basehttp 7572 3460 "POST /api/v1/users/login/ HTTP/1.1" 500 60
+ERROR 2025-04-21 12:06:41,554 log 14060 6704 Internal Server Error: /api/v1/users/login/
+ERROR 2025-04-21 12:06:41,556 basehttp 14060 6704 "POST /api/v1/users/login/ HTTP/1.1" 500 60
+ERROR 2025-04-21 12:28:26,782 log 12980 11412 Internal Server Error: /api/v1/users/login/
+ERROR 2025-04-21 12:28:26,784 basehttp 12980 11412 "POST /api/v1/users/login/ HTTP/1.1" 500 60
+ERROR 2025-04-21 12:38:23,926 log 5624 1016 Internal Server Error: /api/v1/cloud/
+ERROR 2025-04-21 12:38:23,927 log 5624 5124 Internal Server Error: /api/v1/cloud/
+ERROR 2025-04-21 12:38:23,927 basehttp 5624 1016 "GET /api/v1/cloud/ HTTP/1.1" 500 60
+ERROR 2025-04-21 12:38:23,929 basehttp 5624 5124 "GET /api/v1/cloud/ HTTP/1.1" 500 60
+ERROR 2025-04-21 12:39:29,447 log 5624 7528 Internal Server Error: /api/v1/cloud/
+ERROR 2025-04-21 12:39:29,448 log 5624 3144 Internal Server Error: /api/v1/cloud/
+ERROR 2025-04-21 12:39:29,449 basehttp 5624 7528 "GET /api/v1/cloud/ HTTP/1.1" 500 60
+ERROR 2025-04-21 12:39:29,449 basehttp 5624 3144 "GET /api/v1/cloud/ HTTP/1.1" 500 60
+ERROR 2025-04-21 12:45:45,191 log 5624 5292 Internal Server Error: /api/v1/cloud/
+ERROR 2025-04-21 12:45:45,193 basehttp 5624 5292 "GET /api/v1/cloud/ HTTP/1.1" 500 60
+ERROR 2025-04-21 12:45:45,200 log 5624 2332 Internal Server Error: /api/v1/cloud/
+ERROR 2025-04-21 12:45:45,202 basehttp 5624 2332 "GET /api/v1/cloud/ HTTP/1.1" 500 60
+ERROR 2025-04-21 13:08:13,935 log 5624 5844 Internal Server Error: /api/v1/cloud/
+ERROR 2025-04-21 13:08:13,937 basehttp 5624 5844 "GET /api/v1/cloud/ HTTP/1.1" 500 60
+ERROR 2025-04-21 13:19:38,406 log 5624 1068 Internal Server Error: /api/v1/cloud/
+ERROR 2025-04-21 13:19:38,407 log 5624 12652 Internal Server Error: /api/v1/cloud/
+ERROR 2025-04-21 13:19:38,408 basehttp 5624 1068 "GET /api/v1/cloud/ HTTP/1.1" 500 60
+ERROR 2025-04-21 13:19:38,411 basehttp 5624 12652 "GET /api/v1/cloud/ HTTP/1.1" 500 60
+ERROR 2025-04-21 13:21:21,050 log 12180 13548 Internal Server Error: /api/v1/cloud/
+ERROR 2025-04-21 13:21:21,050 log 12180 14148 Internal Server Error: /api/v1/cloud/
+ERROR 2025-04-21 13:21:21,051 basehttp 12180 13548 "GET /api/v1/cloud/ HTTP/1.1" 500 60
+ERROR 2025-04-21 13:21:21,052 basehttp 12180 14148 "GET /api/v1/cloud/ HTTP/1.1" 500 60
+ERROR 2025-04-21 13:23:37,730 log 9588 2136 Internal Server Error: /api/v1/cloud/
+ERROR 2025-04-21 13:23:37,730 log 9588 12664 Internal Server Error: /api/v1/cloud/
+ERROR 2025-04-21 13:23:37,731 basehttp 9588 2136 "GET /api/v1/cloud/ HTTP/1.1" 500 60
+ERROR 2025-04-21 13:23:37,732 basehttp 9588 12664 "GET /api/v1/cloud/ HTTP/1.1" 500 60
+ERROR 2025-04-21 13:26:04,238 log 11168 9452 Internal Server Error: /api/v1/cloud/
+ERROR 2025-04-21 13:26:04,238 log 11168 13384 Internal Server Error: /api/v1/cloud/
+ERROR 2025-04-21 13:26:04,239 basehttp 11168 9452 "GET /api/v1/cloud/ HTTP/1.1" 500 60
+ERROR 2025-04-21 13:26:04,239 basehttp 11168 13384 "GET /api/v1/cloud/ HTTP/1.1" 500 60
+ERROR 2025-04-21 13:44:26,637 log 13684 3176 Internal Server Error: /api/v1/cloud/
+ERROR 2025-04-21 13:44:26,637 log 13684 12500 Internal Server Error: /api/v1/cloud/
+ERROR 2025-04-21 13:44:26,639 basehttp 13684 3176 "GET /api/v1/cloud/ HTTP/1.1" 500 60
+ERROR 2025-04-21 13:44:26,639 basehttp 13684 12500 "GET /api/v1/cloud/ HTTP/1.1" 500 60
+ERROR 2025-04-21 13:44:57,659 log 13684 3176 Internal Server Error: /api/v1/cloud/
+ERROR 2025-04-21 13:44:57,660 basehttp 13684 3176 "GET /api/v1/cloud/ HTTP/1.1" 500 60
+ERROR 2025-04-21 13:44:57,771 log 13684 12500 Internal Server Error: /api/v1/cloud/
+ERROR 2025-04-21 13:44:57,774 basehttp 13684 12500 "GET /api/v1/cloud/ HTTP/1.1" 500 60
+ERROR 2025-04-21 13:46:41,058 log 4460 7544 Internal Server Error: /api/v1/cloud/
+ERROR 2025-04-21 13:46:41,058 log 4460 1244 Internal Server Error: /api/v1/cloud/
+ERROR 2025-04-21 13:46:41,059 basehttp 4460 7544 "GET /api/v1/cloud/ HTTP/1.1" 500 60
+ERROR 2025-04-21 13:46:41,061 basehttp 4460 1244 "GET /api/v1/cloud/ HTTP/1.1" 500 60
+ERROR 2025-04-21 13:48:06,171 log 7316 8536 Internal Server Error: /api/v1/cloud/
+ERROR 2025-04-21 13:48:06,171 log 7316 10920 Internal Server Error: /api/v1/cloud/
+ERROR 2025-04-21 13:48:06,172 basehttp 7316 8536 "GET /api/v1/cloud/ HTTP/1.1" 500 60
+ERROR 2025-04-21 13:48:06,174 basehttp 7316 10920 "GET /api/v1/cloud/ HTTP/1.1" 500 60
+ERROR 2025-04-21 13:59:23,383 log 7336 13640 Internal Server Error: /api/v1/cloud/
+ERROR 2025-04-21 13:59:23,384 log 7336 6588 Internal Server Error: /api/v1/cloud/
+ERROR 2025-04-21 13:59:23,384 basehttp 7336 13640 "GET /api/v1/cloud/ HTTP/1.1" 500 60
+ERROR 2025-04-21 13:59:23,387 basehttp 7336 6588 "GET /api/v1/cloud/ HTTP/1.1" 500 60
+ERROR 2025-04-21 13:59:46,357 log 7336 6588 Internal Server Error: /api/v1/cloud/
+ERROR 2025-04-21 13:59:46,358 log 7336 13640 Internal Server Error: /api/v1/cloud/
+ERROR 2025-04-21 13:59:46,360 basehttp 7336 6588 "GET /api/v1/cloud/ HTTP/1.1" 500 60
+ERROR 2025-04-21 13:59:46,360 basehttp 7336 13640 "GET /api/v1/cloud/ HTTP/1.1" 500 60
+ERROR 2025-04-21 14:54:05,186 log 5272 1244 Internal Server Error: /api/v1/cloud/1/view/
+ERROR 2025-04-21 14:54:05,188 basehttp 5272 1244 "GET /api/v1/cloud/1/view/ HTTP/1.1" 500 6380
+WARNING 2025-04-21 14:54:05,543 log 5272 1244 Not Found: /favicon.ico
+WARNING 2025-04-21 14:54:05,544 basehttp 5272 1244 "GET /favicon.ico HTTP/1.1" 404 2522
+ERROR 2025-04-21 14:55:37,690 log 2520 13612 Internal Server Error: /api/v1/cloud/2/view/
+ERROR 2025-04-21 14:55:37,690 basehttp 2520 13612 "GET /api/v1/cloud/2/view/ HTTP/1.1" 500 6380
+WARNING 2025-04-21 15:43:42,988 log 13396 1812 Bad Request: /api/v1/cloud/9d145569-b052-40ef-a94f-b29cc6e52eff/share/
+WARNING 2025-04-21 15:43:42,989 basehttp 13396 1812 "GET /api/v1/cloud/9d145569-b052-40ef-a94f-b29cc6e52eff/share/ HTTP/1.1" 400 94
+WARNING 2025-04-21 15:44:55,938 log 13396 1812 Bad Request: /api/v1/cloud/9d145569-b052-40ef-a94f-b29cc6e52eff/share/
+WARNING 2025-04-21 15:44:55,940 basehttp 13396 1812 "GET /api/v1/cloud/9d145569-b052-40ef-a94f-b29cc6e52eff/share/ HTTP/1.1" 400 94
+WARNING 2025-04-21 16:17:06,939 log 13396 2740 Forbidden: /api/v1/cloud/
+WARNING 2025-04-21 16:17:06,941 basehttp 13396 2740 "GET /api/v1/cloud/ HTTP/1.1" 403 59
+WARNING 2025-04-21 16:17:46,896 log 13396 2740 Forbidden: /api/v1/cloud/
+WARNING 2025-04-21 16:17:46,897 basehttp 13396 2740 "POST /api/v1/cloud/ HTTP/1.1" 403 59
+WARNING 2025-04-21 16:18:35,377 log 13396 2740 Forbidden: /api/v1/cloud/
+WARNING 2025-04-21 16:18:35,378 basehttp 13396 2740 "POST /api/v1/cloud/ HTTP/1.1" 403 59
+WARNING 2025-04-21 16:18:50,909 log 13396 2740 Bad Request: /api/v1/users/login/
+WARNING 2025-04-21 16:18:50,911 basehttp 13396 2740 "POST /api/v1/users/login/ HTTP/1.1" 400 157
+WARNING 2025-04-21 16:42:25,002 log 12704 6672 Bad Request: /api/v1/users/login/
+WARNING 2025-04-21 16:42:25,004 basehttp 12704 6672 "POST /api/v1/users/login/ HTTP/1.1" 400 171

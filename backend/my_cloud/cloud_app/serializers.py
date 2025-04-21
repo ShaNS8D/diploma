@@ -11,19 +11,24 @@ logger = logging.getLogger(__name__)
 class FileListSerializer(serializers.ModelSerializer):
     owner = UserSerializer(read_only=True)
     download_url = serializers.SerializerMethodField()
+    view_url = serializers.SerializerMethodField()
     file_type = serializers.SerializerMethodField()
 
     class Meta:
         model = File
         fields = ['id', 'original_name', 'size', 'upload_date', 
                  'last_download', 'comment', 'owner', 'share_link',
-                 'download_url', 'file_type']
+                 'download_url', 'view_url', 'file_type']
         read_only_fields = ['id', 'size', 'upload_date', 'last_download', 
-                          'owner', 'share_link', 'download_url', 'file_type']
+                          'owner', 'share_link', 'download_url', 'view_url', 'file_type']
 
     def get_download_url(self, obj):
         request = self.context.get('request')
         return request.build_absolute_uri(f'/api/v1/cloud/{obj.id}/download/') if request else None
+
+    def get_view_url(self, obj):
+        request = self.context.get('request')
+        return request.build_absolute_uri(f'/api/v1/cloud/{obj.id}/view/') if request else None
 
     def get_file_type(self, obj):
         return os.path.splitext(obj.original_name)[1][1:].lower() if obj.original_name else None

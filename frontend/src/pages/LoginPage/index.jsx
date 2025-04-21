@@ -25,8 +25,9 @@ const LoginPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const result = await dispatch(loginUser(credentials));
+    // console.log('handleSubmit login',result);
     
-    if (result.error) {
+    if (!result.success) {
       setErrors({ form: result.error.message });
     } else {
       navigate('/storage');
