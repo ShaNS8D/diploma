@@ -1,5 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { authAPI } from '../../api/api';
+import { handleAsyncError } from '../error/errorSlice';
 
 const initialState = {
   user: null,
@@ -23,7 +24,7 @@ const authSlice = createSlice({
       state.user = null;
       state.isAuthenticated = false;
       state.isAdmin = false;
-      state.authChecked = false;
+      state.authChecked = true; // Все равно отмечаем как проверенное
     },
     setLoading: (state, action) => {
       state.loading = action.payload;
@@ -35,21 +36,26 @@ const authSlice = createSlice({
 });
 
 export const { setAuth, clearAuth, setLoading, setAuthChecked } = authSlice.actions;
+
+// Общая обработка ошибок аутентификации
+const processAuthError = (error, dispatch, defaultMessage) => {
+  const errorData = error.response?.data || { message: error.message || defaultMessage };
+  dispatch(handleAsyncError(errorData));
+  return { success: false, error: errorData };
+};
+
 export const checkAuth = () => async (dispatch) => {
   try {
-    const response = await authAPI.getFiles();
+    const response = await authAPI.getUsers(); 
+    console.log('checkAuth', response)
     dispatch(setAuth({
       user: response.data.user,
       isAdmin: response.data.user.is_admin,
     }));
+    return { success: true };
   } catch (error) {
-    // console.log('[checkAuth] Error:', error);
-    // if (error.response?.status === 401) {
-    //   console.log('[checkAuth] User is not authenticated');
-    // } else {
-    //   console.error('[checkAuth] Unexpected error:', error.message || 'Ошибка проверки аутентификации');
-    // }
     dispatch(clearAuth());
+    return processAuthError(error, dispatch, 'Ошибка проверки аутентификации');
   } finally {
     dispatch(setAuthChecked());
   }
@@ -58,14 +64,18 @@ export const checkAuth = () => async (dispatch) => {
 export const registerUser = (userData) => async (dispatch) => {
   try {
     dispatch(setLoading(true));
-    const response = await authAPI.register(userData);
+    await authAPI.register(userData);
+    const loginResponse = await authAPI.login({
+      username: userData.username,
+      password: userData.password
+    });
     dispatch(setAuth({
-      user: response.data.user,
-      isAdmin: response.data.user.is_admin,
+      user: loginResponse.data.user,
+      isAdmin: loginResponse.data.user.is_admin,
     }));
     return { success: true };
   } catch (error) {
-    return { success: false, error: error.message || 'Регистрация не удалась' };
+    return processAuthError(error, dispatch, 'Регистрация не удалась');
   } finally {
     dispatch(setLoading(false));
   }
@@ -81,8 +91,7 @@ export const loginUser = (credentials) => async (dispatch) => {
     }));
     return { success: true };
   } catch (error) {
-    // console.log('[loginUser] Error:', error);
-    return { success: false, error: error.message || 'Вход в систему не удался' };
+    return processAuthError(error, dispatch, 'Вход в систему не удался');
   } finally {
     dispatch(setLoading(false));
   }
@@ -92,8 +101,9 @@ export const logoutUser = () => async (dispatch) => {
   try {
     await authAPI.logout();
     dispatch(clearAuth());
+    return { success: true };
   } catch (error) {
-    console.error('Logout error:', error);
+    return processAuthError(error, dispatch, 'Ошибка при выходе из системы');
   }
 };
 

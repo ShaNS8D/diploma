@@ -676,3 +676,31 @@ WARNING 2025-04-21 16:18:50,909 log 13396 2740 Bad Request: /api/v1/users/login/
 WARNING 2025-04-21 16:18:50,911 basehttp 13396 2740 "POST /api/v1/users/login/ HTTP/1.1" 400 157
 WARNING 2025-04-21 16:42:25,002 log 12704 6672 Bad Request: /api/v1/users/login/
 WARNING 2025-04-21 16:42:25,004 basehttp 12704 6672 "POST /api/v1/users/login/ HTTP/1.1" 400 171
+WARNING 2025-04-21 19:19:41,283 log 1032 10112 Forbidden: /api/v1/cloud/
+WARNING 2025-04-21 19:19:41,283 basehttp 1032 10112 "GET /api/v1/cloud/ HTTP/1.1" 403 59
+WARNING 2025-04-21 19:19:41,286 log 1032 10112 Forbidden: /api/v1/cloud/
+WARNING 2025-04-21 19:19:41,287 basehttp 1032 10112 "GET /api/v1/cloud/ HTTP/1.1" 403 59
+WARNING 2025-04-21 19:20:23,951 log 1032 10112 Forbidden: /api/v1/cloud/
+WARNING 2025-04-21 19:20:23,952 basehttp 1032 10112 "POST /api/v1/cloud/ HTTP/1.1" 403 59
+WARNING 2025-04-21 19:20:23,964 log 1032 10112 Forbidden: /api/v1/cloud/
+WARNING 2025-04-21 19:20:23,965 basehttp 1032 10112 "GET /api/v1/cloud/ HTTP/1.1" 403 59
+WARNING 2025-04-21 19:24:52,990 log 1032 9688 Forbidden: /api/v1/cloud/
+WARNING 2025-04-21 19:24:52,992 log 1032 8788 Forbidden: /api/v1/cloud/
+WARNING 2025-04-21 19:24:52,992 basehttp 1032 9688 "GET /api/v1/cloud/ HTTP/1.1" 403 59
+WARNING 2025-04-21 19:24:52,993 basehttp 1032 8788 "GET /api/v1/cloud/ HTTP/1.1" 403 59
+WARNING 2025-04-21 19:31:10,753 log 1032 7080 Forbidden: /api/v1/cloud/
+WARNING 2025-04-21 19:31:10,754 basehttp 1032 7080 "POST /api/v1/cloud/ HTTP/1.1" 403 59
+WARNING 2025-04-21 19:31:10,771 log 1032 7080 Forbidden: /api/v1/cloud/
+WARNING 2025-04-21 19:31:10,772 basehttp 1032 7080 "GET /api/v1/cloud/ HTTP/1.1" 403 59
+WARNING 2025-04-21 20:37:09,428 log 9780 10608 Bad Request: /api/v1/users/login/
+WARNING 2025-04-21 20:37:09,429 basehttp 9780 10608 "POST /api/v1/users/login/ HTTP/1.1" 400 123
+WARNING 2025-04-21 20:37:22,270 log 9780 10608 Bad Request: /api/v1/users/login/
+WARNING 2025-04-21 20:37:22,270 basehttp 9780 10608 "POST /api/v1/users/login/ HTTP/1.1" 400 171
+WARNING 2025-04-21 21:29:06,103 log 9780 8456 Forbidden: /api/v1/cloud/
+WARNING 2025-04-21 21:29:06,104 log 9780 10448 Forbidden: /api/v1/cloud/
+WARNING 2025-04-21 21:29:06,105 basehttp 9780 8456 "GET /api/v1/cloud/ HTTP/1.1" 403 59
+WARNING 2025-04-21 21:29:06,105 basehttp 9780 10448 "GET /api/v1/cloud/ HTTP/1.1" 403 59
+WARNING 2025-04-21 21:43:22,899 log 9780 10848 Bad Request: /api/v1/users/login/
+WARNING 2025-04-21 21:43:22,900 basehttp 9780 10848 "POST /api/v1/users/login/ HTTP/1.1" 400 118
+WARNING 2025-04-21 21:47:33,461 log 9780 10920 Bad Request: /api/v1/users/register/
+WARNING 2025-04-21 21:47:33,461 basehttp 9780 10920 "POST /api/v1/users/register/ HTTP/1.1" 400 164

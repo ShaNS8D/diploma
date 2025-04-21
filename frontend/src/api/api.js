@@ -1,4 +1,6 @@
 import axios from 'axios';
+import { store } from '../features/store';
+import { handleAsyncError } from '../features/error/errorSlice';
 
 const API_BASE_URL = 'http://localhost:8000/api/v1/';
 
@@ -25,56 +27,50 @@ function getCookie(name) {
   return cookieValue;
 }
 
-
-const handleError = (error) => {
-  // console.log('[handleError] Processing error:', error);
+const handleError = (error) => (dispatch) => {
+  let rejectedError;
   if (error.response) {
     const { status, data } = error.response;
     let userFriendlyMessage = 'Произошла ошибка';
     if (data.detail) {
       userFriendlyMessage = data.detail;
-    } 
-    else if (data.errors?.non_field_errors) {
+    } else if (data.errors?.non_field_errors) {
       userFriendlyMessage = data.errors.non_field_errors.join(', ');
-    }
-    else if (data.non_field_errors) {
+    } else if (data.non_field_errors) {
       userFriendlyMessage = Array.isArray(data.non_field_errors) 
         ? data.non_field_errors.join(', ') 
         : data.non_field_errors;
-    }
-    else if (typeof data === 'object') {
+    } else if (typeof data === 'object') {
       const fieldErrors = Object.entries(data)
         .filter(([key]) => key !== 'status' && key !== 'detail')
         .map(([key, value]) => {
           const errorText = Array.isArray(value) ? value.join(', ') : value;
           return `${key}: ${errorText}`;
-        });
-      
+        });      
       if (fieldErrors.length > 0) {
         userFriendlyMessage = fieldErrors.join('; ');
       }
     }
-    
-    return Promise.reject({
+    rejectedError = {
       status,
       message: userFriendlyMessage,
       originalMessage: error.message,
       data,
-      isServerError: true
-    });
+      isServerError: true,
+    };
   } else if (error.request) {
-    return Promise.reject({ 
+    rejectedError = { 
       status: 0, 
-      message: 'Сервер не отвечает. Пожалуйста, проверьте подключение к интернету' 
-    });
+      message: 'Сервер не отвечает. Пожалуйста, проверьте подключение к интернету',
+    };
   } else {
-    return Promise.reject({ 
+    rejectedError = { 
       status: -1, 
-      message: error.message || 'Произошла неизвестная ошибка' 
-    });
+      message: error.message || 'Произошла неизвестная ошибка',
+    };
   }
+  return dispatch(handleAsyncError(rejectedError));
 };
-
 
 api.interceptors.request.use((config) => {
   if (['post', 'put', 'patch', 'delete'].includes(config.method?.toLowerCase())) {
@@ -89,20 +85,10 @@ api.interceptors.request.use((config) => {
   return config;
 });
 
-// api.interceptors.request.use(async (config) => {
-//   if (['post', 'put', 'patch', 'delete'].includes(config.method.toLowerCase())) {
-//     const { data: { csrfToken } } = await authAPI.getCSRFToken();
-//     config.headers['X-CSRFToken'] = csrfToken;
-//     console.log('api.interceptors',csrfToken)
-//   }
-//   return config;
-// });
-
 api.interceptors.response.use(
   response => response,
-  error => handleError(error)
+  error => store.dispatch(handleError(error)) 
 );
-
 
 export const authAPI = {
   register: (data) => api.post('users/register/', data),

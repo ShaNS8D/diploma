@@ -35,15 +35,13 @@ class FileViewSet(viewsets.ModelViewSet):
     def get_queryset(self):
         logger.info(f"User files relation: {dir(self.request.user)}")
         try:
-            # print(dir(self.request))
             queryset = super().get_queryset()
-            if not self.request.user.is_admin:
-                queryset = queryset.filter(owner=self.request.user)
-            
-            user_id = self.request.query_params.get('user_id')
-            if user_id and self.request.user.is_admin:
-                queryset = queryset.filter(owner_id=user_id)
-            
+            user_id = self.request.query_params.get('user_id')            
+            if self.request.user.is_admin:
+                if user_id:
+                    queryset = queryset.filter(owner_id=user_id)
+            else:
+                queryset = queryset.filter(owner=self.request.user)                
             logger.info(f"Список файлов, извлеченных пользователем {self.request.user.id}")
             return queryset
         except Exception as e:

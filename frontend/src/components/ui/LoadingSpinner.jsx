@@ -1,6 +1,8 @@
+import './spinner.css'
+
 const LoadingSpinner = () => {
   return (
-    <div className="loading-spinner">
+    <div className="spinner-container">
       <div className="spinner"></div>
     </div>
   );

@@ -6,6 +6,7 @@ import EditFileForm from '../../components/files/EditFileForm';
 import EditFileInput from '../../components/files/EditFileInput';
 import EditFileButton from '../../components/files/EditFileButton';
 import LoadingSpinner from '../../components/ui/LoadingSpinner';
+import { handleAsyncError } from '../../features/error/errorSlice';
 
 const EditFilePage = () => {
   const { fileId } = useParams();  
@@ -33,9 +34,8 @@ const EditFilePage = () => {
       comment: fileData.comment.trim(),
     };
     const result = await dispatch(updateDataFile(fileId, newData));
-
     if (!result.success) {
-      setErrors({ form: result.error.message });
+      return dispatch(handleAsyncError(result.error));
     } else {
       navigate('/storage');
     }

@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { useLocation } from 'react-router-dom'
 import { fetchFiles, uploadFile } from '../../features/files/filesSlice';
 import FileList from '../../components/files/FileList';
 import UploadForm from '../../components/files/UploadForm';
@@ -9,14 +10,15 @@ import LoadingSpinner from '../../components/ui/LoadingSpinner';
 
 const FileStoragePage = () => {
   const dispatch = useDispatch();
+  const location = useLocation();
   const { 
     files, loading 
   } = useSelector((state) => state.files);
-  // console.log('FileStoragePage',files);
- 
   useEffect(() => {
-    dispatch(fetchFiles());
-  }, [dispatch]);
+    const strParams = location.search.substring(1);
+    const [key, value] = strParams.split("=");
+    dispatch(fetchFiles({[key]: value}));
+  }, [dispatch, location.search]);
   
 
   const handleUpload = async (file, comment) => {

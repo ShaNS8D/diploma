@@ -4,13 +4,13 @@ const UserList = ({ users }) => {
   return (
     <div className="user-list">
       <div className="user-list-header">
-        <span>Логин</span>
-        <span>Полное имя</span>
-        <span>Почта</span>
-        <span>Админ</span>
-        <span>Количество</span>
-        <span>Размер</span>
-        <span>Дейтсвия</span>
+        <span className="list-header-span_1">Логин</span>
+        <span className="list-header-span_3">Полное имя</span>
+        <span className="list-header-span_3">Почта</span>
+        <span className='list-header-span_2'>Админ</span>
+        <span className="list-header-span_1">Количество</span>
+        <span className='list-header-span_2'>Размер</span>
+        <span className='list-header-span_5'>Дейтсвия</span>
       </div>
       
       {users.map(user => (

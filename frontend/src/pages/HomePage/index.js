@@ -11,8 +11,7 @@ const HomePage = () => {
       <PageHeader 
         title="Сервис облачного хранилища" 
         subtitle="Безопасное и надежное решение для хранения файлов" 
-      />
-      
+      />      
       <Card>
         <HomeContent isAuthenticated={isAuthenticated} />
       </Card>

@@ -5,8 +5,6 @@ import { handleAsyncError } from '../error/errorSlice';
 const initialState = {
   files: [],
   loading: false,
-  error: null,
-  currentFile: null,
 };
 
 const filesSlice = createSlice({
@@ -31,12 +29,6 @@ const filesSlice = createSlice({
     setLoading: (state, action) => {
       state.loading = action.payload;
     },
-    setError: (state, action) => {
-      state.error = action.payload;
-    },
-    setCurrentFile: (state, action) => {
-      state.currentFile = action.payload;
-    },
   },
 });
 
@@ -46,18 +38,22 @@ export const {
   removeFile,
   updateFile,
   setLoading,
-  setError,
-  setCurrentFile
 } = filesSlice.actions;
+
+const processError = (error, dispatch) => {
+  const errorData = error.response?.data || error.message;
+  dispatch(handleAsyncError(errorData));
+  return { success: false, error: errorData };
+};
 
 export const fetchFiles = (params = {}) => async (dispatch) => {
   try {
-    dispatch(setError(null));
     dispatch(setLoading(true));
     const response = await fileAPI.getFiles(params);
     dispatch(setFiles(response.data));
+    return { success: true };
   } catch (error) {
-    dispatch(handleAsyncError(error.response?.data || error.message));
+    return processError(error, dispatch);
   } finally {
     dispatch(setLoading(false));
   }
@@ -68,10 +64,9 @@ export const uploadFile = (formData) => async (dispatch) => {
     dispatch(setLoading(true));
     const response = await fileAPI.uploadFile(formData);
     dispatch(addFile(response.data));
-    return { success: true };
+    return { success: true, data: response.data };
   } catch (error) {
-    dispatch(handleAsyncError(error.response?.data || error.message));
-    return { success: false, error: error.response?.data };
+    return processError(error, dispatch);
   } finally {
     dispatch(setLoading(false));
   }
@@ -84,8 +79,7 @@ export const deleteFile = (id) => async (dispatch) => {
     dispatch(removeFile(id));
     return { success: true };
   } catch (error) {
-    dispatch(handleAsyncError(error.response?.data || error.message));
-    return { success: false, error: error.response?.data };
+    return processError(error, dispatch);
   } finally {
     dispatch(setLoading(false));
   }
@@ -96,10 +90,9 @@ export const updateDataFile = (id, newData) => async (dispatch) => {
     dispatch(setLoading(true));
     const response = await fileAPI.updateFile(id, newData);
     dispatch(updateFile(response.data));
-    return { success: true };
+    return { success: true, data: response.data };
   } catch (error) {
-    dispatch(handleAsyncError(error.response?.data || error.message));
-    return { success: false, error: error.response?.data };
+    return processError(error, dispatch);
   } finally {
     dispatch(setLoading(false));
   }
@@ -112,8 +105,7 @@ export const generatePublicLink = (id) => async (dispatch) => {
     const { share_url } = response.data;
     return { success: true, link: share_url };
   } catch (error) {
-    dispatch(setError(error.response?.data || error.message));
-    return { success: false, error: error.response?.data };
+    return processError(error, dispatch);
   } finally {
     dispatch(setLoading(false));
   }

@@ -9,11 +9,11 @@ const FileList = ({ files }) => {
   return (
     <div className="file-list">
       <div className="file-list-header">
-        <span>Имя</span>
-        <span>Комментарий</span>
-        <span>Размер</span>
-        <span>Загружено</span>
-        <span>Скачивали</span>        
+        <span className='list-header-span_3'>Имя</span>
+        <span className='list-header-span_4'>Комментарий</span>
+        <span className='list-header-span_2'>Размер</span>
+        <span className="list-header-span_1">Загружено</span>
+        <span className="list-header-span_1">Скачивали</span>        
         <span className='file-list-header-span'>Действия</span>
       </div>
       

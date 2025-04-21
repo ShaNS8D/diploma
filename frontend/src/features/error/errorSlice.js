@@ -9,37 +9,27 @@ const errorSlice = createSlice({
     setError: (state, action) => {
       return {
         status: action.payload.status || 0,
-        message: action.payload.message || 'Unknown error',
+        message: action.payload.message || 'Неизвестная ошибка',
         ...action.payload,
       };
     },
-    clearError: () => {
-      return null;
-    },
+    clearError: () => initialState,
   },
 });
 
 export const { setError, clearError } = errorSlice.actions;
 
-
 export const handleAsyncError = (error) => (dispatch) => {
-  console.log('[handleAsyncError] Received error:', error);
   const normalizedError = typeof error === 'string' 
-  ? { message: error } 
-  : error;
-  // let finalMessage = normalizedError.message;
-  // if (normalizedError.data) {
-  //   if (normalizedError.data.detail) {
-  //     finalMessage = normalizedError.data.detail;
-  //   } else if (normalizedError.data.non_field_errors) {
-  //     finalMessage = normalizedError.data.non_field_errors.join(', ');
-  //   }
-  // }
+    ? { message: error } 
+    : error;
+
   const errorData = {
     status: normalizedError.status || 500,
-    message: normalizedError.message || 'Server error',
-    ...normalizedError,  
+    message: normalizedError.message || 'Ошибка сервера',
+    ...normalizedError,
   };
+
   dispatch(setError(errorData));
   return Promise.reject(errorData);
 };

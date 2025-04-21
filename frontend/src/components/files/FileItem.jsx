@@ -28,12 +28,12 @@ const FileItem = ({ file }) => {
 
   return (
     <div className="file-item">
-      <span>{file.original_name}</span>
-      <span>{file.comment}</span>
-      <span>{formatFileSize(file.size)}</span>
+      <span className='list-header-span_3'>{file.original_name}</span>
+      <span className='list-header-span_4'>{file.comment}</span>
+      <span className='list-header-span_2'>{formatFileSize(file.size)}</span>
 
-      <span>{new Date(file.upload_date).toLocaleDateString()}</span>
-      <span>{new Date(file.last_download).toLocaleDateString()}</span>
+      <span className='list-header-span_1'>{new Date(file.upload_date).toLocaleDateString()}</span>
+      <span className='list-header-span_1'>{new Date(file.last_download).toLocaleDateString()}</span>
 
       <div className="file-actions">
         <Link to={`/storage/edit/${file.id}`}>Редактировать</Link>
