@@ -9,14 +9,6 @@ const ErrorHandler = () => {
   const dispatch = useDispatch();
   const [showError, setShowError] = useState(false);
   
-  const getSeverityClass = (error) => {
-    if (!error.status) return 'error-generic';       // Общие ошибки (нет статуса)
-    if (error.status >= 500) return 'error-server';  // Ошибки сервера (5xx)
-    if (error.status === 401) return 'error-unauthorized'; // Не авторизован
-    if (error.status === 403) return 'error-forbidden';    // Доступ запрещен
-    if (error.status === 404) return 'error-not-found';    // Не найдено
-    return 'error-client';                          // Клиентские ошибки (4xx)
-  };
   useEffect(() => {
     if (error) {
       // console.log('ErrorHandler', error);
@@ -76,7 +68,7 @@ const ErrorHandler = () => {
   if (!error || !showError) return null;
 
   return (
-    <div className={`error-container ${getSeverityClass(error)}`}>
+    <div className='error-container'>
       <div className="error-content">
         <h3>Error {error.status || 'Unknown'}</h3>
         <p>{error.message}</p>

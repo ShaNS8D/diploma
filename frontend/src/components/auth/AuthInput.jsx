@@ -4,7 +4,6 @@ const AuthInput = ({
   value, 
   onChange, 
   placeholder, 
-  error, 
   label 
 }) => {
   return (
@@ -17,9 +16,7 @@ const AuthInput = ({
         value={value}
         onChange={onChange}
         placeholder={placeholder}
-        className={error ? 'error' : ''}
       />
-      {error && <span className="error-message">{error}</span>}
     </div>
   );
 };

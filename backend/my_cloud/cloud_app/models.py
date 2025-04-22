@@ -7,13 +7,20 @@ from django.conf import settings
 
 
 def user_directory_path(instance, filename):
-    return 'user_{0}/{1}/{2}/{3}/{4}'.format(
-        instance.owner.username, 
+    base_path = 'user_{0}/{1}/{2}/{3}/'.format(
+        instance.owner.username,
         timezone.now().year,
         timezone.now().month,
-        timezone.now().day,
-        filename
+        timezone.now().day
     )
+    name, ext = os.path.splitext(filename)
+    counter = 1
+    unique_name = filename    
+    while os.path.exists(os.path.join(settings.MEDIA_ROOT, base_path, unique_name)):
+        unique_name = f"{name}_{counter:03}{ext}"
+        counter += 1
+    instance.original_name = unique_name    
+    return os.path.join(base_path, unique_name)
 
 
 class File(models.Model):
@@ -48,10 +55,11 @@ class File(models.Model):
                     f"Файл слишком большой. Максимальный размер: {settings.MAX_FILE_SIZE} байт"
                 )
             
-            if not self.pk:
+            if not self.pk:  
                 self.size = self.file.size
-                self.original_name = os.path.basename(self.file.name)
-        
+                path = user_directory_path(self, self.file.name)
+                self.original_name = os.path.basename(path)
+       
         super().save(*args, **kwargs)
 
     def update_last_download(self):

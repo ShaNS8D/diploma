@@ -19,7 +19,43 @@
   margin-bottom: 1rem;
   font-size: 1.35rem;
 }
+
+.form-btn {
+  display: flex;
+  justify-content: right;
+  padding: 0 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.35rem;
+}
 /* Стили ошибок */
+.error-container { 
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background-color: #f8d7da;
+  color: #571515;
+  border: 1px solid #f5c6cb;
+  border-radius: 4px;
+  padding: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.error-content {  
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.error-close {
+  align-self: flex-end;
+  background: none;
+  border: none;
+  color: #571515;
+  font-size: 16px;
+  cursor: pointer;
+}
+
 .error-details {
   margin-top: 10px;
   padding-left: 20px;
@@ -35,40 +71,9 @@
   font-weight: 600;
 }
 
-.error-generic {
-  background-color: #ffebee;
-  border-left: 4px solid #f44336;
-}
-
-.error-server {
-  background-color: #fff3e0;
-  border-left: 4px solid #ff9800;
-}
-
-.error-unauthorized {
-  background-color: #e8f5e9;
-  border-left: 4px solid #4caf50;
-}
-
-.error-forbidden {
-  background-color: #e3f2fd;
-  border-left: 4px solid #2196f3;
-}
-
-.error-client {
-  background-color: #f3e5f5;
-  border-left: 4px solid #9c27b0;
-}
-
-.error-container { 
-  background-color: #f8d7da;
-  border: 1px solid #f5c6cb;
-  padding: 10px;
-}
-
-.error-content {  
-  font-size: 14px;
-  color: #721c24;
+.form-errors {  
+  list-style-type: none;
+  padding: 0;
 }
 
 /* Стили успешных действий */
@@ -106,12 +111,6 @@
 }
 
 /* Стили прочие */
-
-.form-errors {  
-  list-style-type: none;
-  padding: 0;
-}
-
 .user-list-header {
   display: flex;
   /* justify-content: space-between; */

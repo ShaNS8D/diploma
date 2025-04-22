@@ -10,7 +10,7 @@ import { handleAsyncError } from '../../features/error/errorSlice';
 
 const EditFilePage = () => {
   const { fileId } = useParams();  
-  const [errors, setErrors] = useState({});
+  
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const { files, loading } = useSelector((state) => state.files);
@@ -51,7 +51,6 @@ const EditFilePage = () => {
           value={fileData.original_name}
           onChange={handleChange}
           placeholder="название"
-          error={errors.original_name}
           label="Название файла"
         />
         <EditFileInput
@@ -59,11 +58,9 @@ const EditFilePage = () => {
           name="comment"
           value={fileData.comment}
           onChange={handleChange}
-          placeholder="комментарий"
-          error={errors.comment}
+          placeholder="комментарий"          
           label="Описание"
-        />
-        {errors.form && <div className="form-error">{errors.form}</div>}
+        />        
         <EditFileButton disabled={loading}>
           Сохранить
         </EditFileButton>

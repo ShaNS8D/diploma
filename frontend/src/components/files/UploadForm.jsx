@@ -27,8 +27,7 @@ const UploadForm = ({ onUpload }) => {
           onChange={handleFileChange} 
           required 
         />
-      </div>
-      
+      </div>      
       <div className="form-group">
         <label>Описание</label>
         <input
@@ -38,10 +37,12 @@ const UploadForm = ({ onUpload }) => {
           placeholder="Необязательное описание файла"
         />
       </div>
+      <div className="form-btn">
+        <button type="submit" disabled={!file}>
+          Загрузить файл
+        </button>
+      </div>      
       
-      <button type="submit" disabled={!file}>
-        Загрузить файл
-      </button>
     </form>
   );
 };

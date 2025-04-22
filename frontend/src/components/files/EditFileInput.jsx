@@ -3,8 +3,7 @@ const EditFileInput = ({
   name, 
   value, 
   onChange, 
-  placeholder, 
-  error, 
+  placeholder,  
   label 
 }) => {
   return (
@@ -17,9 +16,7 @@ const EditFileInput = ({
         value={value}
         onChange={onChange}
         placeholder={placeholder}
-        className={error ? 'error' : ''}
       />
-      {error && <span className="error-message">{error}</span>}
     </div>
   );
 };

@@ -12,7 +12,6 @@ const LoginPage = () => {
     username: '',
     password: '',
   });
-  const [errors, setErrors] = useState({});
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const { loading } = useSelector((state) => state.auth);
@@ -24,12 +23,8 @@ const LoginPage = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const result = await dispatch(loginUser(credentials));
-    // console.log('handleSubmit login',result);
-    
-    if (!result.success) {
-      setErrors({ form: result.error.message });
-    } else {
+    const result = await dispatch(loginUser(credentials)); 
+    if (result.success) {
       navigate('/storage');
     }
   };
@@ -44,7 +39,6 @@ const LoginPage = () => {
           value={credentials.username}
           onChange={handleChange}
           placeholder="Введите логин"
-          error={errors.username}
           label="Логин"
         />
         <AuthInput
@@ -53,16 +47,11 @@ const LoginPage = () => {
           value={credentials.password}
           onChange={handleChange}
           placeholder="Введите пароль"
-          error={errors.password}
           label="Пароль"
-        />
-        
-        {errors.form && <div className="form-error">{errors.form}</div>}
-        
+        />        
         <AuthButton disabled={loading}>
           {loading ? 'Logging in...' : 'Login'}
         </AuthButton>
-        
         <div className="auth-footer">
         У вас нет учетной записи? <Link to="/register">Зарегистрируйся</Link>
         </div>

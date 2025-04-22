@@ -3,6 +3,7 @@ from .models import File
 from users.serializers import UserSerializer  
 import os
 import logging
+from .utils.file_validators import validate_file_extension
 
 
 logger = logging.getLogger(__name__)
@@ -43,6 +44,10 @@ class FileUploadSerializer(serializers.ModelSerializer):
             'comment': {'required': False, 'allow_blank': True}
         }
 
+    def validate_file(self, value):        
+        validate_file_extension(value)
+        return value
+
 
 class FileUpdateSerializer(serializers.ModelSerializer):
     class Meta:
@@ -56,6 +61,18 @@ class FileUpdateSerializer(serializers.ModelSerializer):
     def validate_original_name(self, value):
         if '.' not in value:
             raise serializers.ValidationError("Имя файла должно содержать расширение")
+
+        user_files = File.objects.filter(
+                owner=self.context['request'].user
+            ).exclude(pk=self.instance.pk)
+            
+        if user_files.filter(original_name=value).exists():
+            base, ext = os.path.splitext(value)
+            counter = 1
+            while user_files.filter(original_name=f"{base}_{counter:03}{ext}").exists():
+                counter += 1
+            value = f"{base}_{counter:03}{ext}"
+        
         return value
 
 

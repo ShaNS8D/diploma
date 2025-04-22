@@ -800,3 +800,25 @@ WARNING 2025-04-22 15:46:52,082 log 10768 12908 Forbidden: /api/v1/users/1/updat
 WARNING 2025-04-22 15:46:52,083 basehttp 10768 12908 "PATCH /api/v1/users/1/update/ HTTP/1.1" 403 91
 WARNING 2025-04-22 15:48:21,568 log 13604 6016 Forbidden: /api/v1/users/1/update/
 WARNING 2025-04-22 15:48:21,569 basehttp 13604 6016 "PATCH /api/v1/users/1/update/ HTTP/1.1" 403 91
+ERROR 2025-04-22 20:12:02,501 log 168 8324 Internal Server Error: /api/v1/cloud/share/f585cee7-b254-46c4-9a94-d7ab263d9cc9/
+ERROR 2025-04-22 20:12:02,502 basehttp 168 8324 "GET /api/v1/cloud/share/f585cee7-b254-46c4-9a94-d7ab263d9cc9/ HTTP/1.1" 500 5845
+WARNING 2025-04-22 20:12:02,859 log 168 8324 Not Found: /favicon.ico
+WARNING 2025-04-22 20:12:02,860 basehttp 168 8324 "GET /favicon.ico HTTP/1.1" 404 2522
+ERROR 2025-04-22 20:13:27,190 log 168 6752 Internal Server Error: /api/v1/cloud/
+ERROR 2025-04-22 20:13:27,190 basehttp 168 6752 "POST /api/v1/cloud/ HTTP/1.1" 500 60
+WARNING 2025-04-22 22:06:52,415 log 12232 11456 Forbidden: /api/v1/users/1/update/
+WARNING 2025-04-22 22:06:52,415 basehttp 12232 11456 "PATCH /api/v1/users/1/update/ HTTP/1.1" 403 91
+WARNING 2025-04-22 22:07:05,829 log 12232 11284 Forbidden: /api/v1/users/1/update/
+WARNING 2025-04-22 22:07:05,830 basehttp 12232 11284 "PATCH /api/v1/users/1/update/ HTTP/1.1" 403 91
+WARNING 2025-04-22 22:20:01,544 log 12232 11692 Bad Request: /api/v1/users/login/
+WARNING 2025-04-22 22:20:01,545 basehttp 12232 11692 "POST /api/v1/users/login/ HTTP/1.1" 400 167
+WARNING 2025-04-22 22:20:08,803 log 12232 11692 Bad Request: /api/v1/users/login/
+WARNING 2025-04-22 22:20:08,804 basehttp 12232 11692 "POST /api/v1/users/login/ HTTP/1.1" 400 123
+WARNING 2025-04-22 22:20:14,104 log 12232 11692 Bad Request: /api/v1/users/login/
+WARNING 2025-04-22 22:20:14,105 basehttp 12232 11692 "POST /api/v1/users/login/ HTTP/1.1" 400 171
+WARNING 2025-04-22 22:20:17,094 log 12232 11692 Bad Request: /api/v1/users/login/
+WARNING 2025-04-22 22:20:17,095 basehttp 12232 11692 "POST /api/v1/users/login/ HTTP/1.1" 400 171
+WARNING 2025-04-22 22:29:05,702 log 12232 11584 Bad Request: /api/v1/users/login/
+WARNING 2025-04-22 22:29:05,702 basehttp 12232 11584 "POST /api/v1/users/login/ HTTP/1.1" 400 171
+WARNING 2025-04-22 22:29:13,395 log 12232 11584 Bad Request: /api/v1/users/login/
+WARNING 2025-04-22 22:29:13,395 basehttp 12232 11584 "POST /api/v1/users/login/ HTTP/1.1" 400 171
