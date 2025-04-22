@@ -1,9 +1,10 @@
 from rest_framework import generics, permissions, status
+from rest_framework.decorators import api_view, permission_classes
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from django.contrib.auth import authenticate, logout, login
 from users.permissions import IsAdmin
-# from django.middleware.csrf import get_token
+
 from .models import User
 from .serializers import UserRegistrationSerializer, UserSerializer, UserLoginSerializer
 import logging
@@ -11,13 +12,6 @@ import logging
 
 logger = logging.getLogger(__name__)
 
-
-# class GetCSRFToken(APIView):
-#     permission_classes = [permissions.AllowAny]
-
-#     def get(self, request):
-#         token = get_token(request)
-#         return Response({'csrfToken': token})
 
 class UserRegistrationView(generics.CreateAPIView):
     queryset = User.objects.all()
@@ -77,9 +71,15 @@ class UserUpdateView(generics.UpdateAPIView):
     permission_classes = [permissions.IsAuthenticated, IsAdmin]
 
     def update(self, request, *args, **kwargs):
-        
-        user_id = kwargs.get('pk')
+        user_id = kwargs.get('pk')        
         logger.debug(f"Админ {request.user.username} пытается обновить пользователя {user_id} с данными: {request.data}")
+
+        if request.user.id == user_id and 'is_admin' in request.data:
+            logger.warning(f"Админ {request.user.username} пытался изменить свой собственный is_admin")
+            return Response(
+                {"detail": "Нельзя изменить собственное значение is_admin"},
+                status=status.HTTP_403_FORBIDDEN
+            )
 
         try:
             user = User.objects.get(pk=user_id)
@@ -201,3 +201,17 @@ class LogoutView(APIView):
                 {"detail": "Ошибка при выходе из системы"},
                 status=status.HTTP_500_INTERNAL_SERVER_ERROR
             )
+
+@api_view(['GET'])
+# @permission_classes([permissions.IsAuthenticated])
+def check_auth(request):
+    if request.user.is_authenticated:
+        return Response({
+            "user": {
+                "id": request.user.id,
+                "username": request.user.username,
+                "is_admin": request.user.is_admin,
+            }
+        })
+    else:
+        return Response({"is_authenticated": False}, status=200)

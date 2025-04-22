@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { RouterProvider, createBrowserRouter, Outlet } from 'react-router-dom';
 import { Provider, useDispatch } from 'react-redux';
-import { setStore } from './api/api';
+import { injectStore  } from './api/api';
 import { store } from './features/store';
 import ProtectedRoute from './hoc/ProtectedRoute';
 import HomePage from './pages/HomePage';
@@ -12,11 +12,11 @@ import EditFilePage from './pages/EditFilePage';
 import AdminPage from './pages/AdminPage';
 import NotFoundPage from './pages/NotFoundPage';
 import Layout from './components/layout/Layout';
-import { checkAuth } from './features/auth/authSlice';
 import './App.css';
 
+injectStore(store);
 const AppWrapper = () => {
-  setStore(store);
+  
   return (
     <Provider store={store}>
       <App />
@@ -25,10 +25,7 @@ const AppWrapper = () => {
 };
 
 const App = () => {
-  const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(checkAuth());
-  }, [dispatch]);
+
   const router = createBrowserRouter([
     {
       path: '/',
@@ -82,7 +79,6 @@ const App = () => {
   return (
     <>
       <RouterProvider router={router} />
-      {/* <ErrorHandler /> */}
     </>
   );
 };

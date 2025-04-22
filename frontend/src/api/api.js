@@ -1,12 +1,12 @@
 import axios from 'axios';
-import { store } from '../features/store';
 import { handleAsyncError } from '../features/error/errorSlice';
+import { handleAsyncSuccess } from '../features/success/successSlice';
 
 const API_BASE_URL = 'http://localhost:8000/api/v1/';
 
 let _store;
 
-export const setStore = (store) => {
+export const injectStore = (store) => {
   _store = store;
 };
 
@@ -33,49 +33,43 @@ function getCookie(name) {
   return cookieValue;
 }
 
-const handleError = (error) => (dispatch) => {
-  let rejectedError;
-  if (error.response) {
-    const { status, data } = error.response;
-    let userFriendlyMessage = 'Произошла ошибка';
-    if (data.detail) {
-      userFriendlyMessage = data.detail;
-    } else if (data.errors?.non_field_errors) {
-      userFriendlyMessage = data.errors.non_field_errors.join(', ');
-    } else if (data.non_field_errors) {
-      userFriendlyMessage = Array.isArray(data.non_field_errors) 
-        ? data.non_field_errors.join(', ') 
-        : data.non_field_errors;
-    } else if (typeof data === 'object') {
-      const fieldErrors = Object.entries(data)
-        .filter(([key]) => key !== 'status' && key !== 'detail')
-        .map(([key, value]) => {
-          const errorText = Array.isArray(value) ? value.join(', ') : value;
-          return `${key}: ${errorText}`;
-        });      
-      if (fieldErrors.length > 0) {
-        userFriendlyMessage = fieldErrors.join('; ');
-      }
-    }
-    rejectedError = {
-      status,
-      message: userFriendlyMessage,
-      originalMessage: error.message,
-      data,
-      isServerError: true,
-    };
-  } else if (error.request) {
-    rejectedError = { 
-      status: 0, 
-      message: 'Сервер не отвечает. Пожалуйста, проверьте подключение к интернету',
-    };
-  } else {
-    rejectedError = { 
-      status: -1, 
-      message: error.message || 'Произошла неизвестная ошибка',
+const normalizeError = (error) => {  
+  if (error.validationErrors) {
+    return {
+      status: error.status || 422,
+      message: error.message || 'Ошибка валидации',
+      details: {
+        form: error.validationErrors,
+      },
     };
   }
-  return dispatch(handleAsyncError(rejectedError));
+  if (error.response) {
+    const { status, data } = error.response;
+    let message = 'Произошла ошибка';
+    if (data.detail) {
+      message = data.detail;
+    } else if (data.errors) {
+      message = Object.values(data.errors).flat().join(', ');
+    }    
+    return {
+      status,
+      message,
+      details: {
+        ...(data.errors && { api: data.errors }),
+        raw: data,
+      },
+    };
+  } else if (error.request) {
+    return {
+      status: 0,
+      message: 'Сервер не отвечает. Проверьте подключение к интернету',
+    };
+  } else {
+    return {
+      status: -1,
+      message: error.message || 'Неизвестная ошибка',
+    };
+  }
 };
 
 api.interceptors.request.use((config) => {
@@ -91,16 +85,41 @@ api.interceptors.request.use((config) => {
 });
 
 api.interceptors.response.use(
-  response => response,
-  error => _store.dispatch(handleError(error)) 
+  (response) => {
+    const allowedMethods = ['POST', 'PUT', 'PATCH', 'DELETE'];
+    if (
+      response.status >= 200 &&
+      response.status < 300 &&
+      allowedMethods.includes(response.config.method?.toUpperCase()) &&
+      _store
+    ) {
+      _store.dispatch(handleAsyncSuccess(response));
+    }
+    return response;
+  },
+  (error) => {
+    const normalizedError = normalizeError(error);
+    if (_store) {
+      _store.dispatch(handleAsyncError(normalizedError));
+    } else {
+      console.error('Store not initialized! Error:', normalizedError);
+    }
+    return Promise.reject(normalizedError);
+  }
 );
 
 export const authAPI = {
+  checkAuth: () => api.get('users/auth/check/'),
   register: (data) => api.post('users/register/', data),
   login: (data) => api.post('users/login/', data),
   logout: () => api.post('users/logout/'),
   getUsers: () => api.get('users/'),
-  updateDataUser: (id, data) => api.patch(`users/${id}/update/`, data),
+  updateDataUser: (id, data) => {
+    // console.log("Отправляем PATCH-запрос:");
+    // console.log("URL:", `users/${id}/update/`);
+    // console.log("Тело запроса (data):", data);
+    return api.patch(`users/${id}/update/`, data);
+  },
   deleteUser: (id) => api.delete(`users/${id}/delete/`)
 };
 

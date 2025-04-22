@@ -19,7 +19,7 @@
   margin-bottom: 1rem;
   font-size: 1.35rem;
 }
-
+/* Стили ошибок */
 .error-details {
   margin-top: 10px;
   padding-left: 20px;
@@ -58,6 +58,58 @@
 .error-client {
   background-color: #f3e5f5;
   border-left: 4px solid #9c27b0;
+}
+
+.error-container { 
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  padding: 10px;
+}
+
+.error-content {  
+  font-size: 14px;
+  color: #721c24;
+}
+
+/* Стили успешных действий */
+.success-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+  border-radius: 4px;
+  padding: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.success-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.success-close {
+  align-self: flex-end;
+  background: none;
+  border: none;
+  color: #155724;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.success-detail {
+  font-size: 14px;
+  color: #155724;
+}
+
+/* Стили прочие */
+
+.form-errors {  
+  list-style-type: none;
+  padding: 0;
 }
 
 .user-list-header {

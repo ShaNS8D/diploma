@@ -64,9 +64,10 @@ export const deleteUser = (id) => async (dispatch) => {
 };
 
 export const toggleAdminStatus = (id, isAdmin) => async (dispatch) => {
-  try {
+  try {    
     dispatch(setLoading(true));
-    const response = await authAPI.updateUser(id, { is_admin: isAdmin });
+    
+    const response = await authAPI.updateDataUser(id, { is_admin: isAdmin });
     dispatch(updateUser(response.data.user));
     return { success: true };
   } catch (error) {

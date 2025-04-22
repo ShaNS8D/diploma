@@ -5,8 +5,9 @@ import { deleteUser, toggleAdminStatus } from '../../features/users/usersSlice';
 
 const UserItem = ({ user }) => {
   const dispatch = useDispatch();  
-  const handleToggleAdmin = () => {
-    dispatch(toggleAdminStatus(user.id, !user.is_admin));
+  const handleToggleAdmin = (event) => {
+    const isAdmin = event.target.checked; 
+    dispatch(toggleAdminStatus(user.id, isAdmin)); 
   };
   const handleDelete = () => {
     if (window.confirm(`Вы уверены, что хотите удалить этого пользователя ${user.login}?`)) {

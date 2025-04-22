@@ -45,15 +45,18 @@ const processAuthError = (error, dispatch, defaultMessage) => {
 
 export const checkAuth = () => async (dispatch) => {
   try {
-    const response = await authAPI.getUsers(); 
-    console.log('checkAuth', response)
+    const response = await authAPI.checkAuth();  
+    // console.log(response.data)  
     dispatch(setAuth({
       user: response.data.user,
       isAdmin: response.data.user.is_admin,
-    }));
+    }));    
     return { success: true };
   } catch (error) {
-    dispatch(clearAuth());
+    if (error.response?.status === 401) {
+      dispatch(clearAuth());
+      return { success: false, isAuthError: true };
+    }
     return processAuthError(error, dispatch, 'Ошибка проверки аутентификации');
   } finally {
     dispatch(setAuthChecked());

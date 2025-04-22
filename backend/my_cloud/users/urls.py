@@ -5,8 +5,9 @@ from .views import (
     UserDeleteView,
     LoginView,
     LogoutView,
-    UserUpdateView
+    UserUpdateView,
     # GetCSRFToken
+    check_auth
 )
 
 app_name = 'users'
@@ -19,5 +20,6 @@ urlpatterns = [
     
     path('', UserListView.as_view(), name='user-list'),
     path('<int:pk>/delete/', UserDeleteView.as_view(), name='user-delete'),
+    path('auth/check/', check_auth, name='check-auth'),
     # path('get-csrf-token/', GetCSRFToken.as_view(), name='get-csrf-token'),
 ]

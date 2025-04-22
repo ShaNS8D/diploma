@@ -1,11 +1,12 @@
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate, Link } from 'react-router-dom';
-import { registerUser, handleAsyncError } from '../../store/authSlice';
-import AuthForm from '../UI/AuthForm';
-import AuthInput from '../UI/AuthInput';
-import AuthButton from '../UI/AuthButton';
-import LoadingSpinner from '../UI/LoadingSpinner';
+import { registerUser } from '../../features/auth/authSlice';
+import { handleAsyncError } from '../../features/error/errorSlice';
+import AuthForm from '../../components/auth/AuthForm';
+import AuthInput from '../../components/auth/AuthInput';
+import AuthButton from '../../components/auth/AuthButton';
+import LoadingSpinner from '../../components/ui/LoadingSpinner';
 
 const RegisterPage = () => {
   const [userData, setUserData] = useState({
@@ -46,6 +47,7 @@ const RegisterPage = () => {
       errors.confirmPassword = 'Пароли не совпадают';
     }    
     if (Object.keys(errors).length > 0) {
+      // console.log('RegisterPage', errors);
       dispatch(handleAsyncError({
         message: 'Пожалуйста, исправьте ошибки в форме',
         validationErrors: errors,

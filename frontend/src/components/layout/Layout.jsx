@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 import { logoutUser } from '../../features/auth/authSlice';
 import ErrorHandler from '../../hoc/ErrorHandler';
+import SuccessHandler from '../../hoc/SuccessHandler';
 import { useDispatch } from 'react-redux';
 import './Layout.css';
 
@@ -52,6 +53,7 @@ const Layout = ({ children }) => {
         </nav>
       </header>
       <ErrorHandler />
+      <SuccessHandler />
       <main className="main-content">
         {children}
       </main>

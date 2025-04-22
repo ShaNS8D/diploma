@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchUsers } from '../../features/users/usersSlice';
 import { fetchFiles } from '../../features/files/filesSlice';
@@ -10,36 +10,45 @@ import LoadingSpinner from '../../components/ui/LoadingSpinner';
 const AdminPage = () => {
   const dispatch = useDispatch();
   const { users, loading } = useSelector((state) => state.users);
-  const { files } = useSelector((state) => state.files);  
-  const usersStats = {};
-  files.forEach(file => {
-    const username = file.owner.username;
-    if (!usersStats[username]) {
-      usersStats[username] = {
-        username: username,
-        countFiles: 0,
-        sizeFiles: 0
-      };
+  const { files } = useSelector((state) => state.files); 
+  const [result, setResult] = useState([]);
+  useEffect(() => {
+    if (users.length && files.length) {
+      const usersStats = {};
+      files.forEach(file => {
+        const username = file.owner.username;
+        if (!usersStats[username]) {
+          usersStats[username] = {
+            username: username,
+            countFiles: 0,
+            sizeFiles: 0
+          };
+        }
+        usersStats[username].countFiles += 1;
+        usersStats[username].sizeFiles += file.size;
+      });
+      
+      const filesStats = Object.values(usersStats);
+      const statsMap = new Map();
+      filesStats.forEach(stat => {
+        statsMap.set(stat.username, {
+          countFiles: stat.countFiles,
+          sizeFiles: stat.sizeFiles
+        });
+      });
+      const computedResult = users.map(user => {
+        const userStats = statsMap.get(user.username);
+        return {
+          ...user,
+          countFiles: userStats ? userStats.countFiles : 0,
+          sizeFiles: userStats ? userStats.sizeFiles : 0
+        };
+      });
+      setResult(computedResult);
+    } else {
+      setResult(users);
     }
-    usersStats[username].countFiles += 1;
-    usersStats[username].sizeFiles += file.size;
-  });
-  const filesStats = Object.values(usersStats);
-  const statsMap = new Map();
-  filesStats.forEach(stat => {
-    statsMap.set(stat.username, {
-      countFiles: stat.countFiles,
-      sizeFiles: stat.sizeFiles
-    });
-  });
-  const result = users.map(user => {
-    const userStats = statsMap.get(user.username);
-    return {
-      ...user,
-      countFiles: userStats ? userStats.countFiles : 0,
-      sizeFiles: userStats ? userStats.sizeFiles : 0
-    };
-  });
+  }, [users, files]);
     
 
   useEffect(() => {
