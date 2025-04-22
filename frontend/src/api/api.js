@@ -4,6 +4,12 @@ import { handleAsyncError } from '../features/error/errorSlice';
 
 const API_BASE_URL = 'http://localhost:8000/api/v1/';
 
+let _store;
+
+export const setStore = (store) => {
+  _store = store;
+};
+
 const api = axios.create({
   baseURL: API_BASE_URL,
   withCredentials: true,
@@ -77,7 +83,6 @@ api.interceptors.request.use((config) => {
     const csrfToken = getCookie('csrftoken');
     if (csrfToken) {
       config.headers['X-CSRFToken'] = csrfToken;
-      // console.log('CSRF Token added:', csrfToken);
     } else {
       console.warn('CSRF Token not found in cookies');
     }
@@ -87,7 +92,7 @@ api.interceptors.request.use((config) => {
 
 api.interceptors.response.use(
   response => response,
-  error => store.dispatch(handleError(error)) 
+  error => _store.dispatch(handleError(error)) 
 );
 
 export const authAPI = {

@@ -20,18 +20,19 @@ const errorSlice = createSlice({
 export const { setError, clearError } = errorSlice.actions;
 
 export const handleAsyncError = (error) => (dispatch) => {
-  const normalizedError = typeof error === 'string' 
-    ? { message: error } 
-    : error;
-
-  const errorData = {
-    status: normalizedError.status || 500,
-    message: normalizedError.message || 'Ошибка сервера',
-    ...normalizedError,
+  const normalizedError = {
+    status: error.status || error.response?.status || 500,
+    message: error.message || error.response?.data?.detail || 'Произошла ошибка',
+    details: {
+      ...(error.validationErrors && { form: error.validationErrors }),
+      ...(error.response?.data?.errors && { api: error.response.data.errors }),
+      ...(error.response?.data && typeof error.response.data === 'object' && { raw: error.response.data })
+    },
+    originalError: error
   };
-
-  dispatch(setError(errorData));
-  return Promise.reject(errorData);
+  
+  dispatch(setError(normalizedError));
+  return Promise.reject(normalizedError);
 };
 
 export default errorSlice.reducer;

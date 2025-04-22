@@ -24,7 +24,7 @@ const authSlice = createSlice({
       state.user = null;
       state.isAuthenticated = false;
       state.isAdmin = false;
-      state.authChecked = true; // Все равно отмечаем как проверенное
+      state.authChecked = true;
     },
     setLoading: (state, action) => {
       state.loading = action.payload;
@@ -37,7 +37,6 @@ const authSlice = createSlice({
 
 export const { setAuth, clearAuth, setLoading, setAuthChecked } = authSlice.actions;
 
-// Общая обработка ошибок аутентификации
 const processAuthError = (error, dispatch, defaultMessage) => {
   const errorData = error.response?.data || { message: error.message || defaultMessage };
   dispatch(handleAsyncError(errorData));

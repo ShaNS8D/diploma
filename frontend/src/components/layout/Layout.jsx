@@ -19,8 +19,7 @@ const Layout = ({ children }) => {
   return (
     <div className="layout">
       <header className="header">
-        <nav className="nav">
-        
+        <nav className="nav">        
           <h1 className="logo">
             <Link to="/" className='nav-link'>Облачное хранилище</Link>
           </h1>

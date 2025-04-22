@@ -1,10 +1,10 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { authAPI } from '../../api/api';
+import { handleAsyncError } from '../error/errorSlice';
 
 const initialState = {
   users: [],
   loading: false,
-  error: null,
 };
 
 const usersSlice = createSlice({
@@ -26,21 +26,25 @@ const usersSlice = createSlice({
     setLoading: (state, action) => {
       state.loading = action.payload;
     },
-    setError: (state, action) => {
-      state.error = action.payload;
-    },
   },
 });
 
-export const { setUsers, removeUser, updateUser, setLoading, setError } = usersSlice.actions;
+export const { setUsers, removeUser, updateUser, setLoading } = usersSlice.actions;
+
+const processError = (error, dispatch) => {
+  const errorData = error.response?.data || error.message;
+  dispatch(handleAsyncError(errorData));
+  return { success: false, error: errorData };
+};
 
 export const fetchUsers = () => async (dispatch) => {
   try {
     dispatch(setLoading(true));
     const response = await authAPI.getUsers();
     dispatch(setUsers(response.data));
+    return { success: true };
   } catch (error) {
-    dispatch(setError(error.response?.data || error.message));
+    return processError(error, dispatch);
   } finally {
     dispatch(setLoading(false));
   }
@@ -53,8 +57,7 @@ export const deleteUser = (id) => async (dispatch) => {
     dispatch(removeUser(id));
     return { success: true };
   } catch (error) {
-    dispatch(setError(error.response?.data || error.message));
-    return { success: false, error: error.response?.data };
+    return processError(error, dispatch);
   } finally {
     dispatch(setLoading(false));
   }
@@ -63,13 +66,11 @@ export const deleteUser = (id) => async (dispatch) => {
 export const toggleAdminStatus = (id, isAdmin) => async (dispatch) => {
   try {
     dispatch(setLoading(true));
-    const response = await authAPI.updateDataUser(id, {is_admin: isAdmin });
-    // console.log(response.data);
+    const response = await authAPI.updateUser(id, { is_admin: isAdmin });
     dispatch(updateUser(response.data.user));
     return { success: true };
   } catch (error) {
-    dispatch(setError(error.response?.data || error.message));
-    return { success: false, error: error.response?.data };
+    return processError(error, dispatch);
   } finally {
     dispatch(setLoading(false));
   }

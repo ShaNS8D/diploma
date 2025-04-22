@@ -29,27 +29,49 @@ const ErrorHandler = () => {
   const handleClose = () => {
     setShowError(false);
     dispatch(clearError());
-  };
+  };  
 
-  if (!error || !showError) return null;
-
-  return (
-    <div className={`error-notification ${getSeverityClass(error)}`}>
-      <div className="error-content">
-        <h3>Error {error.status || 'Unknown'}</h3>
-        <p>{error.message}</p>
-        {error.data?.errors && (
-          <ul>
-            {Object.entries(error.data.errors).map(([field, messages]) => (
+  const renderErrors = () => {
+    if (!error.details) return null;
+    
+    return (
+      <div className="error-details">
+        {error.details.form && (
+          <ul className="form-errors">
+            {Object.entries(error.details.form).map(([field, message]) => (
+              <li key={field}>
+                <strong>{field}:</strong> {message}
+              </li>
+            ))}
+          </ul>
+        )}
+        {error.details.api && (
+          <ul className="api-errors">
+            {Object.entries(error.details.api).map(([field, messages]) => (
               <li key={field}>
                 <strong>{field}:</strong> {Array.isArray(messages) ? messages.join(', ') : messages}
               </li>
             ))}
           </ul>
         )}
-        <button onClick={handleClose} className="error-close-btn">
-          ×
-        </button>
+        {error.details.raw && !error.details.form && !error.details.api && (
+          <div className="raw-error">
+            {JSON.stringify(error.details.raw)}
+          </div>
+        )}
+      </div>
+    );
+  };
+
+  if (!error || !showError) return null;
+
+  return (
+    <div className={`error-container ${getSeverityClass(error)}`}>
+      <div className="error-content">
+        <h3>Error {error.status || 'Unknown'}</h3>
+        <p>{error.message}</p>
+        {renderErrors()}
+        <button onClick={handleClose} className="error-close">×</button>
       </div>
     </div>
   );
