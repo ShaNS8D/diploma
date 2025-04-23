@@ -4,7 +4,7 @@ import { deleteFile, generatePublicLink } from '../../features/files/filesSlice'
 
 const FileItem = ({ file }) => {
   const dispatch = useDispatch();  
-  console.log("Download URL:", file.download_url);
+  // console.log("Download URL:", file.download_url);
   const handleDelete = () => {
     if (window.confirm('Вы уверены, что хотите удалить этот файл?')) {
       dispatch(deleteFile(file.id));
@@ -13,8 +13,8 @@ const FileItem = ({ file }) => {
 
   const handleCopyLink = async (id) => {
     try {
-      console.log("generatePublicLink(id)", id);
       const result = await dispatch(generatePublicLink(id));
+      console.log("generatePublicLink(id)", result);
       if (result.success) {
         await navigator.clipboard.writeText(result.link);
         alert('Ссылка скопирована в буфер обмена');
