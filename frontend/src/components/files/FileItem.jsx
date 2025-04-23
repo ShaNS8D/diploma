@@ -11,23 +11,70 @@ const FileItem = ({ file }) => {
     }
   };
 
+  // const handleCopyLink = async (id) => {
+  //   try {
+  //     const result = await dispatch(generatePublicLink(id));
+
+  //     if (result.success) {
+  //       console.log("Пытаюсь скопировать ссылку:", result.link);
+  //       await navigator.clipboard.writeText(result.link);
+  //       alert('Ссылка скопирована в буфер обмена');
+  //     } else {
+  //       console.error("Ошибка в ответе сервера:", result);
+  //       alert('Ошибка при получении ссылки');
+  //     }
+  //   } catch (error) {
+  //     console.error("Общая ошибка:", error);
+  //     alert('Произошла ошибка');
+  //   }
+  // };
   const handleCopyLink = async (id) => {
     try {
       const result = await dispatch(generatePublicLink(id));
-
-      if (result.success) {
-        console.log("Пытаюсь скопировать ссылку:", result.link);
-        await navigator.clipboard.writeText(result.link);
-        alert('Ссылка скопирована в буфер обмена');
-      } else {
-        console.error("Ошибка в ответе сервера:", result);
+      
+      if (!result || !result.success || typeof result.link !== 'string') {
+        
         alert('Ошибка при получении ссылки');
+        return;
+      }
+  
+      if (navigator.clipboard) {
+        try {
+          await navigator.clipboard.writeText(result.link);
+          alert('Ссылка скопирована в буфер обмена');
+        } catch (clipboardError) {
+         
+          fallbackCopyTextToClipboard(result.link);
+        }
+      } else {
+        
+        fallbackCopyTextToClipboard(result.link);
       }
     } catch (error) {
-      console.error("Общая ошибка:", error);
+     
       alert('Произошла ошибка');
     }
   };
+  
+
+  function fallbackCopyTextToClipboard(text) {
+    const textArea = document.createElement("textarea");
+    textArea.value = text;
+    document.body.appendChild(textArea);
+    textArea.focus();
+    textArea.select();
+    try {
+      const successful = document.execCommand('copy');
+      if (successful) {
+        alert('Ссылка скопирована в буфер обмена');
+      } else {
+        alert('Не удалось скопировать ссылку. Попробуйте вручную.');
+      }
+    } catch (err) {
+      alert('Не удалось скопировать ссылку. Попробуйте вручную.');
+    }
+    document.body.removeChild(textArea);
+  }
 
 
   return (
