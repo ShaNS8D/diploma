@@ -1,10 +1,11 @@
 ## Порядок действий
 
 ### Создание виртуального окружения
+
 python3 -m venv venv
 
 ### Активация виртуального окружения
-venv\Scripts\activate 
+
 source venv/bin/activate для Ubuntu
 
 ### Установка необходимых зависимостей при развертывании проекта
@@ -31,17 +32,47 @@ ALLOWED_HOSTS=
 2. Создайте суперпользователя:
    python manage.py createsuperuser
 
-### Проверить настройки файла settings.py
+### Делаем сборку статических файлов
 
-  Проверить нет ли где ссылки на хост
+  python manage.py collectstatic
 
 ### Запуск через WSGI
 
 1. Убедитесь, что ваш сервер настроен на работу с WSGI (например, через Gunicorn):
 
-   gunicorn your_project_name.wsgi:application --bind 0.0.0.0:8000
+   gunicorn --bind 0.0.0.0:8000 my_cloud.wsgi:application
 
-2. Проверьте работу бэкэнда по адресу `http://your_domain_or_ip:8000`.
+2. Проверьте работу бэкэнда по адресу `http://89.111.155.26:8000`.
+
+3. Создаем файл с настройками по адресу
+  /etc/systemd/system/gunicorn.service
+  с содержанием:
+  
+  [Unit]
+  Description=Gunicorn для Django
+  After=network.target
+
+  [Service]
+  User=levsha8d
+  Group=sudo
+  WorkingDirectory=/var/www/levsha8d/backend/my_cloud
+  ExecStart=/var/www/levsha8d/backend/venv/bin/gunicorn \
+            --access-logfile - \
+            --workers 2 \
+            --bind unix:/var/www/levsha8d/backend/my_cloud/gunicorn.sock my_cloud.wsgi:application
+  [Install]
+  WantedBy=multi-user.target
+
+4. Проверяем
+  
+  sudo systemctl start gunicorn
+  sudo systemctl enable gunicorn
+  sudo systemctl status gunicorn
+
+  если есть ошибки - внесите изменения и перезапустите
+  
+  sudo systemctl daemon-reload
+  sudo systemctl restart gunicorn
 
 
 
