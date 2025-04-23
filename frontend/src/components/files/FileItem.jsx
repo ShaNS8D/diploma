@@ -14,14 +14,17 @@ const FileItem = ({ file }) => {
   const handleCopyLink = async (id) => {
     try {
       const result = await dispatch(generatePublicLink(id));
-      console.log("generatePublicLink(id)", result);
+
       if (result.success) {
+        console.log("Пытаюсь скопировать ссылку:", result.link);
         await navigator.clipboard.writeText(result.link);
         alert('Ссылка скопирована в буфер обмена');
       } else {
+        console.error("Ошибка в ответе сервера:", result);
         alert('Ошибка при получении ссылки');
       }
     } catch (error) {
+      console.error("Общая ошибка:", error);
       alert('Произошла ошибка');
     }
   };
