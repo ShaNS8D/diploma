@@ -53,6 +53,9 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'my_cloud.wsgi.application'
 
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
 CORS_ALLOW_CREDENTIALS = True
 #убрать в продакшен
 CORS_ORIGIN_ALLOW_ALL = True
