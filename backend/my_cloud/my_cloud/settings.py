@@ -53,7 +53,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'my_cloud.wsgi.application'
 
-STATIC_URL = '/static/'
+STATIC_URL = '/backend-static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 CORS_ALLOW_CREDENTIALS = True
@@ -98,14 +98,6 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 
 USE_TZ = True
-
-STATIC_URL = 'static/'
-
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),
-]
-
-#STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # Куда собирать файлы при `collectstatic`
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
