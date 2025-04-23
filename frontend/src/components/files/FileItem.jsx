@@ -4,7 +4,7 @@ import { deleteFile, generatePublicLink } from '../../features/files/filesSlice'
 
 const FileItem = ({ file }) => {
   const dispatch = useDispatch();  
-  
+  console.log("Download URL:", file.download_url);
   const handleDelete = () => {
     if (window.confirm('Вы уверены, что хотите удалить этот файл?')) {
       dispatch(deleteFile(file.id));
@@ -13,6 +13,7 @@ const FileItem = ({ file }) => {
 
   const handleCopyLink = async (id) => {
     try {
+      console.log("generatePublicLink(id)", id);
       const result = await dispatch(generatePublicLink(id));
       if (result.success) {
         await navigator.clipboard.writeText(result.link);
@@ -40,7 +41,7 @@ const FileItem = ({ file }) => {
         <a href={file.view_url} target="_blank" rel="noopener noreferrer">
           Посмотреть
         </a>
-        <Link to={file.download_url}>Сачать</Link>
+        <a href={file.download_url} download>Скачать</a>
         <button onClick={() => handleCopyLink(file.share_link)}>
           Получить ссылку
         </button>

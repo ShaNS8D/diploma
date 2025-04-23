@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { RouterProvider, createBrowserRouter, Outlet } from 'react-router-dom';
-import { Provider, useDispatch } from 'react-redux';
+import { Provider } from 'react-redux';
 import { injectStore  } from './api/api';
 import { store } from './features/store';
 import ProtectedRoute from './hoc/ProtectedRoute';
