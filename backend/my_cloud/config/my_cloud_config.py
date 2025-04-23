@@ -17,3 +17,5 @@ ALLOWED_FILE_TYPES = [
     'image/jpeg', 'image/png', 'application/pdf', 'text/plain',
     'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
 ]
+
+ALLOWED_EXTENSIONS = ['.txt', '.pdf', '.jpg','.jpeg', '.png', '.docx', '.xlsx']

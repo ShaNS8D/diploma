@@ -4,15 +4,42 @@
 python3 -m venv venv
 
 ### Активация виртуального окружения
-venv\Scripts\activate
+venv\Scripts\activate 
+source venv/bin/activate для Ubuntu
 
 ### Установка необходимых зависимостей при развертывании проекта
 pip install -r requirements.txt
 
+### Создайте файл переменных среды .env
+Такого содержания:
+DB_NAME=
+DB_USER=
+DB_PASSWORD=
+DB_HOST=
+DB_PORT=
+SECRET_KEY=
+DEBUG=
+ALLOWED_HOSTS=
 
-###
+Поместить рядом с файлом manage.py.
 
-#### выполнение настроек в файле settings.py
+## Миграции и создание суперпользователя
+
+1. Примените миграции:
+   python manage.py migrate
+
+2. Создайте суперпользователя:
+   python manage.py createsuperuser
+
+## Запуск через WSGI
+
+1. Убедитесь, что ваш сервер настроен на работу с WSGI (например, через Gunicorn):
+
+   gunicorn your_project_name.wsgi:application --bind 0.0.0.0:8000
+
+2. Проверьте работу бэкэнда по адресу `http://your_domain_or_ip:8000`.
+
+
 
 ## Ссылки на официальную документацию
 ASGIRef — документация: https://pypi.org/project/asgiref/
@@ -34,30 +61,3 @@ Python Dotenv — документация: https://pypi.org/project/python-dote
 SQLParse — документация: https://pypi.org/project/sqlparse/
 TzData — документация: https://pypi.org/project/tzdata/
 
-## Настройка переменных окружения
-
-Создайте файл `.env` в корне проекта и добавьте следующие переменные:
-
-SECRET_KEY=your_secret_key
-DEBUG=True
-DB_NAME=your_project_name
-DB_USER=your_user
-DB_PASSWORD=your_password
-DB_HOST=localhost
-DB_PORT=5432
-
-## Миграции и создание суперпользователя
-
-1. Примените миграции:
-   python manage.py migrate
-
-2. Создайте суперпользователя:
-   python manage.py createsuperuser
-
-## Запуск через WSGI
-
-1. Убедитесь, что ваш сервер настроен на работу с WSGI (например, через Gunicorn):
-
-   gunicorn your_project_name.wsgi:application --bind 0.0.0.0:8000
-
-2. Проверьте работу бэкэнда по адресу `http://your_domain_or_ip:8000`.

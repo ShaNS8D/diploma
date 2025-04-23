@@ -1,7 +1,7 @@
 import os
 from pathlib import Path
 from config.general_config import DATABASES, SECRET_KEY, DEBUG, ALLOWED_HOSTS
-from config.my_cloud_config import BASE_DIR, MEDIA_URL, MEDIA_ROOT, MAX_FILE_SIZE, ALLOWED_FILE_TYPES
+from config.my_cloud_config import BASE_DIR, MEDIA_URL, MEDIA_ROOT, MAX_FILE_SIZE, ALLOWED_FILE_TYPES, ALLOWED_EXTENSIONS
 from config.logging_config import LOGGING
 
 

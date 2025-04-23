@@ -43,11 +43,23 @@
 
 
 2. Создайте базу данных и пользователя:
+   sudo su postgres
+   psql
+
+   CREATE USER your_user WITH SUPERUSER;
+   ALERT USER your_user WITH PASSWORD 'your_password';
+   
+   создаем системную папку для нового пользователя
+
+   CREATE DATABASE your_user;
+
+   \q
+   exit
+   psql
 
    CREATE DATABASE your_project_name;
-   CREATE USER your_user WITH PASSWORD 'your_password';
-   GRANT ALL PRIVILEGES ON DATABASE your_project_name TO your_user;
 
+   \q
 
 ### Nginx
 
