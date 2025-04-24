@@ -80,6 +80,7 @@ server {
    access_log /var/log/nginx/levsha8d.access.log;
    error_log /var/log/nginx/levsha8d.error.log;
 
+   client_max_body_size 100M;
    sendfile on;
    tcp_nopush on;
    tcp_nodelay on;
